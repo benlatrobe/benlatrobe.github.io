@@ -9352,3 +9352,12 @@ button:focus-visible {
     min-height:220px;
   }
 }
+
+
+.ops-v2-architecture-note {
+  max-width: 860px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
