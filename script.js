@@ -31,3 +31,19 @@ document.querySelectorAll('.reveal').forEach((el) => {
   if (observer) observer.observe(el);
   else el.classList.add('is-visible');
 });
+
+
+const nfcSvg = document.getElementById('nfc-assembly-svg');
+if (nfcSvg) {
+  document.querySelectorAll('[data-nfc-svg-view]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const mode = button.dataset.nfcSvgView;
+      nfcSvg.classList.toggle('is-assembled', mode === 'assembled');
+      nfcSvg.classList.toggle('is-exploded', mode !== 'assembled');
+
+      document.querySelectorAll('[data-nfc-svg-view]').forEach((candidate) => {
+        candidate.classList.toggle('is-active', candidate === button);
+      });
+    });
+  });
+}
