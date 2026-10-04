@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High-Volume Wireless Module — Ben Lin</title>
+  <meta name="description" content="A hardware product case study spanning EVT/DVT/PVT, regulatory certification, production test, fixtures, diagnostics, yield, cycle time, manufacturing ramp, and sustaining." />
+  <meta name="theme-color" content="#f4f1e9" />
+  <link rel="canonical" href="https://benlatrobe.github.io/wireless-module.html" />
+  <meta property="og:title" content="High-Volume Wireless Module — Ben Lin" />
+  <meta property="og:description" content="Scaling a commercial wireless module from engineering builds to 1.5–2.0M units annually." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="case-page wireless-case-page">
+  <a class="skip-link" href="#top">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
+    <nav class="nav"><a href="#lifecycle">Lifecycle</a><a href="#factory">Factory</a><a href="#sustaining">Sustaining</a><a href="index.html#work">Home</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="product-hero section">
+      <div class="product-hero-inner">
+        <div class="reveal">
+          <p class="eyebrow">Selected work / connected hardware</p>
+          <h1>Scaling a wireless module.</h1>
+          <p class="case-deck">A high-volume electronics product taken through development, certification, production test, manufacturing ramp, and sustaining.</p>
+          <div class="case-meta product-meta">
+            <div><span>VOLUME</span><strong>~1.5–2.0M units / year</strong></div>
+            <div><span>CERTIFICATION</span><strong>100+ countries</strong></div>
+            <div><span>SCOPE</span><strong>EVT → sustaining</strong></div>
+          </div>
+        </div>
+
+        <div class="wireless-module-visual reveal">
+          <div class="module-board">
+            <span class="module-ant">ANTENNA</span>
+            <div class="module-chip">NFC</div>
+            <span class="module-io">HOST I/O</span>
+          </div>
+          <i>↕</i>
+          <div class="module-host">HOST PRODUCT</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lifecycle" class="section case-light">
+      <div class="section-index">01 / PRODUCT LIFECYCLE</div>
+      <div class="section-heading reveal"><p class="kicker">Scale starts before production</p><h2>Each phase removes a different kind of uncertainty.</h2></div>
+
+      <div class="wireless-lifecycle reveal">
+        <div><span>01</span><strong>EVT</strong><small>function + integration</small></div><i>→</i>
+        <div><span>02</span><strong>DVT</strong><small>design verification + compliance</small></div><i>→</i>
+        <div><span>03</span><strong>PVT</strong><small>process + production readiness</small></div><i>→</i>
+        <div><span>04</span><strong>RAMP</strong><small>yield + cycle + capacity</small></div><i>→</i>
+        <div><span>05</span><strong>SUSTAIN</strong><small>quality + change + field feedback</small></div>
+      </div>
+    </section>
+
+    <section id="factory" class="section section-dark">
+      <div class="section-index">02 / MANUFACTURING SYSTEM</div>
+      <div class="section-heading reveal"><p class="kicker">What had to scale with the product</p><h2>The module was only one part of the production system.</h2></div>
+
+      <div class="wireless-factory-grid">
+        <article class="wireless-factory-card reveal"><span>TEST STRATEGY</span><h3>Coverage</h3><p>Production-test strategy tied to product requirements and failure modes.</p></article>
+        <article class="wireless-factory-card reveal"><span>FIXTURES</span><h3>Repeatability</h3><p>Fixtures and diagnostics designed for repeatable high-volume execution.</p></article>
+        <article class="wireless-factory-card reveal"><span>YIELD</span><h3>Feedback</h3><p>Yield and defect data used to drive engineering and process corrections.</p></article>
+        <article class="wireless-factory-card reveal"><span>CYCLE TIME</span><h3>Capacity</h3><p>Production flow evolved from more manual execution toward semi-automated and replicated lines.</p></article>
+        <article class="wireless-factory-card reveal"><span>CERTIFICATION</span><h3>Global launch</h3><p>Module certification supported deployment across more than 100 countries.</p></article>
+      </div>
+
+      <div class="wireless-scale reveal">
+        <span>ENGINEERING BUILDS</span><i>→</i><span>PILOT LINE</span><i>→</i><span>SEMI-AUTOMATION</span><i>→</i><span>REPLICATED LINES</span><i>→</i><strong>1.5–2.0M / YEAR</strong>
+      </div>
+    </section>
+
+    <section id="sustaining" class="section wireless-sustaining-section">
+      <div class="section-index">03 / FIELD FEEDBACK</div>
+      <div class="split">
+        <div class="sticky-title reveal"><p class="kicker">A related sustaining lesson</p><h2>Production controls should learn from field failures.</h2></div>
+        <div class="story-column">
+          <div class="field-loop reveal">
+            <div><span>FIELD ISSUE</span><strong>Firmware / SKU configuration mismatch</strong></div><i>→</i>
+            <div><span>RECOVERY</span><strong>1,000+ deployed devices</strong></div><i>→</i>
+            <div><span>ROOT CAUSE</span><strong>Configuration control weakness</strong></div><i>→</i>
+            <div class="field-loop-final"><span>PREVENT</span><strong>Automated SKU detection + stronger controls</strong></div>
+          </div>
+          <p class="body-copy reveal">The specific sustaining incident came from another rugged tracking product, but the lesson is the same: field failures should feed permanent design and manufacturing controls.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-close">
+      <div class="next-panel reveal"><p class="kicker">The principle</p><h2>High volume is an engineering system, not just a production number.</h2><div class="hero-links"><a href="connected-positioning.html">See positioning & tracking →</a><a href="npi-readiness.html">See NPI readiness →</a><a href="index.html#work">Back to selected work →</a></div></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>High-volume wireless hardware.</h2></div>
+    <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
+    <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
