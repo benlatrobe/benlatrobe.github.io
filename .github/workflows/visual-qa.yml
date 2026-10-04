@@ -69,6 +69,7 @@ jobs:
                       time.sleep(0.35)
 
                       driver.execute_script(
+                          "document.documentElement.style.scrollBehavior='auto';"
                           "document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));"
                       )
 
@@ -124,7 +125,7 @@ jobs:
                       driver.execute_script(
                           """
                           const el = document.querySelector(arguments[0]);
-                          if (el) el.scrollIntoView({block:'start'});
+                          if (el) el.scrollIntoView({block:'start', behavior:'auto'});
                           """,
                           target,
                       )
