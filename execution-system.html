@@ -4,123 +4,194 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Continuous Improvement — Ben Lin</title>
-  <meta name="description" content="Three engineering process improvements: requirement decomposition, sprint task management, and change management." />
+  <meta name="description" content="Three engineering improvement initiatives: requirement decomposition, sprint task management, and change management." />
   <meta name="theme-color" content="#151816" />
   <link rel="canonical" href="https://benlatrobe.github.io/execution-system.html" />
   <meta property="og:title" content="Continuous Improvement — Ben Lin" />
-  <meta property="og:description" content="Requirement decomposition, sprint task management, and change management as separate engineering improvement initiatives." />
+  <meta property="og:description" content="Visual before-and-after cases for requirement decomposition, sprint execution, and change management." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="case-page execution-case-page">
+<body class="case-page execution-case-page ci-v2-page">
   <a class="skip-link" href="#top">Skip to content</a>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
   <header class="site-header">
     <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
-    <nav class="nav"><a href="#requirements">Requirements</a><a href="#sprint">Sprint</a><a href="#change">Change</a><a href="index.html#work">Home</a></nav>
+    <nav class="nav">
+      <a href="#requirements">Requirements</a>
+      <a href="#sprint">Sprint</a>
+      <a href="#change">Change</a>
+      <a href="index.html#work">Home</a>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="case-hero section">
+    <section class="case-hero section ci-v2-hero">
       <div class="case-hero-inner">
         <div class="case-intro reveal">
           <p class="eyebrow">Selected work / continuous improvement</p>
-          <h1>Three problems. Three engineering improvements.</h1>
-          <p class="case-deck">Requirement decomposition, sprint task management, and change management each solved a different execution problem.</p>
+          <h1>Three problems. Three targeted improvements.</h1>
+          <p class="case-deck">Each initiative solved a different execution problem rather than forcing one process onto everything.</p>
         </div>
-        <div class="ci-hero-grid reveal">
-          <div><span>01</span><strong>REQUIREMENTS</strong><small>clarify ownership</small></div>
-          <div><span>02</span><strong>SPRINTS</strong><small>standardize execution</small></div>
-          <div><span>03</span><strong>CHANGE</strong><small>control impact</small></div>
+
+        <div class="ci-v2-hero-map reveal">
+          <div>
+            <span>01</span>
+            <strong>REQUIREMENTS</strong>
+            <small>clarify ownership</small>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>SPRINTS</strong>
+            <small>standardize execution</small>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>CHANGE</strong>
+            <small>control impact</small>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="requirements" class="section case-light">
+    <section id="requirements" class="section case-light ci-case-section">
       <div class="section-index">01 / REQUIREMENT DECOMPOSITION</div>
-      <div class="improvement-header reveal">
-        <div><p class="kicker">Problem</p><h2>System requirements did not always translate into clear engineering ownership.</h2></div>
-        <div class="improvement-problem"><span>SYMPTOM</span><strong>Interfaces and integration risks became visible too late.</strong></div>
+      <div class="section-heading reveal">
+        <p class="kicker">Problem</p>
+        <h2>Broad requirements did not always translate into clear engineering ownership.</h2>
       </div>
 
-      <div class="improvement-flow reveal">
-        <div><span>INPUT</span><strong>System requirement</strong></div><i>→</i>
-        <div><span>BREAK DOWN</span><strong>Subsystem requirements</strong></div><i>→</i>
-        <div><span>ASSIGN</span><strong>Owned engineering work</strong></div><i>→</i>
-        <div class="improvement-highlight"><span>CLOSE</span><strong>Verification evidence</strong></div>
+      <div class="ci-before-after-grid">
+        <article class="ci-ba-card ci-ba-before reveal">
+          <span>BEFORE</span>
+          <div class="req-before-visual">
+            <div class="req-big-box">SYSTEM REQUIREMENT</div>
+            <i>↓</i>
+            <div class="req-ambiguity">
+              <span>EE?</span>
+              <span>SW?</span>
+              <span>ME?</span>
+              <span>FW?</span>
+            </div>
+            <small>ownership and interfaces unclear</small>
+          </div>
+        </article>
+
+        <article class="ci-ba-card ci-ba-after reveal">
+          <span>AFTER</span>
+          <div class="req-after-visual">
+            <div class="req-system">SYSTEM REQUIREMENT</div>
+            <i>↓</i>
+            <div class="req-subsystems">
+              <div><strong>EE</strong><small>owned requirement</small></div>
+              <div><strong>SW</strong><small>owned requirement</small></div>
+              <div><strong>ME</strong><small>owned requirement</small></div>
+            </div>
+            <i>↓</i>
+            <div class="req-verify">VERIFICATION EVIDENCE</div>
+          </div>
+        </article>
       </div>
 
-      <div class="improvement-outcome reveal">
-        <strong>&lt; 5 months</strong>
-        <span>One cross-functional program was delivered in under five months against an initial six-month estimate using clear decomposition, ownership, trade-off decisions, and sprint execution.</span>
+      <div class="ci-result-strip reveal">
+        <div><span>INTERVENTION</span><strong>decomposition · interface ownership · trade-off decisions</strong></div>
+        <div><span>EXAMPLE OUTCOME</span><strong>&lt; 5 months vs. 6-month initial estimate</strong></div>
       </div>
     </section>
 
-    <section id="sprint" class="section section-dark ci-sprint-section">
+    <section id="sprint" class="section section-dark ci-case-section ci-sprint-v2">
       <div class="section-index">02 / SPRINT TASK MANAGEMENT</div>
       <div class="section-heading reveal">
         <p class="kicker">Problem</p>
-        <h2>Every engineering manager had a different way to track work.</h2>
+        <h2>Each engineering manager had a different way to track work.</h2>
       </div>
 
-      <div class="sprint-before-after">
-        <article class="sprint-panel reveal">
+      <div class="ci-before-after-grid ci-dark-grid">
+        <article class="ci-ba-card ci-ba-before-dark reveal">
           <span>BEFORE</span>
-          <div class="manager-lanes">
+          <div class="sprint-fragmented-visual">
             <div><strong>Manager A</strong><small>Excel</small></div>
             <div><strong>Manager B</strong><small>Excel</small></div>
-            <div><strong>Manager C</strong><small>local tracking</small></div>
+            <div><strong>Manager C</strong><small>local list</small></div>
           </div>
-          <p>No common view of backlog, ownership, capacity, or completion.</p>
+          <small class="ci-visual-caption">No common backlog, ownership, capacity, or completion view.</small>
         </article>
-        <article class="sprint-panel sprint-after reveal">
+
+        <article class="ci-ba-card ci-ba-after-dark reveal">
           <span>AFTER</span>
-          <div class="sprint-lane">
-            <div>BACKLOG</div><i>→</i><div>SPRINT</div><i>→</i><div>OWNER</div><i>→</i><div>DoD</div><i>→</i><div>REVIEW</div>
+          <div class="sprint-common-flow">
+            <div>BACKLOG</div><i>→</i>
+            <div>SPRINT</div><i>→</i>
+            <div>OWNER</div><i>→</i>
+            <div>DoD</div><i>→</i>
+            <div>REVIEW</div>
           </div>
-          <p>Common Azure DevOps sprint rhythm with visible ownership and Definition of Done.</p>
+          <small class="ci-visual-caption">One Azure DevOps sprint rhythm with visible ownership and Definition of Done.</small>
         </article>
       </div>
+
+      <div class="ci-result-strip ci-result-strip-dark reveal">
+        <div><span>STANDARDIZED</span><strong>planning cadence · task state · ownership · review</strong></div>
+        <div><span>NOT THE GOAL</span><strong>“doing Agile” for its own sake</strong></div>
+      </div>
     </section>
 
-    <section id="change" class="section change-section">
+    <section id="change" class="section case-light ci-case-section ci-change-v2">
       <div class="section-index">03 / CHANGE MANAGEMENT</div>
-      <div class="split">
-        <div class="sticky-title reveal">
-          <p class="kicker">Problem</p>
-          <h2>A design change can invalidate more than the drawing that changed.</h2>
-        </div>
-        <div class="story-column">
-          <div class="change-impact-map reveal">
-            <div class="change-source"><span>CHANGE</span><strong>Requirement / design / component</strong></div>
-            <i>↓</i>
-            <div class="change-impact-branches">
-              <span>requirements</span><span>subsystems</span><span>interfaces</span><span>tasks</span><span>verification</span>
-            </div>
-            <i>↓</i>
-            <div class="change-close"><span>CONTROL</span><strong>Owner → impact analysis → update → re-verify → release</strong></div>
+      <div class="section-heading reveal">
+        <p class="kicker">Problem</p>
+        <h2>A design change can invalidate more than the drawing that changed.</h2>
+      </div>
+
+      <div class="change-ripple-layout">
+        <article class="change-ripple-before reveal">
+          <span>BEFORE</span>
+          <div class="change-source-node">CHANGE</div>
+          <div class="change-ripple r1"></div>
+          <div class="change-ripple r2"></div>
+          <div class="change-ripple r3"></div>
+          <div class="change-floating-label l1">requirements?</div>
+          <div class="change-floating-label l2">interfaces?</div>
+          <div class="change-floating-label l3">tasks?</div>
+          <div class="change-floating-label l4">verification?</div>
+        </article>
+
+        <article class="change-ripple-after reveal">
+          <span>AFTER</span>
+          <div class="change-controlled-flow">
+            <div><strong>CHANGE</strong><small>requirement / design / component</small></div>
+            <i>→</i>
+            <div><strong>IMPACT</strong><small>affected artifacts</small></div>
+            <i>→</i>
+            <div><strong>OWNER</strong><small>responsible engineer</small></div>
+            <i>→</i>
+            <div><strong>RE-VERIFY</strong><small>new evidence</small></div>
+            <i>→</i>
+            <div class="change-release"><strong>RELEASE</strong><small>controlled state</small></div>
           </div>
-          <p class="body-copy reveal">The goal was not more change paperwork. It was to make affected work and re-verification explicit before release.</p>
-        </div>
+        </article>
+      </div>
+
+      <div class="change-impact-row reveal">
+        <span>requirements</span>
+        <span>subsystems</span>
+        <span>interfaces</span>
+        <span>tasks</span>
+        <span>verification</span>
       </div>
     </section>
 
-    <section class="section case-close">
-      <div class="next-panel reveal">
-        <p class="kicker">The pattern</p>
-        <h2>Continuous improvement works when each problem gets a specific control.</h2>
-        <div class="hero-links"><a href="engineering-visibility.html">Next: Engineering Operations Dashboard →</a><a href="index.html#work">Back to selected work →</a></div>
-      </div>
-    </section>
   </main>
 
   <footer id="contact" class="footer">
     <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>Continuous improvement.</h2></div>
-    <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
+    <div class="footer-links"><a href="engineering-visibility.html">Engineering Operations</a><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
     <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
