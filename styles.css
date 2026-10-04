@@ -1540,3 +1540,315 @@ h2 {
     height: 58px;
   }
 }
+
+
+/* Engineering leadership case study */
+.leadership-case-page {
+  background: #e8e4d9;
+}
+
+.leadership-hero {
+  min-height: 100svh;
+  padding-top: 130px;
+  background:
+    radial-gradient(circle at 78% 22%, rgba(187,255,73,.12), transparent 26%),
+    #e8e4d9;
+}
+
+.leadership-hero-inner {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(420px, .95fr);
+  gap: clamp(50px, 8vw, 120px);
+  align-items: center;
+}
+
+.leadership-hero h1 {
+  max-width: 1040px;
+}
+
+.leadership-meta {
+  border-color: rgba(22,24,23,.22);
+}
+
+.leadership-meta span {
+  color: var(--muted);
+}
+
+.org-system {
+  position: relative;
+  min-height: 520px;
+  border: 1px solid var(--ink);
+  background:
+    linear-gradient(rgba(22,24,23,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22,24,23,.04) 1px, transparent 1px),
+    rgba(244,241,233,.44);
+  background-size: 34px 34px;
+}
+
+.org-system svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.org-system line {
+  stroke: rgba(22,24,23,.32);
+  stroke-width: 1.2;
+  stroke-dasharray: 5 7;
+}
+
+.org-center,
+.org-node {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ink);
+  font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .06em;
+}
+
+.org-center {
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background: var(--accent);
+}
+
+.org-node {
+  width: 92px;
+  height: 60px;
+  background: var(--paper);
+}
+
+.org-n1 { left: 48px; top: 58px; }
+.org-n2 { right: 48px; top: 62px; }
+.org-n3 { left: 28px; top: 230px; }
+.org-n4 { right: 24px; top: 230px; width: 112px; }
+.org-n5 { left: 58px; bottom: 56px; }
+.org-n6 { right: 52px; bottom: 58px; }
+
+.leadership-problems {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.leadership-problem {
+  min-height: 260px;
+  padding: 28px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+
+.leadership-problem > span {
+  font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--muted);
+}
+
+.leadership-problem h3 {
+  margin-top: auto;
+  margin-bottom: 14px;
+  font-size: 30px;
+  letter-spacing: -.025em;
+}
+
+.leadership-problem p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.leadership-model-section {
+  background:
+    radial-gradient(circle at 20% 10%, rgba(187,255,73,.06), transparent 28%),
+    var(--dark);
+}
+
+.leadership-model {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+}
+
+.model-stage {
+  min-height: 330px;
+  padding: 26px;
+  border: 1px solid rgba(245,242,234,.22);
+  display: flex;
+  flex-direction: column;
+}
+
+.model-stage > span {
+  font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--accent);
+}
+
+.model-stage h3 {
+  margin: auto 0 18px;
+  font-size: 34px;
+  letter-spacing: -.03em;
+}
+
+.model-stage p {
+  color: rgba(245,242,234,.58);
+  line-height: 1.5;
+}
+
+.model-stage small {
+  margin-top: 24px;
+  color: rgba(245,242,234,.38);
+  font: 700 9px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-transform: uppercase;
+}
+
+.model-link {
+  display: grid;
+  place-items: center;
+  padding: 0 8px;
+  color: rgba(245,242,234,.35);
+}
+
+.leadership-examples-section {
+  background: #d8d4c7;
+}
+
+.leadership-example-list {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+  border-top: 1px solid rgba(22,24,23,.4);
+}
+
+.leadership-example {
+  display: grid;
+  grid-template-columns: minmax(70px,.18fr) minmax(0,1.82fr);
+  gap: 40px;
+  padding: 42px 0 48px;
+  border-bottom: 1px solid rgba(22,24,23,.3);
+}
+
+.leadership-example-num {
+  font: 800 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.example-label {
+  margin-bottom: 14px;
+  font: 800 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
+
+.leadership-example h3 {
+  margin-bottom: 16px;
+  font-size: clamp(30px, 3.5vw, 54px);
+  line-height: 1.04;
+  letter-spacing: -.035em;
+}
+
+.leadership-example p:last-child {
+  max-width: 900px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.62;
+}
+
+.people-points {
+  margin-top: 70px;
+  border-top: 1px solid var(--line);
+}
+
+.people-point {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 50px minmax(200px,.8fr) minmax(260px,1.2fr);
+  gap: 26px;
+  border-bottom: 1px solid var(--line);
+}
+
+.people-point span {
+  font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--muted);
+}
+
+.people-point strong {
+  font-size: 22px;
+}
+
+.people-point p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.leadership-close {
+  background: var(--accent);
+}
+
+.leadership-close .next-panel {
+  min-height: 72vh;
+}
+
+@media (max-width: 1080px) {
+  .leadership-hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .org-system {
+    max-width: 720px;
+  }
+
+  .leadership-model {
+    grid-template-columns: 1fr;
+  }
+
+  .model-link {
+    height: 30px;
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .leadership-hero {
+    padding-top: 110px;
+  }
+
+  .leadership-problems {
+    grid-template-columns: 1fr;
+  }
+
+  .org-system {
+    min-height: 420px;
+  }
+
+  .org-node {
+    width: 70px;
+    height: 52px;
+  }
+
+  .org-n4 {
+    width: 90px;
+  }
+
+  .leadership-example {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .people-point {
+    grid-template-columns: 34px 1fr;
+  }
+
+  .people-point p {
+    grid-column: 2;
+  }
+}
