@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engineering Execution System — Ben Lin</title>
-  <meta name="description" content="A continuous-improvement case study: requirement decomposition, sprint execution, Definition of Done, verification evidence, and change impact analysis." />
+  <title>Continuous Improvement — Ben Lin</title>
+  <meta name="description" content="Three engineering process improvements: requirement decomposition, sprint task management, and change management." />
   <meta name="theme-color" content="#151816" />
   <link rel="canonical" href="https://benlatrobe.github.io/execution-system.html" />
-  <meta property="og:title" content="Engineering Execution System — Ben Lin" />
-  <meta property="og:description" content="From manager-specific task tracking to a traceable requirements-to-verification execution system." />
+  <meta property="og:title" content="Continuous Improvement — Ben Lin" />
+  <meta property="og:description" content="Requirement decomposition, sprint task management, and change management as separate engineering improvement initiatives." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://benlatrobe.github.io/execution-system.html" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
@@ -20,7 +19,7 @@
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
   <header class="site-header">
     <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
-    <nav class="nav"><a href="#before-after">Before / After</a><a href="#system">System</a><a href="#change">Change</a><a href="index.html#work">Home</a></nav>
+    <nav class="nav"><a href="#requirements">Requirements</a><a href="#sprint">Sprint</a><a href="#change">Change</a><a href="index.html#work">Home</a></nav>
   </header>
 
   <main id="top">
@@ -28,91 +27,97 @@
       <div class="case-hero-inner">
         <div class="case-intro reveal">
           <p class="eyebrow">Selected work / continuous improvement</p>
-          <h1>From requirements to controlled execution.</h1>
-          <p class="case-deck">Standardizing how engineering work moves from requirements to tasks, completion evidence, and controlled change.</p>
-          <div class="case-meta">
-            <div><span>PROBLEM</span><strong>Different managers, different execution methods</strong></div>
-            <div><span>CHANGE</span><strong>Common sprint + evidence model</strong></div>
-            <div><span>RESULT</span><strong>More visible and traceable execution</strong></div>
-          </div>
+          <h1>Three problems. Three engineering improvements.</h1>
+          <p class="case-deck">Requirement decomposition, sprint task management, and change management each solved a different execution problem.</p>
         </div>
-        <div class="exec-hero-visual reveal">
-          <div class="exec-chain">
-            <div><span>01</span><strong>REQUIREMENT</strong></div><i>↓</i>
-            <div><span>02</span><strong>DECOMPOSE</strong></div><i>↓</i>
-            <div><span>03</span><strong>SPRINT</strong></div><i>↓</i>
-            <div><span>04</span><strong>DoD</strong></div><i>↓</i>
-            <div class="exec-highlight"><span>05</span><strong>EVIDENCE</strong></div>
-          </div>
+        <div class="ci-hero-grid reveal">
+          <div><span>01</span><strong>REQUIREMENTS</strong><small>clarify ownership</small></div>
+          <div><span>02</span><strong>SPRINTS</strong><small>standardize execution</small></div>
+          <div><span>03</span><strong>CHANGE</strong><small>control impact</small></div>
         </div>
       </div>
     </section>
 
-    <section id="before-after" class="section case-light">
-      <div class="section-index">01 / BEFORE → AFTER</div>
-      <div class="section-heading reveal">
-        <p class="kicker">The improvement</p>
-        <h2>Replace local tracking with a shared execution model.</h2>
+    <section id="requirements" class="section case-light">
+      <div class="section-index">01 / REQUIREMENT DECOMPOSITION</div>
+      <div class="improvement-header reveal">
+        <div><p class="kicker">Problem</p><h2>System requirements did not always translate into clear engineering ownership.</h2></div>
+        <div class="improvement-problem"><span>SYMPTOM</span><strong>Interfaces and integration risks became visible too late.</strong></div>
       </div>
-      <div class="before-after-grid">
-        <article class="ba-panel ba-before reveal">
+
+      <div class="improvement-flow reveal">
+        <div><span>INPUT</span><strong>System requirement</strong></div><i>→</i>
+        <div><span>BREAK DOWN</span><strong>Subsystem requirements</strong></div><i>→</i>
+        <div><span>ASSIGN</span><strong>Owned engineering work</strong></div><i>→</i>
+        <div class="improvement-highlight"><span>CLOSE</span><strong>Verification evidence</strong></div>
+      </div>
+
+      <div class="improvement-outcome reveal">
+        <strong>&lt; 5 months</strong>
+        <span>One cross-functional program was delivered in under five months against an initial six-month estimate using clear decomposition, ownership, trade-off decisions, and sprint execution.</span>
+      </div>
+    </section>
+
+    <section id="sprint" class="section section-dark ci-sprint-section">
+      <div class="section-index">02 / SPRINT TASK MANAGEMENT</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Problem</p>
+        <h2>Every engineering manager had a different way to track work.</h2>
+      </div>
+
+      <div class="sprint-before-after">
+        <article class="sprint-panel reveal">
           <span>BEFORE</span>
-          <div class="ba-flow">
-            <div>Requirements</div><i>↓</i><div>Manager interpretation</div><i>↓</i><div>Local task tracking</div><i>↓</i><div>Individual completion</div><i>↓</i><div>Late verification</div>
+          <div class="manager-lanes">
+            <div><strong>Manager A</strong><small>Excel</small></div>
+            <div><strong>Manager B</strong><small>Excel</small></div>
+            <div><strong>Manager C</strong><small>local tracking</small></div>
           </div>
-          <div class="ba-notes"><small>Different methods</small><small>Mostly spreadsheet-based</small><small>Weak requirement-to-task traceability</small></div>
+          <p>No common view of backlog, ownership, capacity, or completion.</p>
         </article>
-        <article class="ba-panel ba-after reveal">
+        <article class="sprint-panel sprint-after reveal">
           <span>AFTER</span>
-          <div class="ba-flow">
-            <div>Requirements</div><i>↓</i><div>Decomposition + ownership</div><i>↓</i><div>Sprint planning</div><i>↓</i><div>Definition of Done</div><i>↓</i><div>Verification evidence</div>
+          <div class="sprint-lane">
+            <div>BACKLOG</div><i>→</i><div>SPRINT</div><i>→</i><div>OWNER</div><i>→</i><div>DoD</div><i>→</i><div>REVIEW</div>
           </div>
-          <div class="ba-notes"><small>Common workflow</small><small>Visible ownership</small><small>Evidence-based completion</small></div>
+          <p>Common Azure DevOps sprint rhythm with visible ownership and Definition of Done.</p>
         </article>
-      </div>
-    </section>
-
-    <section id="system" class="section section-dark">
-      <div class="section-index">02 / EXECUTION SYSTEM</div>
-      <div class="section-heading reveal">
-        <p class="kicker">Five connected controls</p>
-        <h2>Completion means more than closing a task.</h2>
-      </div>
-      <div class="control-grid">
-        <article class="control-card reveal"><span>01</span><h3>Requirement decomposition</h3><p>Break system intent into owned subsystem work.</p></article>
-        <article class="control-card reveal"><span>02</span><h3>Sprint execution</h3><p>Use one task rhythm across engineering managers and teams.</p></article>
-        <article class="control-card reveal"><span>03</span><h3>Definition of Done</h3><p>Define what must exist before work is considered complete.</p></article>
-        <article class="control-card reveal"><span>04</span><h3>Verification evidence</h3><p>Attach objective results to the work they support.</p></article>
-        <article class="control-card reveal"><span>05</span><h3>Ownership</h3><p>Make task, subsystem, and interface responsibility visible.</p></article>
       </div>
     </section>
 
     <section id="change" class="section change-section">
       <div class="section-index">03 / CHANGE MANAGEMENT</div>
       <div class="split">
-        <div class="sticky-title reveal"><p class="kicker">When the design changes</p><h2>Change should reopen the right work—not everything.</h2></div>
+        <div class="sticky-title reveal">
+          <p class="kicker">Problem</p>
+          <h2>A design change can invalidate more than the drawing that changed.</h2>
+        </div>
         <div class="story-column">
-          <div class="change-flow reveal">
-            <div><span>1</span><strong>CHANGE</strong><small>requirement / design</small></div><i>→</i>
-            <div><span>2</span><strong>IMPACT</strong><small>affected subsystems</small></div><i>→</i>
-            <div><span>3</span><strong>OWNER</strong><small>responsible engineer</small></div><i>→</i>
-            <div><span>4</span><strong>RE-VERIFY</strong><small>new evidence</small></div>
+          <div class="change-impact-map reveal">
+            <div class="change-source"><span>CHANGE</span><strong>Requirement / design / component</strong></div>
+            <i>↓</i>
+            <div class="change-impact-branches">
+              <span>requirements</span><span>subsystems</span><span>interfaces</span><span>tasks</span><span>verification</span>
+            </div>
+            <i>↓</i>
+            <div class="change-close"><span>CONTROL</span><strong>Owner → impact analysis → update → re-verify → release</strong></div>
           </div>
-          <p class="body-copy reveal">The same model that improves daily execution also makes change impact easier to reason about and review.</p>
+          <p class="body-copy reveal">The goal was not more change paperwork. It was to make affected work and re-verification explicit before release.</p>
         </div>
       </div>
     </section>
 
     <section class="section case-close">
       <div class="next-panel reveal">
-        <p class="kicker">The larger idea</p>
-        <h2>Engineering process should make the state of the product easier to see.</h2>
-        <div class="hero-links"><a href="engineering-visibility.html">Next: engineering visibility →</a><a href="index.html#work">Back to selected work →</a></div>
+        <p class="kicker">The pattern</p>
+        <h2>Continuous improvement works when each problem gets a specific control.</h2>
+        <div class="hero-links"><a href="engineering-visibility.html">Next: Engineering Operations Dashboard →</a><a href="index.html#work">Back to selected work →</a></div>
       </div>
     </section>
   </main>
+
   <footer id="contact" class="footer">
-    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>Engineering execution.</h2></div>
+    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>Continuous improvement.</h2></div>
     <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
     <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
   </footer>
