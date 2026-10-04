@@ -43,6 +43,7 @@ jobs:
               "engineering-visibility.html",
               "connected-positioning.html",
               "wireless-module.html",
+              "storage-platform.html",
               "cv.html",
           ]
           viewports = {
