@@ -2535,3 +2535,30 @@ button:focus-visible {
     margin-bottom: 18px;
   }
 }
+
+
+/* Execution mobile containment */
+.execution-case-page .case-hero-inner,
+.execution-case-page .case-intro,
+.execution-case-page .exec-hero-visual,
+.execution-case-page .case-meta {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  .execution-case-page .case-hero-inner {
+    display: block;
+    width: 100%;
+  }
+
+  .execution-case-page .exec-hero-visual {
+    margin-top: 42px;
+  }
+
+  .execution-case-page .case-meta strong,
+  .execution-case-page .case-deck,
+  .execution-case-page h1 {
+    overflow-wrap: anywhere;
+  }
+}
