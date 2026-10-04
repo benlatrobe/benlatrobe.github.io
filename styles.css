@@ -690,3 +690,50 @@ h2 {
 
   .footer-meta { flex-direction: column; }
 }
+
+
+/* Selected work refinements */
+.work-card-featured {
+  grid-column: span 2;
+  min-height: 500px;
+  background:
+    radial-gradient(circle at 78% 30%, rgba(187,255,73,.16), transparent 28%),
+    var(--dark-2);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.project-tags span {
+  padding: 8px 10px;
+  border: 1px solid rgba(245,242,234,.28);
+  font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: rgba(245,242,234,.75);
+}
+
+.project-link {
+  align-self: flex-start;
+  margin-top: 28px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.project-link:hover {
+  color: var(--accent-2);
+}
+
+@media (max-width: 760px) {
+  .work-card-featured {
+    grid-column: auto;
+    min-height: 420px;
+  }
+}
