@@ -4,116 +4,220 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Engineering Operations Dashboard — Ben Lin</title>
-  <meta name="description" content="A full-stack engineering operations platform integrating labor, task, schedule, requirements, PLM, and BOM data into self-service engineering views." />
+  <meta name="description" content="An implemented full-stack engineering operations platform connecting utilization, capacity, management attention, project tracking, and sprint execution." />
   <meta name="theme-color" content="#151816" />
   <link rel="canonical" href="https://benlatrobe.github.io/engineering-visibility.html" />
   <meta property="og:title" content="Engineering Operations Dashboard — Ben Lin" />
-  <meta property="og:description" content="React, FastAPI, DuckDB and engineering-system integrations for shared engineering operations visibility." />
+  <meta property="og:description" content="Real, sanitized product screenshots from a React + FastAPI engineering operations platform." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="case-page visibility-case-page">
+<body class="case-page visibility-case-page ops-v2-page">
   <a class="skip-link" href="#top">Skip to content</a>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
   <header class="site-header">
     <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
-    <nav class="nav"><a href="#architecture">Architecture</a><a href="#stack">Stack</a><a href="#capabilities">Capabilities</a><a href="index.html#work">Home</a></nav>
+    <nav class="nav">
+      <a href="#architecture">Architecture</a>
+      <a href="#management">Management</a>
+      <a href="#execution">Execution</a>
+      <a href="index.html#work">Home</a>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="case-hero section">
-      <div class="case-hero-inner">
+    <section class="case-hero section ops-v2-hero">
+      <div class="case-hero-inner ops-v2-hero-inner">
         <div class="case-intro reveal">
           <p class="eyebrow">Selected work / engineering operations</p>
           <h1>Engineering Operations Dashboard</h1>
-          <p class="case-deck">A full-stack operations platform that connects fragmented engineering data into one self-service execution view.</p>
-          <div class="hero-links"><a href="https://github.com/benlatrobe/dashboard" target="_blank" rel="noreferrer">View project on GitHub ↗</a></div>
+          <p class="case-deck">Connect fragmented engineering data into one operating view for engineers, project managers, and leaders.</p>
+
+          <div class="ops-v2-proof">
+            <span>IMPLEMENTED APPLICATION</span>
+            <span>SANITIZED SCREENSHOTS</span>
+            <span>FULL-STACK DEVELOPMENT</span>
+          </div>
+
+          <div class="hero-links">
+            <a href="https://github.com/benlatrobe/dashboard" target="_blank" rel="noreferrer">View project on GitHub ↗</a>
+          </div>
         </div>
 
-        <div class="ops-hero-flow reveal">
-          <div class="ops-source-row"><span>LABOR</span><span>DEVOPS</span><span>SCHEDULE</span><span>PLM</span><span>BOM</span></div>
-          <i>↓</i>
-          <div class="ops-core">NORMALIZE + LINK</div>
-          <i>↓</i>
-          <div class="ops-view-row"><span>ENGINEER</span><span>PM</span><span>MANAGER</span><span>ADMIN</span></div>
-        </div>
+        <figure class="ops-browser-frame ops-hero-shot reveal">
+          <div class="ops-browser-bar">
+            <i></i><i></i><i></i>
+            <span>organization utilization</span>
+          </div>
+          <img src="assets/dashboard/organization-utilization.png" alt="Sanitized Engineering Operations Dashboard organization utilization view" loading="eager" />
+          <figcaption>Organization-level capacity, work mix, team comparison, and project concentration in one view.</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="architecture" class="section case-light">
+    <section id="architecture" class="section case-light ops-v2-architecture-section">
       <div class="section-index">01 / ARCHITECTURE</div>
       <div class="section-heading reveal">
-        <p class="kicker">Do not replace every source system</p>
-        <h2>Integrate the signals that matter.</h2>
+        <p class="kicker">Integrate — do not replace</p>
+        <h2>Bring engineering signals together without rebuilding every source system.</h2>
       </div>
 
-      <div class="ops-architecture reveal">
-        <div class="ops-layer">
-          <span>SOURCE SYSTEMS</span>
-          <div><strong>Labor / time exports</strong><strong>Azure DevOps</strong><strong>Smartsheet</strong><strong>PLM / BOM</strong></div>
+      <div class="ops-v2-pipeline reveal">
+        <div class="ops-v2-sources">
+          <span>LABOR / TIME</span>
+          <span>AZURE DEVOPS</span>
+          <span>SCHEDULES</span>
+          <span>PLM</span>
+          <span>BOM</span>
         </div>
+
         <i>↓</i>
-        <div class="ops-layer ops-data">
-          <span>DATA</span>
-          <div><strong>ETL</strong><strong>DuckDB</strong><strong>stg → core → pres</strong></div>
+
+        <div class="ops-v2-data">
+          <strong>ETL + NORMALIZATION</strong>
+          <span>DuckDB · staging → core → presentation</span>
         </div>
+
         <i>↓</i>
-        <div class="ops-layer">
-          <span>BACKEND</span>
-          <div><strong>FastAPI</strong><strong>Repositories</strong><strong>Sync services</strong></div>
+
+        <div class="ops-v2-api">
+          <strong>FASTAPI</strong>
+          <span>services · repositories · integrations</span>
         </div>
+
         <i>↓</i>
-        <div class="ops-layer ops-ui">
-          <span>FRONTEND</span>
-          <div><strong>React SPA</strong><strong>Admin UI</strong><strong>Role-based views</strong></div>
+
+        <div class="ops-v2-ui">
+          <strong>REACT SPA</strong>
+          <span>Engineer · PM · Manager · Admin</span>
         </div>
+      </div>
+
+      <div class="ops-v2-stack-strip reveal">
+        <span>React 19</span>
+        <span>TypeScript</span>
+        <span>Vite</span>
+        <span>Tailwind</span>
+        <span>Recharts</span>
+        <span>Python</span>
+        <span>FastAPI</span>
+        <span>DuckDB</span>
+        <span>Pytest</span>
+        <span>Vitest</span>
+        <span>Playwright</span>
       </div>
     </section>
 
-    <section id="stack" class="section section-dark">
-      <div class="section-index">02 / TECHNICAL STACK</div>
-      <div class="section-heading reveal"><p class="kicker">Full-stack implementation</p><h2>Software architecture in service of engineering operations.</h2></div>
+    <section id="management" class="section section-dark ops-v2-management-section">
+      <div class="section-index">02 / MANAGEMENT VIEWS</div>
+      <div class="section-heading reveal">
+        <p class="kicker">From reporting to intervention</p>
+        <h2>See capacity. Then see where attention is needed.</h2>
+      </div>
 
-      <div class="ops-stack-grid">
-        <article class="ops-stack-card reveal"><span>FRONTEND</span><h3>React 19</h3><p>React Router · Vite · Tailwind · Recharts · Zustand · TanStack Query</p></article>
-        <article class="ops-stack-card reveal"><span>BACKEND</span><h3>Python + FastAPI</h3><p>API routes · service orchestration · repositories · auth / capability model</p></article>
-        <article class="ops-stack-card reveal"><span>DATA</span><h3>DuckDB</h3><p>staging, normalized core tables, analytical presentation views, ETL pipelines</p></article>
-        <article class="ops-stack-card reveal"><span>INTEGRATIONS</span><h3>Engineering systems</h3><p>Azure DevOps · Smartsheet · Windchill / PLM · labor/time imports</p></article>
-        <article class="ops-stack-card reveal"><span>TEST</span><h3>Pytest + Vitest</h3><p>Backend and frontend verification with architecture guardrails.</p></article>
-        <article class="ops-stack-card reveal"><span>AUTOMATION</span><h3>Playwright + ARQ</h3><p>Browser-backed data acquisition plus optional queued background execution.</p></article>
+      <div class="ops-screenshot-pair">
+        <figure class="ops-browser-frame ops-dark-frame reveal">
+          <div class="ops-browser-bar">
+            <i></i><i></i><i></i>
+            <span>team capacity</span>
+          </div>
+          <img src="assets/dashboard/team-capacity.png" alt="Sanitized team capacity and utilization trend view" loading="lazy" />
+          <figcaption>
+            <strong>Team capacity trend</strong>
+            <span>Actual + forecast utilization, available hours, contributor load, and project allocation.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="ops-browser-frame ops-dark-frame reveal">
+          <div class="ops-browser-bar">
+            <i></i><i></i><i></i>
+            <span>manager attention</span>
+          </div>
+          <img src="assets/dashboard/manager-attention.png" alt="Sanitized manager attention queue view" loading="lazy" />
+          <figcaption>
+            <strong>Manager attention queue</strong>
+            <span>Turn utilization, timelog recency, and project-dependency signals into prioritized follow-up.</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="capabilities" class="section ops-capability-section">
-      <div class="section-index">03 / OPERATIONAL VIEWS</div>
-      <div class="section-heading reveal"><p class="kicker">What the platform actually does</p><h2>Make engineering execution inspectable without rebuilding it manually.</h2></div>
-
-      <div class="ops-capability-grid">
-        <article class="ops-capability reveal"><span>01</span><h3>Utilization + allocation</h3><p>Hours, FTE, amount, billable / non-billable, team and individual loading.</p></article>
-        <article class="ops-capability reveal"><span>02</span><h3>Project execution</h3><p>Requirements, sprint/task data, loading versus actuals, schedules and project detail.</p></article>
-        <article class="ops-capability reveal"><span>03</span><h3>Personal workload</h3><p>Assignments, due dates, workload and task context in one employee view.</p></article>
-        <article class="ops-capability reveal"><span>04</span><h3>Manager visibility</h3><p>Team utilization, capacity, workload signals and attention views.</p></article>
+    <section id="execution" class="section ops-v2-execution-section">
+      <div class="section-index">03 / EXECUTION EVIDENCE</div>
+      <div class="section-heading reveal">
+        <p class="kicker">A dashboard should drill into the work</p>
+        <h2>Management signals stay connected to project and sprint evidence.</h2>
       </div>
 
-      <div class="outcome-grid ops-outcome">
-        <div class="outcome-number reveal"><strong>20+</strong><span>initial self-service users</span></div>
-        <div class="outcome-arrow reveal">→</div>
-        <div class="outcome-number reveal"><strong>~200</strong><span>person design organization with shared visibility</span></div>
+      <div class="ops-screenshot-pair">
+        <figure class="ops-browser-frame reveal">
+          <div class="ops-browser-bar">
+            <i></i><i></i><i></i>
+            <span>project tracker</span>
+          </div>
+          <img src="assets/dashboard/project-tracker.png" alt="Sanitized engineering project tracker with task ownership and workflow state" loading="lazy" />
+          <figcaption>
+            <strong>Project tracker</strong>
+            <span>Task ownership, status, due dates, filters, and adjacent engineering evidence.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="ops-browser-frame reveal">
+          <div class="ops-browser-bar">
+            <i></i><i></i><i></i>
+            <span>sprint execution</span>
+          </div>
+          <img src="assets/dashboard/sprint-board.png" alt="Sanitized sprint execution board grouped by workflow state" loading="lazy" />
+          <figcaption>
+            <strong>Sprint execution board</strong>
+            <span>Requirement-linked work distributed across Proposed, Active, Resolved, and Closed states.</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="ops-v2-trace reveal">
+        <span>ORGANIZATION SIGNAL</span>
+        <i>→</i>
+        <span>TEAM</span>
+        <i>→</i>
+        <span>EMPLOYEE / PROJECT</span>
+        <i>→</i>
+        <span>TASK / SPRINT</span>
       </div>
     </section>
 
-    <section class="section case-close">
-      <div class="next-panel reveal"><p class="kicker">The point</p><h2>The dashboard was not the product. Better engineering decisions were.</h2><div class="hero-links"><a href="execution-system.html">See continuous improvement →</a><a href="index.html#work">Back to selected work →</a></div></div>
+    <section class="section ops-v2-outcome-section">
+      <div class="section-index">04 / SCALE</div>
+      <div class="ops-v2-scale">
+        <div class="ops-v2-scale-number reveal">
+          <strong>20+</strong>
+          <span>initial self-service users</span>
+        </div>
+        <i class="reveal">→</i>
+        <div class="ops-v2-scale-number reveal">
+          <strong>~200</strong>
+          <span>person design organization with shared visibility</span>
+        </div>
+      </div>
+
+      <p class="ops-v2-evidence-note reveal">Screenshots are from the implemented application. Employee, customer, project, site, team, task, and identifier text was pseudonymized for portfolio use; product behavior and aggregate operating signals were preserved.</p>
     </section>
   </main>
 
   <footer id="contact" class="footer">
     <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>Engineering operations.</h2></div>
-    <div class="footer-links"><a href="https://github.com/benlatrobe/dashboard" target="_blank" rel="noreferrer">GitHub</a><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
+    <div class="footer-links">
+      <a href="https://github.com/benlatrobe/dashboard" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="cv.html">CV</a>
+      <a href="mailto:benlatrobe@gmail.com">Email</a>
+      <a href="index.html">Home</a>
+    </div>
     <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
