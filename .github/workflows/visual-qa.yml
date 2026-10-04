@@ -41,6 +41,8 @@ jobs:
               "execution-system.html",
               "npi-readiness.html",
               "engineering-visibility.html",
+              "connected-positioning.html",
+              "wireless-module.html",
               "cv.html",
           ]
           viewports = {
