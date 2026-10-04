@@ -1126,11 +1126,21 @@ h2 {
   border-left: 1px solid rgba(245,242,234,.18);
 }
 
-.repo-map div {
+.repo-map div,
+.repo-map a {
   min-height: 110px;
   padding: 18px;
   border-right: 1px solid rgba(245,242,234,.18);
   border-bottom: 1px solid rgba(245,242,234,.18);
+}
+
+.repo-map a {
+  display: block;
+  transition: background .18s ease;
+}
+
+.repo-map a:hover {
+  background: rgba(187,255,73,.06);
 }
 
 .repo-map span,
