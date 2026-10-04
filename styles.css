@@ -1936,3 +1936,10 @@ button:focus-visible {
     min-height: 230px;
   }
 }
+
+
+/* Light hero contrast fixes */
+.product-hero .case-deck,
+.leadership-hero .case-deck {
+  color: var(--muted);
+}
