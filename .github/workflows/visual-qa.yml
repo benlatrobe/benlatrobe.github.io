@@ -1,0 +1,159 @@
+name: Portfolio visual QA
+
+on:
+  push:
+    branches:
+      - portfolio-v1
+
+permissions:
+  contents: read
+
+jobs:
+  visual-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+
+      - name: Install Selenium
+        run: python3 -m pip install --quiet selenium
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 8000 > /tmp/portfolio-http.log 2>&1 &
+          sleep 2
+
+      - name: Run browser QA and capture screenshots
+        run: |
+          cat > /tmp/visual_qa.py <<'PY'
+          import base64
+          import json
+          import os
+          import time
+          from pathlib import Path
+          from selenium import webdriver
+          from selenium.webdriver.chrome.options import Options
+
+          pages = [
+              "index.html",
+              "ai-engineering.html",
+              "product-engineering.html",
+              "engineering-leadership.html",
+          ]
+          viewports = {
+              "desktop": (1440, 1000),
+              "tablet": (1024, 900),
+              "mobile": (390, 844),
+          }
+
+          out = Path("qa-screenshots")
+          out.mkdir(exist_ok=True)
+          results = []
+          failed = False
+
+          options = Options()
+          options.add_argument("--headless=new")
+          options.add_argument("--no-sandbox")
+          options.add_argument("--disable-dev-shm-usage")
+          options.add_argument("--hide-scrollbars")
+          options.add_argument("--force-device-scale-factor=1")
+
+          driver = webdriver.Chrome(options=options)
+          try:
+              for viewport_name, (width, height) in viewports.items():
+                  driver.set_window_size(width, height)
+
+                  for page in pages:
+                      url = f"http://127.0.0.1:8000/{page}"
+                      driver.get(url)
+                      time.sleep(0.35)
+
+                      driver.execute_script(
+                          "document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));"
+                      )
+
+                      audit = driver.execute_script(
+                          """
+                          const width = window.innerWidth;
+                          const doc = document.documentElement;
+                          const offenders = [...document.querySelectorAll('body *')]
+                            .filter(el => {
+                              const s = getComputedStyle(el);
+                              if (s.position === 'fixed') return false;
+                              const r = el.getBoundingClientRect();
+                              return r.right > width + 2 || r.left < -2;
+                            })
+                            .slice(0, 20)
+                            .map(el => {
+                              const r = el.getBoundingClientRect();
+                              return {
+                                tag: el.tagName,
+                                cls: el.className || '',
+                                left: Math.round(r.left),
+                                right: Math.round(r.right),
+                                width: Math.round(r.width)
+                              };
+                            });
+
+                          const links = [...document.querySelectorAll('a[href^="#"]')]
+                            .map(a => a.getAttribute('href'))
+                            .filter(h => h && h.length > 1);
+                          const missingAnchors = links.filter(h => !document.querySelector(h));
+
+                          return {
+                            viewportWidth: width,
+                            scrollWidth: doc.scrollWidth,
+                            scrollHeight: doc.scrollHeight,
+                            horizontalOverflow: doc.scrollWidth > width + 2,
+                            offenders,
+                            missingAnchors
+                          };
+                          """
+                      )
+
+                      if audit["horizontalOverflow"] or audit["missingAnchors"]:
+                          failed = True
+
+                      driver.execute_script("window.scrollTo(0, 0)")
+                      time.sleep(0.1)
+                      top_path = out / f"{page.replace('.html','')}-{viewport_name}-top.png"
+                      driver.save_screenshot(str(top_path))
+
+                      # Capture a viewport at the selected-work / main-content area.
+                      target = "#work" if page == "index.html" else "main section:nth-of-type(2)"
+                      driver.execute_script(
+                          """
+                          const el = document.querySelector(arguments[0]);
+                          if (el) el.scrollIntoView({block:'start'});
+                          """,
+                          target,
+                      )
+                      time.sleep(0.15)
+                      mid_path = out / f"{page.replace('.html','')}-{viewport_name}-content.png"
+                      driver.save_screenshot(str(mid_path))
+
+                      results.append({
+                          "page": page,
+                          "viewport": viewport_name,
+                          **audit,
+                      })
+
+              Path("qa-results.json").write_text(json.dumps(results, indent=2))
+              print(json.dumps(results, indent=2))
+          finally:
+              driver.quit()
+
+          if failed:
+              raise SystemExit("Browser QA found horizontal overflow or missing anchors.")
+          PY
+          python3 /tmp/visual_qa.py
+
+      - name: Upload screenshots and QA results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-visual-qa
+          path: |
+            qa-screenshots/
+            qa-results.json
+          if-no-files-found: error
