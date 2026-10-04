@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Visibility — Ben Lin</title>
+  <meta name="description" content="An engineering-operations case study: integrating fragmented planning, requirements, PLM, BOM, and task data into self-service execution views." />
+  <meta name="theme-color" content="#151816" />
+  <link rel="canonical" href="https://benlatrobe.github.io/engineering-visibility.html" />
+  <meta property="og:title" content="Engineering Visibility — Ben Lin" />
+  <meta property="og:description" content="From fragmented engineering data to shared self-service execution visibility." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="case-page visibility-case-page">
+  <a class="skip-link" href="#top">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
+    <nav class="nav"><a href="#before">Before</a><a href="#model">Model</a><a href="#outcome">Outcome</a><a href="index.html#work">Home</a></nav>
+  </header>
+  <main id="top">
+    <section class="case-hero section">
+      <div class="case-hero-inner">
+        <div class="case-intro reveal">
+          <p class="eyebrow">Selected work / engineering operations</p>
+          <h1>From fragmented data to shared visibility.</h1>
+          <p class="case-deck">Connecting planning, task, requirements, product-data, and schedule signals into a common engineering operating view.</p>
+        </div>
+        <div class="visibility-hero reveal">
+          <div class="source-cloud">
+            <span>REQUIREMENTS</span><span>TASKS</span><span>SCHEDULE</span><span>PLM</span><span>BOM</span>
+          </div>
+          <i>↓</i>
+          <div class="visibility-core">SHARED VIEW</div>
+          <i>↓</i>
+          <div class="audience-row"><span>TEAM</span><span>MANAGER</span><span>LEADERSHIP</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="before" class="section case-light">
+      <div class="section-index">01 / BEFORE</div>
+      <div class="split">
+        <div class="sticky-title reveal"><p class="kicker">The problem</p><h2>Each tool knew part of the story.</h2></div>
+        <div class="story-column">
+          <div class="fragment-grid reveal">
+            <div>Requirements<small>what should happen</small></div>
+            <div>Task tracking<small>what people are doing</small></div>
+            <div>Schedules<small>when it should happen</small></div>
+            <div>Product data<small>what is released</small></div>
+            <div>BOM data<small>what is in the product</small></div>
+            <div class="fragment-problem">Manual interpretation<small>needed to connect the picture</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="model" class="section section-dark">
+      <div class="section-index">02 / OPERATING VIEW</div>
+      <div class="section-heading reveal"><p class="kicker">The change</p><h2>Bring signals together without replacing every system.</h2></div>
+      <div class="visibility-model reveal">
+        <div class="vm-sources"><span>requirements</span><span>execution</span><span>schedule</span><span>product data</span><span>BOM</span></div>
+        <i>↓</i>
+        <div class="vm-normalize"><strong>INTEGRATED VIEWS</strong><small>common context + linked status</small></div>
+        <i>↓</i>
+        <div class="vm-views"><span>capacity</span><span>program status</span><span>ownership</span><span>readiness</span></div>
+      </div>
+    </section>
+
+    <section id="outcome" class="section case-light">
+      <div class="section-index">03 / OUTCOME</div>
+      <div class="outcome-grid">
+        <div class="outcome-number reveal"><strong>20+</strong><span>initial self-service users</span></div>
+        <div class="outcome-arrow reveal">→</div>
+        <div class="outcome-number reveal"><strong>~200</strong><span>person design organization with shared visibility</span></div>
+      </div>
+      <p class="visibility-note reveal">The value was not another dashboard. It was reducing the amount of manual interpretation needed to understand engineering execution.</p>
+    </section>
+
+    <section class="section case-close">
+      <div class="next-panel reveal"><p class="kicker">The principle</p><h2>Visibility is part of the operating system.</h2><div class="hero-links"><a href="execution-system.html">See execution system →</a><a href="index.html#work">Back to selected work →</a></div></div>
+    </section>
+  </main>
+  <footer id="contact" class="footer">
+    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>Engineering visibility.</h2></div>
+    <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
+    <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
