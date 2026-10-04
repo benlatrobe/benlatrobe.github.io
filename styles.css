@@ -9361,3 +9361,47 @@ button:focus-visible {
   font-size: 14px;
   line-height: 1.55;
 }
+
+
+.ops-v2-sources span small {
+  display:block;
+  margin-top:6px;
+  color:var(--muted);
+  font-size:8px;
+  font-weight:600;
+  line-height:1.3;
+}
+
+.ops-v2-automation-note {
+  width:min(100%,1050px);
+  margin:26px auto 0;
+  padding:18px 20px;
+  border:1px solid var(--line);
+  display:grid;
+  grid-template-columns:auto auto 1fr;
+  gap:16px;
+  align-items:center;
+  background:#f0ede5;
+}
+
+.ops-v2-automation-note > span {
+  font:800 8px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing:.06em;
+  color:var(--muted);
+}
+
+.ops-v2-automation-note > strong {
+  font-size:14px;
+}
+
+.ops-v2-automation-note > small {
+  color:var(--muted);
+  line-height:1.45;
+}
+
+@media (max-width:760px) {
+  .ops-v2-automation-note {
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+}
