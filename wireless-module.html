@@ -81,51 +81,102 @@
       </div>
     </section>
 
-    <section id="integration" class="section case-light nfc-three-section">
+    <section id="integration" class="section case-light nfc-svg-section">
       <div class="section-index">01 / SYSTEM INTEGRATION</div>
       <div class="section-heading reveal">
-        <p class="kicker">3D exploded assembly</p>
-        <h2>The module, antenna, and touchpad are separate parts of one NFC system.</h2>
+        <p class="kicker">Exploded assembly</p>
+        <h2>The touchpad, antenna, tail, and NFC module are separate parts of one system.</h2>
       </div>
 
-      <div class="nfc-three-layout">
-        <div class="nfc-three-panel reveal">
-          <div id="nfc-three-root" class="nfc-three-root" aria-label="Interactive 3D NFC module, antenna and touchpad assembly">
-            <div class="nfc-three-fallback">
-              <span>3D ASSEMBLY</span>
-              <small>Loading interactive model…</small>
-            </div>
+      <div class="nfc-svg-layout">
+        <div class="nfc-svg-panel reveal">
+          <div class="nfc-svg-toolbar">
+            <button type="button" data-nfc-svg-view="exploded" class="is-active">Exploded</button>
+            <button type="button" data-nfc-svg-view="assembled">Assembled</button>
+            <span>Simple illustrative assembly</span>
           </div>
 
-          <div class="nfc-three-controls">
-            <button type="button" data-nfc-view="exploded" class="is-active">Exploded</button>
-            <button type="button" data-nfc-view="assembled">Assembled</button>
-            <span>Drag to rotate</span>
-          </div>
+          <svg id="nfc-assembly-svg" class="nfc-assembly-svg is-exploded" viewBox="0 0 920 620" role="img" aria-label="Exploded assembly of laptop touchpad, NFC antenna with integrated tail, and NFC module">
+            <defs>
+              <pattern id="nfcGrid" width="36" height="36" patternUnits="userSpaceOnUse">
+                <path d="M 36 0 L 0 0 0 36" fill="none" stroke="rgba(22,24,23,.05)" stroke-width="1"/>
+              </pattern>
+              <marker id="arrowLine" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#6c706d"/>
+              </marker>
+            </defs>
+
+            <rect x="0" y="0" width="920" height="620" fill="url(#nfcGrid)"/>
+
+            <g class="svg-part svg-touchpad" data-part="touchpad">
+              <polygon points="205,95 650,95 730,160 285,160" fill="#f4f1e9" stroke="#161817" stroke-width="2"/>
+              <polygon points="285,160 730,160 730,205 285,205" fill="#dedbd2" stroke="#161817" stroke-width="2"/>
+              <polygon points="205,95 285,160 285,205 205,140" fill="#e8e4d9" stroke="#161817" stroke-width="2"/>
+              <g class="svg-touch-mark">
+                <path d="M630 123 C647 123 660 136 660 153" fill="none" stroke="#161817" stroke-width="3"/>
+                <path d="M638 130 C648 130 655 137 655 147" fill="none" stroke="#161817" stroke-width="3"/>
+                <circle cx="632" cy="139" r="3" fill="#161817"/>
+              </g>
+              <text x="450" y="74" text-anchor="middle">TOUCHPAD SURFACE / USER TAP AREA</text>
+            </g>
+
+            <g class="svg-part svg-antenna" data-part="antenna">
+              <polygon points="255,265 615,265 675,312 315,312" fill="none" stroke="#bbff49" stroke-width="4"/>
+              <polygon points="272,275 598,275 650,303 324,303" fill="none" stroke="#bbff49" stroke-width="2"/>
+              <polygon points="289,284 580,284 626,295 335,295" fill="none" stroke="#bbff49" stroke-width="2"/>
+              <path d="M615 288 C675 305, 700 338, 730 372 C753 398, 778 412, 810 412" fill="none" stroke="#161817" stroke-width="5" stroke-linecap="round"/>
+              <path d="M615 288 C675 305, 700 338, 730 372 C753 398, 778 412, 810 412" fill="none" stroke="#f4f1e9" stroke-width="2" stroke-linecap="round"/>
+              <rect x="806" y="405" width="22" height="14" rx="2" fill="#f4f1e9" stroke="#161817" stroke-width="2"/>
+              <text x="430" y="245" text-anchor="middle">FLAT NFC ANTENNA</text>
+              <text x="722" y="352" transform="rotate(28 722 352)">INTEGRATED TAIL / FPC</text>
+            </g>
+
+            <g class="svg-part svg-module" data-part="module">
+              <polygon points="735,448 835,448 864,470 764,470" fill="#9fb97b" stroke="#161817" stroke-width="2"/>
+              <polygon points="764,470 864,470 864,515 764,515" fill="#89a16b" stroke="#161817" stroke-width="2"/>
+              <polygon points="735,448 764,470 764,515 735,493" fill="#a9bf8b" stroke="#161817" stroke-width="2"/>
+              <polygon points="770,430 828,430 845,443 786,443" fill="#d7d8d4" stroke="#161817" stroke-width="2"/>
+              <polygon points="786,443 845,443 845,471 786,471" fill="#c7c9c5" stroke="#161817" stroke-width="2"/>
+              <rect x="735" y="466" width="18" height="13" rx="2" fill="#161817"/>
+              <line x1="748" y1="472" x2="806" y2="412" stroke="#6c706d" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arrowLine)"/>
+              <text x="800" y="540" text-anchor="middle">NFC MODULE</text>
+              <text x="800" y="557" text-anchor="middle" class="svg-sub">connector receives antenna tail</text>
+            </g>
+
+            <g class="svg-part svg-host" data-part="host">
+              <polygon points="135,510 620,510 700,560 215,560" fill="none" stroke="#9a9d94" stroke-width="2" stroke-dasharray="8 8"/>
+              <text x="420" y="590" text-anchor="middle" class="svg-sub">SIMPLIFIED LAPTOP HOST / PALMREST CONTEXT</text>
+            </g>
+
+            <g class="svg-explode-guides">
+              <line x1="390" y1="215" x2="390" y2="255" stroke="#6c706d" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arrowLine)"/>
+              <line x1="420" y1="330" x2="420" y2="500" stroke="#6c706d" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arrowLine)"/>
+            </g>
+          </svg>
         </div>
 
-        <aside class="nfc-three-spec reveal">
-          <p class="kicker">Module envelope</p>
-          <div class="nfc-dimension">
-            <strong>10.0</strong><span>mm width</span>
+        <aside class="nfc-svg-notes reveal">
+          <div class="nfc-note-block">
+            <span>01</span>
+            <strong>Touchpad</strong>
+            <p>The visible user interaction surface and tap/read area.</p>
           </div>
-          <div class="nfc-dimension">
-            <strong>17.0</strong><span>mm length</span>
+          <div class="nfc-note-block">
+            <span>02</span>
+            <strong>Antenna</strong>
+            <p>A separate flat loop structure located beneath the touchpad.</p>
           </div>
-          <div class="nfc-dimension">
-            <strong>1.85</strong><span>mm max envelope</span>
+          <div class="nfc-note-block">
+            <span>03</span>
+            <strong>Integrated tail</strong>
+            <p>The antenna tail functions as the interconnect and plugs directly into the module connector.</p>
           </div>
-          <div class="nfc-dimension nfc-dimension-small">
-            <strong>0.40</strong><span>mm PCB thickness</span>
+          <div class="nfc-note-block">
+            <span>04</span>
+            <strong>NFC module</strong>
+            <p>A compact radio/control module integrated elsewhere in the laptop chassis.</p>
           </div>
-          <p class="nfc-spec-note">Nominal module geometry follows the public mechanical drawing. Shield and connector details are simplified for visualization.</p>
-
-          <div class="nfc-layer-key">
-            <div><i class="key-touch"></i><span>Touchpad surface</span></div>
-            <div><i class="key-ant"></i><span>Flat NFC antenna</span></div>
-            <div><i class="key-module"></i><span>NFC module</span></div>
-            <div><i class="key-host"></i><span>Host platform</span></div>
-          </div>
+          <p class="nfc-svg-disclaimer">Illustrative assembly based on the public module mechanical drawing and representative touchpad/antenna parts. Exact OEM mechanical implementation varies by laptop platform.</p>
         </aside>
       </div>
     </section>
@@ -213,25 +264,8 @@
         </div>
       </div>
 
-      <div class="nfc-production-metrics">
-        <article class="reveal"><span>TEST</span><strong>Coverage</strong><small>functional + NFC behavior</small></article>
-        <article class="reveal"><span>YIELD</span><strong>Feedback</strong><small>defects drive correction</small></article>
-        <article class="reveal"><span>CYCLE</span><strong>Capacity</strong><small>automation + line replication</small></article>
-        <article class="reveal"><span>QUALITY</span><strong>Consistency</strong><small>repeatable module output</small></article>
-      </div>
-    </section>
 
-    <section class="section product-close">
-      <div class="next-panel reveal">
-        <p class="kicker">The product lesson</p>
-        <h2>A 10 × 17 mm module still requires system-level integration, certification, and manufacturing execution.</h2>
-        <div class="hero-links">
-          <a href="npi-readiness.html">See NPI readiness →</a>
-          <a href="index.html#work">Back to selected work →</a>
-        </div>
-      </div>
     </section>
-  </main>
 
   <footer id="contact" class="footer">
     <div>
@@ -250,6 +284,5 @@
   </footer>
 
   <script src="script.js"></script>
-  <script type="module" src="nfc-module-3d.js"></script>
 </body>
 </html>
