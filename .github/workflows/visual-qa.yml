@@ -3,6 +3,7 @@ name: Portfolio visual QA
 on:
   push:
     branches:
+      - main
       - portfolio-v1
 
 permissions:
@@ -37,8 +38,10 @@ jobs:
           pages = [
               "index.html",
               "ai-engineering.html",
-              "product-engineering.html",
-              "engineering-leadership.html",
+              "execution-system.html",
+              "npi-readiness.html",
+              "engineering-visibility.html",
+              "cv.html",
           ]
           viewports = {
               "desktop": (1440, 1000),
