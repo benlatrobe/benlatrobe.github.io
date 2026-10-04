@@ -26,9 +26,9 @@
       <span class="brand-name">Ben Lin</span>
     </a>
     <nav class="nav" aria-label="Case study navigation">
-      <a href="#problem">Problem</a>
       <a href="#architecture">Architecture</a>
-      <a href="#principles">Principles</a>
+      <a href="#stack">Stack</a>
+      <a href="#agent-flow">Agent Flow</a>
       <a href="index.html#work">Home</a>
     </nav>
   </header>
@@ -175,8 +175,76 @@
       </div>
     </section>
 
+    <section id="stack" class="section universe-stack-section">
+      <div class="section-index">03 / TECHNICAL STACK</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Built across system layers</p>
+        <h2>Different languages for different responsibilities.</h2>
+      </div>
+
+      <div class="tech-stack-grid">
+        <article class="tech-stack-card reveal">
+          <span>RUST</span>
+          <h3>Core + Runtime</h3>
+          <p>Immutable revisions, canonical identity, lifecycle policy, execution journal, recovery, and durable receipts.</p>
+        </article>
+        <article class="tech-stack-card reveal">
+          <span>PYTHON</span>
+          <h3>Agents + Domains + Adapters</h3>
+          <p>Agent loops, domain tools, validation, calculations, API boundaries, CAD and external-tool integration.</p>
+        </article>
+        <article class="tech-stack-card reveal">
+          <span>TYPESCRIPT / REACT</span>
+          <h3>Workbench</h3>
+          <p>Engineering review UI for models, changes, calculations, evidence, unresolved questions, and 3D review.</p>
+        </article>
+        <article class="tech-stack-card reveal">
+          <span>THREE.JS</span>
+          <h3>Engineering visualization</h3>
+          <p>Interactive visualization inside Workbench while engineering authority remains in backend state and contracts.</p>
+        </article>
+        <article class="tech-stack-card reveal">
+          <span>JSON SCHEMA</span>
+          <h3>Contracts</h3>
+          <p>Versioned boundary schemas, canonical serialization, API contracts, and conformance checks.</p>
+        </article>
+        <article class="tech-stack-card reveal">
+          <span>FREECAD / OCCT</span>
+          <h3>Engineering adapters</h3>
+          <p>Native CAD execution, geometry capture, translation, tessellation, and declared fidelity checks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="agent-flow" class="section section-dark universe-agent-section">
+      <div class="section-index">04 / AGENT FLOW</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Agent development</p>
+        <h2>The agent proposes. The host controls execution.</h2>
+      </div>
+
+      <div class="agent-flow-map reveal" aria-label="Universe bounded agent flow">
+        <div><span>01</span><strong>CONTEXT</strong><small>requirements + engineering state</small></div>
+        <i>→</i>
+        <div><span>02</span><strong>PLAN</strong><small>capability planning + delegation</small></div>
+        <i>→</i>
+        <div><span>03</span><strong>ADMIT</strong><small>host policy + input binding + budget</small></div>
+        <i>→</i>
+        <div><span>04</span><strong>EXECUTE</strong><small>domain tools + engineering software</small></div>
+        <i>→</i>
+        <div><span>05</span><strong>RECORD</strong><small>evidence + receipts + unknowns</small></div>
+        <i>→</i>
+        <div><span>06</span><strong>REVIEW</strong><small>replay + human lifecycle gate</small></div>
+      </div>
+
+      <div class="agent-boundary-grid">
+        <article class="agent-boundary reveal"><span>AGENT OWNS</span><strong>Planning · proposals · delegation · review suggestions</strong></article>
+        <article class="agent-boundary reveal"><span>HOST OWNS</span><strong>Tool admission · budgets · bindings · persisted state · lifecycle authority</strong></article>
+      </div>
+    </section>
+
     <section id="principles" class="section case-light">
-      <div class="section-index">03 / DESIGN PRINCIPLES</div>
+      <div class="section-index">05 / DESIGN PRINCIPLES</div>
       <div class="section-heading reveal">
         <p class="kicker">The rules I care about</p>
         <h2>Make AI useful without making engineering less accountable.</h2>
@@ -207,7 +275,7 @@
     </section>
 
     <section class="section case-example">
-      <div class="section-index">04 / ONE EXAMPLE</div>
+      <div class="section-index">06 / ONE EXAMPLE</div>
       <div class="split">
         <div class="sticky-title reveal">
           <p class="kicker">Component selection</p>
@@ -238,7 +306,7 @@
     </section>
 
     <section class="section section-dark case-status">
-      <div class="section-index">05 / STATUS</div>
+      <div class="section-index">07 / STATUS</div>
       <div class="section-heading reveal">
         <p class="kicker">What it is—and what it is not</p>
         <h2>Deliberately bounded.</h2>
