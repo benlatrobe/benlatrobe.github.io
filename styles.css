@@ -303,7 +303,7 @@ h1 {
 
 .section-index {
   position: absolute;
-  top: 32px;
+  top: 72px;
   left: var(--pad);
   color: var(--muted);
 }
@@ -1306,6 +1306,7 @@ h2 {
 }
 
 .product-stack-row small {
+  grid-column: 2;
   color: var(--muted);
 }
 
@@ -1952,4 +1953,17 @@ button:focus-visible {
 .product-hero .case-deck,
 .leadership-hero .case-deck {
   color: var(--muted);
+}
+
+
+/* Desktop homepage hero balance */
+@media (min-width: 1081px) {
+  .hero-grid {
+    gap: clamp(56px, 5vw, 90px);
+  }
+
+  .hero h1 {
+    font-size: clamp(60px, 5vw, 76px);
+    line-height: .96;
+  }
 }
