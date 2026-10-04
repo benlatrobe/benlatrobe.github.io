@@ -4,152 +4,276 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NPI & Manufacturing Readiness — Ben Lin</title>
-  <meta name="description" content="A hardware NPI case study focused on development readiness, build readiness, production ramp, release gates, factory transfer, and sustaining." />
+  <meta name="description" content="A visual hardware NPI case study covering development readiness, build readiness, production ramp, release gates, and sustaining." />
   <meta name="theme-color" content="#f4f1e9" />
   <link rel="canonical" href="https://benlatrobe.github.io/npi-readiness.html" />
   <meta property="og:title" content="NPI & Manufacturing Readiness — Ben Lin" />
-  <meta property="og:description" content="Moving complex hardware from engineering into repeatable manufacturing without late surprises." />
+  <meta property="og:description" content="From engineering intent to repeatable production: readiness, build control, ramp, and sustaining." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="case-page npi-case-page">
+<body class="case-page npi-case-page npi-visual-page">
   <a class="skip-link" href="#top">Skip to content</a>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
-    <nav class="nav"><a href="#system">System</a><a href="#examples">Examples</a><a href="#sustaining">Sustaining</a><a href="index.html#work">Home</a></nav>
+    <a class="brand" href="index.html">
+      <span class="brand-mark">BL</span>
+      <span class="brand-name">Ben Lin</span>
+    </a>
+    <nav class="nav">
+      <a href="#questions">Questions</a>
+      <a href="#framework">Framework</a>
+      <a href="#control-room">Build</a>
+      <a href="#cases">Cases</a>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="product-hero section">
+    <section class="product-hero section npi-visual-hero">
       <div class="product-hero-inner">
         <div class="reveal">
           <p class="eyebrow">Selected work / NPI + manufacturing</p>
-          <h1>From engineering to repeatable production.</h1>
-          <p class="case-deck">The NPI problem is not getting through a build. It is reducing the uncertainty between a design and a stable manufacturing system.</p>
+          <h1>From design to repeatable production.</h1>
+          <p class="case-deck">Readiness is not one gate. It is a system.</p>
         </div>
 
-        <div class="npi-hiring-question reveal">
-          <span>HIRING MANAGER QUESTION</span>
-          <strong>Can this person move a complex design into repeatable, high-quality manufacturing without late surprises?</strong>
-        </div>
-      </div>
-    </section>
-
-    <section id="system" class="section case-light">
-      <div class="section-index">01 / NPI SYSTEM</div>
-      <div class="section-heading reveal">
-        <p class="kicker">Four responsibilities</p>
-        <h2>Readiness starts before the factory and continues after launch.</h2>
-      </div>
-
-      <div class="npi-responsibility-grid">
-        <article class="npi-responsibility reveal">
-          <span>01</span>
-          <h3>Development readiness</h3>
-          <p>Requirements, architecture, verification, DFx, open risks, release maturity.</p>
-          <div class="npi-tags"><small>design maturity</small><small>verification</small><small>DFMEA / DFx</small></div>
-        </article>
-        <article class="npi-responsibility reveal">
-          <span>02</span>
-          <h3>Build readiness</h3>
-          <p>Materials, tooling, fixtures, process flow, work instructions, test coverage, ownership.</p>
-          <div class="npi-tags"><small>CTB</small><small>tooling</small><small>test</small></div>
-        </article>
-        <article class="npi-responsibility reveal">
-          <span>03</span>
-          <h3>Production ramp</h3>
-          <p>Yield, FPY, Cpk, defects, cycle time, capacity, containment, line replication.</p>
-          <div class="npi-tags"><small>yield</small><small>cycle</small><small>capacity</small></div>
-        </article>
-        <article class="npi-responsibility reveal">
-          <span>04</span>
-          <h3>Sustaining</h3>
-          <p>Field quality, root cause, corrective action, PCNs, alternate parts, production changes.</p>
-          <div class="npi-tags"><small>RCA</small><small>change</small><small>field feedback</small></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="examples" class="section section-dark">
-      <div class="section-index">02 / EVIDENCE</div>
-      <div class="section-heading reveal">
-        <p class="kicker">Three examples</p>
-        <h2>Readiness becomes real when a decision has consequences.</h2>
-      </div>
-
-      <div class="npi-example-grid">
-        <article class="npi-example reveal">
-          <div class="example-top"><span>HIGH-VOLUME RAMP</span><span>01</span></div>
-          <h3>Scale the production system with the product</h3>
-          <div class="npi-evidence-line"><strong>1.5–2.0M</strong><span>units / year</span></div>
-          <p>Led product readiness, production-test strategy, fixtures, diagnostics, yield and cycle-time readiness while supporting certification across more than 100 countries.</p>
-          <a class="project-link" href="wireless-module.html">See the product case →</a>
-        </article>
-
-        <article class="npi-example reveal">
-          <div class="example-top"><span>RELEASE GATE</span><span>02</span></div>
-          <h3>Do not release a process that is not capable</h3>
-          <div class="npi-quality-flow"><span>MISS FPY / Cpk</span><i>→</i><span>HOLD RELEASE</span><i>→</i><span>TUNE PROCESS</span><i>→</i><span>REVALIDATE</span></div>
-          <p>Held production release when a dispensing process missed its capability gate, then drove supplier tuning and revalidation until the process met acceptance criteria.</p>
-        </article>
-
-        <article class="npi-example reveal">
-          <div class="example-top"><span>FACTORY TRANSFER</span><span>03</span></div>
-          <h3>Localization is also process redesign</h3>
-          <div class="npi-transfer-flow"><span>TRANSFER</span><i>→</i><span>SIMPLIFY</span><i>→</i><span>POINT-OF-USE</span><i>→</i><span>LESS VARIATION</span></div>
-          <p>Supported manufacturing localization by replacing labor-intensive packaging steps with pre-formed point-of-use assemblies to reduce handling, cycle time, and process variation.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section factory-section">
-      <div class="section-index">03 / BUILD CONTROL</div>
-      <div class="section-heading reveal"><p class="kicker">What to watch during a build</p><h2>The build should produce evidence, not just units.</h2></div>
-      <div class="build-dashboard reveal">
-        <div><span>YIELD</span><strong>↗</strong><small>pass / fail by stage</small></div>
-        <div><span>DEFECTS</span><strong>!</strong><small>type / frequency / owner</small></div>
-        <div><span>CYCLE</span><strong>⏱</strong><small>process and test time</small></div>
-        <div><span>TEST</span><strong>✓</strong><small>coverage + criteria</small></div>
-        <div><span>BLOCKERS</span><strong>→</strong><small>containment + decision</small></div>
-      </div>
-    </section>
-
-    <section id="sustaining" class="section case-light">
-      <div class="section-index">04 / SUSTAINING LOOP</div>
-      <div class="split">
-        <div class="sticky-title reveal">
-          <p class="kicker">After launch</p>
-          <h2>Field failures should improve the manufacturing system.</h2>
-        </div>
-        <div class="story-column">
-          <div class="npi-sustaining-loop reveal">
-            <div><span>FIELD</span><strong>1,000+ deployed devices affected</strong></div><i>→</i>
-            <div><span>CONTAIN</span><strong>Coordinate recovery</strong></div><i>→</i>
-            <div><span>ROOT CAUSE</span><strong>Firmware / SKU configuration</strong></div><i>→</i>
-            <div class="npi-sustain-final"><span>PREVENT</span><strong>Automated detection + stronger controls</strong></div>
+        <div class="npi-stage-visual reveal" aria-label="NPI lifecycle">
+          <div class="npi-stage-track">
+            <article class="npi-stage-card">
+              <span>01</span>
+              <strong>DESIGN</strong>
+              <small>maturity + verification</small>
+            </article>
+            <i class="npi-stage-connector"></i>
+            <article class="npi-stage-card">
+              <span>02</span>
+              <strong>READY</strong>
+              <small>material + process + test</small>
+            </article>
+            <i class="npi-stage-connector"></i>
+            <article class="npi-stage-card npi-stage-accent">
+              <span>03</span>
+              <strong>BUILD</strong>
+              <small>pilot + evidence</small>
+            </article>
+            <i class="npi-stage-connector"></i>
+            <article class="npi-stage-card">
+              <span>04</span>
+              <strong>RAMP</strong>
+              <small>yield + cycle + capacity</small>
+            </article>
+            <i class="npi-stage-connector"></i>
+            <article class="npi-stage-card">
+              <span>05</span>
+              <strong>SUSTAIN</strong>
+              <small>quality + change + learning</small>
+            </article>
           </div>
-          <p class="body-copy reveal">The lesson is broader than one incident: sustaining closes the loop between field behavior, product design, configuration management, and factory controls.</p>
         </div>
+      </div>
+    </section>
+
+    <section id="questions" class="section case-light">
+      <div class="section-index">01 / WHAT NPI MUST ANSWER</div>
+
+      <div class="npi-question-grid">
+        <article class="npi-question-card reveal">
+          <span>01</span>
+          <strong>Is the design mature enough to build?</strong>
+          <div class="question-signal">
+            <i></i><i></i><i></i><i></i>
+          </div>
+        </article>
+        <article class="npi-question-card reveal">
+          <span>02</span>
+          <strong>Is the factory really ready?</strong>
+          <div class="question-signal question-signal-alt">
+            <i></i><i></i><i></i><i></i>
+          </div>
+        </article>
+        <article class="npi-question-card reveal">
+          <span>03</span>
+          <strong>Can the line ramp without surprises?</strong>
+          <div class="question-trend">
+            <b></b><b></b><b></b><b></b><b></b>
+          </div>
+        </article>
+        <article class="npi-question-card reveal">
+          <span>04</span>
+          <strong>Will field failures improve the system?</strong>
+          <div class="question-loop">
+            <i>↺</i>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="framework" class="section section-dark npi-framework-section">
+      <div class="section-index">02 / READINESS FRAMEWORK</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Four connected responsibilities</p>
+        <h2>Reduce uncertainty before it becomes factory disruption.</h2>
+      </div>
+
+      <div class="npi-framework-grid">
+        <article class="npi-framework-card reveal">
+          <div class="npi-framework-icon">
+            <span></span><span></span><span></span>
+          </div>
+          <p class="npi-framework-label">DEVELOPMENT</p>
+          <h3>Design readiness</h3>
+          <div class="npi-token-row"><span>requirements</span><span>verification</span><span>DFx</span><span>risk</span></div>
+        </article>
+
+        <article class="npi-framework-card reveal">
+          <div class="npi-framework-icon npi-icon-build">
+            <span></span><span></span><span></span>
+          </div>
+          <p class="npi-framework-label">BUILD</p>
+          <h3>Factory readiness</h3>
+          <div class="npi-token-row"><span>materials</span><span>tooling</span><span>process</span><span>test</span></div>
+        </article>
+
+        <article class="npi-framework-card reveal">
+          <div class="npi-framework-icon npi-icon-ramp">
+            <span></span><span></span><span></span>
+          </div>
+          <p class="npi-framework-label">RAMP</p>
+          <h3>Stable production</h3>
+          <div class="npi-token-row"><span>yield</span><span>cycle</span><span>defects</span><span>capacity</span></div>
+        </article>
+
+        <article class="npi-framework-card reveal">
+          <div class="npi-framework-icon npi-icon-sustain">
+            <span></span><span></span><span></span>
+          </div>
+          <p class="npi-framework-label">SUSTAIN</p>
+          <h3>Closed-loop learning</h3>
+          <div class="npi-token-row"><span>field</span><span>RCA</span><span>change</span><span>prevention</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="control-room" class="section npi-control-section">
+      <div class="section-index">03 / BUILD CONTROL ROOM</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Illustrative build-control view</p>
+        <h2>The build should produce evidence, not just units.</h2>
+      </div>
+
+      <div class="npi-control-room reveal">
+        <article class="control-tile">
+          <span>FPY / YIELD</span>
+          <div class="control-spark">
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <small>trend by stage</small>
+        </article>
+
+        <article class="control-tile">
+          <span>DEFECTS</span>
+          <div class="control-defects">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <small>type · frequency · owner</small>
+        </article>
+
+        <article class="control-tile">
+          <span>CYCLE TIME</span>
+          <div class="control-cycle">
+            <b></b><b></b><b></b><b></b><b></b>
+          </div>
+          <small>process + test time</small>
+        </article>
+
+        <article class="control-tile">
+          <span>TEST</span>
+          <div class="control-ring">
+            <i></i>
+          </div>
+          <small>coverage + acceptance</small>
+        </article>
+
+        <article class="control-tile control-tile-wide">
+          <span>BLOCKERS / ACTIONS</span>
+          <div class="control-action-list">
+            <div><i></i><strong>Issue</strong><small>containment</small></div>
+            <div><i></i><strong>Owner</strong><small>next action</small></div>
+            <div><i></i><strong>Gate</strong><small>release decision</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cases" class="section case-light npi-cases-section">
+      <div class="section-index">04 / THREE CASES</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Three decisions with consequences</p>
+        <h2>Scale. Hold. Learn.</h2>
+      </div>
+
+      <div class="npi-mini-case-grid">
+        <article class="npi-mini-case reveal">
+          <div class="mini-case-visual mini-case-scale">
+            <span>EVT</span><i></i><span>DVT</span><i></i><span>PVT</span><i></i><strong>RAMP</strong>
+          </div>
+          <p class="mini-case-label">HIGH-VOLUME RAMP</p>
+          <h3>1.5–2.0M units / year</h3>
+          <p>Product readiness, test strategy, fixtures, diagnostics, yield, cycle time, and certification across 100+ countries.</p>
+          <a class="project-link" href="wireless-module.html">Open product case →</a>
+        </article>
+
+        <article class="npi-mini-case reveal">
+          <div class="mini-case-visual mini-case-gate">
+            <span>PROCESS</span><i>×</i><strong>HOLD</strong><i>→</i><span>REVALIDATE</span>
+          </div>
+          <p class="mini-case-label">RELEASE GATE</p>
+          <h3>Do not ship an unstable process.</h3>
+          <p>Production release was held when FPY / Cpk missed the gate; supplier tuning and revalidation followed before release.</p>
+        </article>
+
+        <article class="npi-mini-case reveal">
+          <div class="mini-case-visual mini-case-loop">
+            <span>FIELD</span><i>→</i><span>RECOVER</span><i>→</i><span>RCA</span><i>↺</i><strong>PREVENT</strong>
+          </div>
+          <p class="mini-case-label">SUSTAINING LOOP</p>
+          <h3>1,000+ deployed devices</h3>
+          <p>Recovery of a firmware / SKU configuration issue was converted into automated detection and stronger controls.</p>
+        </article>
       </div>
     </section>
 
     <section class="section product-close">
       <div class="next-panel reveal">
         <p class="kicker">The principle</p>
-        <h2>NPI is the engineering system that makes production predictable.</h2>
-        <div class="hero-links"><a href="wireless-module.html">See high-volume ramp →</a><a href="index.html#work">Back to selected work →</a></div>
+        <h2>NPI makes production predictable.</h2>
+        <div class="hero-links">
+          <a href="wireless-module.html">See high-volume ramp →</a>
+          <a href="index.html#work">Back to selected work →</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer id="contact" class="footer">
-    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>NPI + manufacturing.</h2></div>
-    <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
-    <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
+    <div>
+      <p class="footer-label">BEN LIN / SELECTED WORK</p>
+      <h2>NPI + manufacturing.</h2>
+    </div>
+    <div class="footer-links">
+      <a href="cv.html">CV</a>
+      <a href="mailto:benlatrobe@gmail.com">Email</a>
+      <a href="index.html">Home</a>
+    </div>
+    <div class="footer-meta">
+      <span>St. Petersburg, Florida</span>
+      <span>© <span id="year"></span> Ben Lin</span>
+    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
