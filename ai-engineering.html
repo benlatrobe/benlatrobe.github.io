@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Enabled Engineering — Ben Lin</title>
+  <meta name="description" content="A case study of Universe, Ben Lin's AI-native framework for physical-product engineering." />
+  <meta name="theme-color" content="#151816" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="case-page">
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Back to Ben Lin home">
+      <span class="brand-mark">BL</span>
+      <span class="brand-name">Ben Lin</span>
+    </a>
+    <nav class="nav" aria-label="Case study navigation">
+      <a href="#problem">Problem</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#principles">Principles</a>
+      <a href="index.html#work">Home</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="case-hero section">
+      <div class="case-hero-inner">
+        <div class="case-intro reveal">
+          <p class="eyebrow">Selected work / AI-enabled engineering</p>
+          <h1>Universe</h1>
+          <p class="case-deck">
+            An AI-native framework for physical-product engineering—designed around structured engineering state, bounded agents, deterministic tools, traceable evidence, and explicit human authority.
+          </p>
+          <div class="case-meta">
+            <div><span>ROLE</span><strong>Creator / architect</strong></div>
+            <div><span>FOCUS</span><strong>Hardware engineering + AI</strong></div>
+            <div><span>STATUS</span><strong>Active development</strong></div>
+          </div>
+          <div class="hero-links">
+            <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer">View Universe on GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="case-system reveal" aria-label="Universe architecture overview">
+          <div class="case-system-label">ENGINEERING AUTHORITY FLOW</div>
+          <div class="authority-stack">
+            <div class="authority-row">
+              <span class="authority-id">01</span>
+              <div><strong>Requirements + context</strong><small>source-linked intent, constraints, revisions</small></div>
+            </div>
+            <div class="authority-arrow">↓</div>
+            <div class="authority-row">
+              <span class="authority-id">02</span>
+              <div><strong>Design partner / agent</strong><small>proposes, plans, delegates</small></div>
+            </div>
+            <div class="authority-arrow">↓</div>
+            <div class="authority-row">
+              <span class="authority-id">03</span>
+              <div><strong>Domain workflows + tools</strong><small>calculations, geometry, simulations, validators</small></div>
+            </div>
+            <div class="authority-arrow">↓</div>
+            <div class="authority-row">
+              <span class="authority-id">04</span>
+              <div><strong>Evidence + changes + unknowns</strong><small>version-bound, reviewable, reusable</small></div>
+            </div>
+            <div class="authority-arrow">↓</div>
+            <div class="authority-row authority-human">
+              <span class="authority-id">05</span>
+              <div><strong>Human review + lifecycle gates</strong><small>approval and release remain explicit decisions</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="section case-light">
+      <div class="section-index">01 / THE PROBLEM</div>
+      <div class="split">
+        <div class="sticky-title reveal">
+          <p class="kicker">Why I started it</p>
+          <h2>Engineering AI needs more than a chatbot.</h2>
+        </div>
+        <div class="story-column">
+          <p class="lede reveal">
+            Physical-product development depends on revisions, interfaces, tools, calculations, source evidence, and decisions that must remain traceable long after a conversation ends.
+          </p>
+          <p class="body-copy reveal">
+            A useful engineering agent therefore needs a shared design state, clear tool boundaries, durable execution history, and a way to distinguish a suggestion from an engineering decision.
+          </p>
+
+          <div class="problem-grid">
+            <article class="problem-card reveal">
+              <span>01</span>
+              <h3>Conversation is not engineering state.</h3>
+              <p>Requirements, models, evidence, and changes need identity and version history outside the model's prose.</p>
+            </article>
+            <article class="problem-card reveal">
+              <span>02</span>
+              <h3>A tool result is not universal truth.</h3>
+              <p>Every calculation or model has inputs, applicability, method versions, and limits.</p>
+            </article>
+            <article class="problem-card reveal">
+              <span>03</span>
+              <h3>Automation is not authority.</h3>
+              <p>Agents can propose and coordinate. Engineering approval and release must stay behind explicit lifecycle gates.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section section-dark case-architecture">
+      <div class="section-index">02 / ARCHITECTURE</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Separate the responsibilities</p>
+        <h2>No single agent owns the truth.</h2>
+        <p>The framework separates engineering state, execution, planning, domain semantics, external tools, and the user interface.</p>
+      </div>
+
+      <div class="architecture-map reveal">
+        <div class="arch-layer arch-agent">
+          <span>AGENT</span>
+          <strong>Plan / propose / delegate</strong>
+          <small>bounded reasoning, not engineering authority</small>
+        </div>
+        <div class="arch-connector">requests ↓</div>
+        <div class="arch-row">
+          <div class="arch-layer">
+            <span>CORE</span>
+            <strong>Identity + revisions</strong>
+            <small>immutable model state, admission, lifecycle policy</small>
+          </div>
+          <div class="arch-layer">
+            <span>RUNTIME</span>
+            <strong>Execution + recovery</strong>
+            <small>tasks, workers, journals, durable receipts</small>
+          </div>
+          <div class="arch-layer">
+            <span>DOMAINS</span>
+            <strong>Engineering meaning</strong>
+            <small>schemas, calculations, rules, validators</small>
+          </div>
+        </div>
+        <div class="arch-connector">evidence + state ↑ &nbsp;&nbsp; tools ↓</div>
+        <div class="arch-row arch-row-bottom">
+          <div class="arch-layer">
+            <span>ADAPTERS</span>
+            <strong>External engineering tools</strong>
+            <small>CAD, formats, solvers, fidelity boundaries</small>
+          </div>
+          <div class="arch-layer">
+            <span>WORKBENCH</span>
+            <strong>Engineering review UI</strong>
+            <small>presents state; does not own engineering truth</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="architecture-note reveal">
+        <strong>Canonical Engineering Models (CEMs)</strong>
+        <p>
+          Universe uses structured, versioned domain models to connect engineering properties and relationships with source evidence, assumptions, and validation results. A CEM is not one giant JSON document—and a valid model is not proof that a design is complete or approved.
+        </p>
+      </div>
+    </section>
+
+    <section id="principles" class="section case-light">
+      <div class="section-index">03 / DESIGN PRINCIPLES</div>
+      <div class="section-heading reveal">
+        <p class="kicker">The rules I care about</p>
+        <h2>Make AI useful without making engineering less accountable.</h2>
+      </div>
+
+      <div class="principle-grid">
+        <article class="large-principle reveal">
+          <span>01</span>
+          <h3>Agents propose. Systems record. Humans decide.</h3>
+          <p>The model can help plan work, interpret context, and propose candidates. But persisted engineering state and lifecycle decisions belong to explicit system boundaries.</p>
+        </article>
+        <article class="large-principle reveal">
+          <span>02</span>
+          <h3>Evidence follows the inputs.</h3>
+          <p>Results are bound to the model revisions, conditions, and methods that produced them. Change the basis and affected work becomes stale instead of silently remaining “true.”</p>
+        </article>
+        <article class="large-principle reveal">
+          <span>03</span>
+          <h3>Unknown is a valid engineering state.</h3>
+          <p>Missing inputs, conflicts, assumptions, and deferred work stay explicit. The framework should stop with an owned gap rather than inventing a specification.</p>
+        </article>
+        <article class="large-principle reveal">
+          <span>04</span>
+          <h3>Completion is scoped.</h3>
+          <p>A completed task means its requested scope is accounted for. It does not mean the whole design is correct, qualified, approved, or released.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section case-example">
+      <div class="section-index">04 / ONE EXAMPLE</div>
+      <div class="split">
+        <div class="sticky-title reveal">
+          <p class="kicker">Component selection</p>
+          <h2>A shortlist is a proposal—not a design decision.</h2>
+        </div>
+        <div class="story-column">
+          <p class="lede reveal">
+            In one implemented workflow, requirements drive candidate discovery and screening. The task pins the requirement basis, project revision, comparison result, and exact evidence used.
+          </p>
+
+          <div class="example-flow reveal">
+            <div><span>1</span><strong>Requirement</strong><small>what the product needs</small></div>
+            <i>→</i>
+            <div><span>2</span><strong>Discover</strong><small>candidate parts + sources</small></div>
+            <i>→</i>
+            <div><span>3</span><strong>Screen</strong><small>domain rules + evidence</small></div>
+            <i>→</i>
+            <div><span>4</span><strong>Shortlist</strong><small>recommendation + holds</small></div>
+            <i>→</i>
+            <div><span>5</span><strong>Review</strong><small>human engineering decision</small></div>
+          </div>
+
+          <p class="body-copy reveal">
+            If the requirement basis changes, the prior recommendation remains in history but requires re-evaluation. That is a small example of the larger idea: AI output becomes useful engineering work only when its basis is inspectable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark case-status">
+      <div class="section-index">05 / STATUS</div>
+      <div class="section-heading reveal">
+        <p class="kicker">What it is—and what it is not</p>
+        <h2>Deliberately bounded.</h2>
+      </div>
+
+      <div class="status-grid">
+        <div class="status-column reveal">
+          <h3>Implemented direction</h3>
+          <ul>
+            <li>Versioned engineering contracts and models</li>
+            <li>Core identity, revision, admission, and lifecycle foundations</li>
+            <li>Durable task execution and recovery</li>
+            <li>Bounded agent planning and provider integration</li>
+            <li>Domain calculations, geometry, and validation workflows</li>
+            <li>External-tool adapters and a native review workbench</li>
+          </ul>
+        </div>
+        <div class="status-column reveal">
+          <h3>Not claimed</h3>
+          <ul>
+            <li>Autonomous production-qualified engineering</li>
+            <li>Complete coverage of every hardware domain</li>
+            <li>Automatic engineering approval or release</li>
+            <li>Qualified physical analysis without the right models and evidence</li>
+            <li>Perfect round-trip fidelity with every commercial CAD tool</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="repo-map reveal">
+        <div><span>universe</span><small>architecture</small></div>
+        <div><span>contracts</span><small>schemas + ports</small></div>
+        <div><span>core</span><small>truth + lifecycle</small></div>
+        <div><span>runtime</span><small>execution</small></div>
+        <div><span>agent</span><small>planning</small></div>
+        <div><span>domains</span><small>engineering logic</small></div>
+        <div><span>adapters</span><small>external tools</small></div>
+        <div><span>workbench</span><small>review UI</small></div>
+      </div>
+    </section>
+
+    <section class="section case-close">
+      <div class="next-panel reveal">
+        <p class="kicker">Why this work matters to me</p>
+        <h2>AI becomes more interesting when it has to survive contact with real engineering.</h2>
+        <p>
+          Universe is where I combine my software background, hardware and product-development experience, engineering leadership, and interest in how AI can change the way physical products are built.
+        </p>
+        <div class="hero-links">
+          <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer">Explore the repository ↗</a>
+          <a href="index.html#work">Back to selected work →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p class="footer-label">BEN LIN / SELECTED WORK</p>
+      <h2>Engineering × AI.</h2>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:benlatrobe@gmail.com">Email</a>
+      <a href="https://github.com/benlatrobe" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="index.html">Home</a>
+    </div>
+    <div class="footer-meta">
+      <span>St. Petersburg, Florida</span>
+      <span>© <span id="year"></span> Ben Lin</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
