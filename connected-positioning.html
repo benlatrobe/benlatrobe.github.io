@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connected Positioning & Tracking — Ben Lin</title>
+  <meta name="description" content="Representative connected-product architecture and product-development patterns across BLE, RFID, indoor/outdoor tracking, mobile integration, field trials, and system validation." />
+  <meta name="theme-color" content="#151816" />
+  <link rel="canonical" href="https://benlatrobe.github.io/connected-positioning.html" />
+  <meta property="og:title" content="Connected Positioning & Tracking — Ben Lin" />
+  <meta property="og:description" content="Device, gateway, data and application patterns from connected positioning and tracking product work." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="case-page connected-case-page">
+  <a class="skip-link" href="#top">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
+    <nav class="nav"><a href="#architecture">Architecture</a><a href="#examples">Examples</a><a href="#development">Development</a><a href="index.html#work">Home</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="case-hero section">
+      <div class="case-hero-inner">
+        <div class="case-intro reveal">
+          <p class="eyebrow">Selected work / connected hardware</p>
+          <h1>Positioning & tracking systems.</h1>
+          <p class="case-deck">Connected-product work spanning tags, beacons, hubs, wireless links, mobile applications, field trials, and indoor/outdoor positioning concepts.</p>
+          <div class="case-meta">
+            <div><span>TECH</span><strong>RFID · BLE · NFC · UWB evaluation</strong></div>
+            <div><span>SCOPE</span><strong>Device → system integration</strong></div>
+            <div><span>METHOD</span><strong>PoC → field trial → product decision</strong></div>
+          </div>
+        </div>
+
+        <div class="connected-hero reveal" aria-label="Representative connected positioning architecture">
+          <div class="connected-device-row">
+            <div><span>TAG</span><small>identity / sensing</small></div>
+            <div><span>BEACON</span><small>BLE / location signal</small></div>
+            <div><span>MOBILE</span><small>provision / test / interact</small></div>
+          </div>
+          <i>↓ wireless / proximity / identification</i>
+          <div class="connected-gateway">HUB / READER / EDGE</div>
+          <i>↓</i>
+          <div class="connected-service">DATA / POSITIONING / APPLICATION SERVICE</div>
+          <i>↓</i>
+          <div class="connected-app-row"><span>OPERATIONS</span><span>WEB</span><span>MOBILE APP</span></div>
+          <small class="connected-note">Representative architecture synthesized from multiple connected-product programs, not one exact customer design.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="architecture" class="section case-light">
+      <div class="section-index">01 / SYSTEM PATTERN</div>
+      <div class="section-heading reveal">
+        <p class="kicker">What had to work together</p>
+        <h2>Location is a system problem, not just a radio problem.</h2>
+      </div>
+
+      <div class="connected-layer-grid">
+        <article class="connected-layer reveal"><span>01</span><h3>Device</h3><p>Tags, beacons, badge form factors, wireless modules, power and enclosure constraints.</p></article>
+        <article class="connected-layer reveal"><span>02</span><h3>Wireless</h3><p>RFID, BLE and adjacent positioning technologies selected around range, infrastructure, cost and application needs.</p></article>
+        <article class="connected-layer reveal"><span>03</span><h3>Edge / hub</h3><p>Readers and hubs bridge endpoint signals into application-level data and control.</p></article>
+        <article class="connected-layer reveal"><span>04</span><h3>Application</h3><p>Provisioning, RSSI measurement, test workflows, monitoring and operational use.</p></article>
+      </div>
+    </section>
+
+    <section id="examples" class="section section-dark">
+      <div class="section-index">02 / TWO EXAMPLES</div>
+      <div class="section-heading reveal"><p class="kicker">Different applications, same product thinking</p><h2>Prototype the system before committing to the product.</h2></div>
+
+      <div class="connected-example-grid">
+        <article class="connected-example reveal">
+          <div class="example-top"><span>BLE DEMONSTRATOR</span><span>01</span></div>
+          <h3>Badge + hub + iOS application</h3>
+          <div class="example-system-line"><span>BADGE</span><i>→</i><span>HUB</span><i>↔</i><span>iOS APP</span></div>
+          <p>Built demonstrators with supporting iOS applications for device provisioning, RSSI measurement, and testing, then used customer feedback to shape customization and follow-on concepts.</p>
+        </article>
+
+        <article class="connected-example reveal">
+          <div class="example-top"><span>LOGISTICS FIELD PILOT</span><span>02</span></div>
+          <h3>Use data to decide where tracking creates value</h3>
+          <div class="pilot-metrics"><span>BASKET FLOW</span><span>PROCESS TIME</span><span>RFID READ RATE</span></div>
+          <p>Used operational flow, processing time, and read-rate data to identify high-value tracking points before expanding into larger distribution-center and vehicle-based trials.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="development" class="section connected-development-section">
+      <div class="section-index">03 / PRODUCT DEVELOPMENT</div>
+      <div class="split">
+        <div class="sticky-title reveal"><p class="kicker">What this demonstrates</p><h2>Connected hardware needs product decisions across every layer.</h2></div>
+        <div class="story-column">
+          <div class="connected-decision-map reveal">
+            <div><span>USE CASE</span><strong>What needs to be known or controlled?</strong></div>
+            <i>→</i>
+            <div><span>TECHNOLOGY</span><strong>Which wireless / sensing approach fits?</strong></div>
+            <i>→</i>
+            <div><span>ARCHITECTURE</span><strong>Device, hub, application, infrastructure</strong></div>
+            <i>→</i>
+            <div><span>VALIDATE</span><strong>PoC, field trial, user feedback</strong></div>
+            <i>→</i>
+            <div><span>PRODUCT</span><strong>Requirements, cost, manufacturing, lifecycle</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section case-close">
+      <div class="next-panel reveal"><p class="kicker">Connected hardware</p><h2>Start with the application. Let the system architecture follow.</h2><div class="hero-links"><a href="wireless-module.html">Next: high-volume wireless module →</a><a href="index.html#work">Back to selected work →</a></div></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>Connected positioning.</h2></div>
+    <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
+    <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
