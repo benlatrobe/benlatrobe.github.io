@@ -102,34 +102,46 @@
       <div class="rtls-hardware-grid rtls-hardware-grid-v2">
         <article class="rtls-hardware-card reveal">
           <span>TAG / BEACON</span>
-          <h3>Small, power-constrained endpoint</h3>
-          <div class="tag-board-visual">
-            <div class="tag-enclosure">
-              <div class="tag-antenna-trace"></div>
-              <div class="tag-mcu">MCU</div>
-              <div class="tag-rf">RF</div>
-              <div class="tag-battery">BATTERY</div>
-              <div class="tag-sensor">SENSOR</div>
+          <h3>Compact battery-powered device</h3>
+          <div class="tag-exploded-visual">
+            <div class="tag-layer tag-top-cover"><span>TOP COVER</span></div>
+            <div class="tag-layer tag-pcba-layer">
+              <div class="tag-pcba-disc">
+                <div class="tag-pcba-antenna"></div>
+                <div class="tag-pcba-mcu">MCU</div>
+                <div class="tag-pcba-rf">RF</div>
+                <div class="tag-pcba-sensor">SENSOR</div>
+              </div>
+              <span>PCBA</span>
             </div>
+            <div class="tag-layer tag-battery-layer">
+              <div class="tag-coin-cell">+</div>
+              <span>COIN CELL</span>
+            </div>
+            <div class="tag-layer tag-bottom-cover"><span>BOTTOM COVER</span></div>
           </div>
+          <p class="hardware-visual-note">Illustrative puck-style form factor; actual tags and beacons can take many shapes.</p>
           <div class="rtls-tags"><small>RF</small><small>MCU</small><small>battery</small><small>sensor</small><small>enclosure</small></div>
         </article>
 
         <article class="rtls-hardware-card reveal">
-          <span>AoA / ANTENNA ARRAY</span>
-          <h3>Estimate direction from phase across an array</h3>
-          <div class="aoa-clear-visual">
-            <div class="aoa-tag-source">TAG</div>
-            <div class="aoa-wavefront w1"></div>
-            <div class="aoa-wavefront w2"></div>
-            <div class="aoa-wavefront w3"></div>
-            <div class="aoa-angle-mark"><span>θ</span></div>
-            <div class="aoa-array-panel">
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <span>DIRECTIONAL ANTENNA ARRAY</span>
+          <h3>Shape multiple BLE beams from one locator</h3>
+          <div class="mist-array-visual">
+            <div class="mist-ap-array">
+              <div class="mist-array-center">BLE</div>
+              <i class="ma e1"></i><i class="ma e2"></i><i class="ma e3"></i><i class="ma e4"></i>
+              <i class="ma e5"></i><i class="ma e6"></i><i class="ma e7"></i><i class="ma e8"></i>
             </div>
-            <small>multi-element antenna array</small>
+            <div class="mist-beam b1"></div><div class="mist-beam b2"></div>
+            <div class="mist-beam b3"></div><div class="mist-beam b4"></div>
+            <div class="mist-beam b5"></div><div class="mist-beam b6"></div>
+            <div class="mist-beam b7"></div><div class="mist-beam b8"></div>
+            <div class="mist-tag-target">TAG</div>
+            <small>8 directional beam sectors around a multi-element array</small>
           </div>
-          <div class="rtls-tags"><small>array geometry</small><small>phase</small><small>calibration</small><small>RF layout</small></div>
+          <p class="hardware-visual-note">Directional BLE array concept representative of locator/AP hardware I worked on; AoA and UWB were also evaluated for other positioning approaches.</p>
+          <div class="rtls-tags"><small>directional beams</small><small>array geometry</small><small>calibration</small><small>BLE</small></div>
         </article>
 
         <article class="rtls-hardware-card reveal">
@@ -156,21 +168,29 @@
 
         <article class="rtls-hardware-card reveal">
           <span>READER / GATEWAY</span>
-          <h3>Bridge radio endpoints into the network</h3>
-          <div class="gateway-clear-visual">
-            <div class="gateway-ant ga1"></div>
-            <div class="gateway-box">
-              <div class="gateway-rf">RF</div>
-              <div class="gateway-cpu">CPU</div>
-              <div class="gateway-io">I/O</div>
+          <h3>Bridge local wireless devices to cloud services</h3>
+          <div class="gateway-system-visual">
+            <div class="gateway-radio-stack">
+              <span>BLE</span>
+              <span>Matter / Thread</span>
+              <span>UWB</span>
+              <span>RFID</span>
             </div>
-            <div class="gateway-ant ga2"></div>
-            <div class="gateway-backhaul">
-              <span>ETHERNET / CELLULAR / Wi-Fi</span>
-              <i></i>
+            <div class="gateway-radio-arrow">→</div>
+            <div class="gateway-device">
+              <i class="gateway-device-ant ga-left"></i>
+              <i class="gateway-device-ant ga-right"></i>
+              <strong>GATEWAY</strong>
+              <div class="gateway-device-blocks"><span>RF</span><span>CPU</span><span>NET</span></div>
+            </div>
+            <div class="gateway-cloud-arrow">→</div>
+            <div class="gateway-cloud-side">
+              <div class="cloud-shape"><i></i><i></i><i></i></div>
+              <strong>INTERNET / CLOUD</strong>
+              <small>API · location service · application</small>
             </div>
           </div>
-          <div class="rtls-tags"><small>RF front end</small><small>antenna</small><small>FW</small><small>network</small><small>test</small></div>
+          <div class="rtls-tags"><small>multi-radio</small><small>edge processing</small><small>backhaul</small><small>cloud</small><small>test</small></div>
         </article>
       </div>
     </section>
