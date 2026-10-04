@@ -6269,15 +6269,15 @@ button:focus-visible {
 }
 
 .nfc-assembly-svg.is-assembled .svg-touchpad {
-  transform: translateY(160px);
+  transform: translateY(135px);
 }
 
 .nfc-assembly-svg.is-assembled .svg-antenna {
-  transform: translateY(10px);
+  transform: translateY(0);
 }
 
 .nfc-assembly-svg.is-assembled .svg-module {
-  transform: translate(70px, -50px);
+  transform: translate(0, -34px);
 }
 
 .nfc-assembly-svg.is-assembled .svg-explode-guides {
