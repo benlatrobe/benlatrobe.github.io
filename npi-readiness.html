@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NPI Build Readiness — Ben Lin</title>
-  <meta name="description" content="A build-readiness model connecting design maturity, CTB, factory execution, yield, defects, test results, and next-build learning." />
+  <title>NPI & Manufacturing Readiness — Ben Lin</title>
+  <meta name="description" content="A hardware NPI case study focused on development readiness, build readiness, production ramp, release gates, factory transfer, and sustaining." />
   <meta name="theme-color" content="#f4f1e9" />
   <link rel="canonical" href="https://benlatrobe.github.io/npi-readiness.html" />
-  <meta property="og:title" content="NPI Build Readiness — Ben Lin" />
-  <meta property="og:description" content="Turning a design into a buildable product through readiness gates, factory evidence, and closed-loop learning." />
+  <meta property="og:title" content="NPI & Manufacturing Readiness — Ben Lin" />
+  <meta property="og:description" content="Moving complex hardware from engineering into repeatable manufacturing without late surprises." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
@@ -19,60 +19,134 @@
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
   <header class="site-header">
     <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
-    <nav class="nav"><a href="#gate">CTB</a><a href="#build">Build</a><a href="#loop">Learning</a><a href="index.html#work">Home</a></nav>
+    <nav class="nav"><a href="#system">System</a><a href="#examples">Examples</a><a href="#sustaining">Sustaining</a><a href="index.html#work">Home</a></nav>
   </header>
+
   <main id="top">
     <section class="product-hero section">
       <div class="product-hero-inner">
         <div class="reveal">
-          <p class="eyebrow">Selected work / NPI</p>
-          <h1>Turning a design into a buildable product.</h1>
-          <p class="case-deck">NPI works best when design readiness and factory readiness are treated as one engineering system.</p>
+          <p class="eyebrow">Selected work / NPI + manufacturing</p>
+          <h1>From engineering to repeatable production.</h1>
+          <p class="case-deck">The NPI problem is not getting through a build. It is reducing the uncertainty between a design and a stable manufacturing system.</p>
         </div>
-        <div class="npi-loop reveal" aria-label="NPI loop">
-          <div>DESIGN</div><i>→</i><div class="npi-gate">CTB</div><i>→</i><div>BUILD</div><i>→</i><div>LEARN</div><i>↺</i>
+
+        <div class="npi-hiring-question reveal">
+          <span>HIRING MANAGER QUESTION</span>
+          <strong>Can this person move a complex design into repeatable, high-quality manufacturing without late surprises?</strong>
         </div>
       </div>
     </section>
 
-    <section id="gate" class="section case-light">
-      <div class="section-index">01 / CTB GATE</div>
-      <div class="section-heading reveal"><p class="kicker">Clear to Build</p><h2>CTB is more than design lock.</h2></div>
-      <div class="ctb-grid">
-        <article class="ctb-card reveal"><span>01</span><h3>Design maturity</h3><p>Required design decisions and release state are understood.</p></article>
-        <article class="ctb-card reveal"><span>02</span><h3>Material readiness</h3><p>Build materials are available and shortages are visible.</p></article>
-        <article class="ctb-card reveal"><span>03</span><h3>Process readiness</h3><p>Manufacturing flow, tooling, work instructions, and ownership are ready.</p></article>
-        <article class="ctb-card reveal"><span>04</span><h3>Test readiness</h3><p>Fixtures, test coverage, data capture, and acceptance criteria are defined.</p></article>
+    <section id="system" class="section case-light">
+      <div class="section-index">01 / NPI SYSTEM</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Four responsibilities</p>
+        <h2>Readiness starts before the factory and continues after launch.</h2>
+      </div>
+
+      <div class="npi-responsibility-grid">
+        <article class="npi-responsibility reveal">
+          <span>01</span>
+          <h3>Development readiness</h3>
+          <p>Requirements, architecture, verification, DFx, open risks, release maturity.</p>
+          <div class="npi-tags"><small>design maturity</small><small>verification</small><small>DFMEA / DFx</small></div>
+        </article>
+        <article class="npi-responsibility reveal">
+          <span>02</span>
+          <h3>Build readiness</h3>
+          <p>Materials, tooling, fixtures, process flow, work instructions, test coverage, ownership.</p>
+          <div class="npi-tags"><small>CTB</small><small>tooling</small><small>test</small></div>
+        </article>
+        <article class="npi-responsibility reveal">
+          <span>03</span>
+          <h3>Production ramp</h3>
+          <p>Yield, FPY, Cpk, defects, cycle time, capacity, containment, line replication.</p>
+          <div class="npi-tags"><small>yield</small><small>cycle</small><small>capacity</small></div>
+        </article>
+        <article class="npi-responsibility reveal">
+          <span>04</span>
+          <h3>Sustaining</h3>
+          <p>Field quality, root cause, corrective action, PCNs, alternate parts, production changes.</p>
+          <div class="npi-tags"><small>RCA</small><small>change</small><small>field feedback</small></div>
+        </article>
       </div>
     </section>
 
-    <section id="build" class="section section-dark">
-      <div class="section-index">02 / BUILD</div>
-      <div class="section-heading reveal"><p class="kicker">What the build should tell us</p><h2>The factory is an engineering feedback system.</h2></div>
+    <section id="examples" class="section section-dark">
+      <div class="section-index">02 / EVIDENCE</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Three examples</p>
+        <h2>Readiness becomes real when a decision has consequences.</h2>
+      </div>
+
+      <div class="npi-example-grid">
+        <article class="npi-example reveal">
+          <div class="example-top"><span>HIGH-VOLUME RAMP</span><span>01</span></div>
+          <h3>Scale the production system with the product</h3>
+          <div class="npi-evidence-line"><strong>1.5–2.0M</strong><span>units / year</span></div>
+          <p>Led product readiness, production-test strategy, fixtures, diagnostics, yield and cycle-time readiness while supporting certification across more than 100 countries.</p>
+          <a class="project-link" href="wireless-module.html">See the product case →</a>
+        </article>
+
+        <article class="npi-example reveal">
+          <div class="example-top"><span>RELEASE GATE</span><span>02</span></div>
+          <h3>Do not release a process that is not capable</h3>
+          <div class="npi-quality-flow"><span>MISS FPY / Cpk</span><i>→</i><span>HOLD RELEASE</span><i>→</i><span>TUNE PROCESS</span><i>→</i><span>REVALIDATE</span></div>
+          <p>Held production release when a dispensing process missed its capability gate, then drove supplier tuning and revalidation until the process met acceptance criteria.</p>
+        </article>
+
+        <article class="npi-example reveal">
+          <div class="example-top"><span>FACTORY TRANSFER</span><span>03</span></div>
+          <h3>Localization is also process redesign</h3>
+          <div class="npi-transfer-flow"><span>TRANSFER</span><i>→</i><span>SIMPLIFY</span><i>→</i><span>POINT-OF-USE</span><i>→</i><span>LESS VARIATION</span></div>
+          <p>Supported manufacturing localization by replacing labor-intensive packaging steps with pre-formed point-of-use assemblies to reduce handling, cycle time, and process variation.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section factory-section">
+      <div class="section-index">03 / BUILD CONTROL</div>
+      <div class="section-heading reveal"><p class="kicker">What to watch during a build</p><h2>The build should produce evidence, not just units.</h2></div>
       <div class="build-dashboard reveal">
         <div><span>YIELD</span><strong>↗</strong><small>pass / fail by stage</small></div>
         <div><span>DEFECTS</span><strong>!</strong><small>type / frequency / owner</small></div>
         <div><span>CYCLE</span><strong>⏱</strong><small>process and test time</small></div>
-        <div><span>TEST</span><strong>✓</strong><small>results against criteria</small></div>
-        <div><span>BLOCKERS</span><strong>→</strong><small>containment and decision</small></div>
+        <div><span>TEST</span><strong>✓</strong><small>coverage + criteria</small></div>
+        <div><span>BLOCKERS</span><strong>→</strong><small>containment + decision</small></div>
       </div>
     </section>
 
-    <section id="loop" class="section factory-section">
-      <div class="section-index">03 / CLOSED LOOP</div>
-      <div class="factory-flow">
-        <div class="factory-stage reveal"><span>BEFORE</span><h3>Prepare</h3><p>Readiness, micro-schedule, materials, process, test, criteria.</p></div>
-        <div class="factory-stage factory-stage-active reveal"><span>DURING</span><h3>Observe</h3><p>Yield, defects, cycle time, test, blockers, ownership.</p></div>
-        <div class="factory-stage reveal"><span>AFTER</span><h3>Close</h3><p>Root cause, corrective action, evidence, next-build entry criteria.</p></div>
+    <section id="sustaining" class="section case-light">
+      <div class="section-index">04 / SUSTAINING LOOP</div>
+      <div class="split">
+        <div class="sticky-title reveal">
+          <p class="kicker">After launch</p>
+          <h2>Field failures should improve the manufacturing system.</h2>
+        </div>
+        <div class="story-column">
+          <div class="npi-sustaining-loop reveal">
+            <div><span>FIELD</span><strong>1,000+ deployed devices affected</strong></div><i>→</i>
+            <div><span>CONTAIN</span><strong>Coordinate recovery</strong></div><i>→</i>
+            <div><span>ROOT CAUSE</span><strong>Firmware / SKU configuration</strong></div><i>→</i>
+            <div class="npi-sustain-final"><span>PREVENT</span><strong>Automated detection + stronger controls</strong></div>
+          </div>
+          <p class="body-copy reveal">The lesson is broader than one incident: sustaining closes the loop between field behavior, product design, configuration management, and factory controls.</p>
+        </div>
       </div>
     </section>
 
     <section class="section product-close">
-      <div class="next-panel reveal"><p class="kicker">The principle</p><h2>NPI is not a handoff after engineering. It is part of engineering.</h2><div class="hero-links"><a href="index.html#work">Back to selected work →</a></div></div>
+      <div class="next-panel reveal">
+        <p class="kicker">The principle</p>
+        <h2>NPI is the engineering system that makes production predictable.</h2>
+        <div class="hero-links"><a href="wireless-module.html">See high-volume ramp →</a><a href="index.html#work">Back to selected work →</a></div>
+      </div>
     </section>
   </main>
+
   <footer id="contact" class="footer">
-    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>NPI build readiness.</h2></div>
+    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>NPI + manufacturing.</h2></div>
     <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
     <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
   </footer>
