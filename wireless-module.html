@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>High-Volume NFC Module — Ben Lin</title>
-  <meta name="description" content="A commercial-laptop NFC product case spanning a small 13.56 MHz NFC module, separate touchpad antenna integration, EVT/DVT/PVT, global certification, production test, and high-volume ramp." />
+  <meta name="description" content="A commercial-laptop NFC case spanning a 10 x 17 mm module, separate touchpad antenna integration, module certification across 100+ countries, and high-volume automated production." />
   <meta name="theme-color" content="#f4f1e9" />
   <link rel="canonical" href="https://benlatrobe.github.io/wireless-module.html" />
   <meta property="og:title" content="High-Volume NFC Module — Ben Lin" />
-  <meta property="og:description" content="From a tiny NFC module and separate touchpad antenna to global certification and 1.5–2.0M units annually." />
+  <meta property="og:description" content="A tiny 13.56 MHz NFC module integrated with a separate touchpad antenna, certified globally, and scaled to 1.5–2.0M units annually." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="case-page wireless-case-page nfc-case-page">
+<body class="case-page wireless-case-page nfc-case-page nfc-v2-page">
   <a class="skip-link" href="#top">Skip to content</a>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
@@ -22,212 +22,211 @@
     <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
     <nav class="nav">
       <a href="#integration">Integration</a>
-      <a href="#tap-area">Tap Area</a>
-      <a href="#lifecycle">Lifecycle</a>
-      <a href="#factory">Factory</a>
+      <a href="#certification">Certification</a>
+      <a href="#manufacturing">Manufacturing</a>
+      <a href="index.html#work">Home</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="product-hero section nfc-hero">
+    <section class="product-hero section nfc-usecase-hero">
       <div class="product-hero-inner">
         <div class="reveal">
           <p class="eyebrow">Selected work / connected hardware</p>
-          <h1>Scaling a commercial-laptop NFC module.</h1>
-          <p class="case-deck">The electronics were small. The product system around them was not.</p>
+          <h1>Tap a badge. Authenticate on the laptop.</h1>
+          <p class="case-deck">A tiny NFC module, a separate antenna under the touchpad, and a user-facing tap area working as one product system.</p>
 
           <div class="case-meta product-meta">
-            <div><span>RADIO</span><strong>13.56 MHz NFC</strong></div>
-            <div><span>VOLUME</span><strong>~1.5–2.0M units / year</strong></div>
-            <div><span>LAUNCH</span><strong>100+ countries</strong></div>
+            <div><span>MODULE</span><strong>10 × 17 mm nominal</strong></div>
+            <div><span>VOLUME</span><strong>~1.5–2.0M / year</strong></div>
+            <div><span>CERTIFICATION</span><strong>100+ countries</strong></div>
           </div>
         </div>
 
-        <div class="nfc-laptop-visual reveal" aria-label="Commercial laptop NFC integration">
-          <div class="nfc-laptop-screen">
-            <div class="nfc-screen-glow"></div>
-          </div>
-
-          <div class="nfc-laptop-deck">
-            <div class="nfc-keyboard" aria-hidden="true">
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            </div>
-
-            <div class="nfc-touchpad">
-              <div class="nfc-tap-mark" aria-label="NFC tap location">
-                <span></span><span></span><span></span>
+        <div class="nfc-login-scene reveal" aria-label="Badge tap to laptop authentication">
+          <div class="nfc-scene-laptop">
+            <div class="nfc-scene-screen">
+              <div class="nfc-login-ui">
+                <span class="nfc-login-lock">◉</span>
+                <strong>SECURE SIGN-IN</strong>
+                <small>Tap your badge</small>
               </div>
-              <div class="nfc-wave nfc-wave-1"></div>
-              <div class="nfc-wave nfc-wave-2"></div>
-              <div class="nfc-wave nfc-wave-3"></div>
+              <div class="nfc-login-success">
+                <span>✓</span>
+                <strong>ACCESS GRANTED</strong>
+              </div>
             </div>
-
-            <div class="nfc-antenna-layer">
-              <span>ANTENNA</span>
+            <div class="nfc-scene-deck">
+              <div class="nfc-scene-keys">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="nfc-scene-touchpad">
+                <div class="nfc-scene-mark"><i></i><i></i><i></i></div>
+                <div class="nfc-scene-pulse nfc-pulse-a"></div>
+                <div class="nfc-scene-pulse nfc-pulse-b"></div>
+              </div>
             </div>
-
-            <div class="nfc-module-small">
-              <span>NFC</span>
-              <small>MODULE</small>
-            </div>
-
-            <svg class="nfc-cable" viewBox="0 0 500 220" aria-hidden="true">
-              <path d="M392 169 C340 160, 310 170, 272 183 C245 191, 220 188, 202 178" />
-            </svg>
           </div>
 
-          <div class="nfc-visual-caption">
-            <span>TINY MODULE</span><i>→</i><span>SEPARATE ANTENNA</span><i>→</i><span>TOUCHPAD READ AREA</span>
+          <div class="nfc-badge">
+            <span class="nfc-badge-photo"></span>
+            <strong>ID BADGE</strong>
+            <small>tap to authenticate</small>
+          </div>
+
+          <div class="nfc-usecase-caption">
+            <span>BADGE</span><i>→</i><span>TOUCHPAD NFC AREA</span><i>→</i><span>AUTHENTICATION</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="integration" class="section case-light nfc-integration-section">
+    <section id="integration" class="section case-light nfc-three-section">
       <div class="section-index">01 / SYSTEM INTEGRATION</div>
       <div class="section-heading reveal">
-        <p class="kicker">The module is only one component</p>
-        <h2>Make a tiny radio work inside a much larger product.</h2>
+        <p class="kicker">3D exploded assembly</p>
+        <h2>The module, antenna, and touchpad are separate parts of one NFC system.</h2>
       </div>
 
-      <div class="nfc-integration-flow reveal">
-        <article>
-          <div class="nfc-mini-module"><span>NFC</span></div>
-          <strong>Module</strong>
-          <small>controller + host interface</small>
-        </article>
-        <i>→</i>
-        <article>
-          <div class="nfc-mini-link"></div>
-          <strong>Interconnect</strong>
-          <small>module ↔ antenna path</small>
-        </article>
-        <i>→</i>
-        <article>
-          <div class="nfc-mini-antenna"><span></span></div>
-          <strong>Antenna</strong>
-          <small>separate, flat loop structure</small>
-        </article>
-        <i>→</i>
-        <article class="nfc-flow-accent">
-          <div class="nfc-mini-touch"><span></span></div>
-          <strong>Touchpad</strong>
-          <small>user-facing read area</small>
-        </article>
+      <div class="nfc-three-layout">
+        <div class="nfc-three-panel reveal">
+          <div id="nfc-three-root" class="nfc-three-root" aria-label="Interactive 3D NFC module, antenna and touchpad assembly">
+            <div class="nfc-three-fallback">
+              <span>3D ASSEMBLY</span>
+              <small>Loading interactive model…</small>
+            </div>
+          </div>
+
+          <div class="nfc-three-controls">
+            <button type="button" data-nfc-view="exploded" class="is-active">Exploded</button>
+            <button type="button" data-nfc-view="assembled">Assembled</button>
+            <span>Drag to rotate</span>
+          </div>
+        </div>
+
+        <aside class="nfc-three-spec reveal">
+          <p class="kicker">Module envelope</p>
+          <div class="nfc-dimension">
+            <strong>10.0</strong><span>mm width</span>
+          </div>
+          <div class="nfc-dimension">
+            <strong>17.0</strong><span>mm length</span>
+          </div>
+          <div class="nfc-dimension">
+            <strong>1.85</strong><span>mm max envelope</span>
+          </div>
+          <div class="nfc-dimension nfc-dimension-small">
+            <strong>0.40</strong><span>mm PCB thickness</span>
+          </div>
+          <p class="nfc-spec-note">Nominal module geometry follows the public mechanical drawing. Shield and connector details are simplified for visualization.</p>
+
+          <div class="nfc-layer-key">
+            <div><i class="key-touch"></i><span>Touchpad surface</span></div>
+            <div><i class="key-ant"></i><span>Flat NFC antenna</span></div>
+            <div><i class="key-module"></i><span>NFC module</span></div>
+            <div><i class="key-host"></i><span>Host platform</span></div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section id="tap-area" class="section nfc-tap-section">
-      <div class="section-index">02 / USER EXPERIENCE</div>
-
-      <div class="nfc-tap-layout">
+    <section id="certification" class="section nfc-cert-section">
+      <div class="section-index">02 / MODULE CERTIFICATION</div>
+      <div class="nfc-cert-layout">
         <div class="sticky-title reveal">
-          <p class="kicker">Antenna placement becomes UX</p>
-          <h2>The touchpad tells the user where to tap.</h2>
+          <p class="kicker">Scale the certification with the module</p>
+          <h2>One certified module supports many laptop programs and markets.</h2>
         </div>
 
-        <div class="nfc-exploded-view reveal">
-          <div class="nfc-exploded-label">EXPLODED VIEW</div>
-
-          <div class="nfc-layer nfc-layer-surface">
-            <span>TOUCHPAD SURFACE</span>
-            <div class="nfc-oem-mark">
-              <i></i><i></i><i></i>
-            </div>
+        <div class="nfc-cert-visual reveal">
+          <div class="nfc-cert-module">
+            <span>13.56 MHz</span>
+            <strong>NFC MODULE</strong>
+            <small>modular radio platform</small>
           </div>
 
-          <div class="nfc-layer-gap">↓</div>
-
-          <div class="nfc-layer nfc-layer-antenna">
-            <span>FLAT NFC ANTENNA</span>
-            <div class="nfc-loop-antenna">
-              <i></i><i></i><i></i>
-            </div>
+          <div class="nfc-cert-lines">
+            <i></i><i></i><i></i><i></i><i></i>
           </div>
 
-          <div class="nfc-layer-gap">↓</div>
-
-          <div class="nfc-layer nfc-layer-host">
-            <span>HOST / MODULE CONNECTION</span>
-            <div class="nfc-host-module">
-              <b>NFC</b>
-            </div>
+          <div class="nfc-cert-globe">
+            <div class="cert-globe-grid"></div>
+            <strong>100+</strong>
+            <span>COUNTRIES</span>
           </div>
 
-          <p class="nfc-exploded-note">Illustrative integration — proportions simplified for clarity.</p>
+          <div class="nfc-cert-hosts">
+            <span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="nfc-cert-caption">
+            <span>MODULE CERTIFICATION</span><i>→</i><span>REGIONAL APPROVALS</span><i>→</i><span>MULTIPLE HOST PRODUCTS</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="lifecycle" class="section case-light">
-      <div class="section-index">03 / PRODUCT LIFECYCLE</div>
+    <section id="manufacturing" class="section section-dark nfc-production-section">
+      <div class="section-index">03 / HIGH-VOLUME MANUFACTURING</div>
       <div class="section-heading reveal">
-        <p class="kicker">Scale starts before production</p>
-        <h2>Integration, compliance, and manufacturing mature together.</h2>
+        <p class="kicker">Module-only production</p>
+        <h2>Automation and test make the small module scalable.</h2>
       </div>
 
-      <div class="wireless-lifecycle reveal">
-        <div><span>01</span><strong>EVT</strong><small>function + laptop integration</small></div><i>→</i>
-        <div><span>02</span><strong>DVT</strong><small>RF + design verification</small></div><i>→</i>
-        <div><span>03</span><strong>CERT</strong><small>regional compliance</small></div><i>→</i>
-        <div><span>04</span><strong>PVT</strong><small>process + test readiness</small></div><i>→</i>
-        <div><span>05</span><strong>RAMP</strong><small>yield + cycle + capacity</small></div>
-      </div>
-    </section>
+      <div class="nfc-production-line reveal" aria-label="Illustrative NFC module production line">
+        <div class="nfc-conveyor">
+          <div class="nfc-station">
+            <span>01</span>
+            <strong>MODULE ASSEMBLY</strong>
+            <div class="station-machine station-assembly"><i></i><i></i></div>
+          </div>
+          <i class="conveyor-arrow">→</i>
+          <div class="nfc-station">
+            <span>02</span>
+            <strong>FUNCTION TEST</strong>
+            <div class="station-machine station-test"><i></i><i></i><i></i></div>
+          </div>
+          <i class="conveyor-arrow">→</i>
+          <div class="nfc-station">
+            <span>03</span>
+            <strong>RF / NFC CHECK</strong>
+            <div class="station-machine station-rf"><i></i><i></i></div>
+          </div>
+          <i class="conveyor-arrow">→</i>
+          <div class="nfc-station">
+            <span>04</span>
+            <strong>INSPECTION</strong>
+            <div class="station-machine station-inspect"><i></i></div>
+          </div>
+          <i class="conveyor-arrow">→</i>
+          <div class="nfc-station nfc-station-output">
+            <span>05</span>
+            <strong>OUTPUT</strong>
+            <div class="station-counter">
+              <b>1.5–2.0M</b>
+              <small>units / year</small>
+            </div>
+          </div>
 
-    <section id="factory" class="section section-dark">
-      <div class="section-index">04 / MANUFACTURING SYSTEM</div>
-      <div class="section-heading reveal">
-        <p class="kicker">What had to scale with the module</p>
-        <h2>High volume depends on the test and production system around the hardware.</h2>
-      </div>
-
-      <div class="wireless-factory-grid">
-        <article class="wireless-factory-card reveal">
-          <span>TEST STRATEGY</span>
-          <h3>Coverage</h3>
-          <div class="nfc-factory-icon nfc-test-icon"><i></i><i></i><i></i></div>
-        </article>
-        <article class="wireless-factory-card reveal">
-          <span>FIXTURES</span>
-          <h3>Repeatability</h3>
-          <div class="nfc-factory-icon nfc-fixture-icon"><i></i><i></i></div>
-        </article>
-        <article class="wireless-factory-card reveal">
-          <span>YIELD</span>
-          <h3>Feedback</h3>
-          <div class="nfc-factory-icon nfc-yield-icon"><i></i><i></i><i></i><i></i><i></i></div>
-        </article>
-        <article class="wireless-factory-card reveal">
-          <span>CYCLE TIME</span>
-          <h3>Capacity</h3>
-          <div class="nfc-factory-icon nfc-cycle-icon"><i></i></div>
-        </article>
-        <article class="wireless-factory-card reveal">
-          <span>CERTIFICATION</span>
-          <h3>Global launch</h3>
-          <div class="nfc-factory-icon nfc-globe-icon"><i></i><i></i></div>
-        </article>
+          <div class="nfc-moving-module nfc-moving-module-a"></div>
+          <div class="nfc-moving-module nfc-moving-module-b"></div>
+        </div>
       </div>
 
-      <div class="wireless-scale reveal">
-        <span>ENGINEERING BUILDS</span><i>→</i>
-        <span>PILOT</span><i>→</i>
-        <span>SEMI-AUTOMATION</span><i>→</i>
-        <span>REPLICATED LINES</span><i>→</i>
-        <strong>1.5–2.0M / YEAR</strong>
+      <div class="nfc-production-metrics">
+        <article class="reveal"><span>TEST</span><strong>Coverage</strong><small>functional + NFC behavior</small></article>
+        <article class="reveal"><span>YIELD</span><strong>Feedback</strong><small>defects drive correction</small></article>
+        <article class="reveal"><span>CYCLE</span><strong>Capacity</strong><small>automation + line replication</small></article>
+        <article class="reveal"><span>QUALITY</span><strong>Consistency</strong><small>repeatable module output</small></article>
       </div>
     </section>
 
     <section class="section product-close">
       <div class="next-panel reveal">
         <p class="kicker">The product lesson</p>
-        <h2>A tiny module can require system-level engineering.</h2>
+        <h2>A 10 × 17 mm module still requires system-level integration, certification, and manufacturing execution.</h2>
         <div class="hero-links">
           <a href="npi-readiness.html">See NPI readiness →</a>
-          <a href="connected-positioning.html">See positioning systems →</a>
           <a href="index.html#work">Back to selected work →</a>
         </div>
       </div>
@@ -251,5 +250,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script type="module" src="nfc-module-3d.js"></script>
 </body>
 </html>
