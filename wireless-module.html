@@ -121,56 +121,97 @@
               <text x="462" y="68" text-anchor="middle">TOUCHPAD SURFACE / USER TAP AREA</text>
             </g>
 
-            <!-- flexible antenna body + integrated FPC tail -->
+            <!-- adhesive-backed flexible NFC antenna with integrated FPC tail -->
             <g class="svg-part svg-antenna" data-part="antenna">
-              <!-- flex/ferrite body -->
-              <path d="M250 260
-                       L590 260
-                       L626 276
-                       L626 300
-                       L603 313
-                       L294 313
-                       L262 294
+              <!-- thin backing / adhesive patch -->
+              <path d="M270 256
+                       L565 256
+                       L596 269
+                       L596 305
+                       L574 318
+                       L305 318
+                       L273 302
                        Z"
-                    fill="#eef2e6" stroke="#161817" stroke-width="2"/>
+                    fill="#dad8d0" stroke="#8d9088" stroke-width="1.2"/>
 
-              <!-- coil traces -->
-              <path d="M272 272 L574 272 L608 284 L608 296 L592 302 L307 302 L279 289 Z"
-                    fill="none" stroke="#bbff49" stroke-width="4" stroke-linejoin="round"/>
-              <path d="M286 279 L562 279 L596 287 L596 293 L582 296 L318 296 L292 287 Z"
-                    fill="none" stroke="#8fcf27" stroke-width="2.6" stroke-linejoin="round"/>
-              <path d="M300 285 L548 285 L582 289 L570 291 L328 291 L305 286 Z"
-                    fill="none" stroke="#7cae2a" stroke-width="1.8" stroke-linejoin="round"/>
-
-              <!-- flex neck and tail as one continuous part -->
-              <path d="M626 281
-                       C655 284 676 294 696 309
-                       C721 328 736 356 758 378
-                       C778 399 800 408 826 408
-                       L826 425
-                       C794 425 766 414 742 390
-                       C718 366 704 340 682 324
-                       C664 311 646 304 626 303
+              <!-- flexible antenna film -->
+              <path d="M278 262
+                       L558 262
+                       L588 274
+                       L588 298
+                       L568 310
+                       L310 310
+                       L280 296
                        Z"
-                    fill="#ece9df" stroke="#161817" stroke-width="2"/>
+                    fill="#efece3" stroke="#161817" stroke-width="1.8"/>
 
-              <!-- tail conductors -->
-              <path d="M640 291 C666 297 685 307 702 322 C726 343 742 372 764 390 C781 404 798 411 817 412"
-                    fill="none" stroke="#9a7a47" stroke-width="1.5"/>
-              <path d="M644 297 C668 302 686 312 701 326 C724 347 738 374 758 393 C777 410 795 417 817 417"
-                    fill="none" stroke="#9a7a47" stroke-width="1.5"/>
+              <!-- printed loop traces following the flex outline -->
+              <path d="M294 272
+                       L548 272
+                       L574 281
+                       L574 292
+                       L558 300
+                       L321 300
+                       L296 290
+                       Z"
+                    fill="none" stroke="#bbff49" stroke-width="3.4" stroke-linejoin="round"/>
+              <path d="M306 278
+                       L538 278
+                       L562 285
+                       L562 289
+                       L549 294
+                       L331 294
+                       L309 287
+                       Z"
+                    fill="none" stroke="#8fcf27" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M319 283
+                       L529 283
+                       L550 287
+                       L540 289
+                       L341 289
+                       L322 285
+                       Z"
+                    fill="none" stroke="#6f9828" stroke-width="1.5" stroke-linejoin="round"/>
 
-              <!-- tail contact fingers -->
-              <g transform="translate(823 409)">
-                <rect x="0" y="0" width="24" height="16" rx="1.5" fill="#f5f2ea" stroke="#161817" stroke-width="2"/>
-                <line x1="5" y1="3" x2="5" y2="13" stroke="#9a7a47" stroke-width="1.5"/>
-                <line x1="10" y1="3" x2="10" y2="13" stroke="#9a7a47" stroke-width="1.5"/>
-                <line x1="15" y1="3" x2="15" y2="13" stroke="#9a7a47" stroke-width="1.5"/>
-                <line x1="20" y1="3" x2="20" y2="13" stroke="#9a7a47" stroke-width="1.5"/>
+              <!-- narrow flex neck transitions directly into FPC cable -->
+              <path d="M586 280
+                       C614 282 630 287 646 298
+                       L668 314
+                       C687 328 698 348 713 367
+                       C729 389 747 404 770 414
+                       L799 426
+                       L793 442
+                       L763 430
+                       C737 419 714 401 695 377
+                       C679 357 670 340 652 328
+                       L631 314
+                       C618 305 604 301 586 301
+                       Z"
+                    fill="#e9e4d8" stroke="#161817" stroke-width="1.8"/>
+
+              <!-- conductor traces along FPC -->
+              <path d="M600 288 C623 291 637 297 652 307 C672 321 683 341 699 361 C718 385 737 401 761 411 L791 424"
+                    fill="none" stroke="#a77a3f" stroke-width="1.35"/>
+              <path d="M601 294 C622 297 636 302 649 312 C668 326 677 344 692 364 C710 388 730 406 755 417 L788 430"
+                    fill="none" stroke="#a77a3f" stroke-width="1.35"/>
+              <path d="M602 299 C621 302 633 307 645 316 C663 330 671 348 686 368 C703 392 722 409 748 421 L785 435"
+                    fill="none" stroke="#a77a3f" stroke-width="1.35"/>
+
+              <!-- stiffened ZIF contact end -->
+              <g transform="translate(786 423) rotate(20)">
+                <rect x="0" y="0" width="37" height="18" rx="1.5" fill="#f3efe6" stroke="#161817" stroke-width="1.8"/>
+                <rect x="25" y="1.5" width="10" height="15" fill="#d8c39a" stroke="#161817" stroke-width=".8"/>
+                <line x1="28" y1="3" x2="28" y2="15" stroke="#9a6e36" stroke-width="1"/>
+                <line x1="31" y1="3" x2="31" y2="15" stroke="#9a6e36" stroke-width="1"/>
+                <line x1="34" y1="3" x2="34" y2="15" stroke="#9a6e36" stroke-width="1"/>
               </g>
 
-              <text x="438" y="239" text-anchor="middle">FLEX NFC ANTENNA</text>
-              <text x="727" y="342" transform="rotate(38 727 342)">INTEGRATED FPC TAIL</text>
+              <!-- tiny adhesive callout -->
+              <path d="M332 319 L314 343" stroke="#9a9d94" stroke-width="1" stroke-dasharray="3 4"/>
+              <text x="255" y="355" class="svg-sub">adhesive-backed flex</text>
+
+              <text x="430" y="238" text-anchor="middle">FLEX NFC ANTENNA</text>
+              <text x="706" y="350" transform="rotate(45 706 350)">INTEGRATED FPC CABLE</text>
             </g>
 
             <!-- thin PCB module based on public mechanical drawing proportions -->
