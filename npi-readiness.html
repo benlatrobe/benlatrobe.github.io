@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NPI Build Readiness — Ben Lin</title>
+  <meta name="description" content="A build-readiness model connecting design maturity, CTB, factory execution, yield, defects, test results, and next-build learning." />
+  <meta name="theme-color" content="#f4f1e9" />
+  <link rel="canonical" href="https://benlatrobe.github.io/npi-readiness.html" />
+  <meta property="og:title" content="NPI Build Readiness — Ben Lin" />
+  <meta property="og:description" content="Turning a design into a buildable product through readiness gates, factory evidence, and closed-loop learning." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="case-page npi-case-page">
+  <a class="skip-link" href="#top">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
+    <nav class="nav"><a href="#gate">CTB</a><a href="#build">Build</a><a href="#loop">Learning</a><a href="index.html#work">Home</a></nav>
+  </header>
+  <main id="top">
+    <section class="product-hero section">
+      <div class="product-hero-inner">
+        <div class="reveal">
+          <p class="eyebrow">Selected work / NPI</p>
+          <h1>Turning a design into a buildable product.</h1>
+          <p class="case-deck">NPI works best when design readiness and factory readiness are treated as one engineering system.</p>
+        </div>
+        <div class="npi-loop reveal" aria-label="NPI loop">
+          <div>DESIGN</div><i>→</i><div class="npi-gate">CTB</div><i>→</i><div>BUILD</div><i>→</i><div>LEARN</div><i>↺</i>
+        </div>
+      </div>
+    </section>
+
+    <section id="gate" class="section case-light">
+      <div class="section-index">01 / CTB GATE</div>
+      <div class="section-heading reveal"><p class="kicker">Clear to Build</p><h2>CTB is more than design lock.</h2></div>
+      <div class="ctb-grid">
+        <article class="ctb-card reveal"><span>01</span><h3>Design maturity</h3><p>Required design decisions and release state are understood.</p></article>
+        <article class="ctb-card reveal"><span>02</span><h3>Material readiness</h3><p>Build materials are available and shortages are visible.</p></article>
+        <article class="ctb-card reveal"><span>03</span><h3>Process readiness</h3><p>Manufacturing flow, tooling, work instructions, and ownership are ready.</p></article>
+        <article class="ctb-card reveal"><span>04</span><h3>Test readiness</h3><p>Fixtures, test coverage, data capture, and acceptance criteria are defined.</p></article>
+      </div>
+    </section>
+
+    <section id="build" class="section section-dark">
+      <div class="section-index">02 / BUILD</div>
+      <div class="section-heading reveal"><p class="kicker">What the build should tell us</p><h2>The factory is an engineering feedback system.</h2></div>
+      <div class="build-dashboard reveal">
+        <div><span>YIELD</span><strong>↗</strong><small>pass / fail by stage</small></div>
+        <div><span>DEFECTS</span><strong>!</strong><small>type / frequency / owner</small></div>
+        <div><span>CYCLE</span><strong>⏱</strong><small>process and test time</small></div>
+        <div><span>TEST</span><strong>✓</strong><small>results against criteria</small></div>
+        <div><span>BLOCKERS</span><strong>→</strong><small>containment and decision</small></div>
+      </div>
+    </section>
+
+    <section id="loop" class="section factory-section">
+      <div class="section-index">03 / CLOSED LOOP</div>
+      <div class="factory-flow">
+        <div class="factory-stage reveal"><span>BEFORE</span><h3>Prepare</h3><p>Readiness, micro-schedule, materials, process, test, criteria.</p></div>
+        <div class="factory-stage factory-stage-active reveal"><span>DURING</span><h3>Observe</h3><p>Yield, defects, cycle time, test, blockers, ownership.</p></div>
+        <div class="factory-stage reveal"><span>AFTER</span><h3>Close</h3><p>Root cause, corrective action, evidence, next-build entry criteria.</p></div>
+      </div>
+    </section>
+
+    <section class="section product-close">
+      <div class="next-panel reveal"><p class="kicker">The principle</p><h2>NPI is not a handoff after engineering. It is part of engineering.</h2><div class="hero-links"><a href="index.html#work">Back to selected work →</a></div></div>
+    </section>
+  </main>
+  <footer id="contact" class="footer">
+    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>NPI build readiness.</h2></div>
+    <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
+    <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
