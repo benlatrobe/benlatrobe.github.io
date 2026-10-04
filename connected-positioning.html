@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RTLS & Connected Positioning — Ben Lin</title>
-  <meta name="description" content="A visual RTLS case study covering tags, locators/readers, location engines, mobile applications, BLE demonstrators, RFID field trials, and indoor/outdoor positioning decisions." />
+  <title>RTLS & Positioning — Ben Lin</title>
+  <meta name="description" content="A hardware-focused RTLS portfolio case covering tags, readers, AoA antenna arrays, dead reckoning, RFID, indoor/outdoor positioning, and productization." />
   <meta name="theme-color" content="#151816" />
   <link rel="canonical" href="https://benlatrobe.github.io/connected-positioning.html" />
-  <meta property="og:title" content="RTLS & Connected Positioning — Ben Lin" />
-  <meta property="og:description" content="Representative real-time location system architecture across connected tags, readers, positioning engines, and applications." />
+  <meta property="og:title" content="RTLS & Positioning — Ben Lin" />
+  <meta property="og:description" content="Device and hardware architecture for indoor/outdoor positioning: tags, AoA arrays, dead reckoning, RFID and productization." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="case-page connected-case-page rtls-page">
+<body class="case-page connected-case-page rtls-page rtls-hw-page">
   <a class="skip-link" href="#top">Skip to content</a>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
@@ -22,9 +22,9 @@
     <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
     <nav class="nav">
       <a href="#architecture">Architecture</a>
-      <a href="#indoor-outdoor">Indoor / Outdoor</a>
-      <a href="#examples">Examples</a>
-      <a href="index.html#work">Home</a>
+      <a href="#hardware">Hardware</a>
+      <a href="#rfid">RFID / IP</a>
+      <a href="#productize">Productize</a>
     </nav>
   </header>
 
@@ -32,206 +32,194 @@
     <section class="case-hero section rtls-hero">
       <div class="case-hero-inner">
         <div class="case-intro reveal">
-          <p class="eyebrow">Selected work / connected positioning</p>
+          <p class="eyebrow">Selected work / RTLS & positioning</p>
           <h1>Where is the asset now?</h1>
-          <p class="case-deck">RTLS turns a wireless signal into an operational answer: who or what is where, in real time or near real time.</p>
+          <p class="case-deck">My focus was the device and hardware side of positioning systems: tags, antennas, locators, readers, gateways, and the engineering needed to turn them into manufacturable products.</p>
 
           <div class="case-meta">
-            <div><span>INDOOR</span><strong>BLE · RFID · UWB evaluation</strong></div>
-            <div><span>OUTDOOR</span><strong>tracking + connected telemetry</strong></div>
-            <div><span>SCOPE</span><strong>device → application</strong></div>
+            <div><span>DEVICE</span><strong>tags · badges · readers</strong></div>
+            <div><span>POSITIONING</span><strong>RFID · BLE · AoA · UWB evaluation</strong></div>
+            <div><span>PRODUCT</span><strong>design → NPI → production</strong></div>
           </div>
         </div>
 
-        <div class="rtls-scene reveal" aria-label="Animated indoor outdoor RTLS scene">
-          <div class="rtls-map">
-            <div class="rtls-building">
-              <span class="rtls-zone z1">RECEIVING</span>
-              <span class="rtls-zone z2">STORAGE</span>
-              <span class="rtls-zone z3">PROCESS</span>
-              <span class="rtls-zone z4">EXIT</span>
-
-              <div class="rtls-anchor a1"><i></i></div>
-              <div class="rtls-anchor a2"><i></i></div>
-              <div class="rtls-anchor a3"><i></i></div>
-            </div>
-
-            <div class="rtls-yard">
-              <span>OUTDOOR / YARD</span>
-              <div class="rtls-gateway"><i></i></div>
-            </div>
-
-            <div class="rtls-asset">
-              <span>TAG</span>
-            </div>
-
-            <svg class="rtls-route" viewBox="0 0 760 390" aria-hidden="true">
-              <path d="M115 280 C205 250, 240 155, 365 165 C465 173, 498 260, 608 278" />
-            </svg>
+        <div class="rtls-hw-hero reveal" aria-label="Representative RTLS architecture">
+          <div class="rtls-hw-tag">
+            <span>TAG</span>
+            <i></i>
           </div>
 
-          <div class="rtls-scene-caption">
-            <span>TAG</span><i>→</i><span>LOCATORS</span><i>→</i><span>POSITION</span><i>→</i><span>APPLICATION</span>
+          <div class="rtls-hw-radio">
+            <i></i><i></i><i></i>
           </div>
-          <small>Representative RTLS architecture synthesized from multiple positioning and tracking programs.</small>
+
+          <div class="rtls-hw-locator">
+            <span>LOCATOR / READER</span>
+            <div class="rtls-mini-array">
+              <i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+
+          <div class="rtls-hw-engine">POSITION</div>
+          <div class="rtls-hw-app">APPLICATION</div>
+
+          <svg class="rtls-hw-lines" viewBox="0 0 700 420" aria-hidden="true">
+            <path d="M110 225 C190 170, 250 160, 315 180" />
+            <path d="M385 200 C450 200, 505 205, 570 215" />
+            <path d="M575 230 C590 275, 590 305, 585 338" />
+          </svg>
+
+          <small>Representative architecture only — device and hardware product development was the primary scope.</small>
         </div>
       </div>
     </section>
 
-    <section id="architecture" class="section case-light rtls-architecture-section">
-      <div class="section-index">01 / RTLS ARCHITECTURE</div>
+    <section id="architecture" class="section case-light rtls-compact-architecture">
+      <div class="section-index">01 / SYSTEM ARCHITECTURE</div>
       <div class="section-heading reveal">
-        <p class="kicker">Four layers</p>
-        <h2>Location is a system problem, not just a radio problem.</h2>
+        <p class="kicker">Enough system context to define the hardware</p>
+        <h2>Tag → locator → position → application.</h2>
       </div>
 
-      <div class="rtls-architecture reveal">
-        <article class="rtls-layer">
-          <div class="rtls-layer-icon tag-icon"><i></i></div>
-          <span>01</span>
-          <h3>Tag / device</h3>
-          <div class="rtls-tags"><small>identity</small><small>battery</small><small>sensing</small><small>form factor</small></div>
-        </article>
-
-        <i class="rtls-flow-arrow">→</i>
-
-        <article class="rtls-layer">
-          <div class="rtls-layer-icon locator-icon"><i></i><i></i><i></i></div>
-          <span>02</span>
-          <h3>Locator / reader</h3>
-          <div class="rtls-tags"><small>anchors</small><small>readers</small><small>gateways</small></div>
-        </article>
-
-        <i class="rtls-flow-arrow">→</i>
-
-        <article class="rtls-layer rtls-layer-accent">
-          <div class="rtls-layer-icon engine-icon"><i></i><i></i></div>
-          <span>03</span>
-          <h3>Location engine</h3>
-          <div class="rtls-tags"><small>signal</small><small>position</small><small>zones</small><small>history</small></div>
-        </article>
-
-        <i class="rtls-flow-arrow">→</i>
-
-        <article class="rtls-layer">
-          <div class="rtls-layer-icon app-icon"><i></i></div>
-          <span>04</span>
-          <h3>Application</h3>
-          <div class="rtls-tags"><small>web</small><small>mobile</small><small>alerts</small><small>operations</small></div>
-        </article>
+      <div class="rtls-compact-flow reveal">
+        <article><span>01</span><strong>TAG / DEVICE</strong><small>identity · sensing · battery · radio</small></article>
+        <i>→</i>
+        <article><span>02</span><strong>LOCATOR / READER</strong><small>antenna · RF front end · edge processing</small></article>
+        <i>→</i>
+        <article><span>03</span><strong>POSITIONING</strong><small>RSSI · AoA · ranging · sensor fusion</small></article>
+        <i>→</i>
+        <article><span>04</span><strong>APPLICATION</strong><small>location · zone · event · history</small></article>
       </div>
     </section>
 
-    <section id="indoor-outdoor" class="section section-dark rtls-tech-section">
-      <div class="section-index">02 / INDOOR → OUTDOOR</div>
+    <section id="hardware" class="section section-dark rtls-hardware-section">
+      <div class="section-index">02 / HARDWARE BUILDING BLOCKS</div>
       <div class="section-heading reveal">
-        <p class="kicker">Technology follows the use case</p>
-        <h2>Accuracy, range, infrastructure, power, and cost drive the architecture.</h2>
+        <p class="kicker">Device-side engineering</p>
+        <h2>The positioning method changes the hardware.</h2>
       </div>
 
-      <div class="rtls-tech-map">
-        <article class="rtls-tech-card reveal">
-          <span>INDOOR / PRESENCE</span>
-          <h3>RFID</h3>
-          <div class="rtls-tech-visual rfid-visual"><i></i><i></i><i></i></div>
-          <small>checkpoint / read-zone detection</small>
+      <div class="rtls-hardware-grid">
+        <article class="rtls-hardware-card reveal">
+          <span>TAG / BEACON</span>
+          <h3>Small, power-constrained endpoint</h3>
+          <div class="hw-tag-diagram">
+            <i class="hw-chip"></i>
+            <i class="hw-ant"></i>
+            <i class="hw-batt"></i>
+          </div>
+          <div class="rtls-tags"><small>RF</small><small>MCU</small><small>battery</small><small>sensor</small><small>enclosure</small></div>
         </article>
 
-        <article class="rtls-tech-card reveal">
-          <span>INDOOR / AREA</span>
-          <h3>BLE</h3>
-          <div class="rtls-tech-visual ble-visual"><i></i><i></i><i></i></div>
-          <small>low-power tags / badges / proximity</small>
+        <article class="rtls-hardware-card reveal">
+          <span>AoA / ANTENNA ARRAY</span>
+          <h3>Direction from phase across multiple antennas</h3>
+          <div class="aoa-diagram">
+            <div class="aoa-array"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="aoa-rays"><i></i><i></i><i></i></div>
+            <div class="aoa-target"></div>
+          </div>
+          <div class="rtls-tags"><small>array geometry</small><small>phase</small><small>calibration</small><small>RF layout</small></div>
         </article>
 
-        <article class="rtls-tech-card reveal">
-          <span>INDOOR / PRECISION</span>
-          <h3>UWB</h3>
-          <div class="rtls-tech-visual uwb-visual"><i></i><i></i><i></i></div>
-          <small>higher-precision positioning when justified</small>
+        <article class="rtls-hardware-card reveal">
+          <span>DEAD RECKONING</span>
+          <h3>Keep estimating motion between radio fixes</h3>
+          <div class="dr-diagram">
+            <div class="dr-sensor"><span>IMU</span></div>
+            <svg viewBox="0 0 220 100" aria-hidden="true"><path d="M12 72 C48 52, 72 78, 108 47 C141 19, 166 38, 207 17"/></svg>
+            <div class="dr-fix f1"></div><div class="dr-fix f2"></div><div class="dr-fix f3"></div>
+          </div>
+          <div class="rtls-tags"><small>IMU</small><small>heading</small><small>motion</small><small>sensor fusion</small></div>
         </article>
 
-        <article class="rtls-tech-card reveal">
-          <span>OUTDOOR / WIDE AREA</span>
-          <h3>Connected tracking</h3>
-          <div class="rtls-tech-visual outdoor-visual"><i></i><i></i></div>
-          <small>wide-area location + telemetry</small>
+        <article class="rtls-hardware-card reveal">
+          <span>READER / GATEWAY</span>
+          <h3>Bridge radio endpoints into the system</h3>
+          <div class="reader-diagram">
+            <div class="reader-box"><i></i><i></i></div>
+            <div class="reader-links"><i></i><i></i><i></i></div>
+          </div>
+          <div class="rtls-tags"><small>RF front end</small><small>antenna</small><small>FW</small><small>network</small><small>test</small></div>
         </article>
-      </div>
-
-      <div class="rtls-tech-caption reveal">
-        <span>NO SINGLE RADIO WINS EVERY USE CASE</span>
-        <i>accuracy ↔ cost ↔ battery ↔ infrastructure ↔ environment</i>
       </div>
     </section>
 
-    <section id="examples" class="section rtls-examples-section">
-      <div class="section-index">03 / TWO EXAMPLES</div>
+    <section class="section rtls-choice-section">
+      <div class="section-index">03 / INDOOR ↔ OUTDOOR</div>
       <div class="section-heading reveal">
-        <p class="kicker">Prototype before product commitment</p>
-        <h2>Use the deployment to learn what the system really needs.</h2>
+        <p class="kicker">Architecture tradeoff</p>
+        <h2>No single positioning technology fits every deployment.</h2>
       </div>
 
-      <div class="rtls-example-grid">
-        <article class="rtls-example reveal">
-          <div class="example-top"><span>BLE DEMONSTRATOR</span><span>01</span></div>
+      <div class="rtls-choice-matrix reveal">
+        <div class="choice-row choice-head"><span></span><strong>RFID</strong><strong>BLE</strong><strong>AoA / UWB</strong><strong>OUTDOOR</strong></div>
+        <div class="choice-row"><span>USE</span><small>checkpoint / zone</small><small>proximity / area</small><small>direction / precision</small><small>wide-area tracking</small></div>
+        <div class="choice-row"><span>HARDWARE</span><small>tag + reader</small><small>beacon + locator</small><small>array / anchors</small><small>tracker + wide-area radio</small></div>
+        <div class="choice-row"><span>TRADEOFF</span><small>infrastructure</small><small>battery / density</small><small>cost / calibration</small><small>coverage / power</small></div>
+      </div>
+    </section>
 
-          <div class="rtls-example-system">
-            <div class="badge-node"><i></i><strong>BADGE</strong></div>
-            <span>→</span>
-            <div class="hub-node"><i></i><strong>HUB</strong></div>
-            <span>↔</span>
-            <div class="phone-node"><i></i><strong>iOS APP</strong></div>
+    <section id="rfid" class="section case-light rtls-rfid-section">
+      <div class="section-index">04 / RFID + INVENTION WORK</div>
+      <div class="section-heading reveal">
+        <p class="kicker">Product + IP</p>
+        <h2>RFID work extended from antenna products to field deployment and patents.</h2>
+      </div>
+
+      <div class="rfid-ip-grid">
+        <article class="rfid-ip-card reveal">
+          <div class="rfid-patent-icon">
+            <span>PATENT</span>
+            <i></i><i></i><i></i>
           </div>
-
-          <div class="rtls-example-labels">
-            <span>provisioning</span>
-            <span>RSSI measurement</span>
-            <span>testing</span>
-          </div>
-
-          <p>Built badge + hub demonstrators with an iOS application, then used customer feedback to shape customization and derivative concepts.</p>
+          <h3>RFID invention / patent work</h3>
+          <p>Named inventor on multiple RFID-related patents and worked with patent attorneys through invention disclosure and prosecution.</p>
+          <small>Patent titles / numbers are intentionally not listed here until independently verified.</small>
         </article>
 
-        <article class="rtls-example reveal">
-          <div class="example-top"><span>LOGISTICS FIELD PILOT</span><span>02</span></div>
-
-          <div class="rtls-pilot-route">
-            <div><span>1</span><strong>RECEIVE</strong></div>
-            <i>→</i>
-            <div><span>2</span><strong>PROCESS</strong></div>
-            <i>→</i>
-            <div><span>3</span><strong>STAGE</strong></div>
-            <i>→</i>
-            <div><span>4</span><strong>VEHICLE</strong></div>
+        <article class="rfid-ip-card reveal">
+          <div class="rfid-antenna-visual">
+            <div class="rfid-antenna-sheet"><i></i><i></i><i></i></div>
+            <div class="rfid-embed-surface"></div>
           </div>
+          <h3>Lightweight, embeddable antenna</h3>
+          <p>RFID antenna work emphasized thin, lightweight structures that could be integrated into the customer's product or deployment environment.</p>
+        </article>
 
-          <div class="rtls-example-labels">
-            <span>basket flow</span>
-            <span>process time</span>
-            <span>RFID read rate</span>
+        <article class="rfid-ip-card rfid-logistics-card reveal">
+          <div class="rfid-logistics-visual">
+            <div class="rfid-station"><span>STATION</span><i></i></div>
+            <div class="rfid-baskets"><i></i><i></i><i></i></div>
+            <div class="rfid-truck"><span></span><i></i><i></i></div>
           </div>
-
-          <p>Used operational flow, processing time, and read-rate data to identify where tracking created value before expanding the pilot.</p>
+          <h3>Logistics field deployment</h3>
+          <p>Tagged transport baskets, fixed reader stations, and vehicle-mounted readers were used to validate where RFID could create operational value.</p>
         </article>
       </div>
     </section>
 
-    <section class="section case-close">
-      <div class="next-panel reveal">
-        <p class="kicker">Connected positioning</p>
-        <h2>Start with the operational question. Choose the positioning technology second.</h2>
-        <div class="hero-links">
-          <a href="wireless-module.html">See NFC module →</a>
-          <a href="index.html#work">Back to selected work →</a>
-        </div>
+    <section id="productize" class="section rtls-productize-section">
+      <div class="section-index">05 / PRODUCTIZATION</div>
+      <div class="section-heading reveal">
+        <p class="kicker">The work did not stop at RF architecture</p>
+        <h2>Turn positioning hardware into a manufacturable product.</h2>
+      </div>
+
+      <div class="rtls-product-flow reveal">
+        <div><span>01</span><strong>RF / ANTENNA</strong><small>architecture + layout + tuning</small></div><i>→</i>
+        <div><span>02</span><strong>HW / FW</strong><small>PCB + controls + interfaces</small></div><i>→</i>
+        <div><span>03</span><strong>VALIDATE</strong><small>RF + system + environment</small></div><i>→</i>
+        <div><span>04</span><strong>CERTIFY</strong><small>regional / regulatory</small></div><i>→</i>
+        <div><span>05</span><strong>NPI / RAMP</strong><small>test + yield + manufacturing</small></div>
       </div>
     </section>
+
   </main>
 
   <footer id="contact" class="footer">
-    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>RTLS & positioning.</h2></div>
-    <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
+    <div><p class="footer-label">BEN LIN / SELECTED WORK</p><h2>RTLS & positioning hardware.</h2></div>
+    <div class="footer-links"><a href="wireless-module.html">NFC Module</a><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
     <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
   </footer>
 
