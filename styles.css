@@ -2562,3 +2562,32 @@ button:focus-visible {
     overflow-wrap: anywhere;
   }
 }
+
+
+/* V2 long-title hero sizing */
+.execution-case-page .case-intro h1,
+.visibility-case-page .case-intro h1 {
+  font-size: clamp(58px, 7vw, 102px);
+  line-height: .94;
+  letter-spacing: -.05em;
+}
+
+.execution-case-page .case-intro h1,
+.execution-case-page .case-deck {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+@media (max-width: 760px) {
+  .execution-case-page .case-intro h1,
+  .visibility-case-page .case-intro h1 {
+    font-size: clamp(46px, 13vw, 58px);
+    line-height: 1;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .execution-case-page .case-meta strong {
+    overflow-wrap: anywhere;
+  }
+}
