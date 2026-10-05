@@ -11494,3 +11494,33 @@ button:focus-visible {
     max-width: 100%;
   }
 }
+
+
+/* Clean residual mobile QA offenders */
+@media (max-width: 760px) {
+  .mist-beam {
+    width: 175px;
+    height: 64px;
+    margin-left: -87.5px;
+    margin-top: -32px;
+  }
+
+  .mist-beam.b1 { transform: rotate(0deg) translateX(76px); }
+  .mist-beam.b2 { transform: rotate(45deg) translateX(76px); }
+  .mist-beam.b3 { transform: rotate(90deg) translateX(76px); }
+  .mist-beam.b4 { transform: rotate(135deg) translateX(76px); }
+  .mist-beam.b5 { transform: rotate(180deg) translateX(76px); }
+  .mist-beam.b6 { transform: rotate(225deg) translateX(76px); }
+  .mist-beam.b7 { transform: rotate(270deg) translateX(76px); }
+  .mist-beam.b8 { transform: rotate(315deg) translateX(76px); }
+
+  .nfc-badge {
+    right: 4%;
+  }
+
+  @keyframes nfcBadgeTap {
+    0%, 18%, 100% { transform: rotate(-8deg) translate(0,-60px); }
+    45%, 68% { transform: rotate(-3deg) translate(-78px,30px); }
+    82% { transform: rotate(-8deg) translate(0,-44px); }
+  }
+}
