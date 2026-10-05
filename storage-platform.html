@@ -4,31 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Storage Platform + Management Software — Ben Lin</title>
-  <meta name="description" content="A product and software case study spanning five 2- to 24-bay storage platforms, outsourced hardware development, contract manufacturing, firmware integration, and cross-platform management software." />
+  <meta name="description" content="A product and software case spanning five rack-mount storage platforms, 2- to 24-bay configurations, management software, partner development, manufacturing, and sustaining." />
   <meta name="theme-color" content="#f4f1e9" />
   <link rel="canonical" href="https://benlatrobe.github.io/storage-platform.html" />
   <meta property="og:title" content="Storage Platform + Management Software — Ben Lin" />
-  <meta property="og:description" content="Early product ownership across storage hardware, firmware, manufacturing, and cross-platform management software." />
+  <meta property="og:description" content="Early product ownership across storage hardware, firmware, cross-platform management software, and manufacturing." />
   <meta property="og:type" content="website" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="case-page storage-case-page">
+<body class="case-page storage-case-page storage-v2-page">
   <a class="skip-link" href="#top">Skip to content</a>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
   <header class="site-header">
     <a class="brand" href="index.html"><span class="brand-mark">BL</span><span class="brand-name">Ben Lin</span></a>
-    <nav class="nav"><a href="#platform">Platform</a><a href="#software">Software</a><a href="#ownership">Ownership</a><a href="index.html#work">Home</a></nav>
+    <nav class="nav">
+      <a href="#platform">Hardware</a>
+      <a href="#software">Software</a>
+      <a href="#ownership">Ownership</a>
+      <a href="index.html#work">Home</a>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="product-hero section">
+    <section class="product-hero section storage-v2-hero">
       <div class="product-hero-inner">
         <div class="reveal">
           <p class="eyebrow">Selected work / product + software</p>
-          <h1>Storage platform + management software.</h1>
-          <p class="case-deck">Early product ownership across hardware architecture, outsourced development, firmware integration, contract manufacturing, and the first cross-platform monitoring application.</p>
+          <h1>Storage hardware and management software as one product.</h1>
+          <p class="case-deck">Five rack-mount platform families spanning 2- to 24-bay systems, firmware integration, manufacturing, and a common cross-platform management application.</p>
+
           <div class="case-meta product-meta">
             <div><span>PLATFORMS</span><strong>5 product families</strong></div>
             <div><span>RANGE</span><strong>2- to 24-bay systems</strong></div>
@@ -36,64 +43,197 @@
           </div>
         </div>
 
-        <div class="storage-hero reveal">
-          <div class="storage-chassis">
-            <div class="storage-controller">CONTROLLER</div>
-            <div class="storage-drives">
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span><span></span>
+        <div class="storage-v2-hero-visual reveal">
+          <div class="storage-rack-unit">
+            <div class="storage-rack-bezel">
+              <div class="storage-rack-status"><i></i><i></i><i></i></div>
+              <div class="storage-rack-bays">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
             </div>
-            <div class="storage-backplane">BACKPLANE</div>
+            <div class="storage-rack-label">RACK-MOUNT STORAGE PLATFORM</div>
           </div>
-          <i>↕</i>
-          <div class="storage-software-box">CROSS-PLATFORM MANAGEMENT SOFTWARE</div>
+
+          <div class="storage-hero-link">↕ status · configure · monitor</div>
+
+          <div class="storage-app-window">
+            <div class="storage-app-titlebar">
+              <i></i><i></i><i></i>
+              <span>storage management</span>
+            </div>
+            <div class="storage-app-body">
+              <div class="storage-app-tree">
+                <strong>SYSTEMS</strong>
+                <span>▾ Platform 01</span>
+                <span>▸ Platform 02</span>
+                <span>▸ Platform 03</span>
+              </div>
+              <div class="storage-app-main">
+                <div class="storage-app-kpis"><span>STATUS ✓</span><span>12 DRIVES</span><span>HEALTH OK</span></div>
+                <div class="storage-app-array">
+                  <i></i><i></i><i></i><i></i><i></i><i></i>
+                  <i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="storage-app-events">
+                  <span>controller online</span>
+                  <span>array healthy</span>
+                  <span>no active alarms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <small>Illustrative UI — represents the cross-platform monitoring and management application, not a preserved historical screenshot.</small>
         </div>
       </div>
     </section>
 
-    <section id="platform" class="section case-light">
-      <div class="section-index">01 / PRODUCT PLATFORM</div>
-      <div class="section-heading reveal"><p class="kicker">Hardware as a product system</p><h2>One roadmap connected multiple hardware layers.</h2></div>
+    <section id="platform" class="section case-light storage-platform-v2">
+      <div class="section-index">01 / HARDWARE PLATFORM</div>
+      <div class="section-heading reveal">
+        <p class="kicker">One product assembled from multiple subsystems</p>
+        <h2>Controller, backplane, drives, power, firmware, and enclosure had to work as one platform.</h2>
+      </div>
 
-      <div class="storage-layer-grid">
-        <article class="storage-layer reveal"><span>01</span><h3>Controller</h3><p>External controller development coordinated against product requirements and system interfaces.</p></article>
-        <article class="storage-layer reveal"><span>02</span><h3>Backplane</h3><p>Drive connectivity, enclosure integration, power and platform-level compatibility.</p></article>
-        <article class="storage-layer reveal"><span>03</span><h3>Enclosure</h3><p>2- to 24-bay product variants spanning mechanical, power and manufacturing constraints.</p></article>
-        <article class="storage-layer reveal"><span>04</span><h3>Firmware</h3><p>Integrated device behavior, status, configuration and system-level product functions.</p></article>
+      <div class="storage-exploded-layout">
+        <div class="storage-exploded reveal">
+          <div class="storage-ex-layer storage-cover-layer">
+            <div class="storage-cover-shape"></div>
+            <span>ENCLOSURE</span>
+          </div>
+
+          <div class="storage-ex-arrow">↓</div>
+
+          <div class="storage-ex-layer storage-drives-layer">
+            <div class="storage-drive-row">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <span>DRIVE BAYS</span>
+          </div>
+
+          <div class="storage-ex-arrow">↓</div>
+
+          <div class="storage-ex-layer storage-backplane-layer">
+            <div class="storage-backplane-board">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <span>BACKPLANE</span>
+          </div>
+
+          <div class="storage-ex-arrow">↓</div>
+
+          <div class="storage-ex-bottom-row">
+            <div class="storage-controller-board">
+              <strong>CONTROLLER</strong>
+              <i></i><i></i><i></i>
+            </div>
+            <div class="storage-power-block">
+              <strong>POWER</strong>
+              <i></i>
+            </div>
+          </div>
+        </div>
+
+        <aside class="storage-platform-notes reveal">
+          <div><span>01</span><strong>Controller</strong><small>external development coordinated to product and interface requirements</small></div>
+          <div><span>02</span><strong>Backplane</strong><small>drive connectivity + platform integration</small></div>
+          <div><span>03</span><strong>Enclosure / Power</strong><small>mechanical, thermal, power, sourcing, manufacturing</small></div>
+          <div><span>04</span><strong>Firmware</strong><small>status, configuration, monitoring, device behavior</small></div>
+        </aside>
       </div>
     </section>
 
-    <section id="software" class="section section-dark">
+    <section id="software" class="section section-dark storage-software-v2">
       <div class="section-index">02 / MANAGEMENT SOFTWARE</div>
-      <div class="section-heading reveal"><p class="kicker">Hardware needed a common software surface</p><h2>Monitor multiple platforms through one application.</h2></div>
-
-      <div class="storage-software-architecture reveal">
-        <div class="storage-family-row"><span>2-BAY</span><span>4-BAY</span><span>8-BAY</span><span>12-BAY</span><span>24-BAY</span></div>
-        <i>↓ device / firmware interfaces</i>
-        <div class="storage-abstraction">COMMON MANAGEMENT LAYER</div>
-        <i>↓</i>
-        <div class="storage-functions"><span>STATUS</span><span>MONITOR</span><span>CONFIGURE</span><span>MANAGE</span></div>
+      <div class="section-heading reveal">
+        <p class="kicker">One software surface across multiple hardware families</p>
+        <h2>Hide platform differences behind a common management layer.</h2>
       </div>
 
-      <p class="storage-software-note reveal">I remained hands-on in software development while owning the product roadmap and lifecycle, and led the company’s first cross-platform disk-array monitoring and management application.</p>
+      <div class="storage-software-v2-layout">
+        <div class="storage-platform-family reveal">
+          <div><span>2-BAY</span><i></i></div>
+          <div><span>4-BAY</span><i></i><i></i></div>
+          <div><span>8-BAY</span><i></i><i></i><i></i></div>
+          <div><span>12-BAY</span><i></i><i></i><i></i><i></i></div>
+          <div><span>24-BAY</span><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+
+        <div class="storage-software-arrow reveal">↓ device / firmware interfaces</div>
+
+        <div class="storage-management-layer reveal">
+          <div class="storage-mgmt-window">
+            <div class="storage-mgmt-sidebar">
+              <span>DEVICE TREE</span>
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <div class="storage-mgmt-content">
+              <div class="storage-mgmt-tabs"><span>STATUS</span><span>CONFIG</span><span>EVENTS</span></div>
+              <div class="storage-mgmt-chart">
+                <i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="storage-mgmt-table">
+                <span>Controller</span><strong>Healthy</strong>
+                <span>Array</span><strong>Online</strong>
+                <span>Drives</span><strong>12 / 12</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="storage-stack-strip reveal">
+          <span>Python / Tkinter</span>
+          <span>C / C++</span>
+          <span>SQLite</span>
+          <span>Web technologies</span>
+        </div>
+
+        <p class="storage-software-v2-note reveal">Defined software requirements and architecture, while remaining hands-on in implementation of the first cross-platform monitoring and management application.</p>
+      </div>
     </section>
 
-    <section id="ownership" class="section storage-ownership-section">
+    <section id="ownership" class="section storage-ownership-v2">
       <div class="section-index">03 / PRODUCT OWNERSHIP</div>
-      <div class="section-heading reveal"><p class="kicker">The role crossed company boundaries</p><h2>Product ownership meant integrating what we built and what partners built.</h2></div>
+      <div class="section-heading reveal">
+        <p class="kicker">Brand + white-label product development</p>
+        <h2>Own the roadmap even when parts of the product are developed by partners.</h2>
+      </div>
 
-      <div class="storage-ownership-flow reveal">
-        <div><span>ROADMAP</span><strong>Product direction + requirements</strong></div><i>→</i>
-        <div><span>PARTNERS</span><strong>Controller + power development</strong></div><i>→</i>
-        <div><span>INTEGRATE</span><strong>Hardware + firmware + software</strong></div><i>→</i>
-        <div><span>MANUFACTURE</span><strong>Contract manufacturing + final assembly</strong></div><i>→</i>
-        <div><span>SUSTAIN</span><strong>Feedback + lifecycle execution</strong></div>
+      <div class="storage-ownership-v2-flow reveal">
+        <div>
+          <span>01</span>
+          <strong>ROADMAP + REQUIREMENTS</strong>
+          <small>product direction · platform definition</small>
+        </div>
+        <i>→</i>
+        <div>
+          <span>02</span>
+          <strong>PARTNER DEVELOPMENT</strong>
+          <small>controller · power · external engineering</small>
+        </div>
+        <i>→</i>
+        <div>
+          <span>03</span>
+          <strong>INTEGRATION</strong>
+          <small>HW · FW · SW · enclosure</small>
+        </div>
+        <i>→</i>
+        <div>
+          <span>04</span>
+          <strong>MANUFACTURING</strong>
+          <small>contract manufacturing · final assembly</small>
+        </div>
+        <i>→</i>
+        <div>
+          <span>05</span>
+          <strong>LIFECYCLE</strong>
+          <small>release · sustaining · feedback</small>
+        </div>
       </div>
     </section>
 
-    <section class="section product-close">
-      <div class="next-panel reveal"><p class="kicker">Why this case still matters</p><h2>My product-development career started with hardware and software already connected.</h2><div class="hero-links"><a href="connected-positioning.html">See connected positioning →</a><a href="index.html#work">Back to selected work →</a></div></div>
-    </section>
   </main>
 
   <footer id="contact" class="footer">
@@ -101,6 +241,7 @@
     <div class="footer-links"><a href="cv.html">CV</a><a href="mailto:benlatrobe@gmail.com">Email</a><a href="index.html">Home</a></div>
     <div class="footer-meta"><span>St. Petersburg, Florida</span><span>© <span id="year"></span> Ben Lin</span></div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
