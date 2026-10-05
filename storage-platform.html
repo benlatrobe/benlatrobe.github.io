@@ -45,12 +45,13 @@
 
         <div class="storage-v2-hero-visual reveal">
           <div class="storage-rack-unit">
-            <div class="storage-rack-bezel">
+            <div class="storage-rack-bezel storage-rack-bezel-3u">
+              <div class="storage-rack-handle storage-rack-handle-left"></div>
               <div class="storage-rack-status"><i></i><i></i><i></i></div>
-              <div class="storage-rack-bays">
-                <span></span><span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span><span></span>
+              <div class="storage-rack-bays storage-rack-bays-16">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
               </div>
+              <div class="storage-rack-handle storage-rack-handle-right"></div>
             </div>
             <div class="storage-rack-label">RACK-MOUNT STORAGE PLATFORM</div>
           </div>
@@ -106,9 +107,8 @@
           <div class="storage-ex-arrow">↓</div>
 
           <div class="storage-ex-layer storage-drives-layer">
-            <div class="storage-drive-row">
-              <i></i><i></i><i></i><i></i><i></i><i></i>
-              <i></i><i></i><i></i><i></i><i></i><i></i>
+            <div class="storage-drive-row storage-drive-row-16">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
             </div>
             <span>DRIVE BAYS</span>
           </div>
@@ -116,8 +116,8 @@
           <div class="storage-ex-arrow">↓</div>
 
           <div class="storage-ex-layer storage-backplane-layer">
-            <div class="storage-backplane-board">
-              <i></i><i></i><i></i><i></i><i></i><i></i>
+            <div class="storage-backplane-board storage-backplane-board-16">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
             </div>
             <span>BACKPLANE</span>
           </div>
@@ -125,21 +125,21 @@
           <div class="storage-ex-arrow">↓</div>
 
           <div class="storage-ex-bottom-row">
-            <div class="storage-controller-board">
-              <strong>CONTROLLER</strong>
-              <i></i><i></i><i></i>
+            <div class="storage-controller-board storage-controller-dual">
+              <strong>DUAL CONTROLLERS</strong>
+              <i></i><i></i>
             </div>
-            <div class="storage-power-block">
-              <strong>POWER</strong>
-              <i></i>
+            <div class="storage-power-block storage-power-dual">
+              <strong>REDUNDANT POWER</strong>
+              <i></i><i></i>
             </div>
           </div>
         </div>
 
         <aside class="storage-platform-notes reveal">
-          <div><span>01</span><strong>Controller</strong><small>external development coordinated to product and interface requirements</small></div>
+          <div><span>01</span><strong>Controller</strong><small>single / redundant controller architecture coordinated to product and interface requirements</small></div>
           <div><span>02</span><strong>Backplane</strong><small>drive connectivity + platform integration</small></div>
-          <div><span>03</span><strong>Enclosure / Power</strong><small>mechanical, thermal, power, sourcing, manufacturing</small></div>
+          <div><span>03</span><strong>Enclosure / Power</strong><small>3U rack enclosure, hot-swap trays, redundant power, thermal and manufacturing constraints</small></div>
           <div><span>04</span><strong>Firmware</strong><small>status, configuration, monitoring, device behavior</small></div>
         </aside>
       </div>
