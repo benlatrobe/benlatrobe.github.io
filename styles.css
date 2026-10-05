@@ -11524,3 +11524,37 @@ button:focus-visible {
     82% { transform: rotate(-8deg) translate(0,-44px); }
   }
 }
+
+
+.cv-proof-links {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+}
+
+.cv-proof-links > span {
+  margin-right: 3px;
+  color: var(--muted);
+  font: 800 8px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .06em;
+}
+
+.cv-proof-links a {
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.cv-proof-links a:hover {
+  background: var(--accent);
+}
+
+@media print {
+  .cv-proof-links {
+    display: none;
+  }
+}
