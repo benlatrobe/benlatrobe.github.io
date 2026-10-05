@@ -11558,3 +11558,8 @@ button:focus-visible {
     display: none;
   }
 }
+
+
+.storage-app-array-16 {
+  grid-template-columns: repeat(4, 1fr);
+}
