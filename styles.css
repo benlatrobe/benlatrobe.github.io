@@ -11653,3 +11653,25 @@ button:focus-visible {
     border-top: 1px solid var(--line);
   }
 }
+
+
+/* Homepage selected-work density */
+#work .section-heading {
+  margin-bottom: 52px;
+}
+
+#work .section-heading h2 {
+  max-width: 920px;
+  font-size: clamp(48px, 5vw, 76px);
+}
+
+@media (max-width: 760px) {
+  #work .section-heading {
+    margin-bottom: 44px;
+  }
+
+  #work .section-heading h2 {
+    font-size: clamp(38px, 11vw, 48px);
+    line-height: .98;
+  }
+}
