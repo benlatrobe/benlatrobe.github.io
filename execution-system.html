@@ -14,7 +14,7 @@
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="case-page execution-case-page ci-v2-page">
+<body class="case-page execution-case-page ci-v3-page">
   <a class="skip-link" href="#top">Skip to content</a>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
@@ -34,25 +34,13 @@
         <div class="case-intro reveal">
           <p class="eyebrow">Selected work / continuous improvement</p>
           <h1>Three problems. Three targeted improvements.</h1>
-          <p class="case-deck">Each initiative solved a different execution problem rather than forcing one process onto everything.</p>
+          <p class="case-deck">Requirement decomposition, sprint task management, and change management each addressed a different failure mode in engineering execution.</p>
         </div>
 
         <div class="ci-v2-hero-map reveal">
-          <div>
-            <span>01</span>
-            <strong>REQUIREMENTS</strong>
-            <small>clarify ownership</small>
-          </div>
-          <div>
-            <span>02</span>
-            <strong>SPRINTS</strong>
-            <small>standardize execution</small>
-          </div>
-          <div>
-            <span>03</span>
-            <strong>CHANGE</strong>
-            <small>control impact</small>
-          </div>
+          <div><span>01</span><strong>REQUIREMENTS</strong><small>derive what is missing</small></div>
+          <div><span>02</span><strong>SPRINTS</strong><small>protect the real priorities</small></div>
+          <div><span>03</span><strong>CHANGE</strong><small>close the design-factory loop</small></div>
         </div>
       </div>
     </section>
@@ -61,44 +49,63 @@
       <div class="section-index">01 / REQUIREMENT DECOMPOSITION</div>
       <div class="section-heading reveal">
         <p class="kicker">Problem</p>
-        <h2>Broad requirements did not always translate into clear engineering ownership.</h2>
+        <h2>PRD and system requirements did not always reveal everything each subsystem still had to satisfy.</h2>
       </div>
 
-      <div class="ci-before-after-grid">
-        <article class="ci-ba-card ci-ba-before reveal">
+      <div class="req-v3-story">
+        <article class="req-v3-before reveal">
           <span>BEFORE</span>
-          <div class="req-before-visual">
-            <div class="req-big-box">SYSTEM REQUIREMENT</div>
-            <i>↓</i>
-            <div class="req-ambiguity">
-              <span>EE?</span>
-              <span>SW?</span>
-              <span>ME?</span>
-              <span>FW?</span>
-            </div>
-            <small>ownership and interfaces unclear</small>
+
+          <div class="req-v3-top-flow">
+            <div class="req-v3-prd">PRD</div>
+            <i>→</i>
+            <div class="req-v3-system">SYSTEM REQUIREMENTS</div>
           </div>
+
+          <div class="req-v3-gap">
+            <div class="req-v3-engineer">FUNCTION TEAM</div>
+            <div class="req-v3-question-cloud">
+              <span>thermal?</span>
+              <span>interface?</span>
+              <span>tolerance?</span>
+              <span>failure mode?</span>
+              <span>component limit?</span>
+            </div>
+          </div>
+
+          <small>Important subsystem needs could remain implicit because they were not obvious from the system requirement alone.</small>
         </article>
 
-        <article class="ci-ba-card ci-ba-after reveal">
+        <article class="req-v3-after reveal">
           <span>AFTER</span>
-          <div class="req-after-visual">
-            <div class="req-system">SYSTEM REQUIREMENT</div>
-            <i>↓</i>
-            <div class="req-subsystems">
-              <div><strong>EE</strong><small>owned requirement</small></div>
-              <div><strong>SW</strong><small>owned requirement</small></div>
-              <div><strong>ME</strong><small>owned requirement</small></div>
+
+          <div class="req-v3-method-flow">
+            <div><strong>PRD</strong><small>product intent</small></div><i>→</i>
+            <div><strong>SYSTEM</strong><small>system requirements</small></div><i>→</i>
+            <div class="req-v3-highlight"><strong>STRUCTURE TREE</strong><small>system → subsystems → components</small></div>
+            <i>+</i>
+            <div class="req-v3-highlight"><strong>DFMEA</strong><small>failure modes + controls</small></div>
+          </div>
+
+          <div class="req-v3-tree">
+            <div class="req-v3-tree-root">SYSTEM</div>
+            <i></i>
+            <div class="req-v3-tree-branches">
+              <div><strong>SUBSYSTEM A</strong><small>requirements</small></div>
+              <div><strong>SUBSYSTEM B</strong><small>requirements</small></div>
+              <div><strong>SUBSYSTEM C</strong><small>requirements</small></div>
             </div>
-            <i>↓</i>
-            <div class="req-verify">VERIFICATION EVIDENCE</div>
+            <i></i>
+            <div class="req-v3-components">
+              <span>components</span><span>interfaces</span><span>limits</span><span>verification</span>
+            </div>
           </div>
         </article>
       </div>
 
-      <div class="ci-result-strip reveal">
-        <div><span>INTERVENTION</span><strong>decomposition · interface ownership · trade-off decisions</strong></div>
-        <div><span>EXAMPLE OUTCOME</span><strong>&lt; 5 months vs. 6-month initial estimate</strong></div>
+      <div class="ci-v3-intervention reveal">
+        <span>WHAT CHANGED</span>
+        <strong>Engineers had to reason from components → subsystems → system, then convert DFMEA findings into explicit subsystem requirements.</strong>
       </div>
     </section>
 
@@ -106,81 +113,136 @@
       <div class="section-index">02 / SPRINT TASK MANAGEMENT</div>
       <div class="section-heading reveal">
         <p class="kicker">Problem</p>
-        <h2>Each engineering manager had a different way to track work.</h2>
+        <h2>Unplanned requests could change engineering focus faster than project priorities did.</h2>
       </div>
 
-      <div class="ci-before-after-grid ci-dark-grid">
-        <article class="ci-ba-card ci-ba-before-dark reveal">
+      <div class="sprint-v3-grid">
+        <article class="sprint-v3-before reveal">
           <span>BEFORE</span>
-          <div class="sprint-fragmented-visual">
-            <div><strong>Manager A</strong><small>Excel</small></div>
-            <div><strong>Manager B</strong><small>Excel</small></div>
-            <div><strong>Manager C</strong><small>local list</small></div>
+
+          <div class="sprint-v3-request-sources">
+            <div>CUSTOMER</div>
+            <div>PM</div>
+            <div>MANAGEMENT</div>
           </div>
-          <small class="ci-visual-caption">No common backlog, ownership, capacity, or completion view.</small>
+
+          <div class="sprint-v3-arrows">↓ ↓ ↓</div>
+
+          <div class="sprint-v3-engineer">
+            <strong>ENGINEER</strong>
+            <small>focus shifts to latest request</small>
+          </div>
+
+          <div class="sprint-v3-original-work">
+            <span>committed work</span>
+            <i>→</i>
+            <small>delayed / interrupted</small>
+          </div>
+
+          <p>Requests could arrive outside the planned scope or priority, while managers also tracked work using different local methods.</p>
         </article>
 
-        <article class="ci-ba-card ci-ba-after-dark reveal">
+        <article class="sprint-v3-after reveal">
           <span>AFTER</span>
-          <div class="sprint-common-flow">
-            <div>BACKLOG</div><i>→</i>
-            <div>SPRINT</div><i>→</i>
-            <div>OWNER</div><i>→</i>
-            <div>DoD</div><i>→</i>
-            <div>REVIEW</div>
+
+          <div class="sprint-v3-intake">
+            <div class="sprint-v3-new-request">NEW REQUEST</div>
+            <i>→</i>
+            <div class="sprint-v3-backlog">BACKLOG</div>
+            <i>→</i>
+            <div class="sprint-v3-commit">SPRINT COMMITMENT</div>
           </div>
-          <small class="ci-visual-caption">One Azure DevOps sprint rhythm with visible ownership and Definition of Done.</small>
+
+          <div class="sprint-v3-meetings">
+            <div><strong>DAILY STANDUP</strong><small>Are we still working the priority?</small></div>
+            <div><strong>SPRINT REVIEW</strong><small>Did we complete the committed outcome?</small></div>
+          </div>
+
+          <div class="sprint-v3-decision">
+            <span>incoming request</span>
+            <i>→</i>
+            <div>DO NOW</div>
+            <div>DEFER</div>
+            <div>PUSH BACK</div>
+          </div>
+
+          <p>One Azure DevOps sprint rhythm gave managers a common execution view and gave the project team a mechanism to protect scope and priorities.</p>
         </article>
       </div>
 
-      <div class="ci-result-strip ci-result-strip-dark reveal">
-        <div><span>STANDARDIZED</span><strong>planning cadence · task state · ownership · review</strong></div>
-        <div><span>NOT THE GOAL</span><strong>“doing Agile” for its own sake</strong></div>
+      <div class="ci-v3-combined-outcome reveal">
+        <span>COMBINED EFFECT — REQUIREMENT DECOMPOSITION + SPRINT EXECUTION</span>
+        <strong>&lt; 5 months</strong>
+        <small>One cross-functional program completed in under five months against an initial six-month estimate.</small>
       </div>
     </section>
 
-    <section id="change" class="section case-light ci-case-section ci-change-v2">
+    <section id="change" class="section case-light ci-case-section ci-change-v3">
       <div class="section-index">03 / CHANGE MANAGEMENT</div>
       <div class="section-heading reveal">
         <p class="kicker">Problem</p>
-        <h2>A design change can invalidate more than the drawing that changed.</h2>
+        <h2>The same high-level ECN process behaved differently by site — and factory changes were not always verifiable from Design.</h2>
       </div>
 
-      <div class="change-ripple-layout">
-        <article class="change-ripple-before reveal">
+      <div class="change-v3-grid">
+        <article class="change-v3-before reveal">
           <span>BEFORE</span>
-          <div class="change-source-node">CHANGE</div>
-          <div class="change-ripple r1"></div>
-          <div class="change-ripple r2"></div>
-          <div class="change-ripple r3"></div>
-          <div class="change-floating-label l1">requirements?</div>
-          <div class="change-floating-label l2">interfaces?</div>
-          <div class="change-floating-label l3">tasks?</div>
-          <div class="change-floating-label l4">verification?</div>
+
+          <div class="change-v3-sites">
+            <div>
+              <strong>SITE A</strong>
+              <small>PM → Eng → Ops approval</small>
+            </div>
+            <div>
+              <strong>SITE B</strong>
+              <small>Eng → PM → Quality approval</small>
+            </div>
+            <div>
+              <strong>SITE C</strong>
+              <small>PM-specific workflow</small>
+            </div>
+          </div>
+
+          <div class="change-v3-system-gap">
+            <div><strong>DESIGN SYSTEM</strong><small>ECN released</small></div>
+            <i>→</i>
+            <div class="change-v3-gap-box">SYSTEM GAP</div>
+            <i>→</i>
+            <div><strong>FACTORY SYSTEM</strong><small>BOM changed</small></div>
+          </div>
+
+          <small>No reliable closed-loop confirmation that the factory BOM matched the intended ECN.</small>
         </article>
 
-        <article class="change-ripple-after reveal">
+        <article class="change-v3-after reveal">
           <span>AFTER</span>
-          <div class="change-controlled-flow">
-            <div><strong>CHANGE</strong><small>requirement / design / component</small></div>
+
+          <div class="change-v3-standardize">
+            <div class="change-v3-sites-merge">
+              <span>SITE A</span>
+              <span>SITE B</span>
+              <span>SITE C</span>
+            </div>
+            <i>↓</i>
+            <div class="change-v3-one-flow">STANDARD APPROVAL ROLES</div>
+          </div>
+
+          <div class="change-v3-loop">
+            <div><strong>ECN</strong><small>Design release</small></div>
             <i>→</i>
-            <div><strong>IMPACT</strong><small>affected artifacts</small></div>
+            <div><strong>FACTORY</strong><small>Update BOM</small></div>
             <i>→</i>
-            <div><strong>OWNER</strong><small>responsible engineer</small></div>
+            <div><strong>BOM RETURN</strong><small>send updated BOM back</small></div>
             <i>→</i>
-            <div><strong>RE-VERIFY</strong><small>new evidence</small></div>
-            <i>→</i>
-            <div class="change-release"><strong>RELEASE</strong><small>controlled state</small></div>
+            <div class="change-v3-verify"><strong>DESIGN VERIFY</strong><small>confirm correct implementation</small></div>
+            <i>↺</i>
           </div>
         </article>
       </div>
 
-      <div class="change-impact-row reveal">
-        <span>requirements</span>
-        <span>subsystems</span>
-        <span>interfaces</span>
-        <span>tasks</span>
-        <span>verification</span>
+      <div class="ci-v3-intervention reveal">
+        <span>WHAT CHANGED</span>
+        <strong>Standardized approval roles across sites, then closed the ECN loop by requiring the updated factory BOM to return to Design for verification.</strong>
       </div>
     </section>
 
