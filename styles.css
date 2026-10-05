@@ -11479,3 +11479,18 @@ button:focus-visible {
     height:56px;
   }
 }
+
+
+/* CI mobile hero overflow fix */
+@media (max-width: 760px) {
+  .ci-v3-page .case-intro {
+    min-width: 0;
+  }
+
+  .ci-v3-page .case-intro h1 {
+    font-size: clamp(44px, 12.5vw, 52px);
+    line-height: .96;
+    letter-spacing: -.055em;
+    max-width: 100%;
+  }
+}
