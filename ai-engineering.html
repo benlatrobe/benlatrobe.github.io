@@ -99,13 +99,10 @@
         </div>
         <div class="story-column">
           <p class="lede reveal">
-            In my day-to-day work, I began exploring AI-assisted engineering tools for requirements, technical research, design artifacts, calculations, and validation. Those tools sit within an existing engineering and PLM environment.
+            In my day-to-day work, I began exploring AI-assisted tools for requirements, technical research, design artifacts, calculations, and validation within an existing engineering and PLM environment.
           </p>
           <p class="body-copy reveal">
-            Universe is my personal extension of that work: a side project exploring what happens when individual AI-assisted tools are connected into a broader development framework for physical products.
-          </p>
-          <p class="body-copy reveal">
-            The question behind it is simple: what would an AI-assisted development environment look like if the agent could work with engineering state and engineering tools—not just a conversation?
+            Universe is my personal extension of that work: a side project exploring what an AI-assisted development environment could look like when agents can work with engineering state and engineering tools—not just a conversation.
           </p>
         </div>
       </div>
@@ -116,7 +113,7 @@
       <div class="section-heading reveal">
         <p class="kicker">Connect reasoning to engineering state</p>
         <h2>Separate the responsibilities.</h2>
-        <p>Universe keeps AI reasoning, engineering state, execution, domain logic, external software, and review as distinct parts of the system.</p>
+        <p>Universe separates AI reasoning, engineering state, execution, domain logic, external software, and engineer review.</p>
       </div>
 
       <div class="architecture-map reveal">
@@ -161,7 +158,7 @@
       <div class="architecture-note reveal">
         <strong>Canonical Engineering Models (CEMs)</strong>
         <p>
-          A CEM is a structured, versioned representation of engineering entities, relationships, properties, and supporting evidence. The goal is not one universal engineering database. It is a common way for agents, domain tools, and engineers to work with the same design state while keeping revisions and evidence explicit.
+          A CEM is a structured, versioned representation of engineering entities, relationships, properties, and evidence. It gives agents, domain tools, and engineers a shared design state while keeping revisions and evidence explicit.
         </p>
       </div>
     </section>
@@ -177,25 +174,25 @@
         <article class="tech-stack-card reveal">
           <span>ENGINEERING TOOLS</span>
           <h3>Domain calculations + engineering software</h3>
-          <p>Implemented work includes electrical and power calculations, component screening, system interfaces, panel and service geometry, bounded thermal and scenario studies, validation, and FreeCAD / OCCT integration.</p>
+          <p>Implemented work includes electrical and power calculations, component screening, system interfaces, geometry, bounded thermal and scenario studies, validation, and FreeCAD / OCCT integration.</p>
         </article>
 
         <article class="tech-stack-card reveal">
           <span>AGENT WORKFLOW</span>
           <h3>AI proposes; tools establish evidence</h3>
-          <p>The agent can interpret context, propose bounded work, and coordinate capabilities. The host controls execution, engineering tools perform checks, and results remain tied to the inputs and evidence that produced them.</p>
+          <p>The agent interprets context and proposes bounded work. The host controls execution, engineering tools perform checks, and results stay tied to their inputs and evidence.</p>
         </article>
 
         <article class="tech-stack-card reveal">
           <span>WORKBENCH</span>
           <h3>Review the engineering work, not just the conversation</h3>
-          <p>A React / TypeScript review environment brings together requirements, engineering models, calculations, evidence, proposed changes, unresolved questions, and 3D visualization.</p>
+          <p>A React / TypeScript review environment brings together requirements, models, calculations, evidence, proposed changes, open issues, and 3D visualization.</p>
         </article>
       </div>
 
       <div class="architecture-note reveal">
         <strong>Implementation stack</strong>
-        <p>Rust supports Core and Runtime foundations. Python connects agents, domain tools, and external engineering software. Workbench uses TypeScript / React with Three.js for interactive engineering visualization.</p>
+        <p>Rust supports Core and Runtime. Python connects agents, domain tools, and engineering software. Workbench uses TypeScript / React and Three.js.</p>
       </div>
     </section>
 
@@ -208,7 +205,7 @@
         </div>
         <div class="story-column">
           <p class="lede reveal">
-            One implemented workflow explores component selection by connecting project requirements, candidate discovery, source evidence, domain screening, and engineer review.
+            One implemented workflow connects project requirements, candidate discovery, source evidence, domain screening, and engineer review.
           </p>
 
           <div class="example-flow reveal">
@@ -224,13 +221,13 @@
           </div>
 
           <p class="body-copy reveal">
-            The workflow records the requirement basis, project revision, comparison result, and exact evidence used. If that basis changes, the previous recommendation remains in history but requires re-evaluation instead of silently remaining current.
+            The workflow records the requirement basis, project revision, comparison result, and evidence used. If that basis changes, the prior recommendation remains in history but requires re-evaluation.
           </p>
 
           <div class="architecture-note reveal">
             <strong>Current status</strong>
             <p>
-              Universe is an active personal side project, not a finished or production-qualified engineering platform. The working pieces are a practical way for me to explore how AI agents, deterministic engineering tools, structured models, engineering software, evidence, and human review can work together in product development.
+              Universe is an active personal side project, not a finished or production-qualified platform. It gives me a practical way to explore how AI agents, engineering tools, structured models, evidence, and human review can work together in product development.
             </p>
           </div>
 
