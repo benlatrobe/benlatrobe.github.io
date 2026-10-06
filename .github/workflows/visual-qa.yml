@@ -89,7 +89,6 @@ jobs:
                           const offenders = [...document.querySelectorAll('body *')]
                             .filter(el => {
                               const s = getComputedStyle(el);
-                              if (s.position === 'fixed') return false;
                               const r = el.getBoundingClientRect();
                               return r.right > width + 2 || r.left < -2;
                             })
