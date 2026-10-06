@@ -49,7 +49,7 @@
         </div>
 
         <div class="editorial-diagram diagram-dark reveal" aria-label="Representative RTLS application architecture">
-          <svg viewBox="0 0 640 500" role="img" aria-labelledby="rtls-arch-title rtls-arch-desc">
+          <svg viewBox="0 0 660 520" role="img" aria-labelledby="rtls-arch-title rtls-arch-desc">
             <title id="rtls-arch-title">Representative RTLS architecture</title>
             <desc id="rtls-arch-desc">Tags, beacons, and mobile devices connect wirelessly to a hub, reader, or locator. The locator sends position data to a location service, which supports operations, web, and mobile applications.</desc>
             <defs>
@@ -57,58 +57,102 @@
                 <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
               </pattern>
               <marker id="rtlsArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-                <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="#9da19e"></path>
               </marker>
             </defs>
 
-            <rect x="0" y="0" width="640" height="500" fill="url(#rtlsDots)"></rect>
+            <rect x="0" y="0" width="660" height="520" fill="url(#rtlsDots)"></rect>
 
-            <path class="dd-connector" d="M116 128 V176 H320 V204" marker-end="url(#rtlsArrow)"></path>
-            <path class="dd-connector" d="M320 128 V204" marker-end="url(#rtlsArrow)"></path>
-            <path class="dd-connector" d="M524 128 V176 H320" marker-end="url(#rtlsArrow)"></path>
-            <path class="dd-connector" d="M320 306 V348" marker-end="url(#rtlsArrow)"></path>
-            <path class="dd-connector" d="M320 424 V456 H118" marker-end="url(#rtlsArrow)"></path>
-            <path class="dd-connector" d="M320 456 H320" marker-end="url(#rtlsArrow)"></path>
-            <path class="dd-connector" d="M320 456 H522" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M116 132 V180 H330 V208" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M330 132 V208" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M544 132 V180 H330" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M330 318 V356" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M330 430 V458 H118" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M330 458 H330" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M330 458 H542" marker-end="url(#rtlsArrow)"></path>
 
             <g>
-              <rect class="dd-node-soft" x="42" y="52" width="148" height="76" rx="6"></rect>
-              <text class="dd-eyebrow" x="60" y="77">ENDPOINT</text>
-              <text class="dd-title" x="60" y="104">Tag</text>
-              <text class="dd-copy" x="60" y="120">asset · person</text>
+              <rect class="dd-node-soft" x="40" y="50" width="152" height="82" rx="6"></rect>
+              <g class="dd-icon-muted" transform="translate(58 69)">
+                <path d="M1 6 L7 0 H22 V20 H7 L1 14 Z"></path>
+                <circle cx="8" cy="10" r="2"></circle>
+              </g>
+              <text class="dd-eyebrow" x="96" y="74">ENDPOINT</text>
+              <text class="dd-title" x="96" y="104">Tag</text>
+              <text class="dd-copy" x="96" y="122">asset · person</text>
             </g>
 
             <g>
-              <rect class="dd-node-soft" x="246" y="52" width="148" height="76" rx="6"></rect>
-              <text class="dd-eyebrow" x="264" y="77">ENDPOINT</text>
-              <text class="dd-title" x="264" y="104">Beacon</text>
-              <text class="dd-copy" x="264" y="120">location signal</text>
+              <rect class="dd-node-soft" x="254" y="50" width="152" height="82" rx="6"></rect>
+              <g class="dd-icon-muted" transform="translate(272 69)">
+                <circle cx="11" cy="10" r="3"></circle>
+                <path d="M5 4 C1 8 1 12 5 16 M17 4 C21 8 21 12 17 16"></path>
+                <path d="M2 1 C-4 7 -4 13 2 19 M20 1 C26 7 26 13 20 19"></path>
+              </g>
+              <text class="dd-eyebrow" x="310" y="74">ENDPOINT</text>
+              <text class="dd-title" x="310" y="104">Beacon</text>
+              <text class="dd-copy" x="310" y="122">location signal</text>
             </g>
 
             <g>
-              <rect class="dd-node-soft" x="450" y="52" width="148" height="76" rx="6"></rect>
-              <text class="dd-eyebrow" x="468" y="77">ENDPOINT</text>
-              <text class="dd-title" x="468" y="104">Mobile</text>
-              <text class="dd-copy" x="468" y="120">provision · interact</text>
+              <rect class="dd-node-soft" x="468" y="50" width="152" height="82" rx="6"></rect>
+              <g class="dd-icon-muted" transform="translate(486 65)">
+                <rect x="2" y="0" width="18" height="28" rx="3"></rect>
+                <path d="M7 4 H15 M9 24 H13"></path>
+              </g>
+              <text class="dd-eyebrow" x="524" y="74">ENDPOINT</text>
+              <text class="dd-title" x="524" y="104">Mobile</text>
+              <text class="dd-copy" x="524" y="122">provision · interact</text>
             </g>
 
             <g>
-              <rect class="dd-node-accent" x="208" y="204" width="224" height="102" rx="6"></rect>
-              <text class="dd-eyebrow" x="230" y="230">DEVICE / EDGE</text>
-              <text class="dd-title" x="230" y="262">Hub / reader / locator</text>
-              <text class="dd-copy" x="230" y="284">wireless · proximity · identification</text>
+              <rect class="dd-node-accent" x="202" y="208" width="256" height="110" rx="6"></rect>
+              <g class="dd-icon" transform="translate(224 235)">
+                <rect x="6" y="10" width="28" height="20" rx="3"></rect>
+                <path d="M20 10 V2 M15 6 L20 2 L25 6"></path>
+                <path d="M0 8 C3 3 7 1 11 0 M40 8 C37 3 33 1 29 0"></path>
+              </g>
+              <text class="dd-eyebrow" x="276" y="236">DEVICE / EDGE</text>
+              <text class="dd-title" x="276" y="270">Hub / reader / locator</text>
+              <text class="dd-copy" x="276" y="294">wireless · proximity · identification</text>
             </g>
 
             <g>
-              <rect class="dd-node" x="208" y="348" width="224" height="76" rx="6"></rect>
-              <text class="dd-eyebrow" x="230" y="373">SERVICE</text>
-              <text class="dd-title" x="230" y="400">Location service</text>
-              <text class="dd-copy" x="230" y="416">signal processing · zones · events</text>
+              <rect class="dd-node" x="214" y="356" width="232" height="74" rx="6"></rect>
+              <g class="dd-icon-muted" transform="translate(232 378)">
+                <path d="M12 26 C4 17 0 12 0 8 A12 12 0 0 1 24 8 C24 12 20 17 12 26 Z"></path>
+                <circle cx="12" cy="8" r="3"></circle>
+              </g>
+              <text class="dd-eyebrow" x="274" y="381">SERVICE</text>
+              <text class="dd-title" x="274" y="410">Location service</text>
             </g>
 
-            <text class="dd-tech" x="62" y="483">OPERATIONS</text>
-            <text class="dd-tech" x="295" y="483">WEB</text>
-            <text class="dd-tech" x="480" y="483">MOBILE APP</text>
+            <g>
+              <rect class="dd-node-soft" x="54" y="458" width="128" height="46" rx="5"></rect>
+              <g class="dd-icon-muted" transform="translate(68 468)">
+                <rect x="0" y="0" width="22" height="15" rx="2"></rect>
+                <path d="M7 19 H15 M11 15 V19"></path>
+              </g>
+              <text class="dd-tech" x="100" y="486">OPERATIONS</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-soft" x="266" y="458" width="128" height="46" rx="5"></rect>
+              <g class="dd-icon-muted" transform="translate(280 468)">
+                <rect x="0" y="0" width="22" height="18" rx="2"></rect>
+                <path d="M0 5 H22 M4 2 H5 M8 2 H9"></path>
+              </g>
+              <text class="dd-tech" x="312" y="486">WEB</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-soft" x="478" y="458" width="128" height="46" rx="5"></rect>
+              <g class="dd-icon-muted" transform="translate(492 465)">
+                <rect x="2" y="0" width="16" height="24" rx="3"></rect>
+                <path d="M7 4 H13 M8 20 H12"></path>
+              </g>
+              <text class="dd-tech" x="522" y="486">MOBILE APP</text>
+            </g>
           </svg>
           <small class="rtls-app-note">Representative architecture synthesized from multiple positioning and tracking programs.</small>
         </div>
