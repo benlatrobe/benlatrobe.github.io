@@ -116,10 +116,10 @@
         <p>Universe separates AI reasoning, engineering state, execution, domain logic, external software, and engineer review.</p>
       </div>
 
-      <div class="editorial-diagram diagram-dark reveal">
-        <svg viewBox="0 0 760 500" role="img" aria-labelledby="universe-arch-title universe-arch-desc">
+            <div class="editorial-diagram diagram-dark universe-architecture-diagram reveal">
+        <svg viewBox="0 0 940 520" role="img" aria-labelledby="universe-arch-title universe-arch-desc">
           <title id="universe-arch-title">Universe architecture</title>
-          <desc id="universe-arch-desc">The AI design partner proposes work. Core and Canonical Engineering Models preserve engineering state. Runtime executes bounded tasks, Domains provide engineering logic, Adapters connect external engineering software, and Workbench supports engineer review.</desc>
+          <desc id="universe-arch-desc">An AI design partner proposes and coordinates work against structured engineering state. Core and Canonical Engineering Models preserve identity, revisions, and evidence. Runtime executes bounded tasks, Domains provide engineering logic, Adapters connect external engineering software, and Workbench supports engineer review and decision.</desc>
           <defs>
             <pattern id="universeDots" width="24" height="24" patternUnits="userSpaceOnUse">
               <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
@@ -127,63 +127,108 @@
             <marker id="universeArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
               <path d="M0,0 L7,3.5 L0,7 Z" fill="#9da19e"></path>
             </marker>
-            <marker id="universeArrowAccent" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-              <path d="M0,0 L7,3.5 L0,7 Z" fill="#bbff49"></path>
-            </marker>
           </defs>
 
-          <rect x="0" y="0" width="760" height="500" fill="url(#universeDots)"></rect>
+          <rect x="0" y="0" width="940" height="520" fill="url(#universeDots)"></rect>
 
-          <path class="dd-connector" d="M380 96 V136 H185 V170" marker-end="url(#universeArrow)"></path>
-          <path class="dd-connector" d="M380 96 V170" marker-end="url(#universeArrow)"></path>
-          <path class="dd-connector" d="M380 136 H585 V170" marker-end="url(#universeArrow)"></path>
-          <path class="dd-connector" d="M380 278 V318 H470 V350" marker-end="url(#universeArrow)"></path>
-          <path class="dd-connector" d="M585 278 V318 H470" marker-end="url(#universeArrow)"></path>
-          <path class="dd-connector-accent" d="M185 278 V350" marker-end="url(#universeArrowAccent)"></path>
-          <path class="dd-connector-dashed" d="M380 395 H315" marker-end="url(#universeArrow)"></path>
+          <!-- Primary reading direction: AI partner → engineering work plane → engineer review -->
+          <path class="dd-connector" d="M202 214 H252" marker-end="url(#universeArrow)"></path>
+          <path class="dd-connector" d="M692 214 H742" marker-end="url(#universeArrow)"></path>
+          <text class="dd-tech" x="226" y="201" text-anchor="middle">PROPOSE</text>
+          <text class="dd-tech" x="718" y="201" text-anchor="middle">REVIEW</text>
 
+          <!-- External tool path -->
+          <path class="dd-connector-muted" d="M472 412 V454" marker-end="url(#universeArrow)"></path>
+          <text class="dd-tech" x="490" y="438">TOOL EXECUTION</text>
+
+          <!-- AI Design Partner -->
           <g>
-            <rect class="dd-node" x="280" y="28" width="200" height="68" rx="6"></rect>
-            <text class="dd-eyebrow" x="300" y="51">AI DESIGN PARTNER</text>
-            <text class="dd-title" x="300" y="77">Propose + coordinate</text>
+            <rect class="dd-node" x="36" y="144" width="166" height="140" rx="6"></rect>
+            <g class="dd-icon-muted" transform="translate(62 166) scale(.82)">
+              <path d="M12 8V4H8"></path>
+              <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+              <path d="M2 14h2 M20 14h2 M15 13v2 M9 13v2"></path>
+            </g>
+            <text class="dd-eyebrow" x="104" y="177">AI DESIGN PARTNER</text>
+            <text class="dd-title" x="60" y="224">Propose + coordinate</text>
+            <text class="dd-copy" x="60" y="248">context · planning · delegation</text>
+            <text class="dd-tech" x="60" y="268">NO ENGINEERING AUTHORITY</text>
           </g>
 
+          <!-- Engineering work plane -->
           <g>
-            <rect class="dd-node-accent" x="80" y="170" width="210" height="108" rx="6"></rect>
-            <text class="dd-eyebrow dd-accent-text" x="100" y="194">CORE + CEMS</text>
-            <text class="dd-title" x="100" y="224">Engineering state</text>
-            <text class="dd-copy" x="100" y="246">identity · revisions · evidence</text>
-            <text class="dd-copy" x="100" y="263">lifecycle policy</text>
+            <rect class="dd-node-soft" x="252" y="72" width="440" height="340" rx="8"></rect>
+            <text class="dd-eyebrow" x="274" y="101">ENGINEERING WORK PLANE</text>
+
+            <!-- Focal engineering state -->
+            <g>
+              <rect class="dd-node-accent" x="326" y="128" width="292" height="112" rx="6"></rect>
+              <g class="dd-icon" transform="translate(560 148) scale(.7)">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                <path d="M3 12A9 3 0 0 0 21 12"></path>
+              </g>
+              <text class="dd-eyebrow" x="350" y="154">CORE + CEMS</text>
+              <text class="dd-title" x="350" y="188">Engineering state</text>
+              <text class="dd-copy" x="350" y="211">identity · revisions · evidence · lifecycle policy</text>
+            </g>
+
+            <!-- Runtime -->
+            <g>
+              <rect class="dd-node" x="286" y="274" width="174" height="104" rx="6"></rect>
+              <g class="dd-icon-muted" transform="translate(414 292) scale(.65)">
+                <rect width="8" height="8" x="3" y="3" rx="2"></rect>
+                <path d="M7 11v4a2 2 0 0 0 2 2h4"></path>
+                <rect width="8" height="8" x="13" y="13" rx="2"></rect>
+              </g>
+              <text class="dd-eyebrow" x="306" y="299">RUNTIME</text>
+              <text class="dd-title" x="306" y="329">Bounded execution</text>
+              <text class="dd-copy" x="306" y="351">tasks · checkpoints · recovery</text>
+              <text class="dd-copy" x="306" y="368">receipts</text>
+            </g>
+
+            <!-- Domains -->
+            <g>
+              <rect class="dd-node" x="484" y="274" width="174" height="104" rx="6"></rect>
+              <g class="dd-icon-muted" transform="translate(612 292) scale(.65)">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01 M12 10h.01 M8 10h.01 M12 14h.01 M8 14h.01"></path>
+              </g>
+              <text class="dd-eyebrow" x="504" y="299">DOMAINS</text>
+              <text class="dd-title" x="504" y="329">Engineering logic</text>
+              <text class="dd-copy" x="504" y="351">calculations · rules</text>
+              <text class="dd-copy" x="504" y="368">geometry · validators</text>
+            </g>
+
+            <path class="dd-connector-muted" d="M472 240 V258 H373 V274" marker-end="url(#universeArrow)"></path>
+            <path class="dd-connector-muted" d="M472 258 H571 V274" marker-end="url(#universeArrow)"></path>
           </g>
 
+          <!-- Engineer Review -->
           <g>
-            <rect class="dd-node" x="310" y="170" width="140" height="108" rx="6"></rect>
-            <text class="dd-eyebrow" x="330" y="194">RUNTIME</text>
-            <text class="dd-title" x="330" y="224">Execution</text>
-            <text class="dd-copy" x="330" y="246">tasks · recovery</text>
-            <text class="dd-copy" x="330" y="263">receipts</text>
+            <rect class="dd-node" x="742" y="134" width="162" height="160" rx="6" style="stroke-width:1.8"></rect>
+            <g class="dd-icon-muted" transform="translate(766 158) scale(.8)">
+              <path d="m9 10 2 2 4-4"></path>
+              <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+              <path d="M12 17v4 M8 21h8"></path>
+            </g>
+            <text class="dd-eyebrow" x="808" y="170">WORKBENCH</text>
+            <text class="dd-title" x="766" y="216">Engineer review</text>
+            <text class="dd-copy" x="766" y="241">state · evidence · changes</text>
+            <text class="dd-copy" x="766" y="258">open issues · decision</text>
+            <text class="dd-tech" x="766" y="279">HUMAN AUTHORITY</text>
           </g>
 
+          <!-- Adapters / external engineering software -->
           <g>
-            <rect class="dd-node" x="470" y="170" width="210" height="108" rx="6"></rect>
-            <text class="dd-eyebrow" x="490" y="194">DOMAINS</text>
-            <text class="dd-title" x="490" y="224">Engineering logic</text>
-            <text class="dd-copy" x="490" y="246">calculations · rules · geometry</text>
-            <text class="dd-copy" x="490" y="263">validators</text>
-          </g>
-
-          <g>
-            <rect class="dd-node-accent" x="80" y="350" width="235" height="92" rx="6"></rect>
-            <text class="dd-eyebrow dd-accent-text" x="100" y="375">WORKBENCH</text>
-            <text class="dd-title" x="100" y="405">Engineer review</text>
-            <text class="dd-copy" x="100" y="425">state · evidence · changes · open issues</text>
-          </g>
-
-          <g>
-            <rect class="dd-node" x="380" y="350" width="230" height="92" rx="6"></rect>
-            <text class="dd-eyebrow" x="400" y="375">ADAPTERS</text>
-            <text class="dd-title" x="400" y="405">Engineering software</text>
-            <text class="dd-copy" x="400" y="425">CAD · solvers · formats · source tools</text>
+            <rect class="dd-node" x="350" y="454" width="244" height="54" rx="6"></rect>
+            <g class="dd-icon-muted" transform="translate(368 468) scale(.62)">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path>
+            </g>
+            <text class="dd-eyebrow" x="404" y="474">ADAPTERS / ENGINEERING SOFTWARE</text>
+            <text class="dd-copy" x="404" y="495">CAD · solvers · formats · source tools</text>
           </g>
         </svg>
       </div>
