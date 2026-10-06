@@ -72,9 +72,9 @@
       </div>
 
       <div class="editorial-diagram diagram-scroll ops-architecture-diagram reveal">
-        <svg viewBox="0 0 900 470" role="img" aria-labelledby="ops-arch-title ops-arch-desc">
+        <svg viewBox="0 0 980 480" role="img" aria-labelledby="ops-arch-title ops-arch-desc">
           <title id="ops-arch-title">Engineering Operations Dashboard architecture</title>
-          <desc id="ops-arch-desc">Labor and engineering source systems feed an ETL and PostgreSQL data layer, then FastAPI services, then a React application used by engineers, project managers, managers, and administrators. IHS Intelligent BOM data is acquired through Playwright browser automation.</desc>
+          <desc id="ops-arch-desc">Labor and engineering source systems feed an ETL and PostgreSQL operating data layer, then FastAPI services and a React application used by engineers, project managers, managers, and administrators. IHS Intelligent BOM follows a special Playwright browser-automation acquisition path.</desc>
           <defs>
             <pattern id="opsDots" width="24" height="24" patternUnits="userSpaceOnUse">
               <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
@@ -84,57 +84,107 @@
             </marker>
           </defs>
 
-          <rect x="0" y="0" width="900" height="470" fill="url(#opsDots)"></rect>
+          <rect x="0" y="0" width="980" height="480" fill="url(#opsDots)"></rect>
 
-          <path class="dd-connector" d="M252 225 H316" marker-end="url(#opsArrow)"></path>
-          <path class="dd-connector" d="M506 225 H570" marker-end="url(#opsArrow)"></path>
-          <path class="dd-connector" d="M720 225 H770" marker-end="url(#opsArrow)"></path>
+          <path class="dd-connector" d="M274 230 H330" marker-end="url(#opsArrow)"></path>
+          <path class="dd-connector" d="M550 230 H610" marker-end="url(#opsArrow)"></path>
+          <path class="dd-connector" d="M760 230 H820" marker-end="url(#opsArrow)"></path>
+          <path class="dd-connector-dashed" d="M252 354 H292 V296 H330" marker-end="url(#opsArrow)"></path>
+          <text class="dd-tech" x="278" y="344">PLAYWRIGHT</text>
 
           <g>
-            <rect class="dd-node-soft" x="28" y="60" width="224" height="330" rx="6"></rect>
-            <text class="dd-eyebrow" x="50" y="88">SOURCE SYSTEMS</text>
+            <rect class="dd-node-soft" x="24" y="48" width="250" height="364" rx="6"></rect>
+            <text class="dd-eyebrow" x="48" y="80">SOURCE SYSTEMS</text>
 
-            <rect class="dd-chip" x="50" y="112" width="180" height="38" rx="5"></rect>
-            <text class="dd-tech" x="66" y="136">LABOR / TIME</text>
+            <g>
+              <rect class="dd-chip" x="48" y="108" width="204" height="46" rx="5"></rect>
+              <g class="dd-icon-muted" transform="translate(62 120)">
+                <circle cx="10" cy="10" r="8"></circle>
+                <path d="M10 5 V10 L14 13"></path>
+              </g>
+              <text class="dd-tech" x="94" y="136">LABOR / TIME</text>
+            </g>
 
-            <rect class="dd-chip" x="50" y="164" width="180" height="38" rx="5"></rect>
-            <text class="dd-tech" x="66" y="188">AZURE DEVOPS</text>
+            <g>
+              <rect class="dd-chip" x="48" y="166" width="204" height="46" rx="5"></rect>
+              <g class="dd-icon-muted" transform="translate(62 178)">
+                <circle cx="4" cy="10" r="3"></circle>
+                <circle cx="16" cy="4" r="3"></circle>
+                <circle cx="16" cy="16" r="3"></circle>
+                <path d="M7 9 L13 5 M7 11 L13 15"></path>
+              </g>
+              <text class="dd-tech" x="94" y="194">AZURE DEVOPS</text>
+            </g>
 
-            <rect class="dd-chip" x="50" y="216" width="180" height="38" rx="5"></rect>
-            <text class="dd-tech" x="66" y="240">SMARTSHEET</text>
+            <g>
+              <rect class="dd-chip" x="48" y="224" width="204" height="46" rx="5"></rect>
+              <g class="dd-icon-muted" transform="translate(62 236)">
+                <rect x="1" y="1" width="18" height="18" rx="2"></rect>
+                <path d="M1 7 H19 M7 1 V19 M13 1 V19"></path>
+              </g>
+              <text class="dd-tech" x="94" y="252">SMARTSHEET</text>
+            </g>
 
-            <rect class="dd-chip" x="50" y="268" width="180" height="38" rx="5"></rect>
-            <text class="dd-tech" x="66" y="292">WINDCHILL / PLM</text>
+            <g>
+              <rect class="dd-chip" x="48" y="282" width="204" height="46" rx="5"></rect>
+              <g class="dd-icon-muted" transform="translate(62 294)">
+                <path d="M2 2 H14 L20 8 V20 H2 Z"></path>
+                <path d="M14 2 V8 H20"></path>
+                <path d="M6 12 H16 M6 16 H13"></path>
+              </g>
+              <text class="dd-tech" x="94" y="310">WINDCHILL / PLM</text>
+            </g>
 
-            <rect class="dd-chip" x="50" y="320" width="180" height="48" rx="5"></rect>
-            <text class="dd-tech" x="66" y="342">IHS INTELLIGENT BOM</text>
-            <text class="dd-copy" x="66" y="358">Playwright acquisition</text>
+            <g>
+              <rect class="dd-chip" x="48" y="340" width="204" height="50" rx="5"></rect>
+              <g class="dd-icon-muted" transform="translate(62 353)">
+                <path d="M2 3 H18 V19 H2 Z"></path>
+                <path d="M6 7 H14 M6 11 H14 M6 15 H11"></path>
+              </g>
+              <text class="dd-tech" x="94" y="362">IHS INTELLIGENT BOM</text>
+              <text class="dd-copy" x="94" y="380">browser-acquired BOM intelligence</text>
+            </g>
           </g>
 
           <g>
-            <rect class="dd-node-accent" x="316" y="158" width="190" height="134" rx="6"></rect>
-            <text class="dd-eyebrow" x="338" y="184">DATA LAYER</text>
-            <text class="dd-title" x="338" y="217">ETL + PostgreSQL</text>
-            <text class="dd-copy" x="338" y="241">normalize operational signals</text>
-            <line class="dd-rule" x1="338" y1="258" x2="484" y2="258"></line>
-            <text class="dd-tech" x="338" y="278">OPERATIONAL + ANALYTICAL MODEL</text>
+            <rect class="dd-node-accent" x="330" y="146" width="220" height="168" rx="6"></rect>
+            <g class="dd-icon" transform="translate(496 168)">
+              <ellipse cx="12" cy="4" rx="12" ry="4"></ellipse>
+              <path d="M0 4 V22 C0 27 24 27 24 22 V4"></path>
+              <path d="M0 12 C0 17 24 17 24 12 M0 20 C0 25 24 25 24 20"></path>
+            </g>
+            <text class="dd-eyebrow" x="354" y="176">INTEGRATED OPERATING DATA</text>
+            <text class="dd-title" x="354" y="214">ETL + PostgreSQL</text>
+            <text class="dd-copy" x="354" y="240">normalize engineering signals</text>
+            <line class="dd-rule" x1="354" y1="260" x2="526" y2="260"></line>
+            <text class="dd-tech" x="354" y="284">ONE OPERATIONAL + ANALYTICAL MODEL</text>
           </g>
 
           <g>
-            <rect class="dd-node" x="570" y="170" width="150" height="110" rx="6"></rect>
-            <text class="dd-eyebrow" x="590" y="195">SERVICE LAYER</text>
-            <text class="dd-title" x="590" y="226">FastAPI</text>
-            <text class="dd-copy" x="590" y="249">services · repositories</text>
-            <text class="dd-copy" x="590" y="265">integrations</text>
+            <rect class="dd-node" x="610" y="166" width="150" height="128" rx="6"></rect>
+            <g class="dd-icon-muted" transform="translate(714 185)">
+              <circle cx="4" cy="4" r="3"></circle>
+              <circle cx="4" cy="20" r="3"></circle>
+              <circle cx="20" cy="12" r="3"></circle>
+              <path d="M7 5.5 L17 10.5 M7 18.5 L17 13.5"></path>
+            </g>
+            <text class="dd-eyebrow" x="632" y="194">SERVICE LAYER</text>
+            <text class="dd-title" x="632" y="228">FastAPI</text>
+            <text class="dd-copy" x="632" y="253">services · repositories</text>
+            <text class="dd-copy" x="632" y="271">integrations</text>
           </g>
 
           <g>
-            <rect class="dd-node-accent" x="770" y="158" width="108" height="134" rx="6"></rect>
-            <text class="dd-eyebrow" x="788" y="184">USERS</text>
-            <text class="dd-title" x="788" y="217">React</text>
-            <text class="dd-copy" x="788" y="241">Engineer</text>
-            <text class="dd-copy" x="788" y="257">PM · Manager</text>
-            <text class="dd-copy" x="788" y="273">Admin</text>
+            <rect class="dd-node" x="820" y="154" width="136" height="152" rx="6"></rect>
+            <g class="dd-icon-muted" transform="translate(910 172)">
+              <rect x="0" y="0" width="24" height="18" rx="2"></rect>
+              <path d="M0 5 H24 M8 22 H16 M12 18 V22"></path>
+            </g>
+            <text class="dd-eyebrow" x="842" y="184">ROLE-BASED UI</text>
+            <text class="dd-title" x="842" y="218">React</text>
+            <text class="dd-copy" x="842" y="245">Engineer · PM</text>
+            <text class="dd-copy" x="842" y="263">Manager · Admin</text>
+            <text class="dd-tech" x="842" y="286">SELF-SERVICE VIEWS</text>
           </g>
         </svg>
       </div>
