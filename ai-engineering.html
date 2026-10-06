@@ -293,7 +293,7 @@
           </p>
 
           <div class="editorial-diagram diagram-scroll universe-selection-diagram reveal">
-            <svg viewBox="0 0 980 370" role="img" aria-labelledby="selection-title selection-desc">
+            <svg viewBox="0 0 1000 380" role="img" aria-labelledby="selection-title selection-desc">
               <title id="selection-title">Universe component selection workflow</title>
               <desc id="selection-desc">A product requirement drives candidate discovery and evidence collection, then domain screening, then a shortlist proposal. The proposal remains separate from the final engineer decision. Requirement basis, project revision, comparison result, and evidence are retained as the traceable basis.</desc>
               <defs>
@@ -305,97 +305,90 @@
                 </marker>
               </defs>
 
-              <rect x="0" y="0" width="980" height="370" fill="url(#selectionDots)"></rect>
+              <rect x="0" y="0" width="1000" height="380" fill="url(#selectionDots)"></rect>
 
-              <path class="dd-connector" d="M176 142 H216" marker-end="url(#selectionArrow)"></path>
-              <path class="dd-connector" d="M360 142 H400" marker-end="url(#selectionArrow)"></path>
-              <path class="dd-connector" d="M544 142 H584" marker-end="url(#selectionArrow)"></path>
-              <path class="dd-connector" d="M728 142 H768" marker-end="url(#selectionArrow)"></path>
+              <path class="dd-connector" d="M180 146 H210" marker-end="url(#selectionArrow)"></path>
+              <path class="dd-connector" d="M370 146 H400" marker-end="url(#selectionArrow)"></path>
+              <path class="dd-connector" d="M560 146 H590" marker-end="url(#selectionArrow)"></path>
+              <path class="dd-connector" d="M750 146 H780" marker-end="url(#selectionArrow)"></path>
 
-              <!-- 1. Requirement -->
               <g>
-                <rect class="dd-node" x="32" y="76" width="144" height="132" rx="6"></rect>
-                <g class="dd-icon-muted" transform="translate(132 92) scale(.66)">
+                <rect class="dd-node" x="20" y="80" width="160" height="132" rx="6"></rect>
+                <text class="dd-eyebrow" x="38" y="106">01 / REQUIREMENT</text>
+                <g class="dd-icon-muted" transform="translate(148 92) scale(.52)">
                   <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
                   <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
                   <path d="M12 11h4 M12 16h4 M8 11h.01 M8 16h.01"></path>
                 </g>
-                <text class="dd-eyebrow" x="50" y="103">01 / REQUIREMENT</text>
-                <text class="dd-title" x="50" y="140">Define the need</text>
-                <text class="dd-copy" x="50" y="166">electrical · mechanical</text>
-                <text class="dd-copy" x="50" y="184">environment · constraints</text>
+                <text class="dd-title" x="38" y="145">Define the need</text>
+                <text class="dd-copy" x="38" y="171">electrical · mechanical</text>
+                <text class="dd-copy" x="38" y="189">environment · constraints</text>
               </g>
 
-              <!-- 2. Discover -->
               <g>
-                <rect class="dd-node" x="216" y="76" width="144" height="132" rx="6"></rect>
-                <g class="dd-icon-muted" transform="translate(316 92) scale(.66)">
+                <rect class="dd-node" x="210" y="80" width="160" height="132" rx="6"></rect>
+                <text class="dd-eyebrow" x="228" y="106">02 / DISCOVER</text>
+                <g class="dd-icon-muted" transform="translate(338 92) scale(.52)">
                   <path d="M12 22V12"></path>
                   <path d="M20.27 18.27 22 20"></path>
                   <path d="M21 10.498V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.98-.559"></path>
                   <path d="M3.29 7 12 12l8.71-5 M7.5 4.27l8.997 5.148"></path>
                   <circle cx="18.5" cy="16.5" r="2.5"></circle>
                 </g>
-                <text class="dd-eyebrow" x="234" y="103">02 / DISCOVER</text>
-                <text class="dd-title" x="234" y="140">Find candidates</text>
-                <text class="dd-copy" x="234" y="166">parts · datasheets</text>
-                <text class="dd-copy" x="234" y="184">sources · alternatives</text>
+                <text class="dd-title" x="228" y="145">Find candidates</text>
+                <text class="dd-copy" x="228" y="171">parts · datasheets</text>
+                <text class="dd-copy" x="228" y="189">sources · alternatives</text>
               </g>
 
-              <!-- 3. Screen -->
               <g>
-                <rect class="dd-node" x="400" y="76" width="144" height="132" rx="6"></rect>
-                <g class="dd-icon-muted" transform="translate(500 92) scale(.66)">
+                <rect class="dd-node" x="400" y="80" width="160" height="132" rx="6"></rect>
+                <text class="dd-eyebrow" x="418" y="106">03 / SCREEN</text>
+                <g class="dd-icon-muted" transform="translate(528 92) scale(.52)">
                   <path d="M2 5h20 M6 12h12 M9 19h6"></path>
                 </g>
-                <text class="dd-eyebrow" x="418" y="103">03 / SCREEN</text>
-                <text class="dd-title" x="418" y="140">Check suitability</text>
-                <text class="dd-copy" x="418" y="166">domain rules · calculations</text>
-                <text class="dd-copy" x="418" y="184">evidence · holds</text>
+                <text class="dd-title" x="418" y="145">Check suitability</text>
+                <text class="dd-copy" x="418" y="171">domain rules · calculations</text>
+                <text class="dd-copy" x="418" y="189">evidence · holds</text>
               </g>
 
-              <!-- 4. Proposal -->
               <g>
-                <rect class="dd-node" x="584" y="76" width="144" height="132" rx="6"></rect>
-                <g class="dd-icon-muted" transform="translate(684 92) scale(.66)">
+                <rect class="dd-node" x="590" y="80" width="160" height="132" rx="6"></rect>
+                <text class="dd-eyebrow" x="608" y="106">04 / PROPOSAL</text>
+                <g class="dd-icon-muted" transform="translate(718 92) scale(.52)">
                   <path d="M13 5h8 M13 12h8 M13 19h8"></path>
                   <path d="m3 17 2 2 4-4 M3 7l2 2 4-4"></path>
                 </g>
-                <text class="dd-eyebrow" x="602" y="103">04 / PROPOSAL</text>
-                <text class="dd-title" x="602" y="140">Shortlist</text>
-                <text class="dd-copy" x="602" y="166">comparison · evidence</text>
-                <text class="dd-copy" x="602" y="184">proposal · unresolved holds</text>
+                <text class="dd-title" x="608" y="145">Shortlist</text>
+                <text class="dd-copy" x="608" y="171">comparison · evidence</text>
+                <text class="dd-copy" x="608" y="189">proposal · unresolved holds</text>
               </g>
 
-              <!-- 5. Engineer decision -->
               <g>
-                <rect class="dd-node-accent" x="768" y="62" width="180" height="160" rx="6"></rect>
-                <g class="dd-icon" transform="translate(898 82) scale(.72)">
+                <rect class="dd-node-accent" x="780" y="64" width="196" height="164" rx="6"></rect>
+                <text class="dd-eyebrow" x="800" y="91">05 / DECISION</text>
+                <g class="dd-icon" transform="translate(936 78) scale(.56)">
                   <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
                   <path d="m16 9-5.5 5.5L8 12"></path>
                 </g>
-                <text class="dd-eyebrow" x="788" y="91">05 / ENGINEER DECISION</text>
-                <text class="dd-title" x="788" y="132">Review + decide</text>
-                <text class="dd-copy" x="788" y="159">accept · reject · investigate</text>
-                <line class="dd-rule" x1="788" y1="180" x2="928" y2="180"></line>
-                <text class="dd-tech" x="788" y="203">HUMAN AUTHORITY</text>
+                <text class="dd-title" x="800" y="133">Engineer review</text>
+                <text class="dd-copy" x="800" y="160">accept · reject · investigate</text>
+                <line class="dd-rule" x1="800" y1="182" x2="954" y2="182"></line>
+                <text class="dd-tech" x="800" y="206">HUMAN AUTHORITY</text>
               </g>
 
-              <!-- Traceable basis rail -->
               <g>
-                <rect class="dd-node-soft" x="96" y="270" width="788" height="64" rx="6"></rect>
-                <text class="dd-eyebrow" x="118" y="294">TRACEABLE BASIS</text>
-
-                <g class="dd-icon-muted" transform="translate(118 306) scale(.54)">
+                <rect class="dd-node-soft" x="96" y="278" width="808" height="66" rx="6"></rect>
+                <text class="dd-eyebrow" x="118" y="302">TRACEABLE BASIS</text>
+                <g class="dd-icon-muted" transform="translate(118 313) scale(.46)">
                   <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
                   <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
                   <circle cx="11.5" cy="14.5" r="2.5"></circle>
                   <path d="M13.3 16.3 15 18"></path>
                 </g>
-                <text class="dd-tech" x="152" y="321">REQUIREMENT BASIS</text>
-                <text class="dd-tech" x="318" y="321">PROJECT REVISION</text>
-                <text class="dd-tech" x="478" y="321">COMPARISON RESULT</text>
-                <text class="dd-tech" x="650" y="321">EXACT EVIDENCE</text>
+                <text class="dd-tech" x="150" y="329">REQUIREMENT BASIS</text>
+                <text class="dd-tech" x="320" y="329">PROJECT REVISION</text>
+                <text class="dd-tech" x="488" y="329">COMPARISON RESULT</text>
+                <text class="dd-tech" x="666" y="329">EXACT EVIDENCE</text>
               </g>
             </svg>
           </div>
