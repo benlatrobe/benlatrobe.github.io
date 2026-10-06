@@ -2,11 +2,16 @@
 
 ## Lucide Icons
 
-Selected protocol glyphs used in the RTLS Gateway diagram are adapted from the Lucide icon set:
+Selected glyphs used in portfolio diagrams are adapted from the Lucide icon set:
 - Bluetooth
 - Network
 - Radar
 - Radio Tower
+- Clipboard Check
+- Factory
+- Chart No Axes Combined
+- Refresh CW
+- Wrench
 
 Source: https://github.com/lucide-icons/lucide
 
