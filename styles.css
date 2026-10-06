@@ -12019,3 +12019,8 @@ button:focus-visible {
     letter-spacing: .055em;
   }
 }
+
+
+.gateway-role-diagram {
+  margin: auto 0 22px;
+}
