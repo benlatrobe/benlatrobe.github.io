@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI-Enabled Engineering — Ben Lin</title>
-  <meta name="description" content="A case study of Universe, Ben Lin's AI-native framework for physical-product engineering." />
+  <title>Universe — AI-Enabled Engineering — Ben Lin</title>
+  <meta name="description" content="Universe is Ben Lin's personal side project exploring how AI agents can work with engineering models, domain tools, engineering software, evidence, and human review in physical-product development." />
   <meta name="theme-color" content="#151816" />
   <link rel="canonical" href="https://benlatrobe.github.io/ai-engineering.html" />
-  <meta property="og:title" content="AI-Enabled Engineering — Ben Lin" />
-  <meta property="og:description" content="Universe: an AI-native framework for physical-product engineering built around structured state, bounded agents, engineering tools, traceable evidence, and human authority." />
+  <meta property="og:title" content="Universe — AI-Enabled Engineering — Ben Lin" />
+  <meta property="og:description" content="A personal side project exploring how AI agents can work with engineering models, domain tools, engineering software, evidence, and human review." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://benlatrobe.github.io/assets/og/portfolio-preview.jpg" />
   <meta property="og:image:width" content="600" />
@@ -17,7 +17,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://benlatrobe.github.io/assets/og/portfolio-preview.jpg" />
   <meta property="og:url" content="https://benlatrobe.github.io/ai-engineering.html" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -31,9 +31,10 @@
       <span class="brand-name">Ben Lin</span>
     </a>
     <nav class="nav" aria-label="Case study navigation">
+      <a href="#idea">Idea</a>
       <a href="#architecture">Architecture</a>
-      <a href="#stack">Stack</a>
-      <a href="#agent-flow">Agent Flow</a>
+      <a href="#built">Built</a>
+      <a href="#example">Example</a>
       <a href="index.html#work">Home</a>
     </nav>
   </header>
@@ -45,82 +46,64 @@
           <p class="eyebrow">Selected work / AI-enabled engineering</p>
           <h1>Universe</h1>
           <p class="case-deck">
-            An AI-native framework for physical-product engineering—designed around structured engineering state, bounded agents, deterministic tools, traceable evidence, and explicit human authority.
+            Exploring how AI agents can work with engineering models, domain tools, and real engineering software to support physical-product development.
           </p>
           <div class="case-meta">
             <div><span>ROLE</span><strong>Creator / architect</strong></div>
-            <div><span>FOCUS</span><strong>Hardware engineering + AI</strong></div>
-            <div><span>STATUS</span><strong>Active development</strong></div>
+            <div><span>FOCUS</span><strong>Engineering + AI</strong></div>
+            <div><span>STATUS</span><strong>Personal side project · active development</strong></div>
           </div>
           <div class="hero-links">
             <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer">View Universe on GitHub ↗</a>
           </div>
         </div>
 
-        <div class="case-system reveal" aria-label="Universe architecture overview">
-          <div class="case-system-label">ENGINEERING AUTHORITY FLOW</div>
+        <div class="case-system reveal" aria-label="Universe overview">
+          <div class="case-system-label">UNIVERSE AT A GLANCE</div>
           <div class="authority-stack">
             <div class="authority-row">
               <span class="authority-id">01</span>
-              <div><strong>Requirements + context</strong><small>source-linked intent, constraints, revisions</small></div>
+              <div><strong>Requirements + engineering context</strong><small>intent, constraints, sources, revisions</small></div>
             </div>
             <div class="authority-arrow">↓</div>
             <div class="authority-row">
               <span class="authority-id">02</span>
-              <div><strong>Design partner / agent</strong><small>proposes, plans, delegates</small></div>
+              <div><strong>AI design partner / agent</strong><small>understands context, proposes work, coordinates tools</small></div>
             </div>
             <div class="authority-arrow">↓</div>
             <div class="authority-row">
               <span class="authority-id">03</span>
-              <div><strong>Domain workflows + tools</strong><small>calculations, geometry, simulations, validators</small></div>
+              <div><strong>Engineering models + domain tools</strong><small>calculations, validation, geometry, structured state</small></div>
             </div>
             <div class="authority-arrow">↓</div>
             <div class="authority-row">
               <span class="authority-id">04</span>
-              <div><strong>Evidence + changes + unknowns</strong><small>version-bound, reviewable, reusable</small></div>
+              <div><strong>Evidence + proposed changes</strong><small>results tied to inputs, sources, assumptions, revisions</small></div>
             </div>
             <div class="authority-arrow">↓</div>
             <div class="authority-row authority-human">
               <span class="authority-id">05</span>
-              <div><strong>Human review + lifecycle gates</strong><small>approval and release remain explicit decisions</small></div>
+              <div><strong>Engineer review + decision</strong><small>AI assists; engineering authority stays explicit</small></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="problem" class="section case-light">
-      <div class="section-index">01 / THE PROBLEM</div>
+    <section id="idea" class="section case-light">
+      <div class="section-index">01 / THE IDEA</div>
       <div class="split">
         <div class="sticky-title reveal">
           <p class="kicker">Why I started it</p>
-          <h2>Engineering AI needs more than a chatbot.</h2>
+          <h2>AI should work with engineering tools, not just generate answers.</h2>
         </div>
         <div class="story-column">
           <p class="lede reveal">
-            Physical-product development depends on revisions, interfaces, tools, calculations, source evidence, and decisions that must remain traceable long after a conversation ends.
+            In my day-to-day work, I began exploring AI-assisted tools for requirements, technical research, design artifacts, calculations, and validation. These tools complement existing engineering and PLM systems rather than replace them.
           </p>
           <p class="body-copy reveal">
-            A useful engineering agent therefore needs a shared design state, clear tool boundaries, durable execution history, and a way to distinguish a suggestion from an engineering decision.
+            Universe is my personal extension of that work: a side project exploring what an AI-assisted development environment could look like when agents can work with engineering state and engineering tools—not just a conversation.
           </p>
-
-          <div class="problem-grid">
-            <article class="problem-card reveal">
-              <span>01</span>
-              <h3>Conversation is not engineering state.</h3>
-              <p>Requirements, models, evidence, and changes need identity and version history outside the model's prose.</p>
-            </article>
-            <article class="problem-card reveal">
-              <span>02</span>
-              <h3>A tool result is not universal truth.</h3>
-              <p>Every calculation or model has inputs, applicability, method versions, and limits.</p>
-            </article>
-            <article class="problem-card reveal">
-              <span>03</span>
-              <h3>Automation is not authority.</h3>
-              <p>Agents can propose and coordinate. Engineering approval and release must stay behind explicit lifecycle gates.</p>
-            </article>
-          </div>
         </div>
       </div>
     </section>
@@ -128,46 +111,46 @@
     <section id="architecture" class="section section-dark case-architecture">
       <div class="section-index">02 / ARCHITECTURE</div>
       <div class="section-heading reveal">
-        <p class="kicker">Separate the responsibilities</p>
-        <h2>No single agent owns the truth.</h2>
-        <p>The framework separates engineering state, execution, planning, domain semantics, external tools, and the user interface.</p>
+        <p class="kicker">Connect reasoning to engineering state</p>
+        <h2>How the pieces fit together.</h2>
+        <p>Universe separates AI reasoning, engineering state, execution, domain logic, external software, and engineer review.</p>
       </div>
 
       <div class="architecture-map reveal">
         <div class="arch-layer arch-agent">
           <span>AGENT</span>
-          <strong>Plan / propose / delegate</strong>
-          <small>bounded reasoning, not engineering authority</small>
+          <strong>Understand / propose / coordinate</strong>
+          <small>uses context and plans work, but does not own engineering authority</small>
         </div>
         <div class="arch-connector">requests ↓</div>
         <div class="arch-row">
           <div class="arch-layer">
             <span>CORE</span>
-            <strong>Identity + revisions</strong>
-            <small>immutable model state, admission, lifecycle policy</small>
+            <strong>Engineering state + revisions</strong>
+            <small>identity, immutable revisions, evidence, lifecycle policy</small>
           </div>
           <div class="arch-layer">
             <span>RUNTIME</span>
             <strong>Execution + recovery</strong>
-            <small>tasks, workers, journals, durable receipts</small>
+            <small>tasks, checkpoints, journals, receipts</small>
           </div>
           <div class="arch-layer">
             <span>DOMAINS</span>
             <strong>Engineering meaning</strong>
-            <small>schemas, calculations, rules, validators</small>
+            <small>schemas, calculations, rules, geometry, validators</small>
           </div>
         </div>
-        <div class="arch-connector">evidence + state ↑ &nbsp;&nbsp; tools ↓</div>
+        <div class="arch-connector">engineering state + evidence ↑ &nbsp;&nbsp; external tools ↓</div>
         <div class="arch-row arch-row-bottom">
           <div class="arch-layer">
             <span>ADAPTERS</span>
-            <strong>External engineering tools</strong>
-            <small>CAD, formats, solvers, fidelity boundaries</small>
+            <strong>Engineering software</strong>
+            <small>CAD, formats, solvers, source acquisition, fidelity checks</small>
           </div>
           <div class="arch-layer">
             <span>WORKBENCH</span>
-            <strong>Engineering review UI</strong>
-            <small>presents state; does not own engineering truth</small>
+            <strong>Engineer review</strong>
+            <small>requirements, models, calculations, evidence, changes, open issues</small>
           </div>
         </div>
       </div>
@@ -175,112 +158,52 @@
       <div class="architecture-note reveal">
         <strong>Canonical Engineering Models (CEMs)</strong>
         <p>
-          Universe uses structured, versioned domain models to connect engineering properties and relationships with source evidence, assumptions, and validation results. A CEM is not one giant JSON document—and a valid model is not proof that a design is complete or approved.
+          A CEM is a structured, versioned representation of engineering entities, relationships, properties, and evidence. It gives agents, domain tools, and engineers a shared design state while keeping revisions and evidence explicit.
         </p>
       </div>
     </section>
 
-    <section id="stack" class="section universe-stack-section">
-      <div class="section-index">03 / TECHNICAL STACK</div>
+    <section id="built" class="section universe-stack-section">
+      <div class="section-index">03 / WHAT I HAVE BUILT</div>
       <div class="section-heading reveal">
-        <p class="kicker">Built across system layers</p>
-        <h2>Different languages for different responsibilities.</h2>
+        <p class="kicker">From concept to working pieces</p>
+        <h2>Several parts are already working.</h2>
       </div>
 
       <div class="tech-stack-grid">
-        <article class="tech-stack-card reveal">
-          <span>RUST</span>
-          <h3>Core + Runtime</h3>
-          <p>Immutable revisions, canonical identity, lifecycle policy, execution journal, recovery, and durable receipts.</p>
+        <article class="tech-stack-card tech-stack-card-primary reveal">
+          <span>REQUIREMENTS → ARCHITECTURE</span>
+          <h3>Turn reviewed requirements into a system concept</h3>
+          <p>An implemented workflow turns source-linked requirements into a proposed system structure, subsystem responsibilities, interfaces, constraints, and owned unknowns. Revisions stay attributable, and the candidate remains separate from engineering approval.</p>
         </article>
+
         <article class="tech-stack-card reveal">
-          <span>PYTHON</span>
-          <h3>Agents + Domains + Adapters</h3>
-          <p>Agent loops, domain tools, validation, calculations, API boundaries, CAD and external-tool integration.</p>
+          <span>ENGINEERING TOOLS</span>
+          <h3>Calculations, geometry + engineering software</h3>
+          <p>Implemented work includes electrical and power calculations, component screening, system interfaces, geometry, bounded thermal and scenario studies, validation, and FreeCAD / OCCT integration.</p>
         </article>
+
         <article class="tech-stack-card reveal">
-          <span>TYPESCRIPT / REACT</span>
-          <h3>Workbench</h3>
-          <p>Engineering review UI for models, changes, calculations, evidence, unresolved questions, and 3D review.</p>
+          <span>TRACEABILITY</span>
+          <h3>Results stay tied to their basis</h3>
+          <p>Inputs, sources, revisions, and execution evidence stay attached to the work. When the basis changes, affected results can be identified for re-evaluation instead of silently remaining current.</p>
         </article>
-        <article class="tech-stack-card reveal">
-          <span>THREE.JS</span>
-          <h3>Engineering visualization</h3>
-          <p>Interactive visualization inside Workbench while engineering authority remains in backend state and contracts.</p>
+
+        <article class="tech-stack-card tech-stack-card-primary reveal">
+          <span>WORKBENCH</span>
+          <h3>Review the engineering work, not just the conversation</h3>
+          <p>A React / TypeScript review environment brings together requirements, models, calculations, evidence, proposed changes, open issues, and 3D visualization.</p>
         </article>
-        <article class="tech-stack-card reveal">
-          <span>JSON SCHEMA</span>
-          <h3>Contracts</h3>
-          <p>Versioned boundary schemas, canonical serialization, API contracts, and conformance checks.</p>
-        </article>
-        <article class="tech-stack-card reveal">
-          <span>FREECAD / OCCT</span>
-          <h3>Engineering adapters</h3>
-          <p>Native CAD execution, geometry capture, translation, tessellation, and declared fidelity checks.</p>
-        </article>
+      </div>
+
+      <div class="architecture-note reveal">
+        <strong>Implementation stack</strong>
+        <p>Rust supports Core and Runtime. Python connects agents, domain tools, and engineering software. Workbench uses TypeScript / React and Three.js.</p>
       </div>
     </section>
 
-    <section id="agent-flow" class="section section-dark universe-agent-section">
-      <div class="section-index">04 / AGENT FLOW</div>
-      <div class="section-heading reveal">
-        <p class="kicker">Agent development</p>
-        <h2>The agent proposes. The host controls execution.</h2>
-      </div>
-
-      <div class="agent-flow-map reveal" aria-label="Universe bounded agent flow">
-        <div><span>01</span><strong>CONTEXT</strong><small>requirements + engineering state</small></div>
-        <i>→</i>
-        <div><span>02</span><strong>PLAN</strong><small>capability planning + delegation</small></div>
-        <i>→</i>
-        <div><span>03</span><strong>ADMIT</strong><small>host policy + input binding + budget</small></div>
-        <i>→</i>
-        <div><span>04</span><strong>EXECUTE</strong><small>domain tools + engineering software</small></div>
-        <i>→</i>
-        <div><span>05</span><strong>RECORD</strong><small>evidence + receipts + unknowns</small></div>
-        <i>→</i>
-        <div><span>06</span><strong>REVIEW</strong><small>replay + human lifecycle gate</small></div>
-      </div>
-
-      <div class="agent-boundary-grid">
-        <article class="agent-boundary reveal"><span>AGENT OWNS</span><strong>Planning · proposals · delegation · review suggestions</strong></article>
-        <article class="agent-boundary reveal"><span>HOST OWNS</span><strong>Tool admission · budgets · bindings · persisted state · lifecycle authority</strong></article>
-      </div>
-    </section>
-
-    <section id="principles" class="section case-light">
-      <div class="section-index">05 / DESIGN PRINCIPLES</div>
-      <div class="section-heading reveal">
-        <p class="kicker">The rules I care about</p>
-        <h2>Make AI useful without making engineering less accountable.</h2>
-      </div>
-
-      <div class="principle-grid">
-        <article class="large-principle reveal">
-          <span>01</span>
-          <h3>Agents propose. Systems record. Humans decide.</h3>
-          <p>The model can help plan work, interpret context, and propose candidates. But persisted engineering state and lifecycle decisions belong to explicit system boundaries.</p>
-        </article>
-        <article class="large-principle reveal">
-          <span>02</span>
-          <h3>Evidence follows the inputs.</h3>
-          <p>Results are bound to the model revisions, conditions, and methods that produced them. Change the basis and affected work becomes stale instead of silently remaining “true.”</p>
-        </article>
-        <article class="large-principle reveal">
-          <span>03</span>
-          <h3>Unknown is a valid engineering state.</h3>
-          <p>Missing inputs, conflicts, assumptions, and deferred work stay explicit. The framework should stop with an owned gap rather than inventing a specification.</p>
-        </article>
-        <article class="large-principle reveal">
-          <span>04</span>
-          <h3>Completion is scoped.</h3>
-          <p>A completed task means its requested scope is accounted for. It does not mean the whole design is correct, qualified, approved, or released.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section case-example">
-      <div class="section-index">06 / ONE EXAMPLE</div>
+    <section id="example" class="section case-example">
+      <div class="section-index">04 / CONCRETE EXAMPLE</div>
       <div class="split">
         <div class="sticky-title reveal">
           <p class="kicker">Component selection</p>
@@ -288,7 +211,7 @@
         </div>
         <div class="story-column">
           <p class="lede reveal">
-            In one implemented workflow, requirements drive candidate discovery and screening. The task pins the requirement basis, project revision, comparison result, and exact evidence used.
+            One implemented workflow connects project requirements, candidate discovery, source evidence, domain screening, and engineer review.
           </p>
 
           <div class="example-flow reveal">
@@ -298,71 +221,25 @@
             <i>→</i>
             <div><span>3</span><strong>Screen</strong><small>domain rules + evidence</small></div>
             <i>→</i>
-            <div><span>4</span><strong>Shortlist</strong><small>recommendation + holds</small></div>
+            <div><span>4</span><strong>Shortlist</strong><small>proposal + holds</small></div>
             <i>→</i>
-            <div><span>5</span><strong>Review</strong><small>human engineering decision</small></div>
+            <div><span>5</span><strong>Review</strong><small>engineer decision</small></div>
           </div>
 
           <p class="body-copy reveal">
-            If the requirement basis changes, the prior recommendation remains in history but requires re-evaluation. That is a small example of the larger idea: AI output becomes useful engineering work only when its basis is inspectable.
+            The workflow records the requirement basis, project revision, comparison result, and evidence used. If that basis changes, the prior recommendation remains in history but requires re-evaluation.
           </p>
-        </div>
-      </div>
-    </section>
 
-    <section class="section section-dark case-status">
-      <div class="section-index">07 / STATUS</div>
-      <div class="section-heading reveal">
-        <p class="kicker">What it is—and what it is not</p>
-        <h2>Deliberately bounded.</h2>
-      </div>
+          <div class="architecture-note reveal">
+            <strong>Current status</strong>
+            <p>
+              Universe is an active personal side project, not a finished or production-qualified platform. It gives me a practical way to explore how AI agents, engineering tools, structured models, evidence, and human review can work together in product development.
+            </p>
+          </div>
 
-      <div class="status-grid">
-        <div class="status-column reveal">
-          <h3>Implemented direction</h3>
-          <ul>
-            <li>Versioned engineering contracts and models</li>
-            <li>Core identity, revision, admission, and lifecycle foundations</li>
-            <li>Durable task execution and recovery</li>
-            <li>Bounded agent planning and provider integration</li>
-            <li>Domain calculations, geometry, and validation workflows</li>
-            <li>External-tool adapters and a native review workbench</li>
-          </ul>
-        </div>
-        <div class="status-column reveal">
-          <h3>Not claimed</h3>
-          <ul>
-            <li>Autonomous production-qualified engineering</li>
-            <li>Complete coverage of every hardware domain</li>
-            <li>Automatic engineering approval or release</li>
-            <li>Qualified physical analysis without the right models and evidence</li>
-            <li>Perfect round-trip fidelity with every commercial CAD tool</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="repo-map reveal" aria-label="Universe repository map">
-        <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer"><span>universe ↗</span><small>architecture</small></a>
-        <a href="https://github.com/benlatrobe/universe-contracts" target="_blank" rel="noreferrer"><span>contracts ↗</span><small>schemas + ports</small></a>
-        <a href="https://github.com/benlatrobe/universe-core" target="_blank" rel="noreferrer"><span>core ↗</span><small>truth + lifecycle</small></a>
-        <a href="https://github.com/benlatrobe/universe-runtime" target="_blank" rel="noreferrer"><span>runtime ↗</span><small>execution</small></a>
-        <a href="https://github.com/benlatrobe/universe-agent" target="_blank" rel="noreferrer"><span>agent ↗</span><small>planning</small></a>
-        <a href="https://github.com/benlatrobe/universe-domains" target="_blank" rel="noreferrer"><span>domains ↗</span><small>engineering logic</small></a>
-        <a href="https://github.com/benlatrobe/universe-adapters" target="_blank" rel="noreferrer"><span>adapters ↗</span><small>external tools</small></a>
-        <a href="https://github.com/benlatrobe/universe-workbench" target="_blank" rel="noreferrer"><span>workbench ↗</span><small>review UI</small></a>
-      </div>
-    </section>
-
-    <section class="section case-close">
-      <div class="next-panel reveal">
-        <p class="kicker">Why this work matters to me</p>
-        <h2>AI becomes more interesting when it has to survive contact with real engineering.</h2>
-        <p>
-          Universe is where I combine my software background, hardware and product-development experience, engineering leadership, and interest in how AI can change the way physical products are built.
-        </p>
-        <div class="hero-links">
-          <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer">Explore the repository ↗</a>
-          <a href="index.html#work">Back to selected work →</a>
+          <div class="hero-links reveal">
+            <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer">Explore Universe on GitHub ↗</a>
+          </div>
         </div>
       </div>
     </section>
