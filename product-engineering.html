@@ -50,26 +50,54 @@
           </div>
         </div>
 
-        <div class="product-stack reveal" aria-label="Device to system product stack">
-          <div class="product-stack-row">
-            <span>01</span><strong>Physical product</strong><small>electronics / mechanics / power</small>
-          </div>
-          <div class="stack-link"></div>
-          <div class="product-stack-row">
-            <span>02</span><strong>Embedded intelligence</strong><small>firmware / software / control</small>
-          </div>
-          <div class="stack-link"></div>
-          <div class="product-stack-row">
-            <span>03</span><strong>Connectivity</strong><small>wireless / interfaces / protocols</small>
-          </div>
-          <div class="stack-link"></div>
-          <div class="product-stack-row">
-            <span>04</span><strong>System behavior</strong><small>integration / application / cloud</small>
-          </div>
-          <div class="stack-link"></div>
-          <div class="product-stack-row product-stack-final">
-            <span>05</span><strong>Factory reality</strong><small>test / yield / process / scale</small>
-          </div>
+        <div class="editorial-diagram reveal" aria-label="Device to system product stack">
+          <svg viewBox="0 0 620 430" role="img" aria-labelledby="product-stack-title product-stack-desc">
+            <title id="product-stack-title">Device-to-system product stack</title>
+            <desc id="product-stack-desc">Product development spans physical hardware, embedded intelligence, connectivity, system behavior, and factory reality. Factory evidence is highlighted because manufacturability and production performance are part of the product system.</desc>
+            <defs>
+              <pattern id="productDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+              </pattern>
+            </defs>
+            <rect x="0" y="0" width="620" height="430" fill="url(#productDots)"></rect>
+
+            <text class="dd-tech" x="28" y="52">SYSTEM SCOPE ↑</text>
+
+            <g>
+              <rect class="dd-node" x="86" y="42" width="488" height="62" rx="4"></rect>
+              <text class="dd-eyebrow" x="106" y="66">04</text>
+              <text class="dd-title" x="152" y="76">System behavior</text>
+              <text class="dd-copy" x="402" y="76">integration · application · cloud</text>
+            </g>
+
+            <g>
+              <rect class="dd-node" x="86" y="104" width="488" height="62" rx="4"></rect>
+              <text class="dd-eyebrow" x="106" y="128">03</text>
+              <text class="dd-title" x="152" y="138">Connectivity</text>
+              <text class="dd-copy" x="402" y="138">wireless · interfaces · protocols</text>
+            </g>
+
+            <g>
+              <rect class="dd-node" x="86" y="166" width="488" height="62" rx="4"></rect>
+              <text class="dd-eyebrow" x="106" y="190">02</text>
+              <text class="dd-title" x="152" y="200">Embedded intelligence</text>
+              <text class="dd-copy" x="402" y="200">firmware · software · control</text>
+            </g>
+
+            <g>
+              <rect class="dd-node" x="86" y="228" width="488" height="62" rx="4"></rect>
+              <text class="dd-eyebrow" x="106" y="252">01</text>
+              <text class="dd-title" x="152" y="262">Physical product</text>
+              <text class="dd-copy" x="402" y="262">electronics · mechanics · power</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-accent" x="86" y="310" width="488" height="78" rx="4"></rect>
+              <text class="dd-eyebrow" x="106" y="336">PRODUCTION EVIDENCE</text>
+              <text class="dd-title" x="106" y="365">Factory reality</text>
+              <text class="dd-copy" x="402" y="365">test · yield · process · scale</text>
+            </g>
+          </svg>
         </div>
       </div>
     </section>
