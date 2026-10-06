@@ -43,10 +43,70 @@
           <p class="case-deck">Requirement decomposition, sprint task management, and change management each addressed a different failure mode in engineering execution.</p>
         </div>
 
-        <div class="ci-v2-hero-map reveal">
-          <div><span>01</span><strong>REQUIREMENTS</strong><small>derive what is missing</small></div>
-          <div><span>02</span><strong>SPRINTS</strong><small>protect the real priorities</small></div>
-          <div><span>03</span><strong>CHANGE</strong><small>close the design-factory loop</small></div>
+        <div class="editorial-diagram reveal">
+          <svg viewBox="0 0 640 440" role="img" aria-labelledby="ci-overview-title ci-overview-desc">
+            <title id="ci-overview-title">Three engineering execution improvements</title>
+            <desc id="ci-overview-desc">Three different execution failure modes were addressed with targeted mechanisms: requirement decomposition, sprint task management, and standardized closed-loop change management.</desc>
+            <defs>
+              <pattern id="ciDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+              </pattern>
+              <marker id="ciArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+              </marker>
+            </defs>
+            <rect x="0" y="0" width="640" height="440" fill="url(#ciDots)"></rect>
+
+            <text class="dd-eyebrow" x="38" y="46">FAILURE MODE</text>
+            <text class="dd-eyebrow" x="362" y="46">TARGETED IMPROVEMENT</text>
+
+            <path class="dd-connector" d="M276 104 H344" marker-end="url(#ciArrow)"></path>
+            <path class="dd-connector" d="M276 198 H344" marker-end="url(#ciArrow)"></path>
+            <path class="dd-connector" d="M276 292 H344" marker-end="url(#ciArrow)"></path>
+            <path class="dd-connector-dashed" d="M486 340 V374" marker-end="url(#ciArrow)"></path>
+            <path class="dd-connector-dashed" d="M162 340 V374 H320" marker-end="url(#ciArrow)"></path>
+
+            <g>
+              <rect class="dd-node-soft" x="38" y="68" width="238" height="72" rx="6"></rect>
+              <text class="dd-eyebrow" x="56" y="91">01 / REQUIREMENTS</text>
+              <text class="dd-title" x="56" y="118">Subsystem needs stayed implicit</text>
+            </g>
+            <g>
+              <rect class="dd-node" x="344" y="68" width="258" height="72" rx="6"></rect>
+              <text class="dd-eyebrow" x="362" y="91">DECOMPOSE</text>
+              <text class="dd-title" x="362" y="118">Structure tree + DFMEA</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-soft" x="38" y="162" width="238" height="72" rx="6"></rect>
+              <text class="dd-eyebrow" x="56" y="185">02 / SPRINTS</text>
+              <text class="dd-title" x="56" y="212">Latest request displaced priority</text>
+            </g>
+            <g>
+              <rect class="dd-node" x="344" y="162" width="258" height="72" rx="6"></rect>
+              <text class="dd-eyebrow" x="362" y="185">CONTROL INTAKE</text>
+              <text class="dd-title" x="362" y="212">Backlog + sprint cadence</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-soft" x="38" y="256" width="238" height="84" rx="6"></rect>
+              <text class="dd-eyebrow" x="56" y="279">03 / CHANGE</text>
+              <text class="dd-title" x="56" y="306">ECN execution varied by site</text>
+              <text class="dd-copy" x="56" y="325">factory implementation was hard to verify</text>
+            </g>
+            <g>
+              <rect class="dd-node" x="344" y="256" width="258" height="84" rx="6"></rect>
+              <text class="dd-eyebrow" x="362" y="279">CLOSE THE LOOP</text>
+              <text class="dd-title" x="362" y="306">Standard roles + BOM return</text>
+              <text class="dd-copy" x="362" y="325">Design verifies factory implementation</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-accent" x="206" y="374" width="228" height="48" rx="6"></rect>
+              <text class="dd-eyebrow" x="226" y="397">OUTCOME</text>
+              <text class="dd-title" x="310" y="404" text-anchor="middle">More predictable execution</text>
+            </g>
+          </svg>
         </div>
       </div>
     </section>
