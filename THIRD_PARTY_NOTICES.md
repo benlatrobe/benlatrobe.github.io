@@ -22,6 +22,13 @@ Selected glyphs used in portfolio diagrams are adapted from the Lucide icon set:
 - List Checks
 - Badge Check
 - File Search
+- Link 2 Off
+- Circle Check Big
+- Calendar Check 2
+- List Todo
+- Inbox
+- Triangle Alert
+- Git Branch
 
 Source: https://github.com/lucide-icons/lucide
 
