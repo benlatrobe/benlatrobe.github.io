@@ -12301,3 +12301,36 @@ button:focus-visible {
     min-height: 46px;
   }
 }
+
+
+.rtls-hardware-diagram {
+  margin: auto 0 22px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  .rtls-hardware-diagram {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
+  .rtls-hardware-diagram svg {
+    width: 480px;
+    max-width: none;
+  }
+
+  .rtls-hardware-diagram::after {
+    content: "SWIPE TO EXPLORE →";
+    position: sticky;
+    left: 0;
+    display: block;
+    width: max-content;
+    margin-top: 7px;
+    color: rgba(245,242,234,.55);
+    font: 700 8px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .09em;
+  }
+}
