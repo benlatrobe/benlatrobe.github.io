@@ -6,6 +6,7 @@ on:
       - main
       - portfolio-v1
       - portfolio-diagram-system
+      - portfolio-story-refine
 
 permissions:
   contents: read
