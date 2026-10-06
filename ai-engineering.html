@@ -116,43 +116,76 @@
         <p>Universe separates AI reasoning, engineering state, execution, domain logic, external software, and engineer review.</p>
       </div>
 
-      <div class="architecture-map reveal">
-        <div class="arch-layer arch-agent">
-          <span>AGENT</span>
-          <strong>Understand / propose / coordinate</strong>
-          <small>uses context and plans work, but does not own engineering authority</small>
-        </div>
-        <div class="arch-connector">requests ↓</div>
-        <div class="arch-row">
-          <div class="arch-layer">
-            <span>CORE</span>
-            <strong>Engineering state + revisions</strong>
-            <small>identity, immutable revisions, evidence, lifecycle policy</small>
-          </div>
-          <div class="arch-layer">
-            <span>RUNTIME</span>
-            <strong>Execution + recovery</strong>
-            <small>tasks, checkpoints, journals, receipts</small>
-          </div>
-          <div class="arch-layer">
-            <span>DOMAINS</span>
-            <strong>Engineering meaning</strong>
-            <small>schemas, calculations, rules, geometry, validators</small>
-          </div>
-        </div>
-        <div class="arch-connector">engineering state + evidence ↑ &nbsp;&nbsp; external tools ↓</div>
-        <div class="arch-row arch-row-bottom">
-          <div class="arch-layer">
-            <span>ADAPTERS</span>
-            <strong>Engineering software</strong>
-            <small>CAD, formats, solvers, source acquisition, fidelity checks</small>
-          </div>
-          <div class="arch-layer">
-            <span>WORKBENCH</span>
-            <strong>Engineer review</strong>
-            <small>requirements, models, calculations, evidence, changes, open issues</small>
-          </div>
-        </div>
+      <div class="editorial-diagram diagram-dark reveal">
+        <svg viewBox="0 0 760 500" role="img" aria-labelledby="universe-arch-title universe-arch-desc">
+          <title id="universe-arch-title">Universe architecture</title>
+          <desc id="universe-arch-desc">The AI design partner proposes work. Core and Canonical Engineering Models preserve engineering state. Runtime executes bounded tasks, Domains provide engineering logic, Adapters connect external engineering software, and Workbench supports engineer review.</desc>
+          <defs>
+            <pattern id="universeDots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+            </pattern>
+            <marker id="universeArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#9da19e"></path>
+            </marker>
+            <marker id="universeArrowAccent" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#bbff49"></path>
+            </marker>
+          </defs>
+
+          <rect x="0" y="0" width="760" height="500" fill="url(#universeDots)"></rect>
+
+          <path class="dd-connector" d="M380 96 V136 H185 V170" marker-end="url(#universeArrow)"></path>
+          <path class="dd-connector" d="M380 96 V170" marker-end="url(#universeArrow)"></path>
+          <path class="dd-connector" d="M380 136 H585 V170" marker-end="url(#universeArrow)"></path>
+          <path class="dd-connector" d="M380 278 V318 H470 V350" marker-end="url(#universeArrow)"></path>
+          <path class="dd-connector" d="M585 278 V318 H470" marker-end="url(#universeArrow)"></path>
+          <path class="dd-connector-accent" d="M185 278 V350" marker-end="url(#universeArrowAccent)"></path>
+          <path class="dd-connector-dashed" d="M380 395 H315" marker-end="url(#universeArrow)"></path>
+
+          <g>
+            <rect class="dd-node" x="280" y="28" width="200" height="68" rx="6"></rect>
+            <text class="dd-eyebrow" x="300" y="51">AI DESIGN PARTNER</text>
+            <text class="dd-title" x="300" y="77">Propose + coordinate</text>
+          </g>
+
+          <g>
+            <rect class="dd-node-accent" x="80" y="170" width="210" height="108" rx="6"></rect>
+            <text class="dd-eyebrow dd-accent-text" x="100" y="194">CORE + CEMS</text>
+            <text class="dd-title" x="100" y="224">Engineering state</text>
+            <text class="dd-copy" x="100" y="246">identity · revisions · evidence</text>
+            <text class="dd-copy" x="100" y="263">lifecycle policy</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="310" y="170" width="140" height="108" rx="6"></rect>
+            <text class="dd-eyebrow" x="330" y="194">RUNTIME</text>
+            <text class="dd-title" x="330" y="224">Execution</text>
+            <text class="dd-copy" x="330" y="246">tasks · recovery</text>
+            <text class="dd-copy" x="330" y="263">receipts</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="470" y="170" width="210" height="108" rx="6"></rect>
+            <text class="dd-eyebrow" x="490" y="194">DOMAINS</text>
+            <text class="dd-title" x="490" y="224">Engineering logic</text>
+            <text class="dd-copy" x="490" y="246">calculations · rules · geometry</text>
+            <text class="dd-copy" x="490" y="263">validators</text>
+          </g>
+
+          <g>
+            <rect class="dd-node-accent" x="80" y="350" width="235" height="92" rx="6"></rect>
+            <text class="dd-eyebrow dd-accent-text" x="100" y="375">WORKBENCH</text>
+            <text class="dd-title" x="100" y="405">Engineer review</text>
+            <text class="dd-copy" x="100" y="425">state · evidence · changes · open issues</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="380" y="350" width="230" height="92" rx="6"></rect>
+            <text class="dd-eyebrow" x="400" y="375">ADAPTERS</text>
+            <text class="dd-title" x="400" y="405">Engineering software</text>
+            <text class="dd-copy" x="400" y="425">CAD · solvers · formats · source tools</text>
+          </g>
+        </svg>
       </div>
 
       <div class="architecture-note reveal">
