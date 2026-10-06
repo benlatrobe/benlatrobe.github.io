@@ -206,43 +206,84 @@
 
       <div class="npi-control-room reveal">
         <article class="control-tile">
-          <span>FPY / YIELD</span>
-          <div class="control-spark">
-            <i></i><i></i><i></i><i></i><i></i><i></i>
-          </div>
-          <small>trend by stage</small>
+          <div class="control-tile-head"><span>FPY / YIELD</span><small>TREND</small></div>
+          <svg class="control-chart control-chart-line" viewBox="0 0 220 112" role="img" aria-label="Illustrative first-pass yield trend increasing across build checkpoints">
+            <path class="control-grid" d="M24 18 H210 M24 46 H210 M24 74 H210 M24 102 H210"></path>
+            <path class="control-axis" d="M24 14 V102 H212"></path>
+            <path class="control-target" d="M24 34 H210"></path>
+            <path class="control-data-line" d="M28 84 L66 72 L104 76 L142 54 L180 42 L208 30"></path>
+            <circle class="control-point" cx="28" cy="84" r="3"></circle>
+            <circle class="control-point" cx="66" cy="72" r="3"></circle>
+            <circle class="control-point" cx="104" cy="76" r="3"></circle>
+            <circle class="control-point" cx="142" cy="54" r="3"></circle>
+            <circle class="control-point" cx="180" cy="42" r="3"></circle>
+            <circle class="control-point control-point-focus" cx="208" cy="30" r="4"></circle>
+            <text x="30" y="110">B1</text><text x="101" y="110">B3</text><text x="198" y="110">B6</text>
+            <text class="control-chart-note" x="150" y="29">TARGET</text>
+          </svg>
+          <small>trend by build checkpoint</small>
         </article>
 
         <article class="control-tile">
-          <span>DEFECTS</span>
-          <div class="control-defects">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-          </div>
+          <div class="control-tile-head"><span>DEFECTS</span><small>PARETO</small></div>
+          <svg class="control-chart control-chart-bars" viewBox="0 0 220 112" role="img" aria-label="Illustrative defect Pareto showing three defect categories by relative frequency">
+            <text x="4" y="28">A</text><rect class="control-bar" x="24" y="17" width="154" height="14" rx="2"></rect>
+            <text x="4" y="58">B</text><rect class="control-bar" x="24" y="47" width="104" height="14" rx="2"></rect>
+            <text x="4" y="88">C</text><rect class="control-bar" x="24" y="77" width="62" height="14" rx="2"></rect>
+            <path class="control-target" d="M188 10 V98"></path>
+            <text class="control-chart-note" x="194" y="20">OWNER</text>
+          </svg>
           <small>type · frequency · owner</small>
         </article>
 
         <article class="control-tile">
-          <span>CYCLE TIME</span>
-          <div class="control-cycle">
-            <b></b><b></b><b></b><b></b><b></b>
-          </div>
+          <div class="control-tile-head"><span>CYCLE TIME</span><small>VS TARGET</small></div>
+          <svg class="control-chart control-chart-cycle" viewBox="0 0 220 112" role="img" aria-label="Illustrative process and test cycle-time comparison against a target">
+            <path class="control-axis" d="M24 14 V96 H212"></path>
+            <path class="control-target" d="M150 12 V98"></path>
+            <text class="control-chart-note" x="154" y="20">TARGET</text>
+            <text x="6" y="42">PROC</text><rect class="control-duration" x="58" y="30" width="122" height="16" rx="2"></rect>
+            <text x="6" y="78">TEST</text><rect class="control-duration control-duration-focus" x="58" y="66" width="82" height="16" rx="2"></rect>
+          </svg>
           <small>process + test time</small>
         </article>
 
         <article class="control-tile">
-          <span>TEST</span>
-          <div class="control-ring">
-            <i></i>
-          </div>
-          <small>coverage + acceptance</small>
+          <div class="control-tile-head"><span>TEST / ACCEPTANCE</span><small>GATE</small></div>
+          <svg class="control-chart control-chart-test" viewBox="0 0 220 112" role="img" aria-label="Illustrative test acceptance status showing completed, open, and blocked checks">
+            <rect class="control-status-track" x="24" y="22" width="172" height="18" rx="3"></rect>
+            <rect class="control-status-pass" x="24" y="22" width="126" height="18" rx="3"></rect>
+            <rect class="control-status-open" x="150" y="22" width="28" height="18"></rect>
+            <rect class="control-status-block" x="178" y="22" width="18" height="18" rx="0 3 3 0"></rect>
+            <g class="control-checks">
+              <rect x="24" y="60" width="12" height="12" rx="2"></rect><path d="M27 66 l3 3 5-6"></path>
+              <rect x="62" y="60" width="12" height="12" rx="2"></rect><path d="M65 66 l3 3 5-6"></path>
+              <rect x="100" y="60" width="12" height="12" rx="2"></rect>
+              <rect x="138" y="60" width="12" height="12" rx="2"></rect>
+              <rect x="176" y="60" width="12" height="12" rx="2"></rect><path d="M178 62 l8 8 M186 62 l-8 8"></path>
+            </g>
+            <text class="control-chart-note" x="24" y="98">COMPLETE</text>
+            <text class="control-chart-note" x="100" y="98">OPEN</text>
+            <text class="control-chart-note" x="164" y="98">BLOCKED</text>
+          </svg>
+          <small>coverage + acceptance criteria</small>
         </article>
 
         <article class="control-tile control-tile-wide">
-          <span>BLOCKERS / ACTIONS</span>
-          <div class="control-action-list">
-            <div><i></i><strong>Issue</strong><small>containment</small></div>
-            <div><i></i><strong>Owner</strong><small>next action</small></div>
-            <div><i></i><strong>Gate</strong><small>release decision</small></div>
+          <div class="control-tile-head"><span>BLOCKERS / ACTIONS</span><small>DECISION LOG</small></div>
+          <div class="control-action-table" role="table" aria-label="Illustrative blocker and action tracking table">
+            <div class="control-action-row control-action-header" role="row">
+              <span role="columnheader">ISSUE</span><span role="columnheader">CONTAINMENT</span><span role="columnheader">OWNER / NEXT</span><span role="columnheader">GATE</span>
+            </div>
+            <div class="control-action-row" role="row">
+              <strong role="cell">Test escape</strong><small role="cell">screen affected units</small><small role="cell">EE · verify fixture</small><b role="cell">HOLD</b>
+            </div>
+            <div class="control-action-row" role="row">
+              <strong role="cell">Cycle-time miss</strong><small role="cell">parallelize step</small><small role="cell">ME · update process</small><b role="cell">REVIEW</b>
+            </div>
+            <div class="control-action-row" role="row">
+              <strong role="cell">Material risk</strong><small role="cell">alternate lot</small><small role="cell">SCM · confirm CTB</small><b role="cell">OPEN</b>
+            </div>
           </div>
         </article>
       </div>
