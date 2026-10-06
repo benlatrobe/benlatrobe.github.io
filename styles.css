@@ -11933,3 +11933,28 @@ button:focus-visible {
     color: rgba(245,242,234,.55);
   }
 }
+
+
+/* Prevent scrollable diagrams from defining parent grid min-content width */
+.split > *,
+.story-column,
+.diagram-scroll {
+  min-width: 0;
+}
+
+.diagram-scroll {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  .case-page .site-header {
+    padding-inline: 10px;
+  }
+
+  .case-page .nav {
+    gap: 7px;
+    font-size: 7.5px;
+    letter-spacing: .04em;
+  }
+}
