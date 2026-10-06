@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - portfolio-v1
+      - portfolio-diagram-system
 
 permissions:
   contents: read
@@ -44,6 +45,8 @@ jobs:
               "connected-positioning.html",
               "wireless-module.html",
               "storage-platform.html",
+              "product-engineering.html",
+              "engineering-leadership.html",
               "cv.html",
           ]
           viewports = {
@@ -107,18 +110,53 @@ jobs:
                             .filter(h => h && h.length > 1);
                           const missingAnchors = links.filter(h => !document.querySelector(h));
 
+                          const diagramIssues = [...document.querySelectorAll('.editorial-diagram svg')].map((svg, index) => {
+                            const vb = svg.viewBox && svg.viewBox.baseVal;
+                            if (!vb || !vb.width || !vb.height) {
+                              return {index, issue: 'missing-viewbox'};
+                            }
+                            const textIssues = [...svg.querySelectorAll('text')].map((node) => {
+                              try {
+                                const b = node.getBBox();
+                                const outside = b.x < vb.x - 1 || b.y < vb.y - 1 ||
+                                  b.x + b.width > vb.x + vb.width + 1 ||
+                                  b.y + b.height > vb.y + vb.height + 1;
+                                return outside ? {
+                                  text: node.textContent.trim(),
+                                  x: Math.round(b.x),
+                                  y: Math.round(b.y),
+                                  width: Math.round(b.width),
+                                  height: Math.round(b.height)
+                                } : null;
+                              } catch (e) {
+                                return {text: node.textContent.trim(), issue: 'bbox-error'};
+                              }
+                            }).filter(Boolean);
+                            const rendered = svg.getBoundingClientRect();
+                            return {
+                              index,
+                              viewBox: [vb.x, vb.y, vb.width, vb.height],
+                              renderedWidth: Math.round(rendered.width),
+                              renderedHeight: Math.round(rendered.height),
+                              textIssues
+                            };
+                          });
+
                           return {
                             viewportWidth: width,
                             scrollWidth: doc.scrollWidth,
                             scrollHeight: doc.scrollHeight,
                             horizontalOverflow: doc.scrollWidth > width + 2,
                             offenders,
-                            missingAnchors
+                            missingAnchors,
+                            diagramIssues
                           };
                           """
                       )
 
                       if audit["horizontalOverflow"] or audit["missingAnchors"]:
+                          failed = True
+                      if any(d.get("textIssues") for d in audit.get("diagramIssues", [])):
                           failed = True
 
                       driver.execute_script("window.scrollTo(0, 0)")
@@ -139,9 +177,16 @@ jobs:
                       mid_path = out / f"{page.replace('.html','')}-{viewport_name}-content.png"
                       driver.save_screenshot(str(mid_path))
 
+                      diagram_paths = []
+                      for diagram_index, diagram in enumerate(driver.find_elements("css selector", ".editorial-diagram")):
+                          diagram_path = out / f"{page.replace('.html','')}-{viewport_name}-diagram-{diagram_index+1}.png"
+                          diagram.screenshot(str(diagram_path))
+                          diagram_paths.append(str(diagram_path))
+
                       results.append({
                           "page": page,
                           "viewport": viewport_name,
+                          "diagramScreenshots": diagram_paths,
                           **audit,
                       })
 
