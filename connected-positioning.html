@@ -236,26 +236,102 @@
         <article class="rtls-hardware-card reveal">
           <span>READER / GATEWAY</span>
           <h3>Bridge local wireless devices to cloud services</h3>
-          <div class="gateway-system-visual">
-            <div class="gateway-radio-stack">
-              <span>BLE</span>
-              <span>Matter / Thread</span>
-              <span>UWB</span>
-              <span>RFID</span>
-            </div>
-            <div class="gateway-radio-arrow">→</div>
-            <div class="gateway-device">
-              <i class="gateway-device-ant ga-left"></i>
-              <i class="gateway-device-ant ga-right"></i>
-              <strong>GATEWAY</strong>
-              <div class="gateway-device-blocks"><span>RF</span><span>CPU</span><span>NET</span></div>
-            </div>
-            <div class="gateway-cloud-arrow">→</div>
-            <div class="gateway-cloud-side">
-              <div class="cloud-shape"><i></i><i></i><i></i></div>
-              <strong>INTERNET / CLOUD</strong>
-              <small>API · location service · application</small>
-            </div>
+          <div class="editorial-diagram diagram-dark gateway-role-diagram">
+            <svg viewBox="0 0 620 300" role="img" aria-labelledby="gateway-title gateway-desc">
+              <title id="gateway-title">Gateway system role</title>
+              <desc id="gateway-desc">BLE, Matter or Thread, UWB, and RFID radios connect into a gateway. The gateway combines RF, compute, and network functions and bridges local devices to Internet and cloud services.</desc>
+              <defs>
+                <pattern id="gatewayDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+                </pattern>
+                <marker id="gatewayArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                  <path d="M0,0 L7,3.5 L0,7 Z" fill="#9da19e"></path>
+                </marker>
+              </defs>
+              <rect x="0" y="0" width="620" height="300" fill="url(#gatewayDots)"></rect>
+
+              <path class="dd-connector" d="M176 150 H228" marker-end="url(#gatewayArrow)"></path>
+              <path class="dd-connector" d="M402 150 H452" marker-end="url(#gatewayArrow)"></path>
+
+              <g>
+                <rect class="dd-node-soft" x="20" y="34" width="156" height="232" rx="6"></rect>
+                <text class="dd-eyebrow" x="40" y="61">LOCAL RADIOS</text>
+
+                <g transform="translate(40 82)">
+                  <g class="dd-icon-muted">
+                    <circle cx="8" cy="8" r="2"></circle>
+                    <path d="M3 3 C0 6 0 10 3 13 M13 3 C16 6 16 10 13 13"></path>
+                  </g>
+                  <text class="dd-tech" x="28" y="11">BLE</text>
+                </g>
+                <line class="dd-rule" x1="40" y1="108" x2="156" y2="108"></line>
+
+                <g transform="translate(40 126)">
+                  <g class="dd-icon-muted">
+                    <path d="M0 8 H16 M8 0 V16"></path>
+                    <circle cx="8" cy="8" r="3"></circle>
+                  </g>
+                  <text class="dd-tech" x="28" y="11">MATTER / THREAD</text>
+                </g>
+                <line class="dd-rule" x1="40" y1="152" x2="156" y2="152"></line>
+
+                <g transform="translate(40 170)">
+                  <g class="dd-icon-muted">
+                    <path d="M0 12 C5 0 11 0 16 12 M3 12 C7 5 10 5 13 12"></path>
+                  </g>
+                  <text class="dd-tech" x="28" y="11">UWB</text>
+                </g>
+                <line class="dd-rule" x1="40" y1="196" x2="156" y2="196"></line>
+
+                <g transform="translate(40 214)">
+                  <g class="dd-icon-muted">
+                    <path d="M2 2 H14 V14 H2 Z"></path>
+                    <path d="M17 3 C21 6 21 10 17 13 M20 0 C26 5 26 11 20 16"></path>
+                  </g>
+                  <text class="dd-tech" x="28" y="11">RFID</text>
+                </g>
+              </g>
+
+              <g>
+                <rect class="dd-node-accent" x="228" y="54" width="174" height="192" rx="6"></rect>
+                <g class="dd-icon" transform="translate(287 70)">
+                  <rect x="4" y="18" width="46" height="28" rx="4"></rect>
+                  <path d="M27 18 V4 M19 10 C21 7 24 6 27 6 C30 6 33 7 35 10"></path>
+                  <path d="M14 7 C18 2 22 0 27 0 C32 0 36 2 40 7"></path>
+                </g>
+                <text class="dd-eyebrow" x="252" y="132">EDGE DEVICE</text>
+                <text class="dd-title" x="252" y="162">Gateway</text>
+                <text class="dd-copy" x="252" y="182">local radio → network bridge</text>
+
+                <rect class="dd-chip" x="250" y="198" width="42" height="30" rx="4"></rect>
+                <rect class="dd-chip" x="300" y="198" width="42" height="30" rx="4"></rect>
+                <rect class="dd-chip" x="350" y="198" width="30" height="30" rx="4"></rect>
+
+                <g class="dd-icon-muted" transform="translate(258 204)">
+                  <path d="M8 16 V4 M3 9 C5 6 7 5 8 5 C10 5 12 6 14 9"></path>
+                </g>
+                <g class="dd-icon-muted" transform="translate(309 204)">
+                  <rect x="1" y="1" width="14" height="14" rx="2"></rect>
+                  <path d="M5 5 H11 V11 H5 Z M4 -2 V1 M8 -2 V1 M12 -2 V1 M4 15 V18 M8 15 V18 M12 15 V18"></path>
+                </g>
+                <g class="dd-icon-muted" transform="translate(357 205)">
+                  <circle cx="8" cy="3" r="2"></circle>
+                  <circle cx="2" cy="13" r="2"></circle>
+                  <circle cx="14" cy="13" r="2"></circle>
+                  <path d="M7 5 L3 11 M9 5 L13 11 M4 13 H12"></path>
+                </g>
+              </g>
+
+              <g>
+                <rect class="dd-node-soft" x="452" y="76" width="148" height="148" rx="6" stroke-dasharray="5 4"></rect>
+                <g class="dd-icon-muted" transform="translate(487 96)">
+                  <path d="M12 48 H54 C65 48 72 41 72 32 C72 23 65 16 56 16 C53 7 45 1 35 1 C23 1 14 9 12 20 C5 21 0 27 0 34 C0 42 5 48 12 48 Z"></path>
+                </g>
+                <text class="dd-eyebrow" x="478" y="166">INTERNET / CLOUD</text>
+                <text class="dd-copy" x="478" y="190">API · location service</text>
+                <text class="dd-copy" x="478" y="208">application</text>
+              </g>
+            </svg>
           </div>
           <div class="rtls-tags"><small>multi-radio</small><small>edge processing</small><small>backhaul</small><small>cloud</small><small>test</small></div>
         </article>
