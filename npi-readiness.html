@@ -46,38 +46,73 @@
           <p class="case-deck">Readiness is not one gate. It is a system.</p>
         </div>
 
-        <div class="npi-stage-visual reveal" aria-label="NPI lifecycle">
-          <div class="npi-stage-track">
-            <article class="npi-stage-card">
-              <span>01</span>
-              <strong>DESIGN</strong>
-              <small>maturity + verification</small>
-            </article>
-            <i class="npi-stage-connector"></i>
-            <article class="npi-stage-card">
-              <span>02</span>
-              <strong>READY</strong>
-              <small>material + process + test</small>
-            </article>
-            <i class="npi-stage-connector"></i>
-            <article class="npi-stage-card npi-stage-accent">
-              <span>03</span>
-              <strong>BUILD</strong>
-              <small>pilot + evidence</small>
-            </article>
-            <i class="npi-stage-connector"></i>
-            <article class="npi-stage-card">
-              <span>04</span>
-              <strong>RAMP</strong>
-              <small>yield + cycle + capacity</small>
-            </article>
-            <i class="npi-stage-connector"></i>
-            <article class="npi-stage-card">
-              <span>05</span>
-              <strong>SUSTAIN</strong>
-              <small>quality + change + learning</small>
-            </article>
-          </div>
+        <div class="editorial-diagram diagram-scroll npi-lifecycle-diagram reveal">
+          <svg viewBox="0 0 920 330" role="img" aria-labelledby="npi-life-title npi-life-desc">
+            <title id="npi-life-title">NPI lifecycle</title>
+            <desc id="npi-life-desc">A five-stage product lifecycle moves from design to readiness, build, ramp, and sustaining. The build is the focal evidence-generating stage, while sustaining feeds learning back into future design.</desc>
+            <defs>
+              <pattern id="npiDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+              </pattern>
+              <marker id="npiArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+              </marker>
+              <marker id="npiArrowAccent" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="#161817"></path>
+              </marker>
+            </defs>
+
+            <rect x="0" y="0" width="920" height="330" fill="url(#npiDots)"></rect>
+
+            <path class="dd-connector" d="M178 150 H214" marker-end="url(#npiArrow)"></path>
+            <path class="dd-connector" d="M354 150 H390" marker-end="url(#npiArrow)"></path>
+            <path class="dd-connector-accent" d="M530 150 H566" marker-end="url(#npiArrowAccent)"></path>
+            <path class="dd-connector" d="M706 150 H742" marker-end="url(#npiArrow)"></path>
+            <path class="dd-connector-dashed" d="M812 222 V276 H108 V222" marker-end="url(#npiArrow)"></path>
+            <text class="dd-tech" x="410" y="298">FIELD + FACTORY LEARNING FEEDS THE NEXT DESIGN</text>
+
+            <g>
+              <rect class="dd-node" x="38" y="92" width="140" height="130" rx="6"></rect>
+              <text class="dd-eyebrow" x="56" y="117">01 / DESIGN</text>
+              <text class="dd-title" x="56" y="151">Design</text>
+              <text class="dd-copy" x="56" y="176">maturity · verification</text>
+              <text class="dd-copy" x="56" y="193">DFx · risk</text>
+            </g>
+
+            <g>
+              <rect class="dd-node" x="214" y="92" width="140" height="130" rx="6"></rect>
+              <text class="dd-eyebrow" x="232" y="117">02 / READY</text>
+              <text class="dd-title" x="232" y="151">Readiness</text>
+              <text class="dd-copy" x="232" y="176">materials · tooling</text>
+              <text class="dd-copy" x="232" y="193">process · test</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-accent" x="390" y="74" width="140" height="166" rx="6"></rect>
+              <text class="dd-eyebrow" x="408" y="101">03 / BUILD</text>
+              <text class="dd-title" x="408" y="137">Pilot build</text>
+              <text class="dd-copy" x="408" y="162">yield · defects · cycle</text>
+              <line class="dd-rule" x1="408" y1="181" x2="512" y2="181"></line>
+              <text class="dd-tech" x="408" y="204">GENERATE EVIDENCE</text>
+              <text class="dd-tech" x="408" y="220">MAKE GATE DECISIONS</text>
+            </g>
+
+            <g>
+              <rect class="dd-node" x="566" y="92" width="140" height="130" rx="6"></rect>
+              <text class="dd-eyebrow" x="584" y="117">04 / RAMP</text>
+              <text class="dd-title" x="584" y="151">Ramp</text>
+              <text class="dd-copy" x="584" y="176">yield · cycle</text>
+              <text class="dd-copy" x="584" y="193">capacity · stability</text>
+            </g>
+
+            <g>
+              <rect class="dd-node" x="742" y="92" width="140" height="130" rx="6"></rect>
+              <text class="dd-eyebrow" x="760" y="117">05 / SUSTAIN</text>
+              <text class="dd-title" x="760" y="151">Sustain</text>
+              <text class="dd-copy" x="760" y="176">quality · RCA</text>
+              <text class="dd-copy" x="760" y="193">change · prevention</text>
+            </g>
+          </svg>
         </div>
       </div>
     </section>

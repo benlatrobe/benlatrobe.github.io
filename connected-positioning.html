@@ -48,51 +48,68 @@
           </div>
         </div>
 
-        <div class="rtls-app-hero reveal" aria-label="Representative RTLS application architecture">
-          <div class="rtls-app-endpoints">
-            <div class="rtls-endpoint">
-              <div class="tag-device-icon"><i></i></div>
-              <strong>TAG</strong>
-              <small>asset / person</small>
-            </div>
-            <div class="rtls-endpoint">
-              <div class="beacon-device-icon"><i></i><i></i></div>
-              <strong>BEACON</strong>
-              <small>location signal</small>
-            </div>
-            <div class="rtls-endpoint">
-              <div class="phone-device-icon"><i></i></div>
-              <strong>MOBILE</strong>
-              <small>provision / interact</small>
-            </div>
-          </div>
+        <div class="editorial-diagram diagram-dark reveal" aria-label="Representative RTLS application architecture">
+          <svg viewBox="0 0 640 500" role="img" aria-labelledby="rtls-arch-title rtls-arch-desc">
+            <title id="rtls-arch-title">Representative RTLS architecture</title>
+            <desc id="rtls-arch-desc">Tags, beacons, and mobile devices connect wirelessly to a hub, reader, or locator. The locator sends position data to a location service, which supports operations, web, and mobile applications.</desc>
+            <defs>
+              <pattern id="rtlsDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+              </pattern>
+              <marker id="rtlsArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+              </marker>
+            </defs>
 
-          <div class="rtls-app-arrow">↓ wireless / proximity / identification</div>
+            <rect x="0" y="0" width="640" height="500" fill="url(#rtlsDots)"></rect>
 
-          <div class="rtls-app-reader">
-            <div class="reader-device-icon">
-              <i class="reader-ant-left"></i>
-              <i class="reader-body"></i>
-              <i class="reader-ant-right"></i>
-            </div>
-            <strong>HUB / READER / LOCATOR</strong>
-          </div>
+            <path class="dd-connector" d="M116 128 V176 H320 V204" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M320 128 V204" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M524 128 V176 H320" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M320 306 V348" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M320 424 V456 H118" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M320 456 H320" marker-end="url(#rtlsArrow)"></path>
+            <path class="dd-connector" d="M320 456 H522" marker-end="url(#rtlsArrow)"></path>
 
-          <div class="rtls-app-arrow">↓</div>
+            <g>
+              <rect class="dd-node-soft" x="42" y="52" width="148" height="76" rx="6"></rect>
+              <text class="dd-eyebrow" x="60" y="77">ENDPOINT</text>
+              <text class="dd-title" x="60" y="104">Tag</text>
+              <text class="dd-copy" x="60" y="120">asset · person</text>
+            </g>
 
-          <div class="rtls-app-service">
-            <strong>POSITIONING / LOCATION SERVICE</strong>
-            <small>signal processing · zones · location events</small>
-          </div>
+            <g>
+              <rect class="dd-node-soft" x="246" y="52" width="148" height="76" rx="6"></rect>
+              <text class="dd-eyebrow" x="264" y="77">ENDPOINT</text>
+              <text class="dd-title" x="264" y="104">Beacon</text>
+              <text class="dd-copy" x="264" y="120">location signal</text>
+            </g>
 
-          <div class="rtls-app-arrow">↓</div>
+            <g>
+              <rect class="dd-node-soft" x="450" y="52" width="148" height="76" rx="6"></rect>
+              <text class="dd-eyebrow" x="468" y="77">ENDPOINT</text>
+              <text class="dd-title" x="468" y="104">Mobile</text>
+              <text class="dd-copy" x="468" y="120">provision · interact</text>
+            </g>
 
-          <div class="rtls-app-clients">
-            <span>OPERATIONS</span>
-            <span>WEB</span>
-            <span>MOBILE APP</span>
-          </div>
+            <g>
+              <rect class="dd-node-accent" x="208" y="204" width="224" height="102" rx="6"></rect>
+              <text class="dd-eyebrow" x="230" y="230">DEVICE / EDGE</text>
+              <text class="dd-title" x="230" y="262">Hub / reader / locator</text>
+              <text class="dd-copy" x="230" y="284">wireless · proximity · identification</text>
+            </g>
 
+            <g>
+              <rect class="dd-node" x="208" y="348" width="224" height="76" rx="6"></rect>
+              <text class="dd-eyebrow" x="230" y="373">SERVICE</text>
+              <text class="dd-title" x="230" y="400">Location service</text>
+              <text class="dd-copy" x="230" y="416">signal processing · zones · events</text>
+            </g>
+
+            <text class="dd-tech" x="62" y="483">OPERATIONS</text>
+            <text class="dd-tech" x="295" y="483">WEB</text>
+            <text class="dd-tech" x="480" y="483">MOBILE APP</text>
+          </svg>
           <small class="rtls-app-note">Representative architecture synthesized from multiple positioning and tracking programs.</small>
         </div>
       </div>

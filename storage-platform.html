@@ -236,36 +236,70 @@
         <h2>Own the roadmap even when parts of the product are developed by partners.</h2>
       </div>
 
-      <div class="storage-ownership-v2-flow reveal">
-        <div>
-          <span>01</span>
-          <strong>ROADMAP + REQUIREMENTS</strong>
-          <small>product direction · platform definition</small>
-        </div>
-        <i>→</i>
-        <div>
-          <span>02</span>
-          <strong>PARTNER DEVELOPMENT</strong>
-          <small>controller · power · external engineering</small>
-        </div>
-        <i>→</i>
-        <div>
-          <span>03</span>
-          <strong>INTEGRATION</strong>
-          <small>HW · FW · SW · enclosure</small>
-        </div>
-        <i>→</i>
-        <div>
-          <span>04</span>
-          <strong>MANUFACTURING</strong>
-          <small>contract manufacturing · final assembly</small>
-        </div>
-        <i>→</i>
-        <div>
-          <span>05</span>
-          <strong>LIFECYCLE</strong>
-          <small>release · sustaining · feedback</small>
-        </div>
+      <div class="editorial-diagram diagram-scroll reveal">
+        <svg viewBox="0 0 980 330" role="img" aria-labelledby="storage-own-title storage-own-desc">
+          <title id="storage-own-title">Storage platform product ownership flow</title>
+          <desc id="storage-own-desc">Product ownership begins with roadmap and requirements, uses external partners for selected subsystem development, returns to an internal integration point across hardware, firmware, software, and enclosure, then moves through manufacturing and lifecycle feedback.</desc>
+          <defs>
+            <pattern id="storageDots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+            </pattern>
+            <marker id="storageArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+            </marker>
+          </defs>
+          <rect x="0" y="0" width="980" height="330" fill="url(#storageDots)"></rect>
+
+          <path class="dd-connector" d="M190 160 H230" marker-end="url(#storageArrow)"></path>
+          <path class="dd-connector" d="M390 160 H430" marker-end="url(#storageArrow)"></path>
+          <path class="dd-connector" d="M600 160 H640" marker-end="url(#storageArrow)"></path>
+          <path class="dd-connector" d="M800 160 H840" marker-end="url(#storageArrow)"></path>
+          <path class="dd-connector-dashed" d="M900 224 V270 H110 V224" marker-end="url(#storageArrow)"></path>
+
+          <g>
+            <rect class="dd-node" x="30" y="100" width="160" height="124" rx="6"></rect>
+            <text class="dd-eyebrow" x="50" y="126">01 / OWNER</text>
+            <text class="dd-title" x="50" y="158">Roadmap +</text>
+            <text class="dd-title" x="50" y="180">requirements</text>
+            <text class="dd-copy" x="50" y="205">direction · platform definition</text>
+          </g>
+
+          <g>
+            <rect class="dd-node-soft" x="230" y="100" width="160" height="124" rx="6"></rect>
+            <text class="dd-eyebrow" x="250" y="126">02 / PARTNER</text>
+            <text class="dd-title" x="250" y="158">Subsystem</text>
+            <text class="dd-title" x="250" y="180">development</text>
+            <text class="dd-copy" x="250" y="205">controller · power · external EE</text>
+          </g>
+
+          <g>
+            <rect class="dd-node-accent" x="430" y="82" width="170" height="160" rx="6"></rect>
+            <text class="dd-eyebrow" x="450" y="109">03 / INTEGRATE</text>
+            <text class="dd-title" x="450" y="145">System integration</text>
+            <text class="dd-copy" x="450" y="170">hardware · firmware</text>
+            <text class="dd-copy" x="450" y="187">software · enclosure</text>
+            <line class="dd-rule" x1="450" y1="207" x2="578" y2="207"></line>
+            <text class="dd-tech" x="450" y="228">PRODUCT OWNERSHIP STAYS HERE</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="640" y="100" width="160" height="124" rx="6"></rect>
+            <text class="dd-eyebrow" x="660" y="126">04 / BUILD</text>
+            <text class="dd-title" x="660" y="158">Manufacturing</text>
+            <text class="dd-copy" x="660" y="183">contract manufacturing</text>
+            <text class="dd-copy" x="660" y="200">final assembly</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="840" y="100" width="110" height="124" rx="6"></rect>
+            <text class="dd-eyebrow" x="858" y="126">05</text>
+            <text class="dd-title" x="858" y="158">Lifecycle</text>
+            <text class="dd-copy" x="858" y="183">release</text>
+            <text class="dd-copy" x="858" y="200">sustain · feedback</text>
+          </g>
+
+          <text class="dd-tech" x="365" y="296">FIELD + CUSTOMER FEEDBACK RETURNS TO ROADMAP</text>
+        </svg>
       </div>
     </section>
 

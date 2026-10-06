@@ -43,10 +43,69 @@
           <p class="case-deck">Requirement decomposition, sprint task management, and change management each addressed a different failure mode in engineering execution.</p>
         </div>
 
-        <div class="ci-v2-hero-map reveal">
-          <div><span>01</span><strong>REQUIREMENTS</strong><small>derive what is missing</small></div>
-          <div><span>02</span><strong>SPRINTS</strong><small>protect the real priorities</small></div>
-          <div><span>03</span><strong>CHANGE</strong><small>close the design-factory loop</small></div>
+        <div class="editorial-diagram diagram-dark reveal">
+          <svg viewBox="0 0 640 440" role="img" aria-labelledby="ci-overview-title ci-overview-desc">
+            <title id="ci-overview-title">Three engineering execution improvements</title>
+            <desc id="ci-overview-desc">Three different execution failure modes were addressed with targeted mechanisms: requirement decomposition, sprint task management, and standardized closed-loop change management.</desc>
+            <defs>
+              <pattern id="ciDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+              </pattern>
+              <marker id="ciArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+              </marker>
+            </defs>
+            <rect x="0" y="0" width="640" height="440" fill="url(#ciDots)"></rect>
+
+            <text class="dd-eyebrow" x="38" y="46">FAILURE MODE</text>
+            <text class="dd-eyebrow" x="362" y="46">TARGETED IMPROVEMENT</text>
+
+            <path class="dd-connector" d="M276 104 H344" marker-end="url(#ciArrow)"></path>
+            <path class="dd-connector" d="M276 198 H344" marker-end="url(#ciArrow)"></path>
+            <path class="dd-connector" d="M276 292 H344" marker-end="url(#ciArrow)"></path>
+            <path class="dd-connector-dashed" d="M486 340 V374" marker-end="url(#ciArrow)"></path>
+            <path class="dd-connector-dashed" d="M162 340 V374 H320" marker-end="url(#ciArrow)"></path>
+
+            <g>
+              <rect class="dd-node-soft" x="38" y="68" width="238" height="72" rx="6"></rect>
+              <text class="dd-eyebrow" x="56" y="91">01 / REQUIREMENTS</text>
+              <text class="dd-title" x="56" y="118">Subsystem needs stayed implicit</text>
+            </g>
+            <g>
+              <rect class="dd-node" x="344" y="68" width="258" height="72" rx="6"></rect>
+              <text class="dd-eyebrow" x="362" y="91">DECOMPOSE</text>
+              <text class="dd-title" x="362" y="118">Structure tree + DFMEA</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-soft" x="38" y="162" width="238" height="72" rx="6"></rect>
+              <text class="dd-eyebrow" x="56" y="185">02 / SPRINTS</text>
+              <text class="dd-title" x="56" y="212">Latest request displaced priority</text>
+            </g>
+            <g>
+              <rect class="dd-node" x="344" y="162" width="258" height="72" rx="6"></rect>
+              <text class="dd-eyebrow" x="362" y="185">CONTROL INTAKE</text>
+              <text class="dd-title" x="362" y="212">Backlog + sprint cadence</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-soft" x="38" y="256" width="238" height="84" rx="6"></rect>
+              <text class="dd-eyebrow" x="56" y="279">03 / CHANGE</text>
+              <text class="dd-title" x="56" y="306">ECN execution varied by site</text>
+              <text class="dd-copy" x="56" y="325">factory implementation was hard to verify</text>
+            </g>
+            <g>
+              <rect class="dd-node" x="344" y="256" width="258" height="84" rx="6"></rect>
+              <text class="dd-eyebrow" x="362" y="279">CLOSE THE LOOP</text>
+              <text class="dd-title" x="362" y="306">Standard roles + BOM return</text>
+              <text class="dd-copy" x="362" y="325">Design verifies factory implementation</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-accent" x="206" y="372" width="228" height="52" rx="6"></rect>
+              <text class="dd-title" x="320" y="404" text-anchor="middle">More predictable execution</text>
+            </g>
+          </svg>
         </div>
       </div>
     </section>
@@ -58,55 +117,81 @@
         <h2>PRD and system requirements did not always reveal everything each subsystem still had to satisfy.</h2>
       </div>
 
-      <div class="req-v3-story">
-        <article class="req-v3-before reveal">
-          <span>BEFORE</span>
+      <div class="editorial-diagram diagram-scroll reveal">
+        <svg viewBox="0 0 1040 420" role="img" aria-labelledby="req-delta-title req-delta-desc">
+          <title id="req-delta-title">Requirement decomposition before and after</title>
+          <desc id="req-delta-desc">Before the change, product and system requirements could leave subsystem needs implicit. The intervention added structure-tree decomposition and DFMEA reasoning so subsystem requirements, interfaces, limits, and verification needs became explicit.</desc>
+          <defs>
+            <pattern id="reqDeltaDots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+            </pattern>
+            <marker id="reqDeltaArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+            </marker>
+          </defs>
+          <rect x="0" y="0" width="1040" height="420" fill="url(#reqDeltaDots)"></rect>
 
-          <div class="req-v3-top-flow">
-            <div class="req-v3-prd">PRD</div>
-            <i>→</i>
-            <div class="req-v3-system">SYSTEM REQUIREMENTS</div>
-          </div>
+          <text class="dd-eyebrow" x="38" y="42">BEFORE</text>
+          <text class="dd-eyebrow" x="386" y="42">WHAT CHANGED</text>
+          <text class="dd-eyebrow" x="724" y="42">AFTER</text>
 
-          <div class="req-v3-gap">
-            <div class="req-v3-engineer">FUNCTION TEAM</div>
-            <div class="req-v3-question-cloud">
-              <span>thermal?</span>
-              <span>interface?</span>
-              <span>tolerance?</span>
-              <span>failure mode?</span>
-              <span>component limit?</span>
-            </div>
-          </div>
+          <path class="dd-connector" d="M98 112 V158" marker-end="url(#reqDeltaArrow)"></path>
+          <path class="dd-connector" d="M98 226 V272" marker-end="url(#reqDeltaArrow)"></path>
 
-          <small>Important subsystem needs could remain implicit because they were not obvious from the system requirement alone.</small>
-        </article>
+          <g>
+            <rect class="dd-node" x="38" y="68" width="120" height="44" rx="5"></rect>
+            <text class="dd-title" x="58" y="96">PRD</text>
+          </g>
+          <g>
+            <rect class="dd-node" x="38" y="158" width="190" height="68" rx="5"></rect>
+            <text class="dd-eyebrow" x="58" y="181">SYSTEM</text>
+            <text class="dd-title" x="58" y="207">System requirements</text>
+          </g>
+          <g>
+            <rect class="dd-node-soft" x="38" y="272" width="252" height="96" rx="5"></rect>
+            <text class="dd-eyebrow" x="58" y="296">FUNCTION TEAM</text>
+            <text class="dd-title" x="58" y="325">Implicit needs</text>
+            <text class="dd-copy" x="58" y="346">thermal · interface · tolerance</text>
+            <text class="dd-copy" x="58" y="362">failure modes · component limits</text>
+          </g>
 
-        <article class="req-v3-after reveal">
-          <span>AFTER</span>
+          <g>
+            <rect class="dd-node" x="352" y="86" width="260" height="86" rx="5"></rect>
+            <text class="dd-eyebrow" x="374" y="111">DECOMPOSE</text>
+            <text class="dd-title" x="374" y="141">Structure tree</text>
+            <text class="dd-copy" x="374" y="158">system → subsystem → component</text>
+          </g>
+          <g>
+            <rect class="dd-node" x="352" y="194" width="260" height="86" rx="5"></rect>
+            <text class="dd-eyebrow" x="374" y="219">ANALYZE RISK</text>
+            <text class="dd-title" x="374" y="249">DFMEA</text>
+            <text class="dd-copy" x="374" y="266">failure modes · controls · gaps</text>
+          </g>
+          <g>
+            <rect class="dd-node-accent" x="352" y="302" width="260" height="68" rx="5"></rect>
+            <text class="dd-eyebrow" x="374" y="327">MAKE EXPLICIT</text>
+            <text class="dd-title" x="374" y="354">Subsystem requirements</text>
+          </g>
 
-          <div class="req-v3-method-flow">
-            <div><strong>PRD</strong><small>product intent</small></div><i>→</i>
-            <div><strong>SYSTEM</strong><small>system requirements</small></div><i>→</i>
-            <div class="req-v3-highlight"><strong>STRUCTURE TREE</strong><small>system → subsystems → components</small></div>
-            <i>+</i>
-            <div class="req-v3-highlight"><strong>DFMEA</strong><small>failure modes + controls</small></div>
-          </div>
-
-          <div class="req-v3-tree">
-            <div class="req-v3-tree-root">SYSTEM</div>
-            <i></i>
-            <div class="req-v3-tree-branches">
-              <div><strong>SUBSYSTEM A</strong><small>requirements</small></div>
-              <div><strong>SUBSYSTEM B</strong><small>requirements</small></div>
-              <div><strong>SUBSYSTEM C</strong><small>requirements</small></div>
-            </div>
-            <i></i>
-            <div class="req-v3-components">
-              <span>components</span><span>interfaces</span><span>limits</span><span>verification</span>
-            </div>
-          </div>
-        </article>
+          <path class="dd-connector" d="M784 112 V158" marker-end="url(#reqDeltaArrow)"></path>
+          <path class="dd-connector" d="M784 226 V272" marker-end="url(#reqDeltaArrow)"></path>
+          <g>
+            <rect class="dd-node" x="724" y="68" width="120" height="44" rx="5"></rect>
+            <text class="dd-title" x="744" y="96">PRD</text>
+          </g>
+          <g>
+            <rect class="dd-node" x="724" y="158" width="190" height="68" rx="5"></rect>
+            <text class="dd-eyebrow" x="744" y="181">SYSTEM</text>
+            <text class="dd-title" x="744" y="207">System requirements</text>
+          </g>
+          <g>
+            <rect class="dd-node-accent" x="724" y="272" width="278" height="96" rx="5"></rect>
+            <text class="dd-eyebrow" x="746" y="296">SUBSYSTEM BASIS</text>
+            <text class="dd-title" x="746" y="325">Requirements are visible</text>
+            <text class="dd-copy" x="746" y="346">components · interfaces · limits</text>
+            <text class="dd-copy" x="746" y="362">verification obligations</text>
+          </g>
+        </svg>
       </div>
 
       <div class="ci-v3-intervention reveal">
@@ -122,58 +207,71 @@
         <h2>Unplanned requests could change engineering focus faster than project priorities did.</h2>
       </div>
 
-      <div class="sprint-v3-grid">
-        <article class="sprint-v3-before reveal">
-          <span>BEFORE</span>
+      <div class="editorial-diagram diagram-scroll diagram-dark reveal">
+        <svg viewBox="0 0 1040 430" role="img" aria-labelledby="sprint-delta-title sprint-delta-desc">
+          <title id="sprint-delta-title">Sprint task management before and after</title>
+          <desc id="sprint-delta-desc">Before the change, requests from customers, project managers, and management could directly interrupt engineers and delay committed work. After the change, requests entered a common backlog and sprint commitment process with daily and sprint review cadence.</desc>
+          <defs>
+            <pattern id="sprintDeltaDots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+            </pattern>
+            <marker id="sprintDeltaArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#9da19e"></path>
+            </marker>
+          </defs>
+          <rect x="0" y="0" width="1040" height="430" fill="url(#sprintDeltaDots)"></rect>
 
-          <div class="sprint-v3-request-sources">
-            <div>CUSTOMER</div>
-            <div>PM</div>
-            <div>MANAGEMENT</div>
-          </div>
+          <text class="dd-eyebrow" x="38" y="42">BEFORE</text>
+          <text class="dd-eyebrow" x="382" y="42">CONTROL MECHANISM</text>
+          <text class="dd-eyebrow" x="724" y="42">AFTER</text>
 
-          <div class="sprint-v3-arrows">↓ ↓ ↓</div>
+          <g>
+            <rect class="dd-node-soft" x="38" y="76" width="252" height="78" rx="5"></rect>
+            <text class="dd-eyebrow" x="58" y="101">REQUEST SOURCES</text>
+            <text class="dd-title" x="58" y="130">Customer · PM · Management</text>
+          </g>
+          <path class="dd-connector" d="M164 154 V204" marker-end="url(#sprintDeltaArrow)"></path>
+          <g>
+            <rect class="dd-node" x="76" y="204" width="176" height="74" rx="5"></rect>
+            <text class="dd-eyebrow" x="96" y="229">ENGINEER</text>
+            <text class="dd-title" x="96" y="257">Latest request wins</text>
+          </g>
+          <path class="dd-connector-dashed" d="M164 278 V326" marker-end="url(#sprintDeltaArrow)"></path>
+          <text class="dd-copy" x="74" y="350">committed work delayed / interrupted</text>
 
-          <div class="sprint-v3-engineer">
-            <strong>ENGINEER</strong>
-            <small>focus shifts to latest request</small>
-          </div>
+          <g>
+            <rect class="dd-node" x="356" y="82" width="260" height="74" rx="5"></rect>
+            <text class="dd-eyebrow" x="378" y="107">INTAKE</text>
+            <text class="dd-title" x="378" y="135">Common backlog</text>
+          </g>
+          <path class="dd-connector" d="M486 156 V198" marker-end="url(#sprintDeltaArrow)"></path>
+          <g>
+            <rect class="dd-node-accent" x="356" y="198" width="260" height="92" rx="5"></rect>
+            <text class="dd-eyebrow" x="378" y="224">COMMITMENT</text>
+            <text class="dd-title" x="378" y="254">Sprint priority</text>
+            <text class="dd-copy" x="378" y="274">do now · defer · push back</text>
+          </g>
+          <g>
+            <rect class="dd-node-soft" x="356" y="316" width="260" height="68" rx="5"></rect>
+            <text class="dd-eyebrow" x="378" y="341">CADENCE</text>
+            <text class="dd-title" x="378" y="368">Daily standup + sprint review</text>
+          </g>
 
-          <div class="sprint-v3-original-work">
-            <span>committed work</span>
-            <i>→</i>
-            <small>delayed / interrupted</small>
-          </div>
-
-          <p>Requests could arrive outside the planned scope or priority, while managers also tracked work using different local methods.</p>
-        </article>
-
-        <article class="sprint-v3-after reveal">
-          <span>AFTER</span>
-
-          <div class="sprint-v3-intake">
-            <div class="sprint-v3-new-request">NEW REQUEST</div>
-            <i>→</i>
-            <div class="sprint-v3-backlog">BACKLOG</div>
-            <i>→</i>
-            <div class="sprint-v3-commit">SPRINT COMMITMENT</div>
-          </div>
-
-          <div class="sprint-v3-meetings">
-            <div><strong>DAILY STANDUP</strong><small>Are we still working the priority?</small></div>
-            <div><strong>SPRINT REVIEW</strong><small>Did we complete the committed outcome?</small></div>
-          </div>
-
-          <div class="sprint-v3-decision">
-            <span>incoming request</span>
-            <i>→</i>
-            <div>DO NOW</div>
-            <div>DEFER</div>
-            <div>PUSH BACK</div>
-          </div>
-
-          <p>One Azure DevOps sprint rhythm gave managers a common execution view and gave the project team a mechanism to protect scope and priorities.</p>
-        </article>
+          <g>
+            <rect class="dd-node" x="724" y="88" width="278" height="72" rx="5"></rect>
+            <text class="dd-eyebrow" x="746" y="113">NEW REQUEST</text>
+            <text class="dd-title" x="746" y="142">Enter the same intake path</text>
+          </g>
+          <path class="dd-connector" d="M863 160 V204" marker-end="url(#sprintDeltaArrow)"></path>
+          <g>
+            <rect class="dd-node-accent" x="724" y="204" width="278" height="86" rx="5"></rect>
+            <text class="dd-eyebrow" x="746" y="229">TEAM VIEW</text>
+            <text class="dd-title" x="746" y="258">Protected sprint commitment</text>
+            <text class="dd-copy" x="746" y="278">shared priorities · visible tradeoffs</text>
+          </g>
+          <path class="dd-connector-dashed" d="M863 290 V334" marker-end="url(#sprintDeltaArrow)"></path>
+          <text class="dd-copy" x="746" y="358">one Azure DevOps execution rhythm</text>
+        </svg>
       </div>
 
       <div class="ci-v3-combined-outcome reveal">
@@ -190,60 +288,84 @@
         <h2>The same high-level ECN process behaved differently by site — and factory changes were not always verifiable from Design.</h2>
       </div>
 
-      <div class="change-v3-grid">
-        <article class="change-v3-before reveal">
-          <span>BEFORE</span>
+      <div class="editorial-diagram diagram-scroll reveal">
+        <svg viewBox="0 0 1040 440" role="img" aria-labelledby="change-delta-title change-delta-desc">
+          <title id="change-delta-title">Engineering change management before and after</title>
+          <desc id="change-delta-desc">Before the change, approval sequences varied by site and the design system had no reliable closed-loop confirmation of factory BOM implementation. The change standardized approval roles and required the updated factory BOM to return to Design for verification.</desc>
+          <defs>
+            <pattern id="changeDeltaDots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+            </pattern>
+            <marker id="changeDeltaArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+            </marker>
+          </defs>
+          <rect x="0" y="0" width="1040" height="440" fill="url(#changeDeltaDots)"></rect>
 
-          <div class="change-v3-sites">
-            <div>
-              <strong>SITE A</strong>
-              <small>PM → Eng → Ops approval</small>
-            </div>
-            <div>
-              <strong>SITE B</strong>
-              <small>Eng → PM → Quality approval</small>
-            </div>
-            <div>
-              <strong>SITE C</strong>
-              <small>PM-specific workflow</small>
-            </div>
-          </div>
+          <text class="dd-eyebrow" x="38" y="42">BEFORE</text>
+          <text class="dd-eyebrow" x="380" y="42">WHAT CHANGED</text>
+          <text class="dd-eyebrow" x="724" y="42">AFTER</text>
 
-          <div class="change-v3-system-gap">
-            <div><strong>DESIGN SYSTEM</strong><small>ECN released</small></div>
-            <i>→</i>
-            <div class="change-v3-gap-box">SYSTEM GAP</div>
-            <i>→</i>
-            <div><strong>FACTORY SYSTEM</strong><small>BOM changed</small></div>
-          </div>
+          <g>
+            <rect class="dd-node-soft" x="38" y="70" width="250" height="110" rx="5"></rect>
+            <text class="dd-eyebrow" x="58" y="95">SITE-SPECIFIC FLOWS</text>
+            <text class="dd-copy" x="58" y="124">Site A · PM → Eng → Ops</text>
+            <text class="dd-copy" x="58" y="145">Site B · Eng → PM → Quality</text>
+            <text class="dd-copy" x="58" y="166">Site C · PM-specific workflow</text>
+          </g>
+          <g>
+            <rect class="dd-node" x="38" y="220" width="106" height="70" rx="5"></rect>
+            <text class="dd-eyebrow" x="56" y="244">DESIGN</text>
+            <text class="dd-title" x="56" y="271">ECN</text>
+          </g>
+          <path class="dd-connector-dashed" d="M144 255 H184" marker-end="url(#changeDeltaArrow)"></path>
+          <g>
+            <rect class="dd-node-soft" x="184" y="220" width="92" height="70" rx="5"></rect>
+            <text class="dd-eyebrow" x="202" y="244">GAP</text>
+            <text class="dd-title" x="202" y="271">?</text>
+          </g>
+          <path class="dd-connector-dashed" d="M276 255 H316" marker-end="url(#changeDeltaArrow)"></path>
+          <text class="dd-copy" x="38" y="325">factory implementation was not reliably verifiable from Design</text>
 
-          <small>No reliable closed-loop confirmation that the factory BOM matched the intended ECN.</small>
-        </article>
+          <g>
+            <rect class="dd-node" x="354" y="90" width="260" height="82" rx="5"></rect>
+            <text class="dd-eyebrow" x="376" y="115">STANDARDIZE</text>
+            <text class="dd-title" x="376" y="145">Common approval roles</text>
+          </g>
+          <g>
+            <rect class="dd-node-accent" x="354" y="208" width="260" height="92" rx="5"></rect>
+            <text class="dd-eyebrow" x="376" y="233">CLOSE THE LOOP</text>
+            <text class="dd-title" x="376" y="263">Return factory BOM</text>
+            <text class="dd-copy" x="376" y="283">Design verifies implementation</text>
+          </g>
 
-        <article class="change-v3-after reveal">
-          <span>AFTER</span>
+          <path class="dd-connector" d="M774 128 H822" marker-end="url(#changeDeltaArrow)"></path>
+          <path class="dd-connector" d="M888 180 V226" marker-end="url(#changeDeltaArrow)"></path>
+          <path class="dd-connector" d="M888 298 V344 H774" marker-end="url(#changeDeltaArrow)"></path>
+          <path class="dd-connector-dashed" d="M724 344 H690 V128 H724" marker-end="url(#changeDeltaArrow)"></path>
 
-          <div class="change-v3-standardize">
-            <div class="change-v3-sites-merge">
-              <span>SITE A</span>
-              <span>SITE B</span>
-              <span>SITE C</span>
-            </div>
-            <i>↓</i>
-            <div class="change-v3-one-flow">STANDARD APPROVAL ROLES</div>
-          </div>
-
-          <div class="change-v3-loop">
-            <div><strong>ECN</strong><small>Design release</small></div>
-            <i>→</i>
-            <div><strong>FACTORY</strong><small>Update BOM</small></div>
-            <i>→</i>
-            <div><strong>BOM RETURN</strong><small>send updated BOM back</small></div>
-            <i>→</i>
-            <div class="change-v3-verify"><strong>DESIGN VERIFY</strong><small>confirm correct implementation</small></div>
-            <i>↺</i>
-          </div>
-        </article>
+          <g>
+            <rect class="dd-node" x="724" y="92" width="100" height="72" rx="5"></rect>
+            <text class="dd-eyebrow" x="742" y="116">DESIGN</text>
+            <text class="dd-title" x="742" y="145">ECN</text>
+          </g>
+          <g>
+            <rect class="dd-node" x="822" y="92" width="132" height="88" rx="5"></rect>
+            <text class="dd-eyebrow" x="840" y="116">FACTORY</text>
+            <text class="dd-title" x="840" y="145">Update BOM</text>
+            <text class="dd-copy" x="840" y="163">implement change</text>
+          </g>
+          <g>
+            <rect class="dd-node" x="822" y="226" width="132" height="72" rx="5"></rect>
+            <text class="dd-eyebrow" x="840" y="250">RETURN</text>
+            <text class="dd-title" x="840" y="279">Updated BOM</text>
+          </g>
+          <g>
+            <rect class="dd-node-accent" x="724" y="308" width="164" height="72" rx="5"></rect>
+            <text class="dd-eyebrow" x="742" y="332">VERIFY</text>
+            <text class="dd-title" x="742" y="361">Design confirms</text>
+          </g>
+        </svg>
       </div>
 
       <div class="ci-v3-intervention reveal">

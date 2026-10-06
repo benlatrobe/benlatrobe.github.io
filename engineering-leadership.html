@@ -50,21 +50,80 @@
           </div>
         </div>
 
-        <div class="org-system reveal" aria-label="Engineering organization system">
-          <div class="org-center">PRODUCT</div>
-          <div class="org-node org-n1">EE</div>
-          <div class="org-node org-n2">SW / FW</div>
-          <div class="org-node org-n3">ME</div>
-          <div class="org-node org-n4">VALIDATION</div>
-          <div class="org-node org-n5">PM</div>
-          <div class="org-node org-n6">FACTORY</div>
-          <svg viewBox="0 0 560 520" aria-hidden="true">
-            <line x1="280" y1="260" x2="112" y2="90"/>
-            <line x1="280" y1="260" x2="445" y2="95"/>
-            <line x1="280" y1="260" x2="85" y2="260"/>
-            <line x1="280" y1="260" x2="475" y2="260"/>
-            <line x1="280" y1="260" x2="125" y2="430"/>
-            <line x1="280" y1="260" x2="438" y2="425"/>
+        <div class="editorial-diagram reveal" aria-label="Cross-functional engineering responsibility map">
+          <svg viewBox="0 0 640 500" role="img" aria-labelledby="lead-map-title lead-map-desc">
+            <title id="lead-map-title">Cross-functional engineering responsibility map</title>
+            <desc id="lead-map-desc">The product or program is the shared focal point. Design responsibilities span electrical engineering, software and firmware, and mechanical engineering. Delivery responsibilities span validation, program management, and factory execution. The map represents coordination, not a reporting hierarchy.</desc>
+            <defs>
+              <pattern id="leadDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+              </pattern>
+              <marker id="leadArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+              </marker>
+            </defs>
+            <rect x="0" y="0" width="640" height="500" fill="url(#leadDots)"></rect>
+
+            <path class="dd-connector" d="M320 112 V154 H168 V188" marker-end="url(#leadArrow)"></path>
+            <path class="dd-connector" d="M320 112 V154 H472 V188" marker-end="url(#leadArrow)"></path>
+            <path class="dd-connector-muted" d="M168 264 V304 H88 V338" marker-end="url(#leadArrow)"></path>
+            <path class="dd-connector-muted" d="M168 304 H168 V338" marker-end="url(#leadArrow)"></path>
+            <path class="dd-connector-muted" d="M168 304 H248 V338" marker-end="url(#leadArrow)"></path>
+            <path class="dd-connector-muted" d="M472 264 V304 H392 V338" marker-end="url(#leadArrow)"></path>
+            <path class="dd-connector-muted" d="M472 304 H472 V338" marker-end="url(#leadArrow)"></path>
+            <path class="dd-connector-muted" d="M472 304 H552 V338" marker-end="url(#leadArrow)"></path>
+
+            <g>
+              <rect class="dd-node-accent" x="220" y="40" width="200" height="72" rx="6"></rect>
+              <text class="dd-eyebrow" x="242" y="65">SHARED FOCUS</text>
+              <text class="dd-title" x="242" y="92">Product / program</text>
+            </g>
+
+            <g>
+              <rect class="dd-node" x="88" y="188" width="160" height="76" rx="6"></rect>
+              <text class="dd-eyebrow" x="108" y="213">DESIGN SYSTEM</text>
+              <text class="dd-title" x="108" y="240">Design disciplines</text>
+            </g>
+
+            <g>
+              <rect class="dd-node" x="392" y="188" width="160" height="76" rx="6"></rect>
+              <text class="dd-eyebrow" x="412" y="213">DELIVERY SYSTEM</text>
+              <text class="dd-title" x="412" y="240">Execution disciplines</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-soft" x="42" y="338" width="92" height="68" rx="6"></rect>
+              <text class="dd-eyebrow" x="60" y="363">EE</text>
+              <text class="dd-copy" x="60" y="386">electrical</text>
+            </g>
+            <g>
+              <rect class="dd-node-soft" x="122" y="338" width="92" height="68" rx="6"></rect>
+              <text class="dd-eyebrow" x="140" y="363">SW / FW</text>
+              <text class="dd-copy" x="140" y="386">software</text>
+            </g>
+            <g>
+              <rect class="dd-node-soft" x="202" y="338" width="92" height="68" rx="6"></rect>
+              <text class="dd-eyebrow" x="220" y="363">ME</text>
+              <text class="dd-copy" x="220" y="386">mechanical</text>
+            </g>
+
+            <g>
+              <rect class="dd-node-soft" x="346" y="338" width="92" height="68" rx="6"></rect>
+              <text class="dd-eyebrow" x="364" y="363">VALIDATE</text>
+              <text class="dd-copy" x="364" y="386">evidence</text>
+            </g>
+            <g>
+              <rect class="dd-node-soft" x="426" y="338" width="92" height="68" rx="6"></rect>
+              <text class="dd-eyebrow" x="444" y="363">PM</text>
+              <text class="dd-copy" x="444" y="386">alignment</text>
+            </g>
+            <g>
+              <rect class="dd-node-soft" x="506" y="338" width="92" height="68" rx="6"></rect>
+              <text class="dd-eyebrow" x="524" y="363">FACTORY</text>
+              <text class="dd-copy" x="524" y="386">readiness</text>
+            </g>
+
+            <text class="dd-tech" x="320" y="458" text-anchor="middle">RESPONSIBILITY MAP · NOT A REPORTING HIERARCHY</text>
           </svg>
         </div>
       </div>

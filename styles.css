@@ -3172,6 +3172,10 @@ button:focus-visible {
 }
 
 @media (max-width: 760px) {
+  .universe-stack-section .tech-stack-grid {
+    grid-template-columns: 1fr;
+  }
+
   .universe-stack-section .tech-stack-card-primary {
     min-height: 240px;
   }
@@ -11696,5 +11700,279 @@ button:focus-visible {
   #work .section-heading h2 {
     font-size: clamp(38px, 11vw, 48px);
     line-height: .98;
+  }
+}
+
+
+/* Editorial diagram system — adapted from diagram-design principles */
+.editorial-diagram {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.editorial-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.editorial-diagram .dd-grid-dot {
+  fill: rgba(22,24,23,.10);
+}
+
+.editorial-diagram .dd-rule {
+  stroke: rgba(22,24,23,.22);
+  stroke-width: 1;
+  fill: none;
+}
+
+.editorial-diagram .dd-connector {
+  stroke: var(--muted);
+  stroke-width: 1.4;
+  fill: none;
+}
+
+.editorial-diagram .dd-connector-muted {
+  stroke: rgba(108,112,109,.72);
+  stroke-width: 1.1;
+  fill: none;
+}
+
+.editorial-diagram .dd-connector-dashed {
+  stroke: rgba(108,112,109,.72);
+  stroke-width: 1.1;
+  stroke-dasharray: 5 5;
+  fill: none;
+}
+
+.editorial-diagram .dd-connector-accent {
+  stroke: var(--accent);
+  stroke-width: 1.8;
+  fill: none;
+}
+
+.editorial-diagram .dd-node {
+  fill: rgba(244,241,233,.94);
+  stroke: rgba(22,24,23,.42);
+  stroke-width: 1;
+}
+
+.editorial-diagram .dd-node-soft {
+  fill: rgba(22,24,23,.025);
+  stroke: rgba(22,24,23,.25);
+  stroke-width: 1;
+}
+
+.editorial-diagram .dd-node-accent {
+  fill: rgba(187,255,73,.15);
+  stroke: var(--ink);
+  stroke-width: 1.25;
+}
+
+.editorial-diagram .dd-eyebrow {
+  fill: var(--muted);
+  font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .12em;
+}
+
+.editorial-diagram .dd-title {
+  fill: var(--ink);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.editorial-diagram .dd-copy {
+  fill: var(--muted);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.editorial-diagram .dd-tech {
+  fill: var(--muted);
+  font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .04em;
+}
+
+.editorial-diagram .dd-chip {
+  fill: rgba(22,24,23,.08);
+  stroke: rgba(22,24,23,.18);
+  stroke-width: .8;
+}
+
+.editorial-diagram .dd-chip-accent {
+  fill: rgba(187,255,73,.22);
+  stroke: rgba(22,24,23,.34);
+  stroke-width: .8;
+}
+
+.editorial-diagram.diagram-dark .dd-grid-dot {
+  fill: rgba(245,242,234,.10);
+}
+
+.editorial-diagram.diagram-dark .dd-rule {
+  stroke: rgba(245,242,234,.20);
+}
+
+.editorial-diagram.diagram-dark .dd-node {
+  fill: rgba(245,242,234,.035);
+  stroke: rgba(245,242,234,.28);
+}
+
+.editorial-diagram.diagram-dark .dd-node-soft {
+  fill: rgba(245,242,234,.02);
+  stroke: rgba(245,242,234,.18);
+}
+
+.editorial-diagram.diagram-dark .dd-node-accent {
+  fill: rgba(187,255,73,.10);
+  stroke: var(--accent);
+}
+
+.editorial-diagram.diagram-dark .dd-eyebrow,
+.editorial-diagram.diagram-dark .dd-copy,
+.editorial-diagram.diagram-dark .dd-tech {
+  fill: rgba(245,242,234,.62);
+}
+
+.editorial-diagram.diagram-dark .dd-title {
+  fill: var(--light);
+}
+
+.editorial-diagram.diagram-dark .dd-chip {
+  fill: rgba(245,242,234,.08);
+  stroke: rgba(245,242,234,.18);
+}
+
+.editorial-diagram.diagram-dark .dd-chip-accent {
+  fill: rgba(187,255,73,.16);
+  stroke: rgba(187,255,73,.45);
+}
+
+.editorial-diagram .dd-accent-text {
+  fill: var(--accent);
+}
+
+.editorial-diagram .dd-paper-text {
+  fill: var(--ink);
+}
+
+.home-system-diagram {
+  border: 0;
+}
+
+.home-system-diagram svg {
+  min-height: 430px;
+}
+
+.ops-architecture-diagram,
+.npi-lifecycle-diagram {
+  width: min(100%, var(--max));
+}
+
+@media (max-width: 760px) {
+  .editorial-diagram .dd-title { font-size: 16px; }
+  .editorial-diagram .dd-copy { font-size: 10px; }
+  .editorial-diagram .dd-eyebrow { font-size: 9px; }
+  .home-system-diagram svg { min-height: 0; }
+}
+
+.editorial-system-window {
+  box-shadow: none;
+}
+
+.editorial-system-window .window-top {
+  background: rgba(244,241,233,.52);
+}
+
+
+/* Wide editorial diagrams keep readable type on small screens */
+.diagram-scroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 760px) {
+  .case-page .site-header {
+    padding-inline: 14px;
+  }
+
+  .case-page .nav {
+    gap: 10px;
+    font-size: 8px;
+    letter-spacing: .055em;
+  }
+
+  .diagram-scroll {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .diagram-scroll svg {
+    width: 780px;
+    max-width: none;
+  }
+
+  .diagram-scroll::after {
+    content: "SWIPE TO EXPLORE →";
+    position: sticky;
+    left: 0;
+    display: block;
+    width: max-content;
+    margin-top: 8px;
+    padding: 4px 0;
+    color: var(--muted);
+    font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .1em;
+  }
+
+  .section-dark .diagram-scroll {
+    border-bottom-color: rgba(245,242,234,.18);
+  }
+
+  .section-dark .diagram-scroll::after {
+    color: rgba(245,242,234,.55);
+  }
+}
+
+
+/* Prevent scrollable diagrams from defining parent grid min-content width */
+.split > *,
+.story-column,
+.diagram-scroll {
+  min-width: 0;
+}
+
+.diagram-scroll {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  .case-page .site-header {
+    padding-inline: 10px;
+  }
+
+  .case-page .nav {
+    gap: 7px;
+    font-size: 7.5px;
+    letter-spacing: .04em;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .universe-page .nav a:nth-child(1),
+  .universe-page .nav a:nth-child(4) {
+    display: none;
+  }
+
+  .universe-page .nav {
+    gap: 12px;
+    font-size: 8px;
+    letter-spacing: .055em;
   }
 }
