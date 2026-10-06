@@ -11859,6 +11859,49 @@ button:focus-visible {
   fill: var(--ink);
 }
 
+.editorial-diagram .dd-icon,
+.editorial-diagram .dd-icon-muted,
+.editorial-diagram .dd-icon-accent {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.editorial-diagram .dd-icon {
+  stroke: var(--ink);
+  stroke-width: 1.6;
+}
+
+.editorial-diagram .dd-icon-muted {
+  stroke: var(--muted);
+  stroke-width: 1.45;
+}
+
+.editorial-diagram .dd-icon-accent {
+  stroke: var(--accent);
+  stroke-width: 1.7;
+}
+
+.editorial-diagram.diagram-dark .dd-icon {
+  stroke: var(--light);
+}
+
+.editorial-diagram.diagram-dark .dd-icon-muted {
+  stroke: rgba(245,242,234,.62);
+}
+
+.editorial-diagram .dd-focal-chip {
+  fill: rgba(22,24,23,.055);
+  stroke: rgba(22,24,23,.22);
+  stroke-width: .8;
+}
+
+.editorial-diagram .dd-focal-chip-text {
+  fill: var(--muted);
+  font: 700 7px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .045em;
+}
+
 .home-system-diagram {
   border: 0;
 }
