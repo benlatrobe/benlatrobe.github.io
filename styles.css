@@ -12024,3 +12024,54 @@ button:focus-visible {
 .gateway-role-diagram {
   margin: auto 0 22px;
 }
+
+
+.home-system-diagram-mobile {
+  display: none;
+}
+
+.rtls-architecture-diagram,
+.gateway-role-diagram {
+  max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  .home-system-diagram-desktop {
+    display: none;
+  }
+
+  .home-system-diagram-mobile {
+    display: block;
+  }
+
+  .rtls-architecture-diagram,
+  .gateway-role-diagram {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+  }
+
+  .rtls-architecture-diagram svg {
+    width: 540px;
+    max-width: none;
+  }
+
+  .gateway-role-diagram svg {
+    width: 560px;
+    max-width: none;
+  }
+
+  .rtls-architecture-diagram::after,
+  .gateway-role-diagram::after {
+    content: "SWIPE TO EXPLORE →";
+    position: sticky;
+    left: 0;
+    display: block;
+    width: max-content;
+    margin-top: 7px;
+    color: rgba(245,242,234,.55);
+    font: 700 8px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .09em;
+  }
+}
