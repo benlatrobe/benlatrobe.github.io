@@ -11882,3 +11882,54 @@ button:focus-visible {
 .editorial-system-window .window-top {
   background: rgba(244,241,233,.52);
 }
+
+
+/* Wide editorial diagrams keep readable type on small screens */
+.diagram-scroll {
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 760px) {
+  .case-page .site-header {
+    padding-inline: 14px;
+  }
+
+  .case-page .nav {
+    gap: 10px;
+    font-size: 8px;
+    letter-spacing: .055em;
+  }
+
+  .diagram-scroll {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .diagram-scroll svg {
+    width: 780px;
+    max-width: none;
+  }
+
+  .diagram-scroll::after {
+    content: "SWIPE TO EXPLORE →";
+    position: sticky;
+    left: 0;
+    display: block;
+    width: max-content;
+    margin-top: 8px;
+    padding: 4px 0;
+    color: var(--muted);
+    font: 700 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing: .1em;
+  }
+
+  .section-dark .diagram-scroll {
+    border-bottom-color: rgba(245,242,234,.18);
+  }
+
+  .section-dark .diagram-scroll::after {
+    color: rgba(245,242,234,.55);
+  }
+}
