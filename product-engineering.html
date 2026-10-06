@@ -185,22 +185,54 @@
             Build readiness includes materials, process, fixtures, test, work instructions, acceptance criteria, ownership, and a plan for what the team will learn from the build.
           </p>
 
-          <div class="factory-flow reveal">
-            <div class="factory-stage">
-              <span>BEFORE</span>
-              <h3>Prepare</h3>
-              <p>Design maturity, CTB, materials, manufacturing plan, test readiness, process readiness.</p>
-            </div>
-            <div class="factory-stage factory-stage-active">
-              <span>DURING</span>
-              <h3>Observe</h3>
-              <p>Yield, defects, cycle time, test results, blockers, containment, ownership.</p>
-            </div>
-            <div class="factory-stage">
-              <span>AFTER</span>
-              <h3>Close</h3>
-              <p>Root cause, corrective action, evidence, learning, next-build entry criteria.</p>
-            </div>
+          <div class="editorial-diagram reveal">
+            <svg viewBox="0 0 820 310" role="img" aria-labelledby="factory-flow-title factory-flow-desc">
+              <title id="factory-flow-title">Build readiness and learning flow</title>
+              <desc id="factory-flow-desc">A build is prepared through design, material, process, and test readiness; observed through yield, defect, cycle-time, and test evidence; then closed through root cause, corrective action, learning, and next-build entry criteria. Learning feeds the next build.</desc>
+              <defs>
+                <pattern id="factoryDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+                </pattern>
+                <marker id="factoryArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                  <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+                </marker>
+              </defs>
+              <rect x="0" y="0" width="820" height="310" fill="url(#factoryDots)"></rect>
+
+              <path class="dd-connector" d="M246 140 H286" marker-end="url(#factoryArrow)"></path>
+              <path class="dd-connector" d="M536 140 H576" marker-end="url(#factoryArrow)"></path>
+              <path class="dd-connector-dashed" d="M696 224 V264 H126 V224" marker-end="url(#factoryArrow)"></path>
+
+              <g>
+                <rect class="dd-node" x="36" y="80" width="210" height="144" rx="6"></rect>
+                <text class="dd-eyebrow" x="58" y="106">BEFORE / PREPARE</text>
+                <text class="dd-title" x="58" y="140">Build readiness</text>
+                <text class="dd-copy" x="58" y="166">design maturity · CTB · materials</text>
+                <text class="dd-copy" x="58" y="184">manufacturing plan · process</text>
+                <text class="dd-copy" x="58" y="202">test readiness</text>
+              </g>
+
+              <g>
+                <rect class="dd-node-accent" x="286" y="62" width="250" height="180" rx="6"></rect>
+                <text class="dd-eyebrow" x="308" y="89">DURING / OBSERVE</text>
+                <text class="dd-title" x="308" y="126">Build as evidence</text>
+                <text class="dd-copy" x="308" y="153">yield · defects · cycle time</text>
+                <text class="dd-copy" x="308" y="171">test results · blockers</text>
+                <line class="dd-rule" x1="308" y1="192" x2="510" y2="192"></line>
+                <text class="dd-tech" x="308" y="215">CONTAIN · OWN · DECIDE</text>
+              </g>
+
+              <g>
+                <rect class="dd-node" x="576" y="80" width="208" height="144" rx="6"></rect>
+                <text class="dd-eyebrow" x="598" y="106">AFTER / CLOSE</text>
+                <text class="dd-title" x="598" y="140">Learn + re-enter</text>
+                <text class="dd-copy" x="598" y="166">root cause · corrective action</text>
+                <text class="dd-copy" x="598" y="184">evidence · learning</text>
+                <text class="dd-copy" x="598" y="202">next-build criteria</text>
+              </g>
+
+              <text class="dd-tech" x="320" y="287">LEARNING FEEDS THE NEXT BUILD</text>
+            </svg>
           </div>
 
           <p class="body-copy reveal">
