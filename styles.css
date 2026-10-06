@@ -3172,6 +3172,10 @@ button:focus-visible {
 }
 
 @media (max-width: 760px) {
+  .universe-stack-section .tech-stack-grid {
+    grid-template-columns: 1fr;
+  }
+
   .universe-stack-section .tech-stack-card-primary {
     min-height: 240px;
   }
