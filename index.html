@@ -78,42 +78,65 @@
         </div>
 
         <div class="hero-visual reveal" aria-label="Engineering system visualization">
-          <div class="system-window">
+          <div class="system-window editorial-system-window">
             <div class="window-top">
               <span>ENGINEERING.SYSTEM</span>
-              <span>ACTIVE</span>
+              <span>PRODUCT → FACTORY</span>
             </div>
-            <div class="system-canvas">
-              <div class="grid-lines" aria-hidden="true"></div>
-              <div class="node node-a">
-                <span class="node-id">01</span>
-                <strong>PRODUCT</strong>
-                <small>customer need</small>
-              </div>
-              <div class="node node-b">
-                <span class="node-id">02</span>
-                <strong>ENGINEERING</strong>
-                <small>hardware + software</small>
-              </div>
-              <div class="node node-c">
-                <span class="node-id">03</span>
-                <strong>FACTORY</strong>
-                <small>NPI + readiness</small>
-              </div>
-              <div class="node node-d">
-                <span class="node-id">04</span>
-                <strong>AI</strong>
-                <small>agents + evidence</small>
-              </div>
-              <svg class="system-lines" viewBox="0 0 620 480" role="img" aria-label="Connections among product, engineering, factory, and AI">
-                <path d="M150 120 C250 80, 340 80, 455 145" />
-                <path d="M470 180 C520 250, 480 330, 380 370" />
-                <path d="M340 385 C240 420, 130 350, 130 260" />
-                <path d="M160 220 C250 260, 345 250, 440 205" />
-                <path d="M180 245 C240 310, 300 340, 365 350" />
+            <div class="editorial-diagram home-system-diagram">
+              <svg viewBox="0 0 620 460" role="img" aria-labelledby="home-diagram-title home-diagram-desc">
+                <title id="home-diagram-title">Ben Lin engineering system</title>
+                <desc id="home-diagram-desc">Customer and product needs move into a multidisciplinary engineering system and then into factory readiness. AI-enabled engineering methods support the engineering system with agents, tools, and evidence.</desc>
+                <defs>
+                  <pattern id="homeDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+                  </pattern>
+                  <marker id="homeArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+                  </marker>
+                  <marker id="homeArrowAccent" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="#161817"></path>
+                  </marker>
+                </defs>
+
+                <rect x="0" y="0" width="620" height="460" fill="url(#homeDots)"></rect>
+
+                <path class="dd-connector" d="M170 205 H232" marker-end="url(#homeArrow)"></path>
+                <path class="dd-connector" d="M408 205 H470" marker-end="url(#homeArrow)"></path>
+                <path class="dd-connector-dashed" d="M320 346 V286" marker-end="url(#homeArrow)"></path>
+
+                <g>
+                  <rect class="dd-node" x="34" y="150" width="136" height="110" rx="6"></rect>
+                  <text class="dd-eyebrow" x="52" y="174">01 / INPUT</text>
+                  <text class="dd-title" x="52" y="207">Product need</text>
+                  <text class="dd-copy" x="52" y="230">customer · market</text>
+                  <text class="dd-copy" x="52" y="247">requirements</text>
+                </g>
+
+                <g>
+                  <rect class="dd-node-accent" x="232" y="122" width="176" height="164" rx="6"></rect>
+                  <text class="dd-eyebrow" x="252" y="148">02 / SYSTEM</text>
+                  <text class="dd-title" x="252" y="183">Engineering</text>
+                  <text class="dd-copy" x="252" y="208">hardware · software</text>
+                  <text class="dd-copy" x="252" y="225">validation · program</text>
+                  <line class="dd-rule" x1="252" y1="246" x2="388" y2="246"></line>
+                  <text class="dd-tech" x="252" y="266">OWNERSHIP · INTERFACES · EVIDENCE</text>
+                </g>
+
+                <g>
+                  <rect class="dd-node" x="470" y="150" width="116" height="110" rx="6"></rect>
+                  <text class="dd-eyebrow" x="488" y="174">03 / OUTPUT</text>
+                  <text class="dd-title" x="488" y="207">Factory</text>
+                  <text class="dd-copy" x="488" y="230">NPI · readiness</text>
+                  <text class="dd-copy" x="488" y="247">scale</text>
+                </g>
+
+                <g>
+                  <rect class="dd-node-soft" x="222" y="346" width="196" height="78" rx="6"></rect>
+                  <text class="dd-eyebrow" x="242" y="371">AI-ENABLED METHODS</text>
+                  <text class="dd-title" x="242" y="399">Agents + tools + evidence</text>
+                </g>
               </svg>
-              <div class="signal signal-one"></div>
-              <div class="signal signal-two"></div>
             </div>
           </div>
         </div>
