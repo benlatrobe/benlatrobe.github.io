@@ -12075,3 +12075,18 @@ button:focus-visible {
     letter-spacing: .09em;
   }
 }
+
+
+/* RTLS diagram containment */
+.rtls-hardware-grid,
+.rtls-hardware-card,
+.rtls-architecture-diagram,
+.gateway-role-diagram {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.rtls-architecture-diagram,
+.gateway-role-diagram {
+  width: 100%;
+}
