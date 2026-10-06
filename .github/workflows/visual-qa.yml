@@ -104,6 +104,17 @@ jobs:
                               };
                             });
 
+                          const internalOverflow = [...document.querySelectorAll('body *')]
+                            .filter(el => el.scrollWidth > el.clientWidth + 2)
+                            .slice(0, 30)
+                            .map(el => ({
+                              tag: el.tagName,
+                              cls: el.className || '',
+                              text: (el.textContent || '').trim().slice(0, 120),
+                              clientWidth: el.clientWidth,
+                              scrollWidth: el.scrollWidth
+                            }));
+
                           const links = [...document.querySelectorAll('a[href^="#"]')]
                             .map(a => a.getAttribute('href'))
                             .filter(h => h && h.length > 1);
@@ -147,6 +158,7 @@ jobs:
                             scrollHeight: doc.scrollHeight,
                             horizontalOverflow: doc.scrollWidth > width + 2,
                             offenders,
+                            internalOverflow,
                             missingAnchors,
                             diagramIssues
                           };
