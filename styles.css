@@ -11874,3 +11874,11 @@ button:focus-visible {
   .editorial-diagram .dd-eyebrow { font-size: 9px; }
   .home-system-diagram svg { min-height: 0; }
 }
+
+.editorial-system-window {
+  box-shadow: none;
+}
+
+.editorial-system-window .window-top {
+  background: rgba(244,241,233,.52);
+}
