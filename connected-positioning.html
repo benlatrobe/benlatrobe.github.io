@@ -176,22 +176,55 @@
         <article class="rtls-hardware-card reveal">
           <span>TAG / BEACON</span>
           <h3>Compact battery-powered device</h3>
-          <div class="tag-exploded-visual">
-            <div class="tag-layer tag-top-cover"><span>TOP COVER</span></div>
-            <div class="tag-layer tag-pcba-layer">
-              <div class="tag-pcba-disc">
-                <div class="tag-pcba-antenna"></div>
-                <div class="tag-pcba-mcu">MCU</div>
-                <div class="tag-pcba-rf">RF</div>
-                <div class="tag-pcba-sensor">SENSOR</div>
-              </div>
-              <span>PCBA</span>
-            </div>
-            <div class="tag-layer tag-battery-layer">
-              <div class="tag-coin-cell">+</div>
-              <span>COIN CELL</span>
-            </div>
-            <div class="tag-layer tag-bottom-cover"><span>BOTTOM COVER</span></div>
+          <div class="editorial-diagram diagram-dark rtls-hardware-diagram">
+            <svg viewBox="0 0 520 260" role="img" aria-labelledby="tag-hw-title tag-hw-desc">
+              <title id="tag-hw-title">Representative tag or beacon hardware stack</title>
+              <desc id="tag-hw-desc">An illustrative exploded puck-style device with a top enclosure, central PCBA containing antenna, RF, MCU and sensor functions, a coin-cell battery, and a bottom enclosure.</desc>
+              <defs>
+                <pattern id="tagHwDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+                </pattern>
+              </defs>
+              <rect x="0" y="0" width="520" height="260" fill="url(#tagHwDots)"></rect>
+
+              <path class="dd-connector-muted" d="M300 49 H374"></path>
+              <path class="dd-connector-accent" d="M306 110 H374"></path>
+              <path class="dd-connector-muted" d="M296 169 H374"></path>
+              <path class="dd-connector-muted" d="M300 218 H374"></path>
+
+              <g>
+                <ellipse cx="225" cy="38" rx="78" ry="19" fill="rgba(245,242,234,.03)" stroke="rgba(245,242,234,.55)"></ellipse>
+                <path d="M147 38 V49 C147 60 303 60 303 49 V38" fill="none" stroke="rgba(245,242,234,.32)"></path>
+              </g>
+
+              <g>
+                <ellipse cx="225" cy="104" rx="82" ry="23" fill="rgba(187,255,73,.08)" stroke="#bbff49" stroke-width="1.5"></ellipse>
+                <ellipse cx="225" cy="104" rx="70" ry="17" fill="none" stroke="rgba(187,255,73,.55)"></ellipse>
+                <rect x="198" y="91" width="42" height="26" rx="3" fill="#151816" stroke="rgba(245,242,234,.55)"></rect>
+                <text class="dd-tech" x="219" y="107" text-anchor="middle">MCU</text>
+                <rect x="250" y="93" width="30" height="22" rx="3" fill="#151816" stroke="#bbff49"></rect>
+                <text class="dd-tech dd-accent-text" x="265" y="107" text-anchor="middle">RF</text>
+                <rect x="165" y="94" width="27" height="20" rx="3" fill="#151816" stroke="rgba(245,242,234,.45)"></rect>
+                <text class="dd-tech" x="178.5" y="107" text-anchor="middle">SNS</text>
+              </g>
+
+              <g>
+                <ellipse cx="225" cy="166" rx="64" ry="18" fill="rgba(245,242,234,.025)" stroke="rgba(245,242,234,.52)"></ellipse>
+                <text class="dd-title" x="225" y="172" text-anchor="middle">+</text>
+              </g>
+
+              <g>
+                <ellipse cx="225" cy="218" rx="78" ry="17" fill="rgba(245,242,234,.02)" stroke="rgba(245,242,234,.48)"></ellipse>
+              </g>
+
+              <text class="dd-eyebrow" x="388" y="53">TOP COVER</text>
+              <text class="dd-eyebrow dd-accent-text" x="388" y="114">PCBA / RF CORE</text>
+              <text class="dd-copy" x="388" y="131">antenna · MCU · sensor</text>
+              <text class="dd-eyebrow" x="388" y="173">COIN CELL</text>
+              <text class="dd-eyebrow" x="388" y="222">BOTTOM COVER</text>
+
+              <path class="dd-connector-dashed" d="M225 58 V80 M225 128 V146 M225 184 V201"></path>
+            </svg>
           </div>
           <p class="hardware-visual-note">Illustrative puck-style form factor; actual tags and beacons can take many shapes.</p>
           <div class="rtls-tags"><small>RF</small><small>MCU</small><small>battery</small><small>sensor</small><small>enclosure</small></div>
@@ -200,18 +233,55 @@
         <article class="rtls-hardware-card reveal">
           <span>DIRECTIONAL ANTENNA ARRAY</span>
           <h3>Shape multiple BLE beams from one locator</h3>
-          <div class="mist-array-visual">
-            <div class="mist-ap-array">
-              <div class="mist-array-center">BLE</div>
-              <i class="ma e1"></i><i class="ma e2"></i><i class="ma e3"></i><i class="ma e4"></i>
-              <i class="ma e5"></i><i class="ma e6"></i><i class="ma e7"></i><i class="ma e8"></i>
-            </div>
-            <div class="mist-beam b1"></div><div class="mist-beam b2"></div>
-            <div class="mist-beam b3"></div><div class="mist-beam b4"></div>
-            <div class="mist-beam b5"></div><div class="mist-beam b6"></div>
-            <div class="mist-beam b7"></div><div class="mist-beam b8"></div>
-            <div class="mist-tag-target">TAG</div>
-            <small>8 directional beam sectors around a multi-element array</small>
+          <div class="editorial-diagram diagram-dark rtls-hardware-diagram">
+            <svg viewBox="0 0 520 260" role="img" aria-labelledby="beam-title beam-desc">
+              <title id="beam-title">Directional BLE antenna array concept</title>
+              <desc id="beam-desc">A locator uses a multi-element antenna array to form directional beam sectors. One active sector is highlighted toward a tag while the other sectors remain contextual.</desc>
+              <defs>
+                <pattern id="beamDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+                </pattern>
+              </defs>
+              <rect x="0" y="0" width="520" height="260" fill="url(#beamDots)"></rect>
+
+              <g transform="translate(198 130)">
+                <path d="M0 0 L150 -64 A163 163 0 0 1 163 -25 Z" fill="rgba(187,255,73,.12)" stroke="#bbff49" stroke-width="1.4"></path>
+
+                <path d="M0 0 L0 -132" stroke="rgba(245,242,234,.22)" stroke-dasharray="4 5"></path>
+                <path d="M0 0 L93 -93" stroke="rgba(245,242,234,.22)" stroke-dasharray="4 5"></path>
+                <path d="M0 0 L132 0" stroke="rgba(245,242,234,.22)" stroke-dasharray="4 5"></path>
+                <path d="M0 0 L93 93" stroke="rgba(245,242,234,.22)" stroke-dasharray="4 5"></path>
+                <path d="M0 0 L0 112" stroke="rgba(245,242,234,.22)" stroke-dasharray="4 5"></path>
+                <path d="M0 0 L-93 93" stroke="rgba(245,242,234,.22)" stroke-dasharray="4 5"></path>
+                <path d="M0 0 L-132 0" stroke="rgba(245,242,234,.22)" stroke-dasharray="4 5"></path>
+                <path d="M0 0 L-93 -93" stroke="rgba(245,242,234,.22)" stroke-dasharray="4 5"></path>
+
+                <rect x="-66" y="-66" width="132" height="132" rx="16" fill="rgba(245,242,234,.025)" stroke="rgba(245,242,234,.45)"></rect>
+                <circle cx="0" cy="0" r="22" fill="rgba(187,255,73,.07)" stroke="#bbff49"></circle>
+                <text class="dd-tech dd-accent-text" x="0" y="4" text-anchor="middle">BLE</text>
+
+                <g fill="none" stroke="rgba(245,242,234,.64)">
+                  <ellipse cx="0" cy="-47" rx="8" ry="18"></ellipse>
+                  <ellipse cx="33" cy="-33" rx="8" ry="18" transform="rotate(45 33 -33)"></ellipse>
+                  <ellipse cx="47" cy="0" rx="8" ry="18" transform="rotate(90 47 0)"></ellipse>
+                  <ellipse cx="33" cy="33" rx="8" ry="18" transform="rotate(135 33 33)"></ellipse>
+                  <ellipse cx="0" cy="47" rx="8" ry="18"></ellipse>
+                  <ellipse cx="-33" cy="33" rx="8" ry="18" transform="rotate(45 -33 33)"></ellipse>
+                  <ellipse cx="-47" cy="0" rx="8" ry="18" transform="rotate(90 -47 0)"></ellipse>
+                  <ellipse cx="-33" cy="-33" rx="8" ry="18" transform="rotate(135 -33 -33)"></ellipse>
+                </g>
+              </g>
+
+              <g>
+                <rect x="416" y="64" width="56" height="34" rx="5" fill="rgba(245,242,234,.03)" stroke="rgba(245,242,234,.65)"></rect>
+                <text class="dd-tech" x="444" y="85" text-anchor="middle">TAG</text>
+                <path class="dd-connector-accent" d="M360 96 H412"></path>
+              </g>
+
+              <text class="dd-eyebrow dd-accent-text" x="354" y="42">ACTIVE BEAM SECTOR</text>
+              <text class="dd-copy" x="354" y="118">8 sectors around a multi-element array</text>
+              <text class="dd-copy" x="354" y="136">calibration controls directionality</text>
+            </svg>
           </div>
           <p class="hardware-visual-note">Directional BLE array concept representative of locator/AP hardware I worked on; AoA and UWB were also evaluated for other positioning approaches.</p>
           <div class="rtls-tags"><small>directional beams</small><small>array geometry</small><small>calibration</small><small>BLE</small></div>
@@ -220,21 +290,49 @@
         <article class="rtls-hardware-card reveal">
           <span>DEAD RECKONING</span>
           <h3>Estimate motion between absolute position fixes</h3>
-          <div class="dr-clear-visual">
-            <div class="dr-device">
-              <strong>TAG</strong>
-              <span>IMU</span>
-            </div>
-            <svg viewBox="0 0 360 160" aria-hidden="true">
-              <path class="dr-estimated-path" d="M35 122 C90 90, 125 132, 176 84 C225 40, 266 67, 325 29"/>
-              <circle class="dr-radio-fix" cx="65" cy="108" r="7"/>
-              <circle class="dr-radio-fix" cx="180" cy="82" r="7"/>
-              <circle class="dr-radio-fix" cx="322" cy="30" r="7"/>
+          <div class="editorial-diagram diagram-dark rtls-hardware-diagram">
+            <svg viewBox="0 0 520 250" role="img" aria-labelledby="dr-title dr-desc">
+              <title id="dr-title">Dead-reckoning motion estimate between position fixes</title>
+              <desc id="dr-desc">An IMU estimates motion between absolute radio or positioning fixes. The estimated path is highlighted while neutral fix points periodically correct accumulated drift.</desc>
+              <defs>
+                <pattern id="drDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                  <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+                </pattern>
+              </defs>
+              <rect x="0" y="0" width="520" height="250" fill="url(#drDots)"></rect>
+
+              <g>
+                <rect class="dd-node-soft" x="30" y="82" width="86" height="74" rx="6"></rect>
+                <text class="dd-eyebrow" x="48" y="105">TAG</text>
+                <text class="dd-title" x="48" y="132">IMU</text>
+                <text class="dd-copy" x="48" y="148">motion estimate</text>
+              </g>
+
+              <path class="dd-connector-accent" d="M126 151 C176 116, 210 160, 260 112 C312 63, 352 91, 418 50" stroke-dasharray="7 6"></path>
+
+              <g fill="#151816" stroke="rgba(245,242,234,.72)" stroke-width="1.4">
+                <circle cx="162" cy="130" r="7"></circle>
+                <circle cx="272" cy="104" r="7"></circle>
+                <circle cx="418" cy="50" r="7"></circle>
+              </g>
+
+              <path class="dd-connector-muted" d="M158 121 L171 110"></path>
+              <path class="dd-connector-muted" d="M268 95 L281 84"></path>
+              <path class="dd-connector-muted" d="M414 41 L427 30"></path>
+
+              <text class="dd-tech" x="178" y="108">FIX 1</text>
+              <text class="dd-tech" x="288" y="82">FIX 2</text>
+              <text class="dd-tech" x="434" y="28">FIX 3</text>
+
+              <g>
+                <line x1="142" y1="198" x2="184" y2="198" stroke="#bbff49" stroke-width="2" stroke-dasharray="7 6"></line>
+                <text class="dd-copy" x="194" y="202">IMU-estimated path</text>
+                <circle cx="350" cy="198" r="6" fill="#151816" stroke="rgba(245,242,234,.72)"></circle>
+                <text class="dd-copy" x="364" y="202">absolute position fix</text>
+              </g>
+
+              <text class="dd-eyebrow dd-accent-text" x="142" y="229">ESTIMATE BETWEEN FIXES · CORRECT DRIFT WHEN A FIX ARRIVES</text>
             </svg>
-            <div class="dr-legend">
-              <span><i class="path-key"></i>IMU-estimated path</span>
-              <span><i class="fix-key"></i>radio / position fix</span>
-            </div>
           </div>
           <div class="rtls-tags"><small>IMU</small><small>heading</small><small>motion</small><small>sensor fusion</small></div>
         </article>
