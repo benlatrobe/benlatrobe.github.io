@@ -8,6 +8,7 @@ on:
       - portfolio-diagram-system
       - portfolio-story-refine
       - diagram-polish-pass-1
+      - diagram-polish-pass-2
 
 permissions:
   contents: read
