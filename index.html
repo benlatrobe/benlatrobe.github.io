@@ -81,8 +81,8 @@
               <span>ENGINEERING.SYSTEM</span>
               <span>PRODUCT → FACTORY</span>
             </div>
-            <div class="editorial-diagram home-system-diagram">
-              <svg viewBox="0 0 620 460" role="img" aria-labelledby="home-diagram-title home-diagram-desc">
+            <div class="editorial-diagram home-system-diagram home-system-diagram-desktop">
+              <svg viewBox="0 0 660 470" role="img" aria-labelledby="home-diagram-title home-diagram-desc">
                 <title id="home-diagram-title">Ben Lin engineering system</title>
                 <desc id="home-diagram-desc">Customer and product needs move into a multidisciplinary engineering system and then into factory readiness. AI-enabled engineering methods support the engineering system with agents, tools, and evidence.</desc>
                 <defs>
@@ -92,47 +92,139 @@
                   <marker id="homeArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
                     <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
                   </marker>
-                  <marker id="homeArrowAccent" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-                    <path d="M0,0 L7,3.5 L0,7 Z" fill="#161817"></path>
-                  </marker>
                 </defs>
 
-                <rect x="0" y="0" width="620" height="460" fill="url(#homeDots)"></rect>
+                <rect x="0" y="0" width="660" height="470" fill="url(#homeDots)"></rect>
 
-                <path class="dd-connector" d="M170 205 H232" marker-end="url(#homeArrow)"></path>
-                <path class="dd-connector" d="M408 205 H470" marker-end="url(#homeArrow)"></path>
-                <path class="dd-connector-dashed" d="M320 346 V286" marker-end="url(#homeArrow)"></path>
+                <path class="dd-connector" d="M191 215 H232" marker-end="url(#homeArrow)"></path>
+                <path class="dd-connector" d="M432 215 H484" marker-end="url(#homeArrow)"></path>
+                <path class="dd-connector-dashed" d="M332 350 V303" marker-end="url(#homeArrow)"></path>
 
                 <g>
-                  <rect class="dd-node" x="34" y="150" width="136" height="110" rx="6"></rect>
-                  <text class="dd-eyebrow" x="52" y="174">01 / INPUT</text>
-                  <text class="dd-title" x="52" y="207">Product need</text>
-                  <text class="dd-copy" x="52" y="230">customer · market</text>
-                  <text class="dd-copy" x="52" y="247">requirements</text>
+                  <rect class="dd-node" x="36" y="155" width="155" height="120" rx="6"></rect>
+                  <text class="dd-eyebrow" x="54" y="181">01 / INPUT</text>
+                  <g class="dd-icon-muted" transform="translate(148 170)">
+                    <path d="M0 0 H16 L22 6 V28 H0 Z"></path>
+                    <path d="M16 0 V6 H22"></path>
+                    <path d="M5 13 H17 M5 18 H17 M5 23 H13"></path>
+                  </g>
+                  <text class="dd-title" x="54" y="218">Product need</text>
+                  <text class="dd-copy" x="54" y="244">customer · market</text>
+                  <text class="dd-copy" x="54" y="261">requirements</text>
                 </g>
 
                 <g>
-                  <rect class="dd-node-accent" x="232" y="122" width="176" height="164" rx="6"></rect>
-                  <text class="dd-eyebrow" x="252" y="148">02 / SYSTEM</text>
-                  <text class="dd-title" x="252" y="183">Engineering</text>
-                  <text class="dd-copy" x="252" y="208">hardware · software</text>
-                  <text class="dd-copy" x="252" y="225">validation · program</text>
-                  <line class="dd-rule" x1="252" y1="246" x2="388" y2="246"></line>
-                  <text class="dd-tech" x="252" y="266">OWNERSHIP · INTERFACES · EVIDENCE</text>
+                  <rect class="dd-node-accent" x="232" y="118" width="200" height="185" rx="6"></rect>
+                  <text class="dd-eyebrow" x="252" y="145">02 / SYSTEM</text>
+                  <g class="dd-icon" transform="translate(382 137)">
+                    <circle cx="11" cy="11" r="4"></circle>
+                    <circle cx="2" cy="4" r="2"></circle>
+                    <circle cx="20" cy="4" r="2"></circle>
+                    <circle cx="2" cy="20" r="2"></circle>
+                    <circle cx="20" cy="20" r="2"></circle>
+                    <path d="M4 5.5 L8 8 M18 5.5 L14 8 M4 18.5 L8 14 M18 18.5 L14 14"></path>
+                  </g>
+                  <text class="dd-title" x="252" y="184">Engineering</text>
+                  <text class="dd-copy" x="252" y="210">hardware · software</text>
+                  <text class="dd-copy" x="252" y="228">validation · program</text>
+                  <line class="dd-rule" x1="252" y1="248" x2="412" y2="248"></line>
+
+                  <rect class="dd-focal-chip" x="252" y="263" width="46" height="23" rx="4"></rect>
+                  <rect class="dd-focal-chip" x="304" y="263" width="58" height="23" rx="4"></rect>
+                  <rect class="dd-focal-chip" x="368" y="263" width="44" height="23" rx="4"></rect>
+                  <text class="dd-focal-chip-text" x="275" y="278" text-anchor="middle">OWNERSHIP</text>
+                  <text class="dd-focal-chip-text" x="333" y="278" text-anchor="middle">INTERFACES</text>
+                  <text class="dd-focal-chip-text" x="390" y="278" text-anchor="middle">EVIDENCE</text>
                 </g>
 
                 <g>
-                  <rect class="dd-node" x="470" y="150" width="116" height="110" rx="6"></rect>
-                  <text class="dd-eyebrow" x="488" y="174">03 / OUTPUT</text>
-                  <text class="dd-title" x="488" y="207">Factory</text>
-                  <text class="dd-copy" x="488" y="230">NPI · readiness</text>
-                  <text class="dd-copy" x="488" y="247">scale</text>
+                  <rect class="dd-node" x="484" y="155" width="140" height="120" rx="6"></rect>
+                  <text class="dd-eyebrow" x="502" y="181">03 / OUTPUT</text>
+                  <g class="dd-icon-muted" transform="translate(582 170)">
+                    <path d="M0 28 V11 L8 16 V8 L16 13 V2 H22 V28"></path>
+                    <path d="M0 28 H26"></path>
+                    <path d="M5 21 H8 M13 21 H16 M21 21 H24"></path>
+                  </g>
+                  <text class="dd-title" x="502" y="218">Factory</text>
+                  <text class="dd-copy" x="502" y="244">NPI · readiness</text>
+                  <text class="dd-copy" x="502" y="261">scale</text>
                 </g>
 
                 <g>
-                  <rect class="dd-node-soft" x="222" y="346" width="196" height="78" rx="6"></rect>
-                  <text class="dd-eyebrow" x="242" y="371">AI-ENABLED METHODS</text>
-                  <text class="dd-title" x="242" y="399">Agents + tools + evidence</text>
+                  <rect class="dd-node-soft" x="222" y="350" width="220" height="82" rx="6"></rect>
+                  <text class="dd-eyebrow" x="242" y="376">AI-ENABLED METHODS</text>
+                  <g class="dd-icon-muted" transform="translate(392 365)">
+                    <path d="M10 0 V20 M0 10 H20"></path>
+                    <path d="M4 4 L16 16 M16 4 L4 16"></path>
+                  </g>
+                  <text class="dd-title" x="242" y="407" style="font-size:16px">Agents + tools + evidence</text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="editorial-diagram home-system-diagram home-system-diagram-mobile">
+              <svg viewBox="0 0 350 450" role="img" aria-labelledby="home-mobile-title home-mobile-desc">
+                <title id="home-mobile-title">Ben Lin engineering system</title>
+                <desc id="home-mobile-desc">Product needs move into a multidisciplinary engineering system and then into factory readiness. AI-enabled methods support the engineering system.</desc>
+                <defs>
+                  <pattern id="homeMobileDots" width="22" height="22" patternUnits="userSpaceOnUse">
+                    <circle class="dd-grid-dot" cx="11" cy="11" r="0.8"></circle>
+                  </pattern>
+                  <marker id="homeMobileArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+                  </marker>
+                </defs>
+                <rect x="0" y="0" width="350" height="450" fill="url(#homeMobileDots)"></rect>
+
+                <path class="dd-connector" d="M175 105 V142" marker-end="url(#homeMobileArrow)"></path>
+                <path class="dd-connector" d="M175 318 V354" marker-end="url(#homeMobileArrow)"></path>
+
+                <g>
+                  <rect class="dd-node" x="45" y="22" width="260" height="83" rx="6"></rect>
+                  <g class="dd-icon-muted" transform="translate(66 43)">
+                    <path d="M0 0 H16 L22 6 V28 H0 Z"></path>
+                    <path d="M16 0 V6 H22"></path>
+                    <path d="M5 13 H17 M5 18 H17"></path>
+                  </g>
+                  <text class="dd-eyebrow" x="105" y="48">01 / INPUT</text>
+                  <text class="dd-title" x="105" y="75">Product need</text>
+                  <text class="dd-copy" x="105" y="94">customer · market · requirements</text>
+                </g>
+
+                <g>
+                  <rect class="dd-node-accent" x="30" y="142" width="290" height="176" rx="6"></rect>
+                  <text class="dd-eyebrow" x="52" y="168">02 / SYSTEM</text>
+                  <g class="dd-icon" transform="translate(271 156)">
+                    <circle cx="11" cy="11" r="4"></circle>
+                    <circle cx="2" cy="4" r="2"></circle>
+                    <circle cx="20" cy="4" r="2"></circle>
+                    <circle cx="2" cy="20" r="2"></circle>
+                    <circle cx="20" cy="20" r="2"></circle>
+                    <path d="M4 5.5 L8 8 M18 5.5 L14 8 M4 18.5 L8 14 M18 18.5 L14 14"></path>
+                  </g>
+                  <text class="dd-title" x="52" y="204">Engineering</text>
+                  <text class="dd-copy" x="52" y="228">hardware · software · validation · program</text>
+
+                  <rect class="dd-focal-chip" x="52" y="245" width="64" height="23" rx="4"></rect>
+                  <rect class="dd-focal-chip" x="122" y="245" width="72" height="23" rx="4"></rect>
+                  <rect class="dd-focal-chip" x="200" y="245" width="58" height="23" rx="4"></rect>
+                  <text class="dd-focal-chip-text" x="84" y="260" text-anchor="middle">OWNERSHIP</text>
+                  <text class="dd-focal-chip-text" x="158" y="260" text-anchor="middle">INTERFACES</text>
+                  <text class="dd-focal-chip-text" x="229" y="260" text-anchor="middle">EVIDENCE</text>
+
+                  <rect class="dd-node-soft" x="52" y="280" width="216" height="25" rx="4"></rect>
+                  <text class="dd-tech" x="62" y="296">AI METHODS · AGENTS + TOOLS + EVIDENCE</text>
+                </g>
+
+                <g>
+                  <rect class="dd-node" x="45" y="354" width="260" height="74" rx="6"></rect>
+                  <g class="dd-icon-muted" transform="translate(66 374)">
+                    <path d="M0 28 V11 L8 16 V8 L16 13 V2 H22 V28"></path>
+                    <path d="M0 28 H26"></path>
+                  </g>
+                  <text class="dd-eyebrow" x="105" y="380">03 / OUTPUT</text>
+                  <text class="dd-title" x="105" y="407">Factory</text>
+                  <text class="dd-copy" x="190" y="407">NPI · readiness · scale</text>
                 </g>
               </svg>
             </div>
