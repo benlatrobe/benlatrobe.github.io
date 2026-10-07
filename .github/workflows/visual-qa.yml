@@ -10,6 +10,7 @@ on:
       - diagram-polish-pass-1
       - diagram-polish-pass-2
       - diagram-polish-pass-3
+      - diagram-polish-pass-4
 
 permissions:
   contents: read
