@@ -11,6 +11,7 @@ on:
       - diagram-polish-pass-2
       - diagram-polish-pass-3
       - diagram-polish-pass-4
+      - diagram-polish-pass-5
 
 permissions:
   contents: read
