@@ -12,6 +12,16 @@ Selected glyphs used in portfolio diagrams are adapted from the Lucide icon set:
 - Chart No Axes Combined
 - Refresh CW
 - Wrench
+- Bot
+- Database
+- Workflow
+- Calculator
+- Monitor Check
+- Package Search
+- List Filter
+- List Checks
+- Badge Check
+- File Search
 
 Source: https://github.com/lucide-icons/lucide
 

@@ -9,6 +9,7 @@ on:
       - portfolio-story-refine
       - diagram-polish-pass-1
       - diagram-polish-pass-2
+      - diagram-polish-pass-3
 
 permissions:
   contents: read
