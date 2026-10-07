@@ -12334,3 +12334,100 @@ button:focus-visible {
     letter-spacing: .09em;
   }
 }
+
+
+/* Supporting-visual polish */
+.model-stage {
+  position: relative;
+}
+
+.model-stage > span {
+  color: rgba(245,242,234,.48);
+}
+
+.model-stage-icon {
+  width: 34px;
+  height: 34px;
+  margin-top: 26px;
+  fill: none;
+  stroke: rgba(245,242,234,.62);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.model-stage-focus {
+  background: rgba(187,255,73,.055);
+  box-shadow: inset 0 3px 0 var(--accent);
+}
+
+.model-stage-focus > span {
+  color: var(--accent);
+}
+
+.model-stage-focus .model-stage-icon {
+  stroke: var(--accent);
+}
+
+.mini-case-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: 0 0 auto;
+}
+
+.mini-case-scale i {
+  width: auto;
+  height: auto;
+  background: none;
+  color: var(--muted);
+  font-style: normal;
+}
+
+.mini-case-gate .mini-case-icon {
+  stroke: var(--accent);
+}
+
+.mini-case-loop .mini-case-icon {
+  stroke: var(--muted);
+}
+
+/* RFID supporting visuals: green marks the mechanism/inference, not every component */
+.rack-tag-v2 {
+  border-color: var(--ink);
+}
+
+.occupied-slot {
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+.occupied-slot .rack-tag-v2.hidden-tag {
+  border-color: var(--accent);
+  color: var(--accent);
+  opacity: .45;
+}
+
+.beacon-ant-v2,
+.beacon-rf-v2 {
+  border-color: var(--ink);
+}
+
+.beacon-rf-v2 {
+  background: transparent;
+}
+
+.fixed-reader-v2 i,
+.fixed-reader-v2::before,
+.fixed-reader-v2::after {
+  border-color: var(--ink);
+}
+
+.fixed-reader-v2::before,
+.fixed-reader-v2::after {
+  opacity: .22;
+}

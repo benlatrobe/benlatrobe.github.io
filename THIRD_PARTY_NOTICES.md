@@ -22,6 +22,10 @@ Selected glyphs used in portfolio diagrams are adapted from the Lucide icon set:
 - List Checks
 - Badge Check
 - File Search
+- Octagon Pause
+- Trending Up
+- Key Round
+- Compass
 - Code XML
 - Circuit Board
 - Users
