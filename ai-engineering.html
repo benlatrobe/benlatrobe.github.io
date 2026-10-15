@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Universe — AI-Enabled Engineering — Ben Lin</title>
-  <meta name="description" content="Universe explores how AI agents can work with engineering models, domain tools, engineering software, evidence, and human review in physical-product development." />
+  <meta name="description" content="Universe is an AI-assisted engineering framework connecting versioned engineering models, native CAD review, source-linked evidence, and engineer decisions." />
   <meta name="theme-color" content="#151816" />
   <link rel="canonical" href="https://benlatrobe.github.io/ai-engineering.html" />
   <meta property="og:title" content="Universe — AI-Enabled Engineering — Ben Lin" />
-  <meta property="og:description" content="Exploring how AI agents can work with engineering models, domain tools, engineering software, evidence, and human review." />
+  <meta property="og:description" content="An AI-assisted engineering framework connecting design proposals, engineering models, native CAD review, and human decisions." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://benlatrobe.github.io/assets/og/portfolio-preview.jpg" />
   <meta property="og:image:width" content="600" />
@@ -46,7 +46,7 @@
           <p class="eyebrow">Selected work / AI-enabled engineering</p>
           <h1>Universe</h1>
           <p class="case-deck">
-            Exploring how AI agents can work with engineering models, domain tools, and real engineering software to support physical-product development.
+            Building an AI-assisted engineering framework that connects design proposals, versioned models, domain tools, native CAD review, and human engineering decisions.
           </p>
           <div class="case-meta">
             <div><span>ROLE</span><strong>Creator / architect</strong></div>
@@ -116,7 +116,7 @@
         <p>Universe separates AI reasoning, engineering state, execution, domain logic, external software, and engineer review.</p>
       </div>
 
-            <div class="editorial-diagram diagram-scroll diagram-dark universe-architecture-diagram reveal">
+      <div class="editorial-diagram diagram-scroll diagram-dark universe-architecture-diagram reveal">
         <svg viewBox="0 0 940 520" role="img" aria-labelledby="universe-arch-title universe-arch-desc">
           <title id="universe-arch-title">Universe architecture</title>
           <desc id="universe-arch-desc">An AI design partner proposes and coordinates work against structured engineering state. Core and Canonical Engineering Models preserve identity, revisions, and evidence. Runtime executes bounded tasks, Domains provide engineering logic, Adapters connect external engineering software, and Workbench supports engineer review and decision.</desc>
@@ -149,10 +149,11 @@
               <rect width="16" height="12" x="4" y="8" rx="2"></rect>
               <path d="M2 14h2 M20 14h2 M15 13v2 M9 13v2"></path>
             </g>
-            <text class="dd-eyebrow" x="104" y="177">AI DESIGN PARTNER</text>
-            <text class="dd-title" x="60" y="224">Propose + coordinate</text>
-            <text class="dd-copy" x="60" y="248">context · planning · delegation</text>
-            <text class="dd-tech" x="60" y="268">NO ENGINEERING AUTHORITY</text>
+            <text class="dd-eyebrow" x="102" y="177">AI PARTNER</text>
+            <text class="dd-title" x="60" y="224">Propose work</text>
+            <text class="dd-copy" x="60" y="244">plan · coordinate</text>
+            <text class="dd-copy" x="60" y="259">bounded delegation</text>
+            <text class="dd-tech" x="60" y="274">NO DESIGN AUTHORITY</text>
           </g>
 
           <!-- Engineering work plane -->
@@ -170,7 +171,8 @@
               </g>
               <text class="dd-eyebrow" x="350" y="154">CORE + CEMS</text>
               <text class="dd-title" x="350" y="188">Engineering state</text>
-              <text class="dd-copy" x="350" y="211">identity · revisions · evidence · lifecycle policy</text>
+              <text class="dd-copy" x="350" y="208">identity · revisions · evidence</text>
+              <text class="dd-copy" x="350" y="224">lifecycle policy</text>
             </g>
 
             <!-- Runtime -->
@@ -182,9 +184,9 @@
                 <rect width="8" height="8" x="13" y="13" rx="2"></rect>
               </g>
               <text class="dd-eyebrow" x="306" y="299">RUNTIME</text>
-              <text class="dd-title" x="306" y="329">Bounded execution</text>
-              <text class="dd-copy" x="306" y="351">tasks · checkpoints · recovery</text>
-              <text class="dd-copy" x="306" y="368">receipts</text>
+              <text class="dd-title" x="306" y="329">Execution</text>
+              <text class="dd-copy" x="306" y="351">tasks · checkpoints</text>
+              <text class="dd-copy" x="306" y="368">recovery · receipts</text>
             </g>
 
             <!-- Domains -->
@@ -197,7 +199,7 @@
                 <path d="M16 10h.01 M12 10h.01 M8 10h.01 M12 14h.01 M8 14h.01"></path>
               </g>
               <text class="dd-eyebrow" x="504" y="299">DOMAINS</text>
-              <text class="dd-title" x="504" y="329">Engineering logic</text>
+              <text class="dd-title" x="504" y="329">Domain logic</text>
               <text class="dd-copy" x="504" y="351">calculations · rules</text>
               <text class="dd-copy" x="504" y="368">geometry · validators</text>
             </g>
@@ -215,9 +217,9 @@
               <path d="M12 17v4 M8 21h8"></path>
             </g>
             <text class="dd-eyebrow" x="808" y="170">WORKBENCH</text>
-            <text class="dd-title" x="766" y="216">Engineer review</text>
-            <text class="dd-copy" x="766" y="241">state · evidence · changes</text>
-            <text class="dd-copy" x="766" y="258">open issues · decision</text>
+            <text class="dd-title" x="766" y="216" style="font-size:15px">Engineer review</text>
+            <text class="dd-copy" x="766" y="241">state · evidence</text>
+            <text class="dd-copy" x="766" y="258">changes · decisions</text>
             <text class="dd-tech" x="766" y="279">HUMAN AUTHORITY</text>
           </g>
 
@@ -227,8 +229,8 @@
             <g class="dd-icon-muted" transform="translate(368 468) scale(.62)">
               <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"></path>
             </g>
-            <text class="dd-eyebrow" x="404" y="474">ADAPTERS / ENGINEERING SOFTWARE</text>
-            <text class="dd-copy" x="404" y="495">CAD · solvers · formats · source tools</text>
+            <text class="dd-eyebrow" x="404" y="474">ADAPTERS / TOOLS</text>
+            <text class="dd-copy" x="404" y="495">CAD · solvers · formats</text>
           </g>
         </svg>
       </div>
@@ -236,7 +238,7 @@
       <div class="architecture-note reveal">
         <strong>Canonical Engineering Models (CEMs)</strong>
         <p>
-          A CEM is a structured, versioned representation of engineering entities, relationships, properties, and evidence. It gives agents, domain tools, and engineers a shared design state while keeping revisions and evidence explicit.
+          A CEM is a structured, versioned engineering record that connects entities, relationships, properties, and source evidence. For supported component and assembly models, it retains the exact geometry needed for reconstruction. CAD exports and display meshes are derived outputs—not competing design authorities.
         </p>
       </div>
     </section>
@@ -244,170 +246,171 @@
     <section id="built" class="section universe-stack-section">
       <div class="section-index">03 / WHAT I HAVE BUILT</div>
       <div class="section-heading reveal">
-        <p class="kicker">From concept to working pieces</p>
-        <h2>Several parts are already working.</h2>
+        <p class="kicker">From architecture to working engineering workflows</p>
+        <h2>Connecting AI proposals to engineering work.</h2>
       </div>
 
       <div class="tech-stack-grid">
-        <article class="tech-stack-card tech-stack-card-primary reveal">
-          <span>REQUIREMENTS → ARCHITECTURE</span>
-          <h3>Turn reviewed requirements into a system concept</h3>
-          <p>An implemented workflow turns source-linked requirements into a proposed system structure, subsystem responsibilities, interfaces, constraints, and owned unknowns. Revisions stay attributable, and the candidate remains separate from engineering approval.</p>
+        <article class="tech-stack-card reveal">
+          <span>REQUIREMENTS → CONCEPT</span>
+          <h3>From project documents to a reviewable concept</h3>
+          <p>A verified local Workbench journey connects source-linked requirements, clarification, and reviewed scope to model-authored planning and saved concept results. Assumptions and unfinished obligations remain visible.</p>
         </article>
 
-        <article class="tech-stack-card reveal">
-          <span>ENGINEERING TOOLS</span>
-          <h3>Calculations, geometry + engineering software</h3>
-          <p>Implemented work includes electrical and power calculations, component screening, system interfaces, geometry, bounded thermal and scenario studies, validation, and FreeCAD / OCCT integration.</p>
+        <article class="tech-stack-card tech-stack-card-primary reveal">
+          <span>ENGINEERING MODELS → CAD</span>
+          <h3>Native CAD, checked changes, and component reuse</h3>
+          <p>Bounded workflows turn saved concepts into reviewable native CAD and check explicit position changes. Separately, exact library Component CEM revisions can enter a project for reviewed placement, comparison, and STEP / FCStd export.</p>
         </article>
 
         <article class="tech-stack-card reveal">
           <span>TRACEABILITY</span>
-          <h3>Results stay tied to their basis</h3>
-          <p>Inputs, sources, revisions, and execution evidence stay attached to the work. When the basis changes, affected results can be identified for re-evaluation instead of silently remaining current.</p>
+          <h3>Versioned state and evidence that survives a restart</h3>
+          <p>Results stay tied to source inputs, engineering revisions, tool checks, and saved review context. Existing and changed candidates remain distinguishable; guarded reads can restore their evidence without rerunning engineering tools.</p>
         </article>
 
         <article class="tech-stack-card tech-stack-card-primary reveal">
-          <span>WORKBENCH</span>
-          <h3>Review the engineering work, not just the conversation</h3>
-          <p>A React / TypeScript review environment brings together requirements, models, calculations, evidence, proposed changes, open issues, and 3D visualization.</p>
+          <span>ENGINEERING WORKBENCH</span>
+          <h3>Inspect the model, not just an AI answer</h3>
+          <p>A React / TypeScript / Three.js interface supports project and requirements review, 3D selection, saved views, engineering checks, reviewed changes, and contextual discussion tied to specific records.</p>
         </article>
       </div>
 
       <div class="architecture-note reveal">
         <strong>Implementation stack</strong>
-        <p>Rust supports Core and Runtime. Python connects agents, domain tools, and engineering software. Workbench uses TypeScript / React and Three.js.</p>
+        <p>Rust supports Core and Runtime. Python connects agents, domain tools, and native engineering software. Workbench uses TypeScript / React and Three.js.</p>
       </div>
     </section>
 
     <section id="example" class="section case-example">
       <div class="section-index">04 / CONCRETE EXAMPLE</div>
-      <div class="split">
+      <div class="split universe-example-intro">
         <div class="sticky-title reveal">
-          <p class="kicker">Component selection</p>
-          <h2>A shortlist is a proposal—not a design decision.</h2>
+          <p class="kicker">Concept to checked CAD change</p>
+          <h2>AI proposes. Engineering tools check. Engineers decide.</h2>
         </div>
         <div class="story-column">
           <p class="lede reveal">
-            One implemented workflow connects project requirements, candidate discovery, source evidence, domain screening, and engineer review.
+            One locally verified workflow takes a saved model-authored placement, applies declared 3D assumptions, and creates native CAD that an engineer can inspect and review.
           </p>
-
-          <div class="editorial-diagram diagram-scroll universe-selection-diagram reveal">
-            <svg viewBox="0 0 1000 380" role="img" aria-labelledby="selection-title selection-desc">
-              <title id="selection-title">Universe component selection workflow</title>
-              <desc id="selection-desc">A product requirement drives candidate discovery and evidence collection, then domain screening, then a shortlist proposal. The proposal remains separate from the final engineer decision. Requirement basis, project revision, comparison result, and evidence are retained as the traceable basis.</desc>
-              <defs>
-                <pattern id="selectionDots" width="24" height="24" patternUnits="userSpaceOnUse">
-                  <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
-                </pattern>
-                <marker id="selectionArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-                  <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
-                </marker>
-              </defs>
-
-              <rect x="0" y="0" width="1000" height="380" fill="url(#selectionDots)"></rect>
-
-              <path class="dd-connector" d="M180 146 H210" marker-end="url(#selectionArrow)"></path>
-              <path class="dd-connector" d="M370 146 H400" marker-end="url(#selectionArrow)"></path>
-              <path class="dd-connector" d="M560 146 H590" marker-end="url(#selectionArrow)"></path>
-              <path class="dd-connector" d="M750 146 H780" marker-end="url(#selectionArrow)"></path>
-
-              <g>
-                <rect class="dd-node" x="20" y="80" width="160" height="132" rx="6"></rect>
-                <text class="dd-eyebrow" x="38" y="106">01 / REQUIREMENT</text>
-                <g class="dd-icon-muted" transform="translate(148 92) scale(.52)">
-                  <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
-                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                  <path d="M12 11h4 M12 16h4 M8 11h.01 M8 16h.01"></path>
-                </g>
-                <text class="dd-title" x="38" y="145">Define the need</text>
-                <text class="dd-copy" x="38" y="171">electrical · mechanical</text>
-                <text class="dd-copy" x="38" y="189">environment · constraints</text>
-              </g>
-
-              <g>
-                <rect class="dd-node" x="210" y="80" width="160" height="132" rx="6"></rect>
-                <text class="dd-eyebrow" x="228" y="106">02 / DISCOVER</text>
-                <g class="dd-icon-muted" transform="translate(338 92) scale(.52)">
-                  <path d="M12 22V12"></path>
-                  <path d="M20.27 18.27 22 20"></path>
-                  <path d="M21 10.498V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.98-.559"></path>
-                  <path d="M3.29 7 12 12l8.71-5 M7.5 4.27l8.997 5.148"></path>
-                  <circle cx="18.5" cy="16.5" r="2.5"></circle>
-                </g>
-                <text class="dd-title" x="228" y="145">Find candidates</text>
-                <text class="dd-copy" x="228" y="171">parts · datasheets</text>
-                <text class="dd-copy" x="228" y="189">sources · alternatives</text>
-              </g>
-
-              <g>
-                <rect class="dd-node" x="400" y="80" width="160" height="132" rx="6"></rect>
-                <text class="dd-eyebrow" x="418" y="106">03 / SCREEN</text>
-                <g class="dd-icon-muted" transform="translate(528 92) scale(.52)">
-                  <path d="M2 5h20 M6 12h12 M9 19h6"></path>
-                </g>
-                <text class="dd-title" x="418" y="145">Check suitability</text>
-                <text class="dd-copy" x="418" y="171">domain rules · calculations</text>
-                <text class="dd-copy" x="418" y="189">evidence · holds</text>
-              </g>
-
-              <g>
-                <rect class="dd-node" x="590" y="80" width="160" height="132" rx="6"></rect>
-                <text class="dd-eyebrow" x="608" y="106">04 / PROPOSAL</text>
-                <g class="dd-icon-muted" transform="translate(718 92) scale(.52)">
-                  <path d="M13 5h8 M13 12h8 M13 19h8"></path>
-                  <path d="m3 17 2 2 4-4 M3 7l2 2 4-4"></path>
-                </g>
-                <text class="dd-title" x="608" y="145">Shortlist</text>
-                <text class="dd-copy" x="608" y="171">comparison · evidence</text>
-                <text class="dd-copy" x="608" y="189">proposal · unresolved holds</text>
-              </g>
-
-              <g>
-                <rect class="dd-node-accent" x="780" y="64" width="196" height="164" rx="6"></rect>
-                <text class="dd-eyebrow" x="800" y="91">05 / DECISION</text>
-                <g class="dd-icon" transform="translate(936 78) scale(.56)">
-                  <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"></path>
-                  <path d="m16 9-5.5 5.5L8 12"></path>
-                </g>
-                <text class="dd-title" x="800" y="133">Engineer review</text>
-                <text class="dd-copy" x="800" y="160">accept · reject · investigate</text>
-                <line class="dd-rule" x1="800" y1="182" x2="954" y2="182"></line>
-                <text class="dd-tech" x="800" y="206">HUMAN AUTHORITY</text>
-              </g>
-
-              <g>
-                <rect class="dd-node-soft" x="96" y="278" width="808" height="66" rx="6"></rect>
-                <text class="dd-eyebrow" x="118" y="302">TRACEABLE BASIS</text>
-                <g class="dd-icon-muted" transform="translate(118 313) scale(.46)">
-                  <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
-                  <path d="M14 2v5a1 1 0 0 0 1 1h5"></path>
-                  <circle cx="11.5" cy="14.5" r="2.5"></circle>
-                  <path d="M13.3 16.3 15 18"></path>
-                </g>
-                <text class="dd-tech" x="150" y="329">REQUIREMENT BASIS</text>
-                <text class="dd-tech" x="320" y="329">PROJECT REVISION</text>
-                <text class="dd-tech" x="488" y="329">COMPARISON RESULT</text>
-                <text class="dd-tech" x="666" y="329">EXACT EVIDENCE</text>
-              </g>
-            </svg>
-          </div>
-
-          <p class="body-copy reveal">
-            The workflow records the requirement basis, project revision, comparison result, and evidence used. If that basis changes, the prior recommendation remains in history but requires re-evaluation.
-          </p>
-
-          <div class="architecture-note reveal">
-            <strong>Current status</strong>
-            <p>
-              Universe is an active project, not a finished or production-qualified platform. It gives me a practical way to explore how AI agents, engineering tools, structured models, evidence, and human review can work together in product development.
-            </p>
-          </div>
-
-          <div class="hero-links reveal">
-            <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer">Explore Universe on GitHub ↗</a>
-          </div>
         </div>
+      </div>
+
+      <div class="universe-example-decision-mobile reveal" aria-label="Engineer decision principle">
+        <strong>Engineer review is required</strong>
+        <p>AI proposals and CAD checks support decisions; they do not approve the design.</p>
+      </div>
+
+      <div class="editorial-diagram diagram-scroll universe-selection-diagram reveal">
+        <svg viewBox="0 0 1000 350" role="img" aria-labelledby="cad-review-title cad-review-desc">
+          <title id="cad-review-title">From AI-proposed placement to reviewed CAD change</title>
+          <desc id="cad-review-desc">A saved model-authored placement is projected under declared 3D assumptions into native assembly CAD. Workbench enables inspection and saved views. An engineer explicitly reviews and requests a component move. The system checks a new candidate and retains its original parent and supporting evidence.</desc>
+          <defs>
+            <pattern id="cadReviewDots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+            </pattern>
+            <marker id="cadReviewArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+            </marker>
+          </defs>
+
+          <rect x="0" y="0" width="1000" height="350" fill="url(#cadReviewDots)"></rect>
+          <path class="dd-connector" d="M180 151 H210" marker-end="url(#cadReviewArrow)"></path>
+          <path class="dd-connector" d="M370 151 H400" marker-end="url(#cadReviewArrow)"></path>
+          <path class="dd-connector" d="M560 151 H590" marker-end="url(#cadReviewArrow)"></path>
+          <path class="dd-connector" d="M770 151 H800" marker-end="url(#cadReviewArrow)"></path>
+
+          <g>
+            <rect class="dd-node" x="20" y="70" width="160" height="154" rx="6"></rect>
+            <text class="dd-eyebrow" x="38" y="96">01 / AI PROPOSAL</text>
+            <g class="dd-icon-muted" transform="translate(148 113) scale(.55)">
+              <path d="M12 8V4H8"></path>
+              <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+              <path d="M2 14h2 M20 14h2 M15 13v2 M9 13v2"></path>
+            </g>
+            <text class="dd-title" x="38" y="153" style="font-size:16px">AI placement</text>
+            <text class="dd-copy" x="38" y="181">saved concept</text>
+            <text class="dd-copy" x="38" y="199">source-bound inputs</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="210" y="70" width="160" height="154" rx="6"></rect>
+            <text class="dd-eyebrow" x="228" y="96">02 / MATERIALIZE</text>
+            <g class="dd-icon-muted" transform="translate(338 113) scale(.55)">
+              <path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"></path>
+              <rect x="14" y="2" width="8" height="8" rx="1"></rect>
+            </g>
+            <text class="dd-title" x="228" y="153" style="font-size:16px">Native CAD</text>
+            <text class="dd-copy" x="228" y="181">host projection</text>
+            <text class="dd-copy" x="228" y="199">declared 3D basis</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="400" y="70" width="160" height="154" rx="6"></rect>
+            <text class="dd-eyebrow" x="418" y="96">03 / INSPECT</text>
+            <g class="dd-icon-muted" transform="translate(528 113) scale(.55)">
+              <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+              <path d="M12 17v4 M8 21h8 M9 10l2 2 4-4"></path>
+            </g>
+            <text class="dd-title" x="418" y="153" style="font-size:16px">Workbench</text>
+            <text class="dd-copy" x="418" y="181">select · fit · section</text>
+            <text class="dd-copy" x="418" y="199">saved view + notes</text>
+          </g>
+
+          <g>
+            <rect class="dd-node-accent" x="590" y="58" width="180" height="178" rx="6"></rect>
+            <text class="dd-eyebrow" x="608" y="86">04 / ENGINEER</text>
+            <g class="dd-icon" transform="translate(736 104) scale(.68)">
+              <rect width="8" height="4" x="8" y="2" rx="1"></rect>
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <path d="m9 14 2 2 4-4"></path>
+            </g>
+            <text class="dd-title" x="608" y="151" style="font-size:16px">Review + move</text>
+            <text class="dd-copy" x="608" y="180">explicit scope review</text>
+            <text class="dd-copy" x="608" y="198">user-triggered change</text>
+            <line class="dd-rule" x1="608" x2="750" y1="211" y2="211"></line>
+            <text class="dd-tech" x="608" y="227">HUMAN DECISION</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="800" y="70" width="180" height="154" rx="6"></rect>
+            <text class="dd-eyebrow" x="818" y="96">05 / RECHECK</text>
+            <g class="dd-icon-muted" transform="translate(946 113) scale(.55)">
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+              <path d="M21 3v5h-5 M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16 M8 16H3v5"></path>
+            </g>
+            <text class="dd-title" x="818" y="153" style="font-size:16px">New candidate</text>
+            <text class="dd-copy" x="818" y="181">updated spatial checks</text>
+            <text class="dd-copy" x="818" y="199">original preserved</text>
+          </g>
+
+          <g>
+            <rect class="dd-node-soft" x="115" y="269" width="770" height="65" rx="6"></rect>
+            <text class="dd-eyebrow" x="135" y="291">SAVED REVIEW BASIS</text>
+            <text class="dd-tech" x="135" y="316">SOURCE + PLACEMENT</text>
+            <text class="dd-tech" x="334" y="316">CAD + CHECKS</text>
+            <text class="dd-tech" x="505" y="316">SAVED VIEWS</text>
+            <text class="dd-tech" x="681" y="316">PARENT + CHILD</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="universe-example-followup">
+      <p class="body-copy reveal">
+        A reviewed component translation produces a separate candidate with new spatial checks. The original geometry, saved views, and contextual evidence remain available for comparison. This is assisted concept review—not autonomous CAD design or approval of an installed product.
+      </p>
+
+      <div class="architecture-note reveal">
+        <strong>Current status</strong>
+        <p>
+          Universe remains in active development. These workflows have bounded local verification using synthetic engineering cases. Geometry screens, successful executions, and native exports do not by themselves qualify installed fit, safety, or engineering release.
+        </p>
+      </div>
+
+      <div class="hero-links reveal">
+        <a href="https://github.com/benlatrobe/universe/blob/main/docs/work-packages/concept-cad-review.md" target="_blank" rel="noreferrer">Read the CAD review implementation ↗</a>
+        <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer">Explore Universe on GitHub ↗</a>
+      </div>
       </div>
     </section>
 
