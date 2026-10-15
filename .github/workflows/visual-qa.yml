@@ -14,6 +14,7 @@ on:
       - diagram-polish-pass-5
       - diagram-polish-pass-6
       - diagram-polish-pass-7
+      - universe-evidence-refresh-20261014
 
 permissions:
   contents: read
