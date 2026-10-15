@@ -12431,3 +12431,77 @@ button:focus-visible {
 .fixed-reader-v2::after {
   opacity: .22;
 }
+
+
+/* Universe case study: keep technical diagrams readable without shrinking copy */
+.universe-example-intro {
+  width: min(100%, var(--max));
+  margin-inline: auto;
+  margin-bottom: clamp(28px, 4vw, 55px);
+}
+
+.universe-example-intro .lede {
+  margin-bottom: 0;
+}
+
+.universe-selection-diagram {
+  width: min(100%, 1180px);
+  margin-inline: auto;
+}
+
+.universe-example-followup {
+  width: min(100%, 920px);
+  margin: clamp(32px, 4vw, 56px) auto 0;
+}
+
+.universe-example-followup .body-copy {
+  max-width: 860px;
+  margin-top: 0;
+}
+
+.universe-example-followup .architecture-note {
+  margin-top: 38px;
+  border-top-color: rgba(22,24,23,.22);
+}
+
+.universe-example-decision-mobile {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .universe-example-intro {
+    margin-bottom: 22px;
+  }
+
+  .universe-example-decision-mobile {
+    display: block;
+    width: 100%;
+    margin-bottom: 22px;
+    padding: 16px 18px;
+    border-left: 3px solid var(--ink);
+    background: rgba(187,255,73,.12);
+  }
+
+  .universe-example-decision-mobile strong {
+    display: block;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .universe-example-decision-mobile p {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .universe-page .universe-selection-diagram svg {
+    width: 1050px;
+    max-width: none;
+  }
+
+  .universe-page .universe-architecture-diagram svg {
+    width: 940px;
+    max-width: none;
+  }
+}
