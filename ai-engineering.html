@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Universe — AI-Enabled Engineering — Ben Lin</title>
-  <meta name="description" content="Universe explores how AI agents can work with engineering models, domain tools, engineering software, evidence, and human review in physical-product development." />
+  <meta name="description" content="Universe is an AI-assisted engineering framework connecting versioned engineering models, native CAD review, source-linked evidence, and engineer decisions." />
   <meta name="theme-color" content="#151816" />
   <link rel="canonical" href="https://benlatrobe.github.io/ai-engineering.html" />
   <meta property="og:title" content="Universe — AI-Enabled Engineering — Ben Lin" />
-  <meta property="og:description" content="Exploring how AI agents can work with engineering models, domain tools, engineering software, evidence, and human review." />
+  <meta property="og:description" content="An AI-assisted engineering framework connecting design proposals, engineering models, native CAD review, and human decisions." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://benlatrobe.github.io/assets/og/portfolio-preview.jpg" />
   <meta property="og:image:width" content="600" />
@@ -46,7 +46,7 @@
           <p class="eyebrow">Selected work / AI-enabled engineering</p>
           <h1>Universe</h1>
           <p class="case-deck">
-            Exploring how AI agents can work with engineering models, domain tools, and real engineering software to support physical-product development.
+            Building an AI-assisted engineering framework that connects design proposals, versioned models, domain tools, native CAD review, and human engineering decisions.
           </p>
           <div class="case-meta">
             <div><span>ROLE</span><strong>Creator / architect</strong></div>
@@ -236,7 +236,7 @@
       <div class="architecture-note reveal">
         <strong>Canonical Engineering Models (CEMs)</strong>
         <p>
-          A CEM is a structured, versioned representation of engineering entities, relationships, properties, and evidence. It gives agents, domain tools, and engineers a shared design state while keeping revisions and evidence explicit.
+          A CEM is a structured, versioned engineering record that connects entities, relationships, properties, and source evidence. For supported component and assembly models, it retains the exact geometry needed for reconstruction. CAD exports and display meshes are derived outputs—not competing design authorities.
         </p>
       </div>
     </section>
@@ -244,39 +244,39 @@
     <section id="built" class="section universe-stack-section">
       <div class="section-index">03 / WHAT I HAVE BUILT</div>
       <div class="section-heading reveal">
-        <p class="kicker">From concept to working pieces</p>
-        <h2>Several parts are already working.</h2>
+        <p class="kicker">From architecture to working engineering workflows</p>
+        <h2>Connecting AI proposals to engineering work.</h2>
       </div>
 
       <div class="tech-stack-grid">
-        <article class="tech-stack-card tech-stack-card-primary reveal">
-          <span>REQUIREMENTS → ARCHITECTURE</span>
-          <h3>Turn reviewed requirements into a system concept</h3>
-          <p>An implemented workflow turns source-linked requirements into a proposed system structure, subsystem responsibilities, interfaces, constraints, and owned unknowns. Revisions stay attributable, and the candidate remains separate from engineering approval.</p>
+        <article class="tech-stack-card reveal">
+          <span>REQUIREMENTS → CONCEPT</span>
+          <h3>From project documents to a reviewable concept</h3>
+          <p>A verified local Workbench journey connects source-linked requirements, clarification, and reviewed scope to model-authored planning and saved concept results. Assumptions and unfinished obligations remain visible.</p>
         </article>
 
-        <article class="tech-stack-card reveal">
-          <span>ENGINEERING TOOLS</span>
-          <h3>Calculations, geometry + engineering software</h3>
-          <p>Implemented work includes electrical and power calculations, component screening, system interfaces, geometry, bounded thermal and scenario studies, validation, and FreeCAD / OCCT integration.</p>
+        <article class="tech-stack-card tech-stack-card-primary reveal">
+          <span>ENGINEERING MODELS → CAD</span>
+          <h3>Native CAD, checked changes, and component reuse</h3>
+          <p>Bounded workflows turn saved concepts into reviewable native CAD and check explicit position changes. Separately, exact library Component CEM revisions can enter a project for reviewed placement, comparison, and STEP / FCStd export.</p>
         </article>
 
         <article class="tech-stack-card reveal">
           <span>TRACEABILITY</span>
-          <h3>Results stay tied to their basis</h3>
-          <p>Inputs, sources, revisions, and execution evidence stay attached to the work. When the basis changes, affected results can be identified for re-evaluation instead of silently remaining current.</p>
+          <h3>Versioned state and evidence that survives a restart</h3>
+          <p>Results stay tied to source inputs, engineering revisions, tool checks, and saved review context. Existing and changed candidates remain distinguishable; guarded reads can restore their evidence without rerunning engineering tools.</p>
         </article>
 
         <article class="tech-stack-card tech-stack-card-primary reveal">
-          <span>WORKBENCH</span>
-          <h3>Review the engineering work, not just the conversation</h3>
-          <p>A React / TypeScript review environment brings together requirements, models, calculations, evidence, proposed changes, open issues, and 3D visualization.</p>
+          <span>ENGINEERING WORKBENCH</span>
+          <h3>Inspect the model, not just an AI answer</h3>
+          <p>A React / TypeScript / Three.js interface supports project and requirements review, 3D selection, saved views, engineering checks, reviewed changes, and contextual discussion tied to specific records.</p>
         </article>
       </div>
 
       <div class="architecture-note reveal">
         <strong>Implementation stack</strong>
-        <p>Rust supports Core and Runtime. Python connects agents, domain tools, and engineering software. Workbench uses TypeScript / React and Three.js.</p>
+        <p>Rust supports Core and Runtime. Python connects agents, domain tools, and native engineering software. Workbench uses TypeScript / React and Three.js.</p>
       </div>
     </section>
 
