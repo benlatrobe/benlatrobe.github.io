@@ -284,7 +284,7 @@
 
     <section id="example" class="section case-example">
       <div class="section-index">04 / CONCRETE EXAMPLE</div>
-      <div class="split">
+      <div class="split universe-example-intro">
         <div class="sticky-title reveal">
           <p class="kicker">Concept to checked CAD change</p>
           <h2>AI proposes. Engineering tools check. Engineers decide.</h2>
@@ -293,117 +293,124 @@
           <p class="lede reveal">
             One locally verified workflow takes a saved model-authored placement, applies declared 3D assumptions, and creates native CAD that an engineer can inspect and review.
           </p>
-
-          <div class="editorial-diagram diagram-scroll universe-selection-diagram reveal">
-            <svg viewBox="0 0 1000 350" role="img" aria-labelledby="cad-review-title cad-review-desc">
-              <title id="cad-review-title">From AI-proposed placement to reviewed CAD change</title>
-              <desc id="cad-review-desc">A saved model-authored placement is projected under declared 3D assumptions into native assembly CAD. Workbench enables inspection and saved views. An engineer explicitly reviews and requests a component move. The system checks a new candidate and retains its original parent and supporting evidence.</desc>
-              <defs>
-                <pattern id="cadReviewDots" width="24" height="24" patternUnits="userSpaceOnUse">
-                  <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
-                </pattern>
-                <marker id="cadReviewArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
-                  <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
-                </marker>
-              </defs>
-
-              <rect x="0" y="0" width="1000" height="350" fill="url(#cadReviewDots)"></rect>
-              <path class="dd-connector" d="M180 151 H210" marker-end="url(#cadReviewArrow)"></path>
-              <path class="dd-connector" d="M370 151 H400" marker-end="url(#cadReviewArrow)"></path>
-              <path class="dd-connector" d="M560 151 H590" marker-end="url(#cadReviewArrow)"></path>
-              <path class="dd-connector" d="M770 151 H800" marker-end="url(#cadReviewArrow)"></path>
-
-              <g>
-                <rect class="dd-node" x="20" y="70" width="160" height="154" rx="6"></rect>
-                <text class="dd-eyebrow" x="38" y="96">01 / AI PROPOSAL</text>
-                <g class="dd-icon-muted" transform="translate(148 113) scale(.55)">
-                  <path d="M12 8V4H8"></path>
-                  <rect width="16" height="12" x="4" y="8" rx="2"></rect>
-                  <path d="M2 14h2 M20 14h2 M15 13v2 M9 13v2"></path>
-                </g>
-                <text class="dd-title" x="38" y="153" style="font-size:16px">AI placement</text>
-                <text class="dd-copy" x="38" y="181">saved concept</text>
-                <text class="dd-copy" x="38" y="199">source-bound inputs</text>
-              </g>
-
-              <g>
-                <rect class="dd-node" x="210" y="70" width="160" height="154" rx="6"></rect>
-                <text class="dd-eyebrow" x="228" y="96">02 / MATERIALIZE</text>
-                <g class="dd-icon-muted" transform="translate(338 113) scale(.55)">
-                  <path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"></path>
-                  <rect x="14" y="2" width="8" height="8" rx="1"></rect>
-                </g>
-                <text class="dd-title" x="228" y="153" style="font-size:16px">Native CAD</text>
-                <text class="dd-copy" x="228" y="181">host projection</text>
-                <text class="dd-copy" x="228" y="199">declared 3D basis</text>
-              </g>
-
-              <g>
-                <rect class="dd-node" x="400" y="70" width="160" height="154" rx="6"></rect>
-                <text class="dd-eyebrow" x="418" y="96">03 / INSPECT</text>
-                <g class="dd-icon-muted" transform="translate(528 113) scale(.55)">
-                  <rect width="20" height="14" x="2" y="3" rx="2"></rect>
-                  <path d="M12 17v4 M8 21h8 M9 10l2 2 4-4"></path>
-                </g>
-                <text class="dd-title" x="418" y="153" style="font-size:16px">Workbench</text>
-                <text class="dd-copy" x="418" y="181">select · fit · section</text>
-                <text class="dd-copy" x="418" y="199">saved view + notes</text>
-              </g>
-
-              <g>
-                <rect class="dd-node-accent" x="590" y="58" width="180" height="178" rx="6"></rect>
-                <text class="dd-eyebrow" x="608" y="86">04 / ENGINEER</text>
-                <g class="dd-icon" transform="translate(736 104) scale(.68)">
-                  <rect width="8" height="4" x="8" y="2" rx="1"></rect>
-                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                  <path d="m9 14 2 2 4-4"></path>
-                </g>
-                <text class="dd-title" x="608" y="151" style="font-size:16px">Review + move</text>
-                <text class="dd-copy" x="608" y="180">explicit scope review</text>
-                <text class="dd-copy" x="608" y="198">user-triggered change</text>
-                <line class="dd-rule" x1="608" x2="750" y1="211" y2="211"></line>
-                <text class="dd-tech" x="608" y="227">HUMAN DECISION</text>
-              </g>
-
-              <g>
-                <rect class="dd-node" x="800" y="70" width="180" height="154" rx="6"></rect>
-                <text class="dd-eyebrow" x="818" y="96">05 / RECHECK</text>
-                <g class="dd-icon-muted" transform="translate(946 113) scale(.55)">
-                  <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
-                  <path d="M21 3v5h-5 M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16 M8 16H3v5"></path>
-                </g>
-                <text class="dd-title" x="818" y="153" style="font-size:16px">New candidate</text>
-                <text class="dd-copy" x="818" y="181">updated spatial checks</text>
-                <text class="dd-copy" x="818" y="199">original preserved</text>
-              </g>
-
-              <g>
-                <rect class="dd-node-soft" x="115" y="269" width="770" height="65" rx="6"></rect>
-                <text class="dd-eyebrow" x="135" y="291">SAVED REVIEW BASIS</text>
-                <text class="dd-tech" x="135" y="316">SOURCE + PLACEMENT</text>
-                <text class="dd-tech" x="334" y="316">CAD + CHECKS</text>
-                <text class="dd-tech" x="505" y="316">SAVED VIEWS</text>
-                <text class="dd-tech" x="681" y="316">PARENT + CHILD</text>
-              </g>
-            </svg>
-          </div>
-
-          <p class="body-copy reveal">
-            A reviewed component translation produces a separate candidate with new spatial checks. The original geometry, saved views, and contextual evidence remain available for comparison. This is assisted concept review—not autonomous CAD design or approval of an installed product.
-          </p>
-
-          <div class="architecture-note reveal">
-            <strong>Current status</strong>
-            <p>
-              Universe remains in active development. These workflows have bounded local verification using synthetic engineering cases. Geometry screens, successful executions, and native exports do not by themselves qualify installed fit, safety, or engineering release.
-            </p>
-          </div>
-
-          <div class="hero-links reveal">
-            <a href="https://github.com/benlatrobe/universe/blob/main/docs/work-packages/concept-cad-review.md" target="_blank" rel="noreferrer">Read the CAD review implementation ↗</a>
-            <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer">Explore Universe on GitHub ↗</a>
-          </div>
         </div>
+      </div>
+
+      <div class="universe-example-decision-mobile reveal" aria-label="Engineer decision principle">
+        <strong>Engineer review is required</strong>
+        <p>AI proposals and CAD checks support decisions; they do not approve the design.</p>
+      </div>
+
+      <div class="editorial-diagram diagram-scroll universe-selection-diagram reveal">
+        <svg viewBox="0 0 1000 350" role="img" aria-labelledby="cad-review-title cad-review-desc">
+          <title id="cad-review-title">From AI-proposed placement to reviewed CAD change</title>
+          <desc id="cad-review-desc">A saved model-authored placement is projected under declared 3D assumptions into native assembly CAD. Workbench enables inspection and saved views. An engineer explicitly reviews and requests a component move. The system checks a new candidate and retains its original parent and supporting evidence.</desc>
+          <defs>
+            <pattern id="cadReviewDots" width="24" height="24" patternUnits="userSpaceOnUse">
+              <circle class="dd-grid-dot" cx="12" cy="12" r="0.8"></circle>
+            </pattern>
+            <marker id="cadReviewArrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#6c706d"></path>
+            </marker>
+          </defs>
+
+          <rect x="0" y="0" width="1000" height="350" fill="url(#cadReviewDots)"></rect>
+          <path class="dd-connector" d="M180 151 H210" marker-end="url(#cadReviewArrow)"></path>
+          <path class="dd-connector" d="M370 151 H400" marker-end="url(#cadReviewArrow)"></path>
+          <path class="dd-connector" d="M560 151 H590" marker-end="url(#cadReviewArrow)"></path>
+          <path class="dd-connector" d="M770 151 H800" marker-end="url(#cadReviewArrow)"></path>
+
+          <g>
+            <rect class="dd-node" x="20" y="70" width="160" height="154" rx="6"></rect>
+            <text class="dd-eyebrow" x="38" y="96">01 / AI PROPOSAL</text>
+            <g class="dd-icon-muted" transform="translate(148 113) scale(.55)">
+              <path d="M12 8V4H8"></path>
+              <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+              <path d="M2 14h2 M20 14h2 M15 13v2 M9 13v2"></path>
+            </g>
+            <text class="dd-title" x="38" y="153" style="font-size:16px">AI placement</text>
+            <text class="dd-copy" x="38" y="181">saved concept</text>
+            <text class="dd-copy" x="38" y="199">source-bound inputs</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="210" y="70" width="160" height="154" rx="6"></rect>
+            <text class="dd-eyebrow" x="228" y="96">02 / MATERIALIZE</text>
+            <g class="dd-icon-muted" transform="translate(338 113) scale(.55)">
+              <path d="M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2"></path>
+              <rect x="14" y="2" width="8" height="8" rx="1"></rect>
+            </g>
+            <text class="dd-title" x="228" y="153" style="font-size:16px">Native CAD</text>
+            <text class="dd-copy" x="228" y="181">host projection</text>
+            <text class="dd-copy" x="228" y="199">declared 3D basis</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="400" y="70" width="160" height="154" rx="6"></rect>
+            <text class="dd-eyebrow" x="418" y="96">03 / INSPECT</text>
+            <g class="dd-icon-muted" transform="translate(528 113) scale(.55)">
+              <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+              <path d="M12 17v4 M8 21h8 M9 10l2 2 4-4"></path>
+            </g>
+            <text class="dd-title" x="418" y="153" style="font-size:16px">Workbench</text>
+            <text class="dd-copy" x="418" y="181">select · fit · section</text>
+            <text class="dd-copy" x="418" y="199">saved view + notes</text>
+          </g>
+
+          <g>
+            <rect class="dd-node-accent" x="590" y="58" width="180" height="178" rx="6"></rect>
+            <text class="dd-eyebrow" x="608" y="86">04 / ENGINEER</text>
+            <g class="dd-icon" transform="translate(736 104) scale(.68)">
+              <rect width="8" height="4" x="8" y="2" rx="1"></rect>
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+              <path d="m9 14 2 2 4-4"></path>
+            </g>
+            <text class="dd-title" x="608" y="151" style="font-size:16px">Review + move</text>
+            <text class="dd-copy" x="608" y="180">explicit scope review</text>
+            <text class="dd-copy" x="608" y="198">user-triggered change</text>
+            <line class="dd-rule" x1="608" x2="750" y1="211" y2="211"></line>
+            <text class="dd-tech" x="608" y="227">HUMAN DECISION</text>
+          </g>
+
+          <g>
+            <rect class="dd-node" x="800" y="70" width="180" height="154" rx="6"></rect>
+            <text class="dd-eyebrow" x="818" y="96">05 / RECHECK</text>
+            <g class="dd-icon-muted" transform="translate(946 113) scale(.55)">
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+              <path d="M21 3v5h-5 M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16 M8 16H3v5"></path>
+            </g>
+            <text class="dd-title" x="818" y="153" style="font-size:16px">New candidate</text>
+            <text class="dd-copy" x="818" y="181">updated spatial checks</text>
+            <text class="dd-copy" x="818" y="199">original preserved</text>
+          </g>
+
+          <g>
+            <rect class="dd-node-soft" x="115" y="269" width="770" height="65" rx="6"></rect>
+            <text class="dd-eyebrow" x="135" y="291">SAVED REVIEW BASIS</text>
+            <text class="dd-tech" x="135" y="316">SOURCE + PLACEMENT</text>
+            <text class="dd-tech" x="334" y="316">CAD + CHECKS</text>
+            <text class="dd-tech" x="505" y="316">SAVED VIEWS</text>
+            <text class="dd-tech" x="681" y="316">PARENT + CHILD</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="universe-example-followup">
+      <p class="body-copy reveal">
+        A reviewed component translation produces a separate candidate with new spatial checks. The original geometry, saved views, and contextual evidence remain available for comparison. This is assisted concept review—not autonomous CAD design or approval of an installed product.
+      </p>
+
+      <div class="architecture-note reveal">
+        <strong>Current status</strong>
+        <p>
+          Universe remains in active development. These workflows have bounded local verification using synthetic engineering cases. Geometry screens, successful executions, and native exports do not by themselves qualify installed fit, safety, or engineering release.
+        </p>
+      </div>
+
+      <div class="hero-links reveal">
+        <a href="https://github.com/benlatrobe/universe/blob/main/docs/work-packages/concept-cad-review.md" target="_blank" rel="noreferrer">Read the CAD review implementation ↗</a>
+        <a href="https://github.com/benlatrobe/universe" target="_blank" rel="noreferrer">Explore Universe on GitHub ↗</a>
+      </div>
       </div>
     </section>
 
